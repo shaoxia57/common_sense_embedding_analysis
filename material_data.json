@@ -11,7 +11,7 @@
             "inverted_paraphrase" : "blocks more light than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["more", "less"]}
     },
 
     "1" : {
