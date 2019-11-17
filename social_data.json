@@ -1,0 +1,72 @@
+{
+    "0" : {
+        "situation" : "A makes the varisty team while B does not",
+        "negation_switch" : {"0" : ["is", "isn't"], 
+                             "1" : ["is", "isn't"], 
+                             "2" : ["makes", "does not make"]},
+        "antonym_switch" : ["skilled", "incompetent"],
+        "original_comparison" : "is more skilled than",
+        "paraphrase" : "is better than",
+        "inverted_paraphrase" : "makes more mistakes than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["better", "worse"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "1" : {
+        "situation" : "A is going to play the piano in front of B",
+        "negation_switch" : {"0" : ["is", "isn't"], 
+                             "1" : ["is", "isn't"], 
+                             "2" : ["is", "isn't"]},
+        "antonym_switch" : ["nervous", "relaxed"],
+        "original_comparison" : "is more nervous than",
+        "paraphrase" : "is more stressed than",
+        "inverted_paraphrase" : "is feeling more calm than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "2" : {
+        "situation" : "A won the competition while B lost",
+        "negation_switch" : {"0" : ["is", "isn't"], 
+                             "1" : ["is", "isn't"], 
+                             "2" : ["is", "isn't"]},
+        "antonym_switch" : ["happy", "sad"],
+        "original_comparison" : "is more happy than",
+        "paraphrase" : "is feeling better than",
+        "inverted_paraphrase" : "is smiling less than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["better", "worse"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "3" : {
+        "situation" : "A does work faster than B",
+        "negation_switch" : {"0" : ["is", "isn't"], 
+                             "1" : ["can", "can't"], 
+                             "2" : ["is", "isn't"]},
+        "antonym_switch" : ["efficient", "unproductive"],
+        "original_comparison" : "is more efficient than",
+        "paraphrase" : "can do more work in less time than",
+        "inverted_paraphrase" : "is more ineffective than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "4" : {
+        "situation" : "A bullies B",
+        "negation_switch" : {"0" : ["is", "isn't"], 
+                             "1" : ["is", "isn't"], 
+                             "2" : ["cares", "does not care"]},
+        "antonym_switch" : ["mean", "kind"],
+        "original_comparison" : "is more mean than",
+        "paraphrase" : "is a crueler person than",
+        "inverted_paraphrase" : "cares more about people than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["crueler", "less cruel"], 
+                            "2" : ["more", "less"]}
+    }
+
+}
