@@ -1,0 +1,53 @@
+{
+    "0" : {
+            "negation" : "not",
+            "original_comparison" : "smaller",
+            "antonym_comparison" : "larger",
+            "original_comparison_phrase" : "can fit into",
+            "paraphrase" : "can be put into",
+            "inverted_paraphrase" : "can contain",
+            "premise_switch" : {"0" : ["can", "cannot"], "1" : ["can", "cannot"], "2" : ["can", "cannot"]}
+    },
+
+    "1" : {
+         "negation" : "not",
+         "original_comparison" : "lighter",
+         "antonym_comparison" : "heavier",
+         "original_comparison_phrase" : "should float more than",
+         "paraphrase" : "will stay afloat more than",
+         "inverted_paraphrase" : "will sink more than",
+         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["will", "will not"], "2" : ["will", "will not"]}
+    },
+
+    "2" : {
+         "negation" : "not",
+         "original_comparison" : "denser",
+         "antonym_comparison" : "airier",
+         "original_comparison_phrase" : "should be harder than",
+         "paraphrase" : "should be more solid than",
+         "inverted_paraphrase" : "will be softer than",
+         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["will", "will not"], "2" : ["will", "will not"]}
+    },
+
+    "3" : {
+        "negation" : "not",
+        "original_comparison" : "thinner",
+        "antonym_comparison" : "fatter",
+        "original_comparison_phrase" : "should be lighter than",
+        "paraphrase" : "should weigh less than",
+        "inverted_paraphrase" : "should be heavier than",
+        "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
+    },
+
+    "4" : {
+        "negation" : "not",
+        "original_comparison" : "thinner",
+        "antonym_comparison" : "fatter",
+        "original_comparison_phrase" : "should be lighter than",
+        "paraphrase" : "should weigh less than",
+        "inverted_paraphrase" : "should be heavier than",
+        "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
+    }
+
+
+}
