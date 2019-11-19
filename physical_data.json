@@ -41,11 +41,11 @@
 
     "4" : {
         "negation" : "not",
-        "original_comparison" : "thinner",
-        "antonym_comparison" : "fatter",
-        "original_comparison_phrase" : "should be lighter than",
-        "paraphrase" : "should weigh less than",
-        "inverted_paraphrase" : "should be heavier than",
+        "original_comparison" : "colder",
+        "antonym_comparison" : "hotter",
+        "original_comparison_phrase" : "should melt after",
+        "paraphrase" : "should turn to liquid after",
+        "inverted_paraphrase" : "should freeze before",
         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
     }
 

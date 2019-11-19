@@ -45,8 +45,8 @@ def generate_physical_perturbations(negation,
     output["antonym_paraphrase"] = original_phys_perturbation(antonym_comparison, inverted_paraphrase, premise_switch, "2")
     output["antonym_paraphrase_inversion"] = negative_phys_perturbation(antonym_comparison, paraphrase, premise_switch, "1")
 
-    output["negation_antonym_paraphrase"] = original_phys_perturbation(negation_antonym_comparison, inverted_paraphrase, premise_switch, "2")
-    output["negation_antonym_paraphrase_inversion"] = negative_phys_perturbation(negation_antonym_comparison, paraphrase, premise_switch, "1")
+    output["negation_antonym_paraphrase"] = original_phys_perturbation(negation_antonym_comparison, paraphrase, premise_switch, "1")
+    output["negation_antonym_paraphrase_inversion"] = negative_phys_perturbation(negation_antonym_comparison, inverted_paraphrase, premise_switch, "2")
 
     return output
 
