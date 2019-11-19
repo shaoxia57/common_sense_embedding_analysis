@@ -45,7 +45,7 @@
         "antonym_comparison" : "hotter",
         "original_comparison_phrase" : "should melt after",
         "paraphrase" : "should turn to liquid after",
-        "inverted_paraphrase" : "should freeze before",
+        "inverted_paraphrase" : "should freeze after",
         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
     }
 
