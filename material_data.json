@@ -31,7 +31,7 @@
 
     "2" : {
             "material_1" : "concrete",
-            "material_2" : "heavier",
+            "material_2" : "paper",
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["weighs", "does not weigh"], 
                                  "2" : ["is", "is not"]},
