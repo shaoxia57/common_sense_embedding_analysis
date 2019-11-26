@@ -6,7 +6,7 @@
                                  "1" : ["lets", "does not let"], 
                                  "2" : ["blocks", "does not block"]},
             "antonym_switch" : ["transparent", "opaque"],
-            "original_comparison" : "is more tranparent than",
+            "original_comparison" : "is more transparent than",
             "paraphrase" : "lets in more light than",
             "inverted_paraphrase" : "blocks more light than",
             "premise_switch" : {"0" : ["more", "less"],
@@ -54,7 +54,7 @@
             "original_comparison" : "floats more than",
             "paraphrase" : "is more buyont than",
             "inverted_paraphrase" : "falls to the ocean floor faster than",
-            "premise_switch" : {"0" : ["heavier", "lighter"],
+            "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["faster", "slower"]}
     },
