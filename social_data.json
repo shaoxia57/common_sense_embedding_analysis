@@ -193,8 +193,8 @@
         "negation_switch" : {"0" : ["spends", "does not spend"], 
                              "1" : ["can", "can not"], 
                              "2" : ["spends", "does not spend"]},
-        "antonym_switch" : ["knowledgable about", "ignorant of"],
-        "original_comparison" : "is more knowledgable about law than",
+        "antonym_switch" : ["knowledgeable about", "ignorant of"],
+        "original_comparison" : "is more knowledgeable about law than",
         "paraphrase" : "has studied law more than",
         "inverted_paraphrase" : "has spent more time receiving legal advise than",
         "premise_switch" : {"0" : ["more", "less"], 
@@ -217,4 +217,74 @@
                             "2" : ["less", "more"]}
 
     },
+
+    "15" : {
+        "situation" : "A enjoys watching tv more than B",
+        "negation_switch" : {"0" : ["finds", "does not find"], 
+                             "1" : ["has", "does not have"], 
+                             "2" : ["spends", "does not spend"]},
+        "antonym_switch" : ["up to date", "in the know"],
+        "original_comparison" : "is more up to date on current tv shows than",
+        "paraphrase" : "has more knowledge about current tv shows than",
+        "inverted_paraphrase" : "is more ignorant about current tv shows than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "16" : {
+        "situation" : "A always beats B in tennis",
+        "negation_switch" : {"0" : ["has", "has not"], 
+                             "1" : ["is", "is not"], 
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["skill", "inability"],
+        "original_comparison" : "has more skill in tennis than",
+        "paraphrase" : "is a better player than",
+        "inverted_paraphrase" : "is more incompetent in tenns than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["better", "worse"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "17" : {
+        "situation" : "A makes B late",
+        "negation_switch" : {"0" : ["has", "has not"], 
+                             "1" : ["should", "should not be"], 
+                             "2" : ["has", "has not"]},
+        "antonym_switch" : ["annoyed at", "contrite towards"],
+        "original_comparison" : "has less reason to be annoyed at",
+        "paraphrase" : "should be less upset with",
+        "inverted_paraphrase" : "has less reason to be apologetic towards",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "18" : {
+        "situation" : "A is a better friend than B",
+        "negation_switch" : {"0" : ["is", "is not"], 
+                             "1" : ["shows", "does not show"], 
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["thoughtful", "selfish"],
+        "original_comparison" : "is more thoughtful than",
+        "paraphrase" : "shows more care torwards friends than",
+        "inverted_paraphrase" : "is more of a prick than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "19" : {
+        "situation" : "A is B's teacher",
+        "negation_switch" : {"0" : ["should", "should not"], 
+                             "1" : ["should", "should not"], 
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["informed", "ignorant"],
+        "original_comparison" : "should be more informed than",
+        "paraphrase" : "should have a better understanding of the material than",
+        "inverted_paraphrase" : "is more unaware of the complexities of the subject than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["better", "worse"], 
+                            "2" : ["more", "less"]}
+    }
 }
