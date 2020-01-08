@@ -67,6 +67,154 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["crueler", "less cruel"], 
                             "2" : ["more", "less"]}
-    }
+    },
 
+    "5" : {
+        "situation" : "A is B's boss",
+        "negation_switch" : {"0" : ["commands", "does not command"], 
+                             "1" : ["has", "has not"], 
+                             "2" : ["should", "should not"]},
+        "antonym_switch" : ["respect", "dishonor"],
+        "original_comparison" : "commands more respect than",
+        "paraphrase" : "has earned more respect than",
+        "inverted_paraphrase" : "should be disrespected more than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "6" : {
+        "situation" : "A has more work than B",
+        "negation_switch" : {"0" : ["is", "is not"], 
+                             "1" : ["has", "does not have"], 
+                             "2" : ["should", "should not"]},
+        "antonym_switch" : ["stressed out", "at ease"],
+        "original_comparison" : "is more stressed out than",
+        "paraphrase" : "has higher stress levels than",
+        "inverted_paraphrase" : "should be more calm than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["higher", "lower"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "7" : {
+        "situation" : "A likes B",
+        "negation_switch" : {"0" : ["has", "does not have"], 
+                             "1" : ["feels", "does not feel"], 
+                             "2" : ["should", "should not"]},
+        "antonym_switch" : ["feelings for", "indifference towards"],
+        "original_comparison" : "has more feelings for",
+        "paraphrase" : "feels much emotion towards",
+        "inverted_paraphrase" : "is more at ease around",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["much", "little"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "8" : {
+        "situation" : "A practices more than B",
+        "negation_switch" : {"0" : ["is", "is not"], 
+                             "1" : ["feels", "does not feel"], 
+                             "2" : ["should", "should not"]},
+        "antonym_switch" : ["succeed", "fail"],
+        "original_comparison" : "is more likely to succeed than",
+        "paraphrase" : "has a better chance to succeed than",
+        "inverted_paraphrase" : "has a higher chance of failing than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["better", "worse"], 
+                            "2" : ["higher", "lower"]}
+
+    },
+
+    "9" : {
+        "situation" : "A is B's parent",
+        "negation_switch" : {"0" : ["takes", "does not take"], 
+                             "1" : ["provides", "does not provide"], 
+                             "2" : ["relies", "does not rely"]},
+        "antonym_switch" : ["care of", "assistance from"],
+        "original_comparison" : "initially takes more care of",
+        "paraphrase" : "initially provides more for",
+        "inverted_paraphrase" : "initially relies more on",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "10" : {
+        "situation" : "A is B's doctor",
+        "negation_switch" : {"0" : ["takes", "does not take"], 
+                             "1" : ["provides", "does not provide"], 
+                             "2" : ["requires", "does not require"]},
+        "antonym_switch" : ["care of", "assistance from"],
+        "original_comparison" : "takes more care of",
+        "paraphrase" : "provides more assistance towards",
+        "inverted_paraphrase" : "requires more medical aid from",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "11" : {
+        "situation" : "A has to apologize to B",
+        "negation_switch" : {"0" : ["must", "must not"], 
+                             "1" : ["should", "should not"], 
+                             "2" : ["should", "should not"]},
+        "antonym_switch" : ["thoughtful", "insensitive"],
+        "original_comparison" : "must be more thoughtful than",
+        "paraphrase" : "should be more caring in their actions than",
+        "inverted_paraphrase" : "should be more selfish in their actions than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "12" : {
+        "situation" : "A is B's priest",
+        "negation_switch" : {"0" : ["spends", "does not spend"], 
+                             "1" : ["can", "can not"], 
+                             "2" : ["spends", "does not spend"]},
+        "antonym_switch" : ["in", "out of"],
+        "original_comparison" : "spends more time praying than",
+        "paraphrase" : "can be found praying more often than",
+        "inverted_paraphrase" : "spends more time sinning than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "13" : {
+        "situation" : "A is B's lawyer",
+        "negation_switch" : {"0" : ["spends", "does not spend"], 
+                             "1" : ["can", "can not"], 
+                             "2" : ["spends", "does not spend"]},
+        "antonym_switch" : ["knowledgable about", "ignorant of"],
+        "original_comparison" : "is more knowledgable about law than",
+        "paraphrase" : "has studied law more than",
+        "inverted_paraphrase" : "has spent more time receiving legal advise than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["more", "less"]}
+
+    },
+
+    "14" : {
+        "situation" : "A has a lot more money than B",
+        "negation_switch" : {"0" : ["finds", "does not find"], 
+                             "1" : ["has", "does not have"], 
+                             "2" : ["spends", "does not spend"]},
+        "antonym_switch" : ["difficult", "effortless"],
+        "original_comparison" : "finds it less difficult to pay bills than",
+        "paraphrase" : "has a easier time paying bills than",
+        "inverted_paraphrase" : "is less financially secure than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["easier", "harder"], 
+                            "2" : ["less", "more"]}
+
+    },
 }
