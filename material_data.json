@@ -72,5 +72,246 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["harder", "easier"]}
+    },
+
+    "5" : {
+            "material_1" : "wool",
+            "material_2" : "steel",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["soft", "coarse"],
+            "original_comparison" : "is more soft than",
+            "paraphrase" : "is more comfortable to wear than",
+            "inverted_paraphrase" : "is more rough to the touch than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
+    },
+
+    "6" : {
+            "material_1" : "wood",
+            "material_2" : "glass",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["combustable", "fire retardent"],
+            "original_comparison" : "is more combustable than",
+            "paraphrase" : "is more likely to catch fire than",
+            "inverted_paraphrase" : "is more likely to survive a fire than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
+    },
+
+    "7" : {
+            "material_1" : "leather",
+            "material_2" : "nylon",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["lets", "does not let"]},
+            "antonym_switch" : ["water resistant", "permeable"],
+            "original_comparison" : "is less water resistant than",
+            "paraphrase" : "is worse to use for waterproofing than",
+            "inverted_paraphrase" : "lets less water through than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["more", "less"],
+                                "2" : ["less", "more"]}
+    },
+
+    "8" : {
+            "material_1" : "copper",
+            "material_2" : "concrete",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["ductile", "brittle"],
+            "original_comparison" : "is more ductile than",
+            "paraphrase" : "is more malleable than",
+            "inverted_paraphrase" : "is less rigid than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["better", "worse"],
+                                "2" : ["less", "more"]}
+    },
+
+    "9" : {
+            "material_1" : "cloth",
+            "material_2" : "metal",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["foldable", "rigid"],
+            "original_comparison" : "is more foldable than",
+            "paraphrase" : "is easier to fold than",
+            "inverted_paraphrase" : "is more inflexible",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["better", "worse"],
+                                "2" : ["more", "less"]}
+    },
+
+    "10" : {
+            "material_1" : "metal",
+            "material_2" : "feathers",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["sturdy", "fragile"],
+            "original_comparison" : "is more sturdy than",
+            "paraphrase" : "is more stable than",
+            "inverted_paraphrase" : "is more breakable",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["better", "worse"],
+                                "2" : ["more", "less"]}
+    },
+
+    "11" : {
+            "material_1" : "metal",
+            "material_2" : "dirt",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["lets", "does not let"], 
+                                 "2" : ["stops", "does not stop"]},
+            "antonym_switch" : ["conductor", "insulater"],
+            "original_comparison" : "is a better electrical conductor than",
+            "paraphrase" : "lets more electricity pass through than",
+            "inverted_paraphrase" : "stops more electricity than",
+            "premise_switch" : {"0" : ["better", "worse"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
+    },
+
+    "12" : {
+            "material_1" : "helium",
+            "material_2" : "stone",
+            "negation_switch" : {"0" : ["can", "can not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["fly", "sink"],
+            "original_comparison" : "can fly better than",
+            "paraphrase" : "is able to fly better than",
+            "inverted_paraphrase" : "is more likely to stay on the ground than",
+            "premise_switch" : {"0" : ["better", "worse"],
+                                "1" : ["better", "worse"],
+                                "2" : ["more", "less"]}
+    },
+
+    "13" : {
+            "material_1" : "helium",
+            "material_2" : "stone",
+            "negation_switch" : {"0" : ["can", "can not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["fly", "sink"],
+            "original_comparison" : "can fly better than",
+            "paraphrase" : "is able to fly better than",
+            "inverted_paraphrase" : "is more likely to stay on the ground than",
+            "premise_switch" : {"0" : ["better", "worse"],
+                                "1" : ["better", "worse"],
+                                "2" : ["more", "less"]}
+    },
+
+    "14" : {
+            "material_1" : "rubber",
+            "material_2" : "titanium",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["elastic", "inelastic"],
+            "original_comparison" : "is more elastic than",
+            "paraphrase" : "is easier to strech than",
+            "inverted_paraphrase" : "is more able to stay in a fixed shape than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["easier", "harder"],
+                                "2" : ["more", "less"]}
+    },
+
+    "14" : {
+            "material_1" : "rubber",
+            "material_2" : "titanium",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["elastic", "inelastic"],
+            "original_comparison" : "is more elastic than",
+            "paraphrase" : "is easier to strech than",
+            "inverted_paraphrase" : "is more able to stay in a fixed shape than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["easier", "harder"],
+                                "2" : ["more", "less"]}
+    },
+
+    "15" : {
+            "material_1" : "water",
+            "material_2" : "methane",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["can", "can not"], 
+                                 "2" : ["poses", "does not pose"]},
+            "antonym_switch" : ["store", "dispose of"],
+            "original_comparison" : "is more safe to store than",
+            "paraphrase" : "can be handled with more calmness than",
+            "inverted_paraphrase" : "poses more risk in storage than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
+    },
+
+    "16" : {
+            "material_1" : "mercury",
+            "material_2" : "oxygen",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["poses", "does not pose"]},
+            "antonym_switch" : ["consume", "stay away from"],
+            "original_comparison" : "is less healthy to consume than",
+            "paraphrase" : "is less beneficial to ingest than",
+            "inverted_paraphrase" : "poses less danger inside the human body than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "1" : ["less", "more"],
+                                "2" : ["less", "more"]}
+    },
+
+    "17" : {
+            "material_1" : "wood",
+            "material_2" : "fur",
+            "negation_switch" : {"0" : ["does", "does not"], 
+                                 "1" : ["changes", "does not change"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["expand", "maintain size"],
+            "original_comparison" : "does expand more under heat than",
+            "paraphrase" : "changes shape more when heated than",
+            "inverted_paraphrase" : "is more able to stay the same shape when heated than",
+            "premise_switch" : {"0" : ["more", "less"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
+    },
+
+    "18" : {
+            "material_1" : "wood",
+            "material_2" : "concrete",
+            "negation_switch" : {"0" : ["is", "is not"], 
+                                 "1" : ["is", "is not"], 
+                                 "2" : ["is", "is not"]},
+            "antonym_switch" : ["penetrable", "tough"],
+            "original_comparison" : "is less penetrable than",
+            "paraphrase" : "is easier to make a hole in than",
+            "inverted_paraphrase" : "is better to make a safe out of than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "1" : ["easier", "harder"],
+                                "2" : ["better", "worse"]}
+    },
+
+    "19" : {
+            "material_1" : "glass",
+            "material_2" : "tar",
+            "negation_switch" : {"0" : ["will", "will not"], 
+                                 "1" : ["reflects", "does not reflect"], 
+                                 "2" : ["will", "will not"]},
+            "antonym_switch" : ["reflect", "absorb"],
+            "original_comparison" : "will reflect light better than",
+            "paraphrase" : "reflects more light than",
+            "inverted_paraphrase" : "will capture more light than",
+            "premise_switch" : {"0" : ["better", "worse"],
+                                "1" : ["more", "less"],
+                                "2" : ["more", "less"]}
     }
+
 }
