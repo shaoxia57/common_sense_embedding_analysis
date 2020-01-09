@@ -35,7 +35,7 @@
             "negation_switch" : {"0" : ["should", "should not"], 
                                  "1" : ["weighs", "does not weigh"], 
                                  "2" : ["is", "is not"]},
-            "antonym_switch" : ["heavy", "light"],
+            "antonym_switch" : ["heavy", "lightweight"],
             "original_comparison" : "should be more heavy than",
             "paraphrase" : "weighs more than",
             "inverted_paraphrase" : "is more easy to lift than",
