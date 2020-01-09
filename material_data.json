@@ -151,16 +151,16 @@
 
     "10" : {
             "material_1" : "metal",
-            "material_2" : "feathers",
+            "material_2" : "chocolate",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["is", "is not"], 
+                                 "1" : ["needs", "does not need"], 
                                  "2" : ["is", "is not"]},
-            "antonym_switch" : ["sturdy", "fragile"],
-            "original_comparison" : "is more sturdy than",
-            "paraphrase" : "is more stable than",
-            "inverted_paraphrase" : "is more breakable",
+            "antonym_switch" : ["difficult", "easy"],
+            "original_comparison" : "is more difficult to melt than",
+            "paraphrase" : "needs more energy to melt than",
+            "inverted_paraphrase" : "is more likely to melt than",
             "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["better", "worse"],
+                                "1" : ["more", "less"],
                                 "2" : ["more", "less"]}
     },
 
@@ -195,32 +195,17 @@
     },
 
     "13" : {
-            "material_1" : "helium",
-            "material_2" : "stone",
-            "negation_switch" : {"0" : ["can", "can not"], 
-                                 "1" : ["is", "is not"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["fly", "sink"],
-            "original_comparison" : "can fly better than",
-            "paraphrase" : "is able to fly better than",
-            "inverted_paraphrase" : "is more likely to stay on the ground than",
-            "premise_switch" : {"0" : ["better", "worse"],
-                                "1" : ["better", "worse"],
-                                "2" : ["more", "less"]}
-    },
-
-    "14" : {
-            "material_1" : "rubber",
-            "material_2" : "titanium",
+            "material_1" : "honey",
+            "material_2" : "water",
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["is", "is not"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["elastic", "inelastic"],
-            "original_comparison" : "is more elastic than",
-            "paraphrase" : "is easier to strech than",
-            "inverted_paraphrase" : "is more able to stay in a fixed shape than",
+                                 "2" : ["flows", "does not flow"]},
+            "antonym_switch" : ["viscous", "free flowing"],
+            "original_comparison" : "is more viscous than",
+            "paraphrase" : "has a higher viscosity than",
+            "inverted_paraphrase" : "flows out of a bottle more smoothely than",
             "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["easier", "harder"],
+                                "1" : ["higher", "lower"],
                                 "2" : ["more", "less"]}
     },
 
