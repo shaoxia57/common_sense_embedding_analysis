@@ -23,10 +23,10 @@
             "antonym_switch" : ["sharp", "blunt"],
             "original_comparison" : "is more sharp than",
             "paraphrase" : "can cut better than",
-            "inverted_paraphrase" : "cuts worse than",
+            "inverted_paraphrase" : "is more edgeless than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["better", "worse"],
-                                "2" : ["worse", "better"]}
+                                "2" : ["more", "less"]}
     },
 
     "2" : {
