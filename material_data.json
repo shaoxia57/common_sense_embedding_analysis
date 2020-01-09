@@ -198,7 +198,7 @@
             "material_1" : "honey",
             "material_2" : "water",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["is", "is not"], 
+                                 "1" : ["has", "does not have"], 
                                  "2" : ["flows", "does not flow"]},
             "antonym_switch" : ["viscous", "free flowing"],
             "original_comparison" : "is more viscous than",
