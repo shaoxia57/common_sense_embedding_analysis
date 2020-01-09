@@ -1,6 +1,6 @@
 {
     "0" : {
-        "situation" : "A makes the varisty team while B does not",
+        "situation" : "A makes the varsity team while B does not",
         "negation_switch" : {"0" : ["is", "isn't"], 
                              "1" : ["is", "isn't"], 
                              "2" : ["makes", "does not make"]},
@@ -240,7 +240,7 @@
         "antonym_switch" : ["skill", "inability"],
         "original_comparison" : "has more skill in tennis than",
         "paraphrase" : "is a better player than",
-        "inverted_paraphrase" : "is more incompetent in tenns than",
+        "inverted_paraphrase" : "is more incompetent in tennis than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
                             "2" : ["more", "less"]}
@@ -267,7 +267,7 @@
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["thoughtful", "selfish"],
         "original_comparison" : "is more thoughtful than",
-        "paraphrase" : "shows more care torwards friends than",
+        "paraphrase" : "shows more care towards friends than",
         "inverted_paraphrase" : "is more of a prick than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
