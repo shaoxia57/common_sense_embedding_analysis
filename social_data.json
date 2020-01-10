@@ -42,13 +42,13 @@
     },
 
     "3" : {
-        "situation" : "A does work faster than B",
+        "situation" : "A is able to concentrate more than B",
         "negation_switch" : {"0" : ["is", "isn't"], 
-                             "1" : ["can", "can't"], 
+                             "1" : ["is", "isn't"], 
                              "2" : ["is", "isn't"]},
         "antonym_switch" : ["efficient", "unproductive"],
-        "original_comparison" : "is more efficient than",
-        "paraphrase" : "can do more work in less time than",
+        "original_comparison" : "is a more efficient than",
+        "paraphrase" : "is able to do more work in less time than",
         "inverted_paraphrase" : "is more ineffective than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 

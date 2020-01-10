@@ -1,7 +1,7 @@
 ### Why is our dataset important:
 
 ### General
-* All perturbations and sentences we are testing are 100% grammatically correct, so the eval set is very close in nature to the training set. This reduces the risk of degrading the language model's performance in encoding semantic meaning about each word in each sentence––we have given the model every shot of encoding the appropriate common-sense information about the entities in the truism.
+* All perturbations and sentences we are testing are grammatically correct––not relying on natural language generation to generate, so the eval set is very close in nature to the training set. This reduces the risk of degrading the language model's performance in encoding semantic meaning about each word in each sentence––we have given the model every shot of encoding the appropriate common-sense information about the entities in the truism.
 
 * The masked posistions we are choosing are ones that not only require common-sense reasoning, but also ones only a few words make grammitical sense. In this way we reduce the risk of the LM of filling in the blanks with acceptable (both from a grammar and logical perspective) words, but not the word we were looking for in our evaluation. 
 
