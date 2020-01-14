@@ -757,44 +757,44 @@
  },
  "18": {
   "original": {
-   "original": "A is made out of wood and B is made out of concrete, so A is less penetrable than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is more penetrable than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is more penetrable than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is less penetrable than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is more penetrable than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is more penetrable than A"
   },
   "negation": {
-   "original": "A is made out of wood and B is made out of concrete, so A is not more penetrable than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is not less penetrable than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is not less penetrable than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is not more penetrable than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is not less penetrable than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is not less penetrable than A"
   },
   "antonym": {
-   "original": "A is made out of wood and B is made out of concrete, so A is more tough than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is less tough than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is less tough than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is more tough than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is less tough than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is less tough than A"
   },
   "paraphrase": {
-   "original": "A is made out of wood and B is made out of concrete, so A is easier to make a hole in than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is harder to make a hole in than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is harder to make a hole in than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is easier to make a hole in than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is harder to make a hole in than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is harder to make a hole in than A"
   },
   "paraphrase_inversion": {
-   "original": "A is made out of wood and B is made out of concrete, so A is worse to make a safe out of than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is better to make a safe out of than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is better to make a safe out of than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is worse to make a safe out of than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is better to make a safe out of than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is better to make a safe out of than A"
   },
   "negation_antonym": {
-   "original": "A is made out of wood and B is made out of concrete, so A is not less tough than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is not more tough than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is not more tough than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is not less tough than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is not more tough than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is not more tough than A"
   },
   "negation_paraphrase": {
-   "original": "A is made out of wood and B is made out of concrete, so A is not better to make a safe out of than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is not worse to make a safe out of than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is not worse to make a safe out of than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is not better to make a safe out of than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is not worse to make a safe out of than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is not worse to make a safe out of than A"
   },
   "negation_paraphrase_inversion": {
-   "original": "A is made out of wood and B is made out of concrete, so A is not harder to make a hole in than B",
-   "asymmetric_premise": "B is made out of wood and A is made out of concrete, so A is not easier to make a hole in than B",
-   "asymmetric_conclusion": "A is made out of wood and B is made out of concrete, so B is not easier to make a hole in than A"
+   "original": "A is made out of concrete and B is made out of wood, so A is not harder to make a hole in than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of wood, so A is not easier to make a hole in than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of wood, so B is not easier to make a hole in than A"
   }
  },
  "19": {

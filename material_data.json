@@ -270,8 +270,8 @@
     },
 
     "18" : {
-            "material_1" : "wood",
-            "material_2" : "concrete",
+            "material_1" : "concrete",
+            "material_2" : "wood",
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["is", "is not"], 
                                  "2" : ["is", "is not"]},
