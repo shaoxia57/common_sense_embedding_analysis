@@ -19,7 +19,7 @@ We also test truisms in these three (I can see the argument for really only two)
 
     1. Situation involving two parties (A makes the varsity team while B does not) -> Common Sense Comparison between two parties (A is more skilled than B) (8)
     2. Comparison between two parties (A is able to concentrate more than B) -> Common Sense Comparison between two parties (A is more efficient than B) (6)
-    3. Relationship between two parties (A is B's boss) -> Common Sense Comparison between two parties (A commands more respect than B)(6)
+    3. Relationship between two parties (A is B's boss) -> Common Sense Comparison between two parties (A commands more respect than B) (6)
 
 2. Material Truisms:
 
@@ -31,4 +31,6 @@ We also test truisms in these three (I can see the argument for really only two)
 
 3. Physical Truisms:
 
-    We are exploring the LM's ability to understand common-sense logic coming from the phyiscal world, and humans' general perception of words describing objects in the real world.
+    We are exploring the LM's ability to understand common-sense logic coming from the physical world, and humans' general perception of words describing objects in the real world.
+
+    1. A comparison is made between two objects, where the comparison is related to some physical property of the objects (A is much hotter than B) -> Common Sense Comparison between the two objects (A will be more painful to hold onto than B) (20)

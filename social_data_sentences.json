@@ -1,1 +1,842 @@
-{"0": {"original": {"original": "A makes the varsity team while B does not, so A is more skilled than B", "asymmetric_premise": "B makes the varsity team while A does not, so A is less skilled than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B is less skilled than A"}, "negation": {"original": "A makes the varsity team while B does not, so A isn't less skilled than B", "asymmetric_premise": "B makes the varsity team while A does not, so A isn't more skilled than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't more skilled than A"}, "antonym": {"original": "A makes the varsity team while B does not, so A is less incompetent than B", "asymmetric_premise": "B makes the varsity team while A does not, so A is more incompetent than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B is more incompetent than A"}, "paraphrase": {"original": "A makes the varsity team while B does not, so A is better than B", "asymmetric_premise": "B makes the varsity team while A does not, so A is worse than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B is worse than A"}, "paraphrase_inversion": {"original": "A makes the varsity team while B does not, so A makes less mistakes than B", "asymmetric_premise": "B makes the varsity team while A does not, so A makes more mistakes than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B makes more mistakes than A"}, "negation_antonym": {"original": "A makes the varsity team while B does not, so A isn't more incompetent than B", "asymmetric_premise": "B makes the varsity team while A does not, so A isn't less incompetent than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't less incompetent than A"}, "negation_paraphrase": {"original": "A makes the varsity team while B does not, so A does not make more mistakes than B", "asymmetric_premise": "B makes the varsity team while A does not, so A does not make less mistakes than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B does not make less mistakes than A"}, "negation_paraphrase_inversion": {"original": "A makes the varsity team while B does not, so A isn't worse than B", "asymmetric_premise": "B makes the varsity team while A does not, so A isn't better than B", "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't better than A"}}, "1": {"original": {"original": "A is going to play the piano in front of B, so A is more nervous than B", "asymmetric_premise": "B is going to play the piano in front of A, so A is less nervous than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B is less nervous than A"}, "negation": {"original": "A is going to play the piano in front of B, so A isn't less nervous than B", "asymmetric_premise": "B is going to play the piano in front of A, so A isn't more nervous than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't more nervous than A"}, "antonym": {"original": "A is going to play the piano in front of B, so A is less relaxed than B", "asymmetric_premise": "B is going to play the piano in front of A, so A is more relaxed than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B is more relaxed than A"}, "paraphrase": {"original": "A is going to play the piano in front of B, so A is more stressed than B", "asymmetric_premise": "B is going to play the piano in front of A, so A is less stressed than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B is less stressed than A"}, "paraphrase_inversion": {"original": "A is going to play the piano in front of B, so A is feeling less calm than B", "asymmetric_premise": "B is going to play the piano in front of A, so A is feeling more calm than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B is feeling more calm than A"}, "negation_antonym": {"original": "A is going to play the piano in front of B, so A isn't more relaxed than B", "asymmetric_premise": "B is going to play the piano in front of A, so A isn't less relaxed than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't less relaxed than A"}, "negation_paraphrase": {"original": "A is going to play the piano in front of B, so A isn't feeling more calm than B", "asymmetric_premise": "B is going to play the piano in front of A, so A isn't feeling less calm than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't feeling less calm than A"}, "negation_paraphrase_inversion": {"original": "A is going to play the piano in front of B, so A isn't less stressed than B", "asymmetric_premise": "B is going to play the piano in front of A, so A isn't more stressed than B", "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't more stressed than A"}}, "2": {"original": {"original": "A won the competition while B lost, so A is more happy than B", "asymmetric_premise": "B won the competition while A lost, so A is less happy than B", "asymmetric_conclusion": "A won the competition while B lost, so B is less happy than A"}, "negation": {"original": "A won the competition while B lost, so A isn't less happy than B", "asymmetric_premise": "B won the competition while A lost, so A isn't more happy than B", "asymmetric_conclusion": "A won the competition while B lost, so B isn't more happy than A"}, "antonym": {"original": "A won the competition while B lost, so A is less sad than B", "asymmetric_premise": "B won the competition while A lost, so A is more sad than B", "asymmetric_conclusion": "A won the competition while B lost, so B is more sad than A"}, "paraphrase": {"original": "A won the competition while B lost, so A is feeling better than B", "asymmetric_premise": "B won the competition while A lost, so A is feeling worse than B", "asymmetric_conclusion": "A won the competition while B lost, so B is feeling worse than A"}, "paraphrase_inversion": {"original": "A won the competition while B lost, so A is smiling less than B", "asymmetric_premise": "B won the competition while A lost, so A is smiling less than B", "asymmetric_conclusion": "A won the competition while B lost, so B is smiling less than A"}, "negation_antonym": {"original": "A won the competition while B lost, so A isn't more sad than B", "asymmetric_premise": "B won the competition while A lost, so A isn't less sad than B", "asymmetric_conclusion": "A won the competition while B lost, so B isn't less sad than A"}, "negation_paraphrase": {"original": "A won the competition while B lost, so A isn't smiling less than B", "asymmetric_premise": "B won the competition while A lost, so A isn't smiling less than B", "asymmetric_conclusion": "A won the competition while B lost, so B isn't smiling less than A"}, "negation_paraphrase_inversion": {"original": "A won the competition while B lost, so A isn't feeling worse than B", "asymmetric_premise": "B won the competition while A lost, so A isn't feeling better than B", "asymmetric_conclusion": "A won the competition while B lost, so B isn't feeling better than A"}}, "3": {"original": {"original": "A is able to concentrate more than B, so A is more efficient than B", "asymmetric_premise": "B is able to concentrate more than A, so A is less efficient than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B is less efficient than A"}, "negation": {"original": "A is able to concentrate more than B, so A isn't less efficient than B", "asymmetric_premise": "B is able to concentrate more than A, so A isn't more efficient than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't more efficient than A"}, "antonym": {"original": "A is able to concentrate more than B, so A is less unproductive than B", "asymmetric_premise": "B is able to concentrate more than A, so A is more unproductive than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B is more unproductive than A"}, "paraphrase": {"original": "A is able to concentrate more than B, so A is able to do more work in less time than B", "asymmetric_premise": "B is able to concentrate more than A, so A is able to do less work in less time than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B is able to do less work in less time than A"}, "paraphrase_inversion": {"original": "A is able to concentrate more than B, so A is less ineffective than B", "asymmetric_premise": "B is able to concentrate more than A, so A is more ineffective than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B is more ineffective than A"}, "negation_antonym": {"original": "A is able to concentrate more than B, so A isn't more unproductive than B", "asymmetric_premise": "B is able to concentrate more than A, so A isn't less unproductive than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't less unproductive than A"}, "negation_paraphrase": {"original": "A is able to concentrate more than B, so A isn't more ineffective than B", "asymmetric_premise": "B is able to concentrate more than A, so A isn't less ineffective than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't less ineffective than A"}, "negation_paraphrase_inversion": {"original": "A is able to concentrate more than B, so A isn't able to do less work in less time than B", "asymmetric_premise": "B is able to concentrate more than A, so A isn't able to do more work in less time than B", "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't able to do more work in less time than A"}}, "4": {"original": {"original": "A bullies B, so A is more mean than B", "asymmetric_premise": "B bullies A, so A is less mean than B", "asymmetric_conclusion": "A bullies B, so B is less mean than A"}, "negation": {"original": "A bullies B, so A isn't less mean than B", "asymmetric_premise": "B bullies A, so A isn't more mean than B", "asymmetric_conclusion": "A bullies B, so B isn't more mean than A"}, "antonym": {"original": "A bullies B, so A is less kind than B", "asymmetric_premise": "B bullies A, so A is more kind than B", "asymmetric_conclusion": "A bullies B, so B is more kind than A"}, "paraphrase": {"original": "A bullies B, so A is a crueler person than B", "asymmetric_premise": "B bullies A, so A is a less cruel person than B", "asymmetric_conclusion": "A bullies B, so B is a less cruel person than A"}, "paraphrase_inversion": {"original": "A bullies B, so A cares less about people than B", "asymmetric_premise": "B bullies A, so A cares more about people than B", "asymmetric_conclusion": "A bullies B, so B cares more about people than A"}, "negation_antonym": {"original": "A bullies B, so A isn't more kind than B", "asymmetric_premise": "B bullies A, so A isn't less kind than B", "asymmetric_conclusion": "A bullies B, so B isn't less kind than A"}, "negation_paraphrase": {"original": "A bullies B, so A does not care more about people than B", "asymmetric_premise": "B bullies A, so A does not care less about people than B", "asymmetric_conclusion": "A bullies B, so B does not care less about people than A"}, "negation_paraphrase_inversion": {"original": "A bullies B, so A isn't a less cruel person than B", "asymmetric_premise": "B bullies A, so A isn't a crueler person than B", "asymmetric_conclusion": "A bullies B, so B isn't a crueler person than A"}}, "5": {"original": {"original": "A is B's boss, so A commands more respect than B", "asymmetric_premise": "B is A's boss, so A commands less respect than B", "asymmetric_conclusion": "A is B's boss, so B commands less respect than A"}, "negation": {"original": "A is B's boss, so A does not command less respect than B", "asymmetric_premise": "B is A's boss, so A does not command more respect than B", "asymmetric_conclusion": "A is B's boss, so B does not command more respect than A"}, "antonym": {"original": "A is B's boss, so A commands less dishonor than B", "asymmetric_premise": "B is A's boss, so A commands more dishonor than B", "asymmetric_conclusion": "A is B's boss, so B commands more dishonor than A"}, "paraphrase": {"original": "A is B's boss, so A has earned more respect than B", "asymmetric_premise": "B is A's boss, so A has earned less respect than B", "asymmetric_conclusion": "A is B's boss, so B has earned less respect than A"}, "paraphrase_inversion": {"original": "A is B's boss, so A should be disrespected less than B", "asymmetric_premise": "B is A's boss, so A should be disrespected more than B", "asymmetric_conclusion": "A is B's boss, so B should be disrespected more than A"}, "negation_antonym": {"original": "A is B's boss, so A does not command more dishonor than B", "asymmetric_premise": "B is A's boss, so A does not command less dishonor than B", "asymmetric_conclusion": "A is B's boss, so B does not command less dishonor than A"}, "negation_paraphrase": {"original": "A is B's boss, so A should not be disrespected more than B", "asymmetric_premise": "B is A's boss, so A should not be disrespected less than B", "asymmetric_conclusion": "A is B's boss, so B should not be disrespected less than A"}, "negation_paraphrase_inversion": {"original": "A is B's boss, so A has not earned less respect than B", "asymmetric_premise": "B is A's boss, so A has not earned more respect than B", "asymmetric_conclusion": "A is B's boss, so B has not earned more respect than A"}}, "6": {"original": {"original": "A has more work than B, so A is more stressed out than B", "asymmetric_premise": "B has more work than A, so A is less stressed out than B", "asymmetric_conclusion": "A has more work than B, so B is less stressed out than A"}, "negation": {"original": "A has more work than B, so A is not less stressed out than B", "asymmetric_premise": "B has more work than A, so A is not more stressed out than B", "asymmetric_conclusion": "A has more work than B, so B is not more stressed out than A"}, "antonym": {"original": "A has more work than B, so A is less at ease than B", "asymmetric_premise": "B has more work than A, so A is more at ease than B", "asymmetric_conclusion": "A has more work than B, so B is more at ease than A"}, "paraphrase": {"original": "A has more work than B, so A has higher stress levels than B", "asymmetric_premise": "B has more work than A, so A has lower stress levels than B", "asymmetric_conclusion": "A has more work than B, so B has lower stress levels than A"}, "paraphrase_inversion": {"original": "A has more work than B, so A should be less calm than B", "asymmetric_premise": "B has more work than A, so A should be more calm than B", "asymmetric_conclusion": "A has more work than B, so B should be more calm than A"}, "negation_antonym": {"original": "A has more work than B, so A is not more at ease than B", "asymmetric_premise": "B has more work than A, so A is not less at ease than B", "asymmetric_conclusion": "A has more work than B, so B is not less at ease than A"}, "negation_paraphrase": {"original": "A has more work than B, so A should not be more calm than B", "asymmetric_premise": "B has more work than A, so A should not be less calm than B", "asymmetric_conclusion": "A has more work than B, so B should not be less calm than A"}, "negation_paraphrase_inversion": {"original": "A has more work than B, so A does not have lower stress levels than B", "asymmetric_premise": "B has more work than A, so A does not have higher stress levels than B", "asymmetric_conclusion": "A has more work than B, so B does not have higher stress levels than A"}}, "7": {"original": {"original": "A likes B, so A has more feelings for B", "asymmetric_premise": "B likes A, so A has less feelings for B", "asymmetric_conclusion": "A likes B, so B has less feelings for A"}, "negation": {"original": "A likes B, so A does not have less feelings for B", "asymmetric_premise": "B likes A, so A does not have more feelings for B", "asymmetric_conclusion": "A likes B, so B does not have more feelings for A"}, "antonym": {"original": "A likes B, so A has less indifference towards B", "asymmetric_premise": "B likes A, so A has more indifference towards B", "asymmetric_conclusion": "A likes B, so B has more indifference towards A"}, "paraphrase": {"original": "A likes B, so A feels much emotion towards B", "asymmetric_premise": "B likes A, so A feels little emotion towards B", "asymmetric_conclusion": "A likes B, so B feels little emotion towards A"}, "paraphrase_inversion": {"original": "A likes B, so A is less at ease around B", "asymmetric_premise": "B likes A, so A is more at ease around B", "asymmetric_conclusion": "A likes B, so B is more at ease around A"}, "negation_antonym": {"original": "A likes B, so A does not have more indifference towards B", "asymmetric_premise": "B likes A, so A does not have less indifference towards B", "asymmetric_conclusion": "A likes B, so B does not have less indifference towards A"}, "negation_paraphrase": {"original": "A likes B, so A is more at ease around B", "asymmetric_premise": "B likes A, so A is less at ease around B", "asymmetric_conclusion": "A likes B, so B is less at ease around A"}, "negation_paraphrase_inversion": {"original": "A likes B, so A does not feel little emotion towards B", "asymmetric_premise": "B likes A, so A does not feel much emotion towards B", "asymmetric_conclusion": "A likes B, so B does not feel much emotion towards A"}}, "8": {"original": {"original": "A practices more than B, so A is more likely to succeed than B", "asymmetric_premise": "B practices more than A, so A is less likely to succeed than B", "asymmetric_conclusion": "A practices more than B, so B is less likely to succeed than A"}, "negation": {"original": "A practices more than B, so A is not less likely to succeed than B", "asymmetric_premise": "B practices more than A, so A is not more likely to succeed than B", "asymmetric_conclusion": "A practices more than B, so B is not more likely to succeed than A"}, "antonym": {"original": "A practices more than B, so A is less likely to fail than B", "asymmetric_premise": "B practices more than A, so A is more likely to fail than B", "asymmetric_conclusion": "A practices more than B, so B is more likely to fail than A"}, "paraphrase": {"original": "A practices more than B, so A has a better chance to succeed than B", "asymmetric_premise": "B practices more than A, so A has a worse chance to succeed than B", "asymmetric_conclusion": "A practices more than B, so B has a worse chance to succeed than A"}, "paraphrase_inversion": {"original": "A practices more than B, so A has a lower chance of failing than B", "asymmetric_premise": "B practices more than A, so A has a higher chance of failing than B", "asymmetric_conclusion": "A practices more than B, so B has a higher chance of failing than A"}, "negation_antonym": {"original": "A practices more than B, so A is not more likely to fail than B", "asymmetric_premise": "B practices more than A, so A is not less likely to fail than B", "asymmetric_conclusion": "A practices more than B, so B is not less likely to fail than A"}, "negation_paraphrase": {"original": "A practices more than B, so A has a higher chance of failing than B", "asymmetric_premise": "B practices more than A, so A has a lower chance of failing than B", "asymmetric_conclusion": "A practices more than B, so B has a lower chance of failing than A"}, "negation_paraphrase_inversion": {"original": "A practices more than B, so A has a worse chance to succeed than B", "asymmetric_premise": "B practices more than A, so A has a better chance to succeed than B", "asymmetric_conclusion": "A practices more than B, so B has a better chance to succeed than A"}}, "9": {"original": {"original": "A is B's parent, so A initially takes more care of B", "asymmetric_premise": "B is A's parent, so A initially takes less care of B", "asymmetric_conclusion": "A is B's parent, so B initially takes less care of A"}, "negation": {"original": "A is B's parent, so A initially does not take less care of B", "asymmetric_premise": "B is A's parent, so A initially does not take more care of B", "asymmetric_conclusion": "A is B's parent, so B initially does not take more care of A"}, "antonym": {"original": "A is B's parent, so A initially takes less assistance from B", "asymmetric_premise": "B is A's parent, so A initially takes more assistance from B", "asymmetric_conclusion": "A is B's parent, so B initially takes more assistance from A"}, "paraphrase": {"original": "A is B's parent, so A initially provides more for B", "asymmetric_premise": "B is A's parent, so A initially provides less for B", "asymmetric_conclusion": "A is B's parent, so B initially provides less for A"}, "paraphrase_inversion": {"original": "A is B's parent, so A initially relies less on B", "asymmetric_premise": "B is A's parent, so A initially relies more on B", "asymmetric_conclusion": "A is B's parent, so B initially relies more on A"}, "negation_antonym": {"original": "A is B's parent, so A initially does not take more assistance from B", "asymmetric_premise": "B is A's parent, so A initially does not take less assistance from B", "asymmetric_conclusion": "A is B's parent, so B initially does not take less assistance from A"}, "negation_paraphrase": {"original": "A is B's parent, so A initially does not rely more on B", "asymmetric_premise": "B is A's parent, so A initially does not rely less on B", "asymmetric_conclusion": "A is B's parent, so B initially does not rely less on A"}, "negation_paraphrase_inversion": {"original": "A is B's parent, so A initially does not provide less for B", "asymmetric_premise": "B is A's parent, so A initially does not provide more for B", "asymmetric_conclusion": "A is B's parent, so B initially does not provide more for A"}}, "10": {"original": {"original": "A is B's doctor, so A takes more care of B", "asymmetric_premise": "B is A's doctor, so A takes less care of B", "asymmetric_conclusion": "A is B's doctor, so B takes less care of A"}, "negation": {"original": "A is B's doctor, so A does not take less care of B", "asymmetric_premise": "B is A's doctor, so A does not take more care of B", "asymmetric_conclusion": "A is B's doctor, so B does not take more care of A"}, "antonym": {"original": "A is B's doctor, so A takes less assistance from B", "asymmetric_premise": "B is A's doctor, so A takes more assistance from B", "asymmetric_conclusion": "A is B's doctor, so B takes more assistance from A"}, "paraphrase": {"original": "A is B's doctor, so A provides more assistance towards B", "asymmetric_premise": "B is A's doctor, so A provides less assistance towards B", "asymmetric_conclusion": "A is B's doctor, so B provides less assistance towards A"}, "paraphrase_inversion": {"original": "A is B's doctor, so A requires less medical aid from B", "asymmetric_premise": "B is A's doctor, so A requires more medical aid from B", "asymmetric_conclusion": "A is B's doctor, so B requires more medical aid from A"}, "negation_antonym": {"original": "A is B's doctor, so A does not take more assistance from B", "asymmetric_premise": "B is A's doctor, so A does not take less assistance from B", "asymmetric_conclusion": "A is B's doctor, so B does not take less assistance from A"}, "negation_paraphrase": {"original": "A is B's doctor, so A does not require more medical aid from B", "asymmetric_premise": "B is A's doctor, so A does not require less medical aid from B", "asymmetric_conclusion": "A is B's doctor, so B does not require less medical aid from A"}, "negation_paraphrase_inversion": {"original": "A is B's doctor, so A does not provide less assistance towards B", "asymmetric_premise": "B is A's doctor, so A does not provide more assistance towards B", "asymmetric_conclusion": "A is B's doctor, so B does not provide more assistance towards A"}}, "11": {"original": {"original": "A has to apologize to B, so A must be more thoughtful than B", "asymmetric_premise": "B has to apologize to A, so A must be less thoughtful than B", "asymmetric_conclusion": "A has to apologize to B, so B must be less thoughtful than A"}, "negation": {"original": "A has to apologize to B, so A must not be less thoughtful than B", "asymmetric_premise": "B has to apologize to A, so A must not be more thoughtful than B", "asymmetric_conclusion": "A has to apologize to B, so B must not be more thoughtful than A"}, "antonym": {"original": "A has to apologize to B, so A must be less insensitive than B", "asymmetric_premise": "B has to apologize to A, so A must be more insensitive than B", "asymmetric_conclusion": "A has to apologize to B, so B must be more insensitive than A"}, "paraphrase": {"original": "A has to apologize to B, so A should be more caring in their actions than B", "asymmetric_premise": "B has to apologize to A, so A should be less caring in their actions than B", "asymmetric_conclusion": "A has to apologize to B, so B should be less caring in their actions than A"}, "paraphrase_inversion": {"original": "A has to apologize to B, so A should be less selfish in their actions than B", "asymmetric_premise": "B has to apologize to A, so A should be more selfish in their actions than B", "asymmetric_conclusion": "A has to apologize to B, so B should be more selfish in their actions than A"}, "negation_antonym": {"original": "A has to apologize to B, so A must not be more insensitive than B", "asymmetric_premise": "B has to apologize to A, so A must not be less insensitive than B", "asymmetric_conclusion": "A has to apologize to B, so B must not be less insensitive than A"}, "negation_paraphrase": {"original": "A has to apologize to B, so A should not be more selfish in their actions than B", "asymmetric_premise": "B has to apologize to A, so A should not be less selfish in their actions than B", "asymmetric_conclusion": "A has to apologize to B, so B should not be less selfish in their actions than A"}, "negation_paraphrase_inversion": {"original": "A has to apologize to B, so A should not be less caring in their actions than B", "asymmetric_premise": "B has to apologize to A, so A should not be more caring in their actions than B", "asymmetric_conclusion": "A has to apologize to B, so B should not be more caring in their actions than A"}}, "12": {"original": {"original": "A is B's priest, so A spends more time praying than B", "asymmetric_premise": "B is A's priest, so A spends less time praying than B", "asymmetric_conclusion": "A is B's priest, so B spends less time praying than A"}, "negation": {"original": "A is B's priest, so A does not spend less time praying than B", "asymmetric_premise": "B is A's priest, so A does not spend more time praying than B", "asymmetric_conclusion": "A is B's priest, so B does not spend more time praying than A"}, "antonym": {"original": "A is B's priest, so A spends less time prayout ofg than B", "asymmetric_premise": "B is A's priest, so A spends more time prayout ofg than B", "asymmetric_conclusion": "A is B's priest, so B spends more time prayout ofg than A"}, "paraphrase": {"original": "A is B's priest, so A can be found praying more often than B", "asymmetric_premise": "B is A's priest, so A can be found praying less often than B", "asymmetric_conclusion": "A is B's priest, so B can be found praying less often than A"}, "paraphrase_inversion": {"original": "A is B's priest, so A spends less time sinning than B", "asymmetric_premise": "B is A's priest, so A spends more time sinning than B", "asymmetric_conclusion": "A is B's priest, so B spends more time sinning than A"}, "negation_antonym": {"original": "A is B's priest, so A does not spend more time prayout ofg than B", "asymmetric_premise": "B is A's priest, so A does not spend less time prayout ofg than B", "asymmetric_conclusion": "A is B's priest, so B does not spend less time prayout ofg than A"}, "negation_paraphrase": {"original": "A is B's priest, so A does not spend more time sinning than B", "asymmetric_premise": "B is A's priest, so A does not spend less time sinning than B", "asymmetric_conclusion": "A is B's priest, so B does not spend less time sinning than A"}, "negation_paraphrase_inversion": {"original": "A is B's priest, so A can not be found praying less often than B", "asymmetric_premise": "B is A's priest, so A can not be found praying more often than B", "asymmetric_conclusion": "A is B's priest, so B can not be found praying more often than A"}}, "13": {"original": {"original": "A is B's lawyer, so A is more knowledgeable about law than B", "asymmetric_premise": "B is A's lawyer, so A is less knowledgeable about law than B", "asymmetric_conclusion": "A is B's lawyer, so B is less knowledgeable about law than A"}, "negation": {"original": "A is B's lawyer, so A is less knowledgeable about law than B", "asymmetric_premise": "B is A's lawyer, so A is more knowledgeable about law than B", "asymmetric_conclusion": "A is B's lawyer, so B is more knowledgeable about law than A"}, "antonym": {"original": "A is B's lawyer, so A is less ignorant of law than B", "asymmetric_premise": "B is A's lawyer, so A is more ignorant of law than B", "asymmetric_conclusion": "A is B's lawyer, so B is more ignorant of law than A"}, "paraphrase": {"original": "A is B's lawyer, so A has studied law more than B", "asymmetric_premise": "B is A's lawyer, so A has studied law less than B", "asymmetric_conclusion": "A is B's lawyer, so B has studied law less than A"}, "paraphrase_inversion": {"original": "A is B's lawyer, so A has spent less time receiving legal advise than B", "asymmetric_premise": "B is A's lawyer, so A has spent more time receiving legal advise than B", "asymmetric_conclusion": "A is B's lawyer, so B has spent more time receiving legal advise than A"}, "negation_antonym": {"original": "A is B's lawyer, so A is more ignorant of law than B", "asymmetric_premise": "B is A's lawyer, so A is less ignorant of law than B", "asymmetric_conclusion": "A is B's lawyer, so B is less ignorant of law than A"}, "negation_paraphrase": {"original": "A is B's lawyer, so A has spent more time receiving legal advise than B", "asymmetric_premise": "B is A's lawyer, so A has spent less time receiving legal advise than B", "asymmetric_conclusion": "A is B's lawyer, so B has spent less time receiving legal advise than A"}, "negation_paraphrase_inversion": {"original": "A is B's lawyer, so A has studied law less than B", "asymmetric_premise": "B is A's lawyer, so A has studied law more than B", "asymmetric_conclusion": "A is B's lawyer, so B has studied law more than A"}}, "14": {"original": {"original": "A has a lot more money than B, so A finds it less difficult to pay bills than B", "asymmetric_premise": "B has a lot more money than A, so A finds it more difficult to pay bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B finds it more difficult to pay bills than A"}, "negation": {"original": "A has a lot more money than B, so A does not find it more difficult to pay bills than B", "asymmetric_premise": "B has a lot more money than A, so A does not find it less difficult to pay bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B does not find it less difficult to pay bills than A"}, "antonym": {"original": "A has a lot more money than B, so A finds it more effortmore to pay bills than B", "asymmetric_premise": "B has a lot more money than A, so A finds it less effortless to pay bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B finds it less effortless to pay bills than A"}, "paraphrase": {"original": "A has a lot more money than B, so A has a easier time paying bills than B", "asymmetric_premise": "B has a lot more money than A, so A has a harder time paying bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B has a harder time paying bills than A"}, "paraphrase_inversion": {"original": "A has a lot more money than B, so A is more financially secure than B", "asymmetric_premise": "B has a lot more money than A, so A is less financially secure than B", "asymmetric_conclusion": "A has a lot more money than B, so B is less financially secure than A"}, "negation_antonym": {"original": "A has a lot more money than B, so A does not find it less effortless to pay bills than B", "asymmetric_premise": "B has a lot more money than A, so A does not find it more effortmore to pay bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B does not find it more effortmore to pay bills than A"}, "negation_paraphrase": {"original": "A has a lot more money than B, so A is less financially secure than B", "asymmetric_premise": "B has a lot more money than A, so A is more financially secure than B", "asymmetric_conclusion": "A has a lot more money than B, so B is more financially secure than A"}, "negation_paraphrase_inversion": {"original": "A has a lot more money than B, so A does not have a harder time paying bills than B", "asymmetric_premise": "B has a lot more money than A, so A does not have a easier time paying bills than B", "asymmetric_conclusion": "A has a lot more money than B, so B does not have a easier time paying bills than A"}}, "15": {"original": {"original": "A enjoys watching tv more than B, so A is more up to date on current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is less up to date on current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less up to date on current tv shows than A"}, "negation": {"original": "A enjoys watching tv more than B, so A is less up to date on current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is more up to date on current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more up to date on current tv shows than A"}, "antonym": {"original": "A enjoys watching tv more than B, so A is less in the know on current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is more in the know on current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more in the know on current tv shows than A"}, "paraphrase": {"original": "A enjoys watching tv more than B, so A has more knowledge about current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A has less knowledge about current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B has less knowledge about current tv shows than A"}, "paraphrase_inversion": {"original": "A enjoys watching tv more than B, so A is less ignorant about current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is more ignorant about current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more ignorant about current tv shows than A"}, "negation_antonym": {"original": "A enjoys watching tv more than B, so A is more in the know on current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is less in the know on current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less in the know on current tv shows than A"}, "negation_paraphrase": {"original": "A enjoys watching tv more than B, so A is more ignorant about current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A is less ignorant about current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less ignorant about current tv shows than A"}, "negation_paraphrase_inversion": {"original": "A enjoys watching tv more than B, so A does not have less knowledge about current tv shows than B", "asymmetric_premise": "B enjoys watching tv more than A, so A does not have more knowledge about current tv shows than B", "asymmetric_conclusion": "A enjoys watching tv more than B, so B does not have more knowledge about current tv shows than A"}}, "16": {"original": {"original": "A always beats B in tennis, so A has more skill in tennis than B", "asymmetric_premise": "B always beats A in tennis, so A has less skill in tennis than B", "asymmetric_conclusion": "A always beats B in tennis, so B has less skill in tennis than A"}, "negation": {"original": "A always beats B in tennis, so A has not less skill in tennis than B", "asymmetric_premise": "B always beats A in tennis, so A has not more skill in tennis than B", "asymmetric_conclusion": "A always beats B in tennis, so B has not more skill in tennis than A"}, "antonym": {"original": "A always beats B in tennis, so A has less inability in tennis than B", "asymmetric_premise": "B always beats A in tennis, so A has more inability in tennis than B", "asymmetric_conclusion": "A always beats B in tennis, so B has more inability in tennis than A"}, "paraphrase": {"original": "A always beats B in tennis, so A is a better player than B", "asymmetric_premise": "B always beats A in tennis, so A is a worse player than B", "asymmetric_conclusion": "A always beats B in tennis, so B is a worse player than A"}, "paraphrase_inversion": {"original": "A always beats B in tennis, so A is less incompetent in tennis than B", "asymmetric_premise": "B always beats A in tennis, so A is more incompetent in tennis than B", "asymmetric_conclusion": "A always beats B in tennis, so B is more incompetent in tennis than A"}, "negation_antonym": {"original": "A always beats B in tennis, so A has not more inability in tennis than B", "asymmetric_premise": "B always beats A in tennis, so A has not less inability in tennis than B", "asymmetric_conclusion": "A always beats B in tennis, so B has not less inability in tennis than A"}, "negation_paraphrase": {"original": "A always beats B in tennis, so A is not more incompetent in tennis not than B", "asymmetric_premise": "B always beats A in tennis, so A is not less incompetent in tennis not than B", "asymmetric_conclusion": "A always beats B in tennis, so B is not less incompetent in tennis not than A"}, "negation_paraphrase_inversion": {"original": "A always beats B in tennis, so A is not a worse player than B", "asymmetric_premise": "B always beats A in tennis, so A is not a better player than B", "asymmetric_conclusion": "A always beats B in tennis, so B is not a better player than A"}}, "17": {"original": {"original": "A makes B late, so A has less reason to be annoyed at B", "asymmetric_premise": "B makes A late, so A has more reason to be annoyed at B", "asymmetric_conclusion": "A makes B late, so B has more reason to be annoyed at A"}, "negation": {"original": "A makes B late, so A has not more reason to be annoyed at B", "asymmetric_premise": "B makes A late, so A has not less reason to be annoyed at B", "asymmetric_conclusion": "A makes B late, so B has not less reason to be annoyed at A"}, "antonym": {"original": "A makes B late, so A has more reason to be contrite towards B", "asymmetric_premise": "B makes A late, so A has less reason to be contrite towards B", "asymmetric_conclusion": "A makes B late, so B has less reason to be contrite towards A"}, "paraphrase": {"original": "A makes B late, so A should be less upset with B", "asymmetric_premise": "B makes A late, so A should be more upset with B", "asymmetric_conclusion": "A makes B late, so B should be more upset with A"}, "paraphrase_inversion": {"original": "A makes B late, so A has more reason to be apologetic towards B", "asymmetric_premise": "B makes A late, so A has less reason to be apologetic towards B", "asymmetric_conclusion": "A makes B late, so B has less reason to be apologetic towards A"}, "negation_antonym": {"original": "A makes B late, so A has not less reason to be contrite towards B", "asymmetric_premise": "B makes A late, so A has not more reason to be contrite towards B", "asymmetric_conclusion": "A makes B late, so B has not more reason to be contrite towards A"}, "negation_paraphrase": {"original": "A makes B late, so A has not less reason to be apologetic towards B", "asymmetric_premise": "B makes A late, so A has not more reason to be apologetic towards B", "asymmetric_conclusion": "A makes B late, so B has not more reason to be apologetic towards A"}, "negation_paraphrase_inversion": {"original": "A makes B late, so A should not be be more upset with B", "asymmetric_premise": "B makes A late, so A should not be be less upset with B", "asymmetric_conclusion": "A makes B late, so B should not be be less upset with A"}}, "18": {"original": {"original": "A is a better friend than B, so A is more thoughtful than B", "asymmetric_premise": "B is a better friend than A, so A is less thoughtful than B", "asymmetric_conclusion": "A is a better friend than B, so B is less thoughtful than A"}, "negation": {"original": "A is a better friend than B, so A is not less thoughtful than B", "asymmetric_premise": "B is a better friend than A, so A is not more thoughtful than B", "asymmetric_conclusion": "A is a better friend than B, so B is not more thoughtful than A"}, "antonym": {"original": "A is a better friend than B, so A is less selfish than B", "asymmetric_premise": "B is a better friend than A, so A is more selfish than B", "asymmetric_conclusion": "A is a better friend than B, so B is more selfish than A"}, "paraphrase": {"original": "A is a better friend than B, so A shows more care towards friends than B", "asymmetric_premise": "B is a better friend than A, so A shows less care towards friends than B", "asymmetric_conclusion": "A is a better friend than B, so B shows less care towards friends than A"}, "paraphrase_inversion": {"original": "A is a better friend than B, so A is less of a prick than B", "asymmetric_premise": "B is a better friend than A, so A is more of a prick than B", "asymmetric_conclusion": "A is a better friend than B, so B is more of a prick than A"}, "negation_antonym": {"original": "A is a better friend than B, so A is not more selfis noth than B", "asymmetric_premise": "B is a better friend than A, so A is not less selfis noth than B", "asymmetric_conclusion": "A is a better friend than B, so B is not less selfis noth than A"}, "negation_paraphrase": {"original": "A is a better friend than B, so A is not more of a prick than B", "asymmetric_premise": "B is a better friend than A, so A is not less of a prick than B", "asymmetric_conclusion": "A is a better friend than B, so B is not less of a prick than A"}, "negation_paraphrase_inversion": {"original": "A is a better friend than B, so A does not show less care towards friends than B", "asymmetric_premise": "B is a better friend than A, so A does not show more care towards friends than B", "asymmetric_conclusion": "A is a better friend than B, so B does not show more care towards friends than A"}}, "19": {"original": {"original": "A is B's teacher, so A should be more informed than B", "asymmetric_premise": "B is A's teacher, so A should be less informed than B", "asymmetric_conclusion": "A is B's teacher, so B should be less informed than A"}, "negation": {"original": "A is B's teacher, so A should not be less informed than B", "asymmetric_premise": "B is A's teacher, so A should not be more informed than B", "asymmetric_conclusion": "A is B's teacher, so B should not be more informed than A"}, "antonym": {"original": "A is B's teacher, so A should be less ignorant than B", "asymmetric_premise": "B is A's teacher, so A should be more ignorant than B", "asymmetric_conclusion": "A is B's teacher, so B should be more ignorant than A"}, "paraphrase": {"original": "A is B's teacher, so A should have a better understanding of the material than B", "asymmetric_premise": "B is A's teacher, so A should have a worse understanding of the material than B", "asymmetric_conclusion": "A is B's teacher, so B should have a worse understanding of the material than A"}, "paraphrase_inversion": {"original": "A is B's teacher, so A is less unaware of the complexities of the subject than B", "asymmetric_premise": "B is A's teacher, so A is more unaware of the complexities of the subject than B", "asymmetric_conclusion": "A is B's teacher, so B is more unaware of the complexities of the subject than A"}, "negation_antonym": {"original": "A is B's teacher, so A should not be more ignorant than B", "asymmetric_premise": "B is A's teacher, so A should not be less ignorant than B", "asymmetric_conclusion": "A is B's teacher, so B should not be less ignorant than A"}, "negation_paraphrase": {"original": "A is B's teacher, so A is not more unaware of the complexities of the subject than B", "asymmetric_premise": "B is A's teacher, so A is not less unaware of the complexities of the subject than B", "asymmetric_conclusion": "A is B's teacher, so B is not less unaware of the complexities of the subject than A"}, "negation_paraphrase_inversion": {"original": "A is B's teacher, so A should not have a worse understanding of the material than B", "asymmetric_premise": "B is A's teacher, so A should not have a better understanding of the material than B", "asymmetric_conclusion": "A is B's teacher, so B should not have a better understanding of the material than A"}}}
+{
+ "0": {
+  "original": {
+   "original": "A makes the varsity team while B does not, so A is more skilled than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A is less skilled than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B is less skilled than A"
+  },
+  "negation": {
+   "original": "A makes the varsity team while B does not, so A isn't less skilled than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A isn't more skilled than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't more skilled than A"
+  },
+  "antonym": {
+   "original": "A makes the varsity team while B does not, so A is less incompetent than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A is more incompetent than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B is more incompetent than A"
+  },
+  "paraphrase": {
+   "original": "A makes the varsity team while B does not, so A is better than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A is worse than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B is worse than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A makes the varsity team while B does not, so A makes less mistakes than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A makes more mistakes than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B makes more mistakes than A"
+  },
+  "negation_antonym": {
+   "original": "A makes the varsity team while B does not, so A isn't more incompetent than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A isn't less incompetent than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't less incompetent than A"
+  },
+  "negation_paraphrase": {
+   "original": "A makes the varsity team while B does not, so A does not make more mistakes than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A does not make less mistakes than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B does not make less mistakes than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A makes the varsity team while B does not, so A isn't worse than B",
+   "asymmetric_premise": "B makes the varsity team while A does not, so A isn't better than B",
+   "asymmetric_conclusion": "A makes the varsity team while B does not, so B isn't better than A"
+  }
+ },
+ "1": {
+  "original": {
+   "original": "A is going to play the piano in front of B, so A is more nervous than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A is less nervous than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B is less nervous than A"
+  },
+  "negation": {
+   "original": "A is going to play the piano in front of B, so A isn't less nervous than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A isn't more nervous than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't more nervous than A"
+  },
+  "antonym": {
+   "original": "A is going to play the piano in front of B, so A is less relaxed than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A is more relaxed than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B is more relaxed than A"
+  },
+  "paraphrase": {
+   "original": "A is going to play the piano in front of B, so A is more stressed than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A is less stressed than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B is less stressed than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is going to play the piano in front of B, so A is feeling less calm than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A is feeling more calm than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B is feeling more calm than A"
+  },
+  "negation_antonym": {
+   "original": "A is going to play the piano in front of B, so A isn't more relaxed than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A isn't less relaxed than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't less relaxed than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is going to play the piano in front of B, so A isn't feeling more calm than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A isn't feeling less calm than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't feeling less calm than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is going to play the piano in front of B, so A isn't less stressed than B",
+   "asymmetric_premise": "B is going to play the piano in front of A, so A isn't more stressed than B",
+   "asymmetric_conclusion": "A is going to play the piano in front of B, so B isn't more stressed than A"
+  }
+ },
+ "2": {
+  "original": {
+   "original": "A won the competition while B lost, so A is more happy than B",
+   "asymmetric_premise": "B won the competition while A lost, so A is less happy than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B is less happy than A"
+  },
+  "negation": {
+   "original": "A won the competition while B lost, so A isn't less happy than B",
+   "asymmetric_premise": "B won the competition while A lost, so A isn't more happy than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B isn't more happy than A"
+  },
+  "antonym": {
+   "original": "A won the competition while B lost, so A is less sad than B",
+   "asymmetric_premise": "B won the competition while A lost, so A is more sad than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B is more sad than A"
+  },
+  "paraphrase": {
+   "original": "A won the competition while B lost, so A is feeling better than B",
+   "asymmetric_premise": "B won the competition while A lost, so A is feeling worse than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B is feeling worse than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A won the competition while B lost, so A is frowning less than B",
+   "asymmetric_premise": "B won the competition while A lost, so A is frowning more than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B is frowning more than A"
+  },
+  "negation_antonym": {
+   "original": "A won the competition while B lost, so A isn't more sad than B",
+   "asymmetric_premise": "B won the competition while A lost, so A isn't less sad than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B isn't less sad than A"
+  },
+  "negation_paraphrase": {
+   "original": "A won the competition while B lost, so A isn't frowning more than B",
+   "asymmetric_premise": "B won the competition while A lost, so A isn't frowning less than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B isn't frowning less than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A won the competition while B lost, so A isn't feeling worse than B",
+   "asymmetric_premise": "B won the competition while A lost, so A isn't feeling better than B",
+   "asymmetric_conclusion": "A won the competition while B lost, so B isn't feeling better than A"
+  }
+ },
+ "3": {
+  "original": {
+   "original": "A is able to concentrate more than B, so A is more efficient than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A is less efficient than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B is less efficient than A"
+  },
+  "negation": {
+   "original": "A is able to concentrate more than B, so A isn't less efficient than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A isn't more efficient than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't more efficient than A"
+  },
+  "antonym": {
+   "original": "A is able to concentrate more than B, so A is less unproductive than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A is more unproductive than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B is more unproductive than A"
+  },
+  "paraphrase": {
+   "original": "A is able to concentrate more than B, so A is able to do more work in less time than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A is able to do less work in less time than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B is able to do less work in less time than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is able to concentrate more than B, so A is less ineffective than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A is more ineffective than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B is more ineffective than A"
+  },
+  "negation_antonym": {
+   "original": "A is able to concentrate more than B, so A isn't more unproductive than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A isn't less unproductive than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't less unproductive than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is able to concentrate more than B, so A isn't more ineffective than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A isn't less ineffective than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't less ineffective than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is able to concentrate more than B, so A isn't able to do less work in less time than B",
+   "asymmetric_premise": "B is able to concentrate more than A, so A isn't able to do more work in less time than B",
+   "asymmetric_conclusion": "A is able to concentrate more than B, so B isn't able to do more work in less time than A"
+  }
+ },
+ "4": {
+  "original": {
+   "original": "A bullies B, so A is more mean than B",
+   "asymmetric_premise": "B bullies A, so A is less mean than B",
+   "asymmetric_conclusion": "A bullies B, so B is less mean than A"
+  },
+  "negation": {
+   "original": "A bullies B, so A isn't less mean than B",
+   "asymmetric_premise": "B bullies A, so A isn't more mean than B",
+   "asymmetric_conclusion": "A bullies B, so B isn't more mean than A"
+  },
+  "antonym": {
+   "original": "A bullies B, so A is less kind than B",
+   "asymmetric_premise": "B bullies A, so A is more kind than B",
+   "asymmetric_conclusion": "A bullies B, so B is more kind than A"
+  },
+  "paraphrase": {
+   "original": "A bullies B, so A is a more cruel person than B",
+   "asymmetric_premise": "B bullies A, so A is a less cruel person than B",
+   "asymmetric_conclusion": "A bullies B, so B is a less cruel person than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A bullies B, so A cares less about people than B",
+   "asymmetric_premise": "B bullies A, so A cares more about people than B",
+   "asymmetric_conclusion": "A bullies B, so B cares more about people than A"
+  },
+  "negation_antonym": {
+   "original": "A bullies B, so A isn't more kind than B",
+   "asymmetric_premise": "B bullies A, so A isn't less kind than B",
+   "asymmetric_conclusion": "A bullies B, so B isn't less kind than A"
+  },
+  "negation_paraphrase": {
+   "original": "A bullies B, so A does not care more about people than B",
+   "asymmetric_premise": "B bullies A, so A does not care less about people than B",
+   "asymmetric_conclusion": "A bullies B, so B does not care less about people than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A bullies B, so A isn't a less cruel person than B",
+   "asymmetric_premise": "B bullies A, so A isn't a more cruel person than B",
+   "asymmetric_conclusion": "A bullies B, so B isn't a more cruel person than A"
+  }
+ },
+ "5": {
+  "original": {
+   "original": "A is B's boss, so A commands more respect than B",
+   "asymmetric_premise": "B is A's boss, so A commands less respect than B",
+   "asymmetric_conclusion": "A is B's boss, so B commands less respect than A"
+  },
+  "negation": {
+   "original": "A is B's boss, so A does not command less respect than B",
+   "asymmetric_premise": "B is A's boss, so A does not command more respect than B",
+   "asymmetric_conclusion": "A is B's boss, so B does not command more respect than A"
+  },
+  "antonym": {
+   "original": "A is B's boss, so A commands less dishonor than B",
+   "asymmetric_premise": "B is A's boss, so A commands more dishonor than B",
+   "asymmetric_conclusion": "A is B's boss, so B commands more dishonor than A"
+  },
+  "paraphrase": {
+   "original": "A is B's boss, so A has earned more respect than B",
+   "asymmetric_premise": "B is A's boss, so A has earned less respect than B",
+   "asymmetric_conclusion": "A is B's boss, so B has earned less respect than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's boss, so A should be disrespected less than B",
+   "asymmetric_premise": "B is A's boss, so A should be disrespected more than B",
+   "asymmetric_conclusion": "A is B's boss, so B should be disrespected more than A"
+  },
+  "negation_antonym": {
+   "original": "A is B's boss, so A does not command more dishonor than B",
+   "asymmetric_premise": "B is A's boss, so A does not command less dishonor than B",
+   "asymmetric_conclusion": "A is B's boss, so B does not command less dishonor than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's boss, so A should not be disrespected more than B",
+   "asymmetric_premise": "B is A's boss, so A should not be disrespected less than B",
+   "asymmetric_conclusion": "A is B's boss, so B should not be disrespected less than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's boss, so A has not earned less respect than B",
+   "asymmetric_premise": "B is A's boss, so A has not earned more respect than B",
+   "asymmetric_conclusion": "A is B's boss, so B has not earned more respect than A"
+  }
+ },
+ "6": {
+  "original": {
+   "original": "A has more work than B, so A is more stressed out than B",
+   "asymmetric_premise": "B has more work than A, so A is less stressed out than B",
+   "asymmetric_conclusion": "A has more work than B, so B is less stressed out than A"
+  },
+  "negation": {
+   "original": "A has more work than B, so A is not less stressed out than B",
+   "asymmetric_premise": "B has more work than A, so A is not more stressed out than B",
+   "asymmetric_conclusion": "A has more work than B, so B is not more stressed out than A"
+  },
+  "antonym": {
+   "original": "A has more work than B, so A is less at ease than B",
+   "asymmetric_premise": "B has more work than A, so A is more at ease than B",
+   "asymmetric_conclusion": "A has more work than B, so B is more at ease than A"
+  },
+  "paraphrase": {
+   "original": "A has more work than B, so A has higher stress levels than B",
+   "asymmetric_premise": "B has more work than A, so A has lower stress levels than B",
+   "asymmetric_conclusion": "A has more work than B, so B has lower stress levels than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A has more work than B, so A should be less calm than B",
+   "asymmetric_premise": "B has more work than A, so A should be more calm than B",
+   "asymmetric_conclusion": "A has more work than B, so B should be more calm than A"
+  },
+  "negation_antonym": {
+   "original": "A has more work than B, so A is not more at ease than B",
+   "asymmetric_premise": "B has more work than A, so A is not less at ease than B",
+   "asymmetric_conclusion": "A has more work than B, so B is not less at ease than A"
+  },
+  "negation_paraphrase": {
+   "original": "A has more work than B, so A should not be more calm than B",
+   "asymmetric_premise": "B has more work than A, so A should not be less calm than B",
+   "asymmetric_conclusion": "A has more work than B, so B should not be less calm than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A has more work than B, so A does not have lower stress levels than B",
+   "asymmetric_premise": "B has more work than A, so A does not have higher stress levels than B",
+   "asymmetric_conclusion": "A has more work than B, so B does not have higher stress levels than A"
+  }
+ },
+ "7": {
+  "original": {
+   "original": "A likes B, so A has more feelings for B",
+   "asymmetric_premise": "B likes A, so A has less feelings for B",
+   "asymmetric_conclusion": "A likes B, so B has less feelings for A"
+  },
+  "negation": {
+   "original": "A likes B, so A does not have less feelings for B",
+   "asymmetric_premise": "B likes A, so A does not have more feelings for B",
+   "asymmetric_conclusion": "A likes B, so B does not have more feelings for A"
+  },
+  "antonym": {
+   "original": "A likes B, so A has less indifference towards B",
+   "asymmetric_premise": "B likes A, so A has more indifference towards B",
+   "asymmetric_conclusion": "A likes B, so B has more indifference towards A"
+  },
+  "paraphrase": {
+   "original": "A likes B, so A feels much emotion towards B",
+   "asymmetric_premise": "B likes A, so A feels little emotion towards B",
+   "asymmetric_conclusion": "A likes B, so B feels little emotion towards A"
+  },
+  "paraphrase_inversion": {
+   "original": "A likes B, so A is less at ease around B",
+   "asymmetric_premise": "B likes A, so A is more at ease around B",
+   "asymmetric_conclusion": "A likes B, so B is more at ease around A"
+  },
+  "negation_antonym": {
+   "original": "A likes B, so A does not have more indifference towards B",
+   "asymmetric_premise": "B likes A, so A does not have less indifference towards B",
+   "asymmetric_conclusion": "A likes B, so B does not have less indifference towards A"
+  },
+  "negation_paraphrase": {
+   "original": "A likes B, so A is more at ease around B",
+   "asymmetric_premise": "B likes A, so A is less at ease around B",
+   "asymmetric_conclusion": "A likes B, so B is less at ease around A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A likes B, so A does not feel little emotion towards B",
+   "asymmetric_premise": "B likes A, so A does not feel much emotion towards B",
+   "asymmetric_conclusion": "A likes B, so B does not feel much emotion towards A"
+  }
+ },
+ "8": {
+  "original": {
+   "original": "A practices more than B, so A is more likely to succeed than B",
+   "asymmetric_premise": "B practices more than A, so A is less likely to succeed than B",
+   "asymmetric_conclusion": "A practices more than B, so B is less likely to succeed than A"
+  },
+  "negation": {
+   "original": "A practices more than B, so A is not less likely to succeed than B",
+   "asymmetric_premise": "B practices more than A, so A is not more likely to succeed than B",
+   "asymmetric_conclusion": "A practices more than B, so B is not more likely to succeed than A"
+  },
+  "antonym": {
+   "original": "A practices more than B, so A is less likely to fail than B",
+   "asymmetric_premise": "B practices more than A, so A is more likely to fail than B",
+   "asymmetric_conclusion": "A practices more than B, so B is more likely to fail than A"
+  },
+  "paraphrase": {
+   "original": "A practices more than B, so A has a better chance to succeed than B",
+   "asymmetric_premise": "B practices more than A, so A has a worse chance to succeed than B",
+   "asymmetric_conclusion": "A practices more than B, so B has a worse chance to succeed than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A practices more than B, so A has a lower chance of failing than B",
+   "asymmetric_premise": "B practices more than A, so A has a higher chance of failing than B",
+   "asymmetric_conclusion": "A practices more than B, so B has a higher chance of failing than A"
+  },
+  "negation_antonym": {
+   "original": "A practices more than B, so A is not more likely to fail than B",
+   "asymmetric_premise": "B practices more than A, so A is not less likely to fail than B",
+   "asymmetric_conclusion": "A practices more than B, so B is not less likely to fail than A"
+  },
+  "negation_paraphrase": {
+   "original": "A practices more than B, so A has a higher chance of failing than B",
+   "asymmetric_premise": "B practices more than A, so A has a lower chance of failing than B",
+   "asymmetric_conclusion": "A practices more than B, so B has a lower chance of failing than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A practices more than B, so A has a worse chance to succeed than B",
+   "asymmetric_premise": "B practices more than A, so A has a better chance to succeed than B",
+   "asymmetric_conclusion": "A practices more than B, so B has a better chance to succeed than A"
+  }
+ },
+ "9": {
+  "original": {
+   "original": "A is B's parent, so A initially takes more care of B",
+   "asymmetric_premise": "B is A's parent, so A initially takes less care of B",
+   "asymmetric_conclusion": "A is B's parent, so B initially takes less care of A"
+  },
+  "negation": {
+   "original": "A is B's parent, so A initially does not take less care of B",
+   "asymmetric_premise": "B is A's parent, so A initially does not take more care of B",
+   "asymmetric_conclusion": "A is B's parent, so B initially does not take more care of A"
+  },
+  "antonym": {
+   "original": "A is B's parent, so A initially takes less assistance from B",
+   "asymmetric_premise": "B is A's parent, so A initially takes more assistance from B",
+   "asymmetric_conclusion": "A is B's parent, so B initially takes more assistance from A"
+  },
+  "paraphrase": {
+   "original": "A is B's parent, so A initially provides more for B",
+   "asymmetric_premise": "B is A's parent, so A initially provides less for B",
+   "asymmetric_conclusion": "A is B's parent, so B initially provides less for A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's parent, so A initially relies less on B",
+   "asymmetric_premise": "B is A's parent, so A initially relies more on B",
+   "asymmetric_conclusion": "A is B's parent, so B initially relies more on A"
+  },
+  "negation_antonym": {
+   "original": "A is B's parent, so A initially does not take more assistance from B",
+   "asymmetric_premise": "B is A's parent, so A initially does not take less assistance from B",
+   "asymmetric_conclusion": "A is B's parent, so B initially does not take less assistance from A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's parent, so A initially does not rely more on B",
+   "asymmetric_premise": "B is A's parent, so A initially does not rely less on B",
+   "asymmetric_conclusion": "A is B's parent, so B initially does not rely less on A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's parent, so A initially does not provide less for B",
+   "asymmetric_premise": "B is A's parent, so A initially does not provide more for B",
+   "asymmetric_conclusion": "A is B's parent, so B initially does not provide more for A"
+  }
+ },
+ "10": {
+  "original": {
+   "original": "A is B's doctor, so A takes more care of B",
+   "asymmetric_premise": "B is A's doctor, so A takes less care of B",
+   "asymmetric_conclusion": "A is B's doctor, so B takes less care of A"
+  },
+  "negation": {
+   "original": "A is B's doctor, so A does not take less care of B",
+   "asymmetric_premise": "B is A's doctor, so A does not take more care of B",
+   "asymmetric_conclusion": "A is B's doctor, so B does not take more care of A"
+  },
+  "antonym": {
+   "original": "A is B's doctor, so A takes less assistance from B",
+   "asymmetric_premise": "B is A's doctor, so A takes more assistance from B",
+   "asymmetric_conclusion": "A is B's doctor, so B takes more assistance from A"
+  },
+  "paraphrase": {
+   "original": "A is B's doctor, so A provides more assistance towards B",
+   "asymmetric_premise": "B is A's doctor, so A provides less assistance towards B",
+   "asymmetric_conclusion": "A is B's doctor, so B provides less assistance towards A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's doctor, so A requires less medical aid from B",
+   "asymmetric_premise": "B is A's doctor, so A requires more medical aid from B",
+   "asymmetric_conclusion": "A is B's doctor, so B requires more medical aid from A"
+  },
+  "negation_antonym": {
+   "original": "A is B's doctor, so A does not take more assistance from B",
+   "asymmetric_premise": "B is A's doctor, so A does not take less assistance from B",
+   "asymmetric_conclusion": "A is B's doctor, so B does not take less assistance from A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's doctor, so A does not require more medical aid from B",
+   "asymmetric_premise": "B is A's doctor, so A does not require less medical aid from B",
+   "asymmetric_conclusion": "A is B's doctor, so B does not require less medical aid from A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's doctor, so A does not provide less assistance towards B",
+   "asymmetric_premise": "B is A's doctor, so A does not provide more assistance towards B",
+   "asymmetric_conclusion": "A is B's doctor, so B does not provide more assistance towards A"
+  }
+ },
+ "11": {
+  "original": {
+   "original": "A has to apologize to B, so A must be more thoughtful than B",
+   "asymmetric_premise": "B has to apologize to A, so A must be less thoughtful than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B must be less thoughtful than A"
+  },
+  "negation": {
+   "original": "A has to apologize to B, so A must not be less thoughtful than B",
+   "asymmetric_premise": "B has to apologize to A, so A must not be more thoughtful than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B must not be more thoughtful than A"
+  },
+  "antonym": {
+   "original": "A has to apologize to B, so A must be less insensitive than B",
+   "asymmetric_premise": "B has to apologize to A, so A must be more insensitive than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B must be more insensitive than A"
+  },
+  "paraphrase": {
+   "original": "A has to apologize to B, so A should be more caring in their actions than B",
+   "asymmetric_premise": "B has to apologize to A, so A should be less caring in their actions than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B should be less caring in their actions than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A has to apologize to B, so A should be less selfish in their actions than B",
+   "asymmetric_premise": "B has to apologize to A, so A should be more selfish in their actions than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B should be more selfish in their actions than A"
+  },
+  "negation_antonym": {
+   "original": "A has to apologize to B, so A must not be more insensitive than B",
+   "asymmetric_premise": "B has to apologize to A, so A must not be less insensitive than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B must not be less insensitive than A"
+  },
+  "negation_paraphrase": {
+   "original": "A has to apologize to B, so A should not be more selfish in their actions than B",
+   "asymmetric_premise": "B has to apologize to A, so A should not be less selfish in their actions than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B should not be less selfish in their actions than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A has to apologize to B, so A should not be less caring in their actions than B",
+   "asymmetric_premise": "B has to apologize to A, so A should not be more caring in their actions than B",
+   "asymmetric_conclusion": "A has to apologize to B, so B should not be more caring in their actions than A"
+  }
+ },
+ "12": {
+  "original": {
+   "original": "A is B's priest, so A spends more time praying than B",
+   "asymmetric_premise": "B is A's priest, so A spends less time praying than B",
+   "asymmetric_conclusion": "A is B's priest, so B spends less time praying than A"
+  },
+  "negation": {
+   "original": "A is B's priest, so A does not spend less time praying than B",
+   "asymmetric_premise": "B is A's priest, so A does not spend more time praying than B",
+   "asymmetric_conclusion": "A is B's priest, so B does not spend more time praying than A"
+  },
+  "antonym": {
+   "original": "A is B's priest, so A spends less time prayout ofg than B",
+   "asymmetric_premise": "B is A's priest, so A spends more time prayout ofg than B",
+   "asymmetric_conclusion": "A is B's priest, so B spends more time prayout ofg than A"
+  },
+  "paraphrase": {
+   "original": "A is B's priest, so A can be found praying more often than B",
+   "asymmetric_premise": "B is A's priest, so A can be found praying less often than B",
+   "asymmetric_conclusion": "A is B's priest, so B can be found praying less often than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's priest, so A spends less time sinning than B",
+   "asymmetric_premise": "B is A's priest, so A spends more time sinning than B",
+   "asymmetric_conclusion": "A is B's priest, so B spends more time sinning than A"
+  },
+  "negation_antonym": {
+   "original": "A is B's priest, so A does not spend more time prayout ofg than B",
+   "asymmetric_premise": "B is A's priest, so A does not spend less time prayout ofg than B",
+   "asymmetric_conclusion": "A is B's priest, so B does not spend less time prayout ofg than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's priest, so A does not spend more time sinning than B",
+   "asymmetric_premise": "B is A's priest, so A does not spend less time sinning than B",
+   "asymmetric_conclusion": "A is B's priest, so B does not spend less time sinning than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's priest, so A can not be found praying less often than B",
+   "asymmetric_premise": "B is A's priest, so A can not be found praying more often than B",
+   "asymmetric_conclusion": "A is B's priest, so B can not be found praying more often than A"
+  }
+ },
+ "13": {
+  "original": {
+   "original": "A is B's lawyer, so A is more knowledgeable about law than B",
+   "asymmetric_premise": "B is A's lawyer, so A is less knowledgeable about law than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B is less knowledgeable about law than A"
+  },
+  "negation": {
+   "original": "A is B's lawyer, so A is less knowledgeable about law than B",
+   "asymmetric_premise": "B is A's lawyer, so A is more knowledgeable about law than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B is more knowledgeable about law than A"
+  },
+  "antonym": {
+   "original": "A is B's lawyer, so A is less ignorant of law than B",
+   "asymmetric_premise": "B is A's lawyer, so A is more ignorant of law than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B is more ignorant of law than A"
+  },
+  "paraphrase": {
+   "original": "A is B's lawyer, so A has studied law more than B",
+   "asymmetric_premise": "B is A's lawyer, so A has studied law less than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B has studied law less than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's lawyer, so A has spent less time receiving legal advise than B",
+   "asymmetric_premise": "B is A's lawyer, so A has spent more time receiving legal advise than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B has spent more time receiving legal advise than A"
+  },
+  "negation_antonym": {
+   "original": "A is B's lawyer, so A is more ignorant of law than B",
+   "asymmetric_premise": "B is A's lawyer, so A is less ignorant of law than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B is less ignorant of law than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's lawyer, so A has spent more time receiving legal advise than B",
+   "asymmetric_premise": "B is A's lawyer, so A has spent less time receiving legal advise than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B has spent less time receiving legal advise than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's lawyer, so A has studied law less than B",
+   "asymmetric_premise": "B is A's lawyer, so A has studied law more than B",
+   "asymmetric_conclusion": "A is B's lawyer, so B has studied law more than A"
+  }
+ },
+ "14": {
+  "original": {
+   "original": "A has a lot more money than B, so A finds it less difficult to pay bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A finds it more difficult to pay bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B finds it more difficult to pay bills than A"
+  },
+  "negation": {
+   "original": "A has a lot more money than B, so A does not find it more difficult to pay bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A does not find it less difficult to pay bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B does not find it less difficult to pay bills than A"
+  },
+  "antonym": {
+   "original": "A has a lot more money than B, so A finds it more effortmore to pay bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A finds it less effortless to pay bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B finds it less effortless to pay bills than A"
+  },
+  "paraphrase": {
+   "original": "A has a lot more money than B, so A has an easier time paying bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A has an harder time paying bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B has an harder time paying bills than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A has a lot more money than B, so A is more financially secure than B",
+   "asymmetric_premise": "B has a lot more money than A, so A is less financially secure than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B is less financially secure than A"
+  },
+  "negation_antonym": {
+   "original": "A has a lot more money than B, so A does not find it less effortless to pay bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A does not find it more effortmore to pay bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B does not find it more effortmore to pay bills than A"
+  },
+  "negation_paraphrase": {
+   "original": "A has a lot more money than B, so A is less financially secure than B",
+   "asymmetric_premise": "B has a lot more money than A, so A is more financially secure than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B is more financially secure than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A has a lot more money than B, so A does not have an harder time paying bills than B",
+   "asymmetric_premise": "B has a lot more money than A, so A does not have an easier time paying bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B does not have an easier time paying bills than A"
+  }
+ },
+ "15": {
+  "original": {
+   "original": "A enjoys watching tv more than B, so A is more up to date on current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is less up to date on current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less up to date on current tv shows than A"
+  },
+  "negation": {
+   "original": "A enjoys watching tv more than B, so A is less up to date on current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is more up to date on current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more up to date on current tv shows than A"
+  },
+  "antonym": {
+   "original": "A enjoys watching tv more than B, so A is less in the know on current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is more in the know on current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more in the know on current tv shows than A"
+  },
+  "paraphrase": {
+   "original": "A enjoys watching tv more than B, so A has more knowledge about current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A has less knowledge about current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B has less knowledge about current tv shows than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A enjoys watching tv more than B, so A is less ignorant about current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is more ignorant about current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is more ignorant about current tv shows than A"
+  },
+  "negation_antonym": {
+   "original": "A enjoys watching tv more than B, so A is more in the know on current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is less in the know on current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less in the know on current tv shows than A"
+  },
+  "negation_paraphrase": {
+   "original": "A enjoys watching tv more than B, so A is more ignorant about current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A is less ignorant about current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B is less ignorant about current tv shows than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A enjoys watching tv more than B, so A does not have less knowledge about current tv shows than B",
+   "asymmetric_premise": "B enjoys watching tv more than A, so A does not have more knowledge about current tv shows than B",
+   "asymmetric_conclusion": "A enjoys watching tv more than B, so B does not have more knowledge about current tv shows than A"
+  }
+ },
+ "16": {
+  "original": {
+   "original": "A always beats B in tennis, so A has more skill in tennis than B",
+   "asymmetric_premise": "B always beats A in tennis, so A has less skill in tennis than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B has less skill in tennis than A"
+  },
+  "negation": {
+   "original": "A always beats B in tennis, so A has not less skill in tennis than B",
+   "asymmetric_premise": "B always beats A in tennis, so A has not more skill in tennis than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B has not more skill in tennis than A"
+  },
+  "antonym": {
+   "original": "A always beats B in tennis, so A has less inability in tennis than B",
+   "asymmetric_premise": "B always beats A in tennis, so A has more inability in tennis than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B has more inability in tennis than A"
+  },
+  "paraphrase": {
+   "original": "A always beats B in tennis, so A is a better player than B",
+   "asymmetric_premise": "B always beats A in tennis, so A is a worse player than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B is a worse player than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A always beats B in tennis, so A is less incompetent in tennis than B",
+   "asymmetric_premise": "B always beats A in tennis, so A is more incompetent in tennis than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B is more incompetent in tennis than A"
+  },
+  "negation_antonym": {
+   "original": "A always beats B in tennis, so A has not more inability in tennis than B",
+   "asymmetric_premise": "B always beats A in tennis, so A has not less inability in tennis than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B has not less inability in tennis than A"
+  },
+  "negation_paraphrase": {
+   "original": "A always beats B in tennis, so A is not more incompetent in tennis not than B",
+   "asymmetric_premise": "B always beats A in tennis, so A is not less incompetent in tennis not than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B is not less incompetent in tennis not than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A always beats B in tennis, so A is not a worse player than B",
+   "asymmetric_premise": "B always beats A in tennis, so A is not a better player than B",
+   "asymmetric_conclusion": "A always beats B in tennis, so B is not a better player than A"
+  }
+ },
+ "17": {
+  "original": {
+   "original": "A makes B late, so A has less reason to be annoyed at B",
+   "asymmetric_premise": "B makes A late, so A has more reason to be annoyed at B",
+   "asymmetric_conclusion": "A makes B late, so B has more reason to be annoyed at A"
+  },
+  "negation": {
+   "original": "A makes B late, so A has not more reason to be annoyed at B",
+   "asymmetric_premise": "B makes A late, so A has not less reason to be annoyed at B",
+   "asymmetric_conclusion": "A makes B late, so B has not less reason to be annoyed at A"
+  },
+  "antonym": {
+   "original": "A makes B late, so A has more reason to be contrite towards B",
+   "asymmetric_premise": "B makes A late, so A has less reason to be contrite towards B",
+   "asymmetric_conclusion": "A makes B late, so B has less reason to be contrite towards A"
+  },
+  "paraphrase": {
+   "original": "A makes B late, so A should be less upset with B",
+   "asymmetric_premise": "B makes A late, so A should be more upset with B",
+   "asymmetric_conclusion": "A makes B late, so B should be more upset with A"
+  },
+  "paraphrase_inversion": {
+   "original": "A makes B late, so A has more reason to be apologetic towards B",
+   "asymmetric_premise": "B makes A late, so A has less reason to be apologetic towards B",
+   "asymmetric_conclusion": "A makes B late, so B has less reason to be apologetic towards A"
+  },
+  "negation_antonym": {
+   "original": "A makes B late, so A has not less reason to be contrite towards B",
+   "asymmetric_premise": "B makes A late, so A has not more reason to be contrite towards B",
+   "asymmetric_conclusion": "A makes B late, so B has not more reason to be contrite towards A"
+  },
+  "negation_paraphrase": {
+   "original": "A makes B late, so A has not less reason to be apologetic towards B",
+   "asymmetric_premise": "B makes A late, so A has not more reason to be apologetic towards B",
+   "asymmetric_conclusion": "A makes B late, so B has not more reason to be apologetic towards A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A makes B late, so A should not be be more upset with B",
+   "asymmetric_premise": "B makes A late, so A should not be be less upset with B",
+   "asymmetric_conclusion": "A makes B late, so B should not be be less upset with A"
+  }
+ },
+ "18": {
+  "original": {
+   "original": "A is a better friend than B, so A is more thoughtful than B",
+   "asymmetric_premise": "B is a better friend than A, so A is less thoughtful than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is less thoughtful than A"
+  },
+  "negation": {
+   "original": "A is a better friend than B, so A is not less thoughtful than B",
+   "asymmetric_premise": "B is a better friend than A, so A is not more thoughtful than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is not more thoughtful than A"
+  },
+  "antonym": {
+   "original": "A is a better friend than B, so A is less selfish than B",
+   "asymmetric_premise": "B is a better friend than A, so A is more selfish than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is more selfish than A"
+  },
+  "paraphrase": {
+   "original": "A is a better friend than B, so A shows more care towards friends than B",
+   "asymmetric_premise": "B is a better friend than A, so A shows less care towards friends than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B shows less care towards friends than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is a better friend than B, so A is less of a prick than B",
+   "asymmetric_premise": "B is a better friend than A, so A is more of a prick than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is more of a prick than A"
+  },
+  "negation_antonym": {
+   "original": "A is a better friend than B, so A is not more selfis noth than B",
+   "asymmetric_premise": "B is a better friend than A, so A is not less selfis noth than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is not less selfis noth than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is a better friend than B, so A is not more of a prick than B",
+   "asymmetric_premise": "B is a better friend than A, so A is not less of a prick than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B is not less of a prick than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is a better friend than B, so A does not show less care towards friends than B",
+   "asymmetric_premise": "B is a better friend than A, so A does not show more care towards friends than B",
+   "asymmetric_conclusion": "A is a better friend than B, so B does not show more care towards friends than A"
+  }
+ },
+ "19": {
+  "original": {
+   "original": "A is B's teacher, so A should be more informed than B",
+   "asymmetric_premise": "B is A's teacher, so A should be less informed than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should be less informed than A"
+  },
+  "negation": {
+   "original": "A is B's teacher, so A should not be less informed than B",
+   "asymmetric_premise": "B is A's teacher, so A should not be more informed than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should not be more informed than A"
+  },
+  "antonym": {
+   "original": "A is B's teacher, so A should be less ignorant than B",
+   "asymmetric_premise": "B is A's teacher, so A should be more ignorant than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should be more ignorant than A"
+  },
+  "paraphrase": {
+   "original": "A is B's teacher, so A should have a better understanding of the material than B",
+   "asymmetric_premise": "B is A's teacher, so A should have a worse understanding of the material than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should have a worse understanding of the material than A"
+  },
+  "paraphrase_inversion": {
+   "original": "A is B's teacher, so A is less unaware of the complexities of the subject than B",
+   "asymmetric_premise": "B is A's teacher, so A is more unaware of the complexities of the subject than B",
+   "asymmetric_conclusion": "A is B's teacher, so B is more unaware of the complexities of the subject than A"
+  },
+  "negation_antonym": {
+   "original": "A is B's teacher, so A should not be more ignorant than B",
+   "asymmetric_premise": "B is A's teacher, so A should not be less ignorant than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should not be less ignorant than A"
+  },
+  "negation_paraphrase": {
+   "original": "A is B's teacher, so A is not more unaware of the complexities of the subject than B",
+   "asymmetric_premise": "B is A's teacher, so A is not less unaware of the complexities of the subject than B",
+   "asymmetric_conclusion": "A is B's teacher, so B is not less unaware of the complexities of the subject than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is B's teacher, so A should not have a worse understanding of the material than B",
+   "asymmetric_premise": "B is A's teacher, so A should not have a better understanding of the material than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should not have a better understanding of the material than A"
+  }
+ }
+}

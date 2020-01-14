@@ -7,10 +7,10 @@
         "antonym_switch" : ["skilled", "incompetent"],
         "original_comparison" : "is more skilled than",
         "paraphrase" : "is better than",
-        "inverted_paraphrase" : "makes more mistakes than",
+        "inverted_paraphrase" : "makes less mistakes than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "1" : {
@@ -21,10 +21,10 @@
         "antonym_switch" : ["nervous", "relaxed"],
         "original_comparison" : "is more nervous than",
         "paraphrase" : "is more stressed than",
-        "inverted_paraphrase" : "is feeling more calm than",
+        "inverted_paraphrase" : "is feeling less calm than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "2" : {
@@ -35,10 +35,10 @@
         "antonym_switch" : ["happy", "sad"],
         "original_comparison" : "is more happy than",
         "paraphrase" : "is feeling better than",
-        "inverted_paraphrase" : "is smiling less than",
+        "inverted_paraphrase" : "is frowning less than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "3" : {
@@ -49,10 +49,10 @@
         "antonym_switch" : ["efficient", "unproductive"],
         "original_comparison" : "is more efficient than",
         "paraphrase" : "is able to do more work in less time than",
-        "inverted_paraphrase" : "is more ineffective than",
+        "inverted_paraphrase" : "is less ineffective than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "4" : {
@@ -62,11 +62,11 @@
                              "2" : ["cares", "does not care"]},
         "antonym_switch" : ["mean", "kind"],
         "original_comparison" : "is more mean than",
-        "paraphrase" : "is a crueler person than",
-        "inverted_paraphrase" : "cares more about people than",
+        "paraphrase" : "is a more cruel person than",
+        "inverted_paraphrase" : "cares less about people than",
         "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["crueler", "less cruel"], 
-                            "2" : ["more", "less"]}
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     },
 
     "5" : {
@@ -77,10 +77,10 @@
         "antonym_switch" : ["respect", "dishonor"],
         "original_comparison" : "commands more respect than",
         "paraphrase" : "has earned more respect than",
-        "inverted_paraphrase" : "should be disrespected more than",
+        "inverted_paraphrase" : "should be disrespected less than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "6" : {
@@ -91,10 +91,10 @@
         "antonym_switch" : ["stressed out", "at ease"],
         "original_comparison" : "is more stressed out than",
         "paraphrase" : "has higher stress levels than",
-        "inverted_paraphrase" : "should be more calm than",
+        "inverted_paraphrase" : "should be less calm than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["higher", "lower"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -106,10 +106,10 @@
         "antonym_switch" : ["feelings for", "indifference towards"],
         "original_comparison" : "has more feelings for",
         "paraphrase" : "feels much emotion towards",
-        "inverted_paraphrase" : "is more at ease around",
+        "inverted_paraphrase" : "is less at ease around",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["much", "little"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -121,10 +121,10 @@
         "antonym_switch" : ["succeed", "fail"],
         "original_comparison" : "is more likely to succeed than",
         "paraphrase" : "has a better chance to succeed than",
-        "inverted_paraphrase" : "has a higher chance of failing than",
+        "inverted_paraphrase" : "has a lower chance of failing than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
-                            "2" : ["higher", "lower"]}
+                            "2" : ["lower", "higher"]}
 
     },
 
@@ -136,10 +136,10 @@
         "antonym_switch" : ["care of", "assistance from"],
         "original_comparison" : "initially takes more care of",
         "paraphrase" : "initially provides more for",
-        "inverted_paraphrase" : "initially relies more on",
+        "inverted_paraphrase" : "initially relies less on",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -151,10 +151,10 @@
         "antonym_switch" : ["care of", "assistance from"],
         "original_comparison" : "takes more care of",
         "paraphrase" : "provides more assistance towards",
-        "inverted_paraphrase" : "requires more medical aid from",
+        "inverted_paraphrase" : "requires less medical aid from",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -166,10 +166,10 @@
         "antonym_switch" : ["thoughtful", "insensitive"],
         "original_comparison" : "must be more thoughtful than",
         "paraphrase" : "should be more caring in their actions than",
-        "inverted_paraphrase" : "should be more selfish in their actions than",
+        "inverted_paraphrase" : "should be less selfish in their actions than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -181,10 +181,10 @@
         "antonym_switch" : ["in", "out of"],
         "original_comparison" : "spends more time praying than",
         "paraphrase" : "can be found praying more often than",
-        "inverted_paraphrase" : "spends more time sinning than",
+        "inverted_paraphrase" : "spends less time sinning than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -196,10 +196,10 @@
         "antonym_switch" : ["knowledgeable about", "ignorant of"],
         "original_comparison" : "is more knowledgeable about law than",
         "paraphrase" : "has studied law more than",
-        "inverted_paraphrase" : "has spent more time receiving legal advise than",
+        "inverted_paraphrase" : "has spent less time receiving legal advise than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
 
     },
 
@@ -210,11 +210,11 @@
                              "2" : ["spends", "does not spend"]},
         "antonym_switch" : ["difficult", "effortless"],
         "original_comparison" : "finds it less difficult to pay bills than",
-        "paraphrase" : "has a easier time paying bills than",
-        "inverted_paraphrase" : "is less financially secure than",
+        "paraphrase" : "has an easier time paying bills than",
+        "inverted_paraphrase" : "is more financially secure than",
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["easier", "harder"], 
-                            "2" : ["less", "more"]}
+                            "2" : ["more", "less"]}
 
     },
 
@@ -226,10 +226,10 @@
         "antonym_switch" : ["up to date", "in the know"],
         "original_comparison" : "is more up to date on current tv shows than",
         "paraphrase" : "has more knowledge about current tv shows than",
-        "inverted_paraphrase" : "is more ignorant about current tv shows than",
+        "inverted_paraphrase" : "is less ignorant about current tv shows than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "16" : {
@@ -240,10 +240,10 @@
         "antonym_switch" : ["skill", "inability"],
         "original_comparison" : "has more skill in tennis than",
         "paraphrase" : "is a better player than",
-        "inverted_paraphrase" : "is more incompetent in tennis than",
+        "inverted_paraphrase" : "is less incompetent in tennis than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "17" : {
@@ -254,10 +254,10 @@
         "antonym_switch" : ["annoyed at", "contrite towards"],
         "original_comparison" : "has less reason to be annoyed at",
         "paraphrase" : "should be less upset with",
-        "inverted_paraphrase" : "has less reason to be apologetic towards",
+        "inverted_paraphrase" : "has more reason to be apologetic towards",
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
-                            "2" : ["less", "more"]}
+                            "2" : ["more", "less"]}
     },
 
     "18" : {
@@ -268,10 +268,10 @@
         "antonym_switch" : ["thoughtful", "selfish"],
         "original_comparison" : "is more thoughtful than",
         "paraphrase" : "shows more care towards friends than",
-        "inverted_paraphrase" : "is more of a prick than",
+        "inverted_paraphrase" : "is less of a prick than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     },
 
     "19" : {
@@ -282,9 +282,9 @@
         "antonym_switch" : ["informed", "ignorant"],
         "original_comparison" : "should be more informed than",
         "paraphrase" : "should have a better understanding of the material than",
-        "inverted_paraphrase" : "is more unaware of the complexities of the subject than",
+        "inverted_paraphrase" : "is less unaware of the complexities of the subject than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["better", "worse"], 
-                            "2" : ["more", "less"]}
+                            "2" : ["less", "more"]}
     }
 }

@@ -1,52 +1,283 @@
 {
     "0" : {
-            "negation" : "not",
-            "original_comparison" : "smaller",
-            "antonym_comparison" : "larger",
-            "original_comparison_phrase" : "can fit into",
-            "paraphrase" : "can be put into",
-            "inverted_paraphrase" : "can contain",
-            "premise_switch" : {"0" : ["can", "cannot"], "1" : ["can", "cannot"], "2" : ["can", "cannot"]}
+        "initial_comparison" : "A is smaller than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["can", "can not"]},
+        "antonym_switch" : ["fit into", "contain"],
+        "original_comparison" : "is more likely to fit into",
+        "paraphrase" : "is more easily put into",
+        "inverted_paraphrase" : "is less able to enclose",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     },
 
     "1" : {
-         "negation" : "not",
-         "original_comparison" : "lighter",
-         "antonym_comparison" : "heavier",
-         "original_comparison_phrase" : "should float more than",
-         "paraphrase" : "will stay afloat more than",
-         "inverted_paraphrase" : "will sink more than",
-         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["will", "will not"], "2" : ["will", "will not"]}
+        "initial_comparison" : "A is lighter than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["will", "will not"],
+                             "2" : ["will", "will not"]},
+        "antonym_switch" : ["fit into", "contain"],
+        "original_comparison" : "should float more than",
+        "paraphrase" : "will stay afloat more than",
+        "inverted_paraphrase" : "will sink less than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     },
 
     "2" : {
-         "negation" : "not",
-         "original_comparison" : "denser",
-         "antonym_comparison" : "airier",
-         "original_comparison_phrase" : "should be harder than",
-         "paraphrase" : "should be more solid than",
-         "inverted_paraphrase" : "will be softer than",
-         "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["will", "will not"], "2" : ["will", "will not"]}
+        "initial_comparison" : "A is denser than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["should", "should not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["hard", "soft"],
+        "original_comparison" : "should be more hard than",
+        "paraphrase" : "should be more difficult to penetrate than",
+        "inverted_paraphrase" : "is less squishy than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     },
 
     "3" : {
-        "negation" : "not",
-        "original_comparison" : "thinner",
-        "antonym_comparison" : "fatter",
-        "original_comparison_phrase" : "should be lighter than",
-        "paraphrase" : "should weigh less than",
-        "inverted_paraphrase" : "should be heavier than",
-        "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
+        "initial_comparison" : "A is thinner than B",
+        "negation_switch" : {"0" : ["can", "can not"],
+                             "1" : ["can", "can not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["slip through", "be blocked by"],
+        "original_comparison" : "can slip through more cracks than",
+        "paraphrase" : "can fit into more openings than",
+        "inverted_paraphrase" : "is less impeded by small spaces than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     },
 
     "4" : {
-        "negation" : "not",
-        "original_comparison" : "colder",
-        "antonym_comparison" : "hotter",
-        "original_comparison_phrase" : "should melt after",
-        "paraphrase" : "should turn to liquid after",
-        "inverted_paraphrase" : "should freeze after",
-        "premise_switch" : {"0" : ["should", "shouldn't"], "1" : ["should", "shouldn't"], "2" : ["should", "shouldn't"]}
+        "initial_comparison" : "A is colder than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["should", "should not"],
+                             "2" : ["will", "will not"]},
+        "antonym_switch" : ["melt", "freeze"],
+        "original_comparison" : "should melt less quickly than",
+        "paraphrase" : "should turn into liquid less quickly than",
+        "inverted_paraphrase" : "will take more time to melt than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "5" : {
+        "initial_comparison" : "A is more elastic than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["bounce", "stay on the ground"],
+        "original_comparison" : "should bounce more than",
+        "paraphrase" : "is easier to bounce than",
+        "inverted_paraphrase" : "needs less energy to bounce than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["easier", "harder"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "6" : {
+        "initial_comparison" : "A is tougher than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["requires", "does not require"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["pull apart", "keep together"],
+        "original_comparison" : "is more difficult to pull apart than",
+        "paraphrase" : "requires more effort to tear than",
+        "inverted_paraphrase" : "is less likely to fall apart under pressure than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "7" : {
+        "initial_comparison" : "A is softer than B",
+        "negation_switch" : {"0" : ["should", "should not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["requires", "does not require"]},
+        "antonym_switch" : ["comfortable", "difficult"],
+        "original_comparison" : "is more comfortable to sleep on than",
+        "paraphrase" : "is more comfy to sleep on than",
+        "inverted_paraphrase" : "requires less time to feel comfortable on than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+
+    "8" : {
+        "initial_comparison" : "A is taller than B",
+        "negation_switch" : {"0" : ["will", "will not"],
+                             "1" : ["will", "will not"],
+                             "2" : ["has", "does not have"]},
+        "antonym_switch" : ["lengthy", "minature"],
+        "original_comparison" : "will cast a more lengthy shadow than",
+        "paraphrase" : "will have a more extensive shadow than",
+        "inverted_paraphrase" : "has less area not touched by its shadow than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "9" : {
+        "initial_comparison" : "A is heavier than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["can", "can not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["support", "crumble under"],
+        "original_comparison" : "is more likely to support the weight of",
+        "paraphrase" : "can more easily support the weight of",
+        "inverted_paraphrase" : "is less expected to be crushed by",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "10" : {
+        "initial_comparison" : "A has more momentum than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["will", "will not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["ability", "inability"],
+        "original_comparison" : "has more of an ability to cause damage on impact than",
+        "paraphrase" : "will cause more damage on impact than",
+        "inverted_paraphrase" : "is less harmless on impact than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "11" : {
+        "initial_comparison" : "A is more luminous than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["will", "will not"],
+                             "2" : ["has", "does not have"]},
+        "antonym_switch" : ["dangerous", "innocuous"],
+        "original_comparison" : "is more dangerous to look directly at than",
+        "paraphrase" : "will cause more damage when stared at than",
+        "inverted_paraphrase" : "is less safe to stare at than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "12" : {
+        "initial_comparison" : "A is more soluble than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["difficult", "obvious"],
+        "original_comparison" : "is more difficult to discern in water than",
+        "paraphrase" : "is harder to see in water than",
+        "inverted_paraphrase" : "is less seperable in water than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "13" : {
+        "initial_comparison" : "A is more permeable than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["keeps", "does not keep"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["appropriate", "inappropriate"],
+        "original_comparison" : "is less appropriate to use as waterproofing than",
+        "paraphrase" : "keeps less water out than",
+        "inverted_paraphrase" : "is more likely to allow water in",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "14" : {
+        "initial_comparison" : "A is larger than B",
+        "negation_switch" : {"0" : ["will", "will not"],
+                             "1" : ["diplaces", "does not displace"],
+                             "2" : ["leaves", "does not leave"]},
+        "antonym_switch" : ["displace", "leave in place"],
+        "original_comparison" : "will displace more liquid in a tub than",
+        "paraphrase" : "diplaces more liquid in a tub than",
+        "inverted_paraphrase" : "leaves less liquid in a tub than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "15" : {
+        "initial_comparison" : "A is shorter than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["requires", "does not require"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["difficult to climb", "easily climbed"],
+        "original_comparison" : "is less difficult to climb than",
+        "paraphrase" : "requires less energy to climb than",
+        "inverted_paraphrase" : "is more likely to be climbed faster than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "16" : {
+        "initial_comparison" : "A is wider than B",
+        "negation_switch" : {"0" : ["is", "is not"],
+                             "1" : ["requires", "does not require"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["unwieldy", "convenient"],
+        "original_comparison" : "is more unwieldy to carry than",
+        "paraphrase" : "is more awkward to carry than",
+        "inverted_paraphrase" : "is less easy to carry than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "17" : {
+        "initial_comparison" : "A is more taught than B",
+        "negation_switch" : {"0" : ["can", "can not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["withstand", "absorb"],
+        "original_comparison" : "can withstand less additional force than",
+        "paraphrase" : "is less able to tolerate additional force than",
+        "inverted_paraphrase" : "is more likely to snap than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]}
+    },
+
+    "18" : {
+        "initial_comparison" : "A is much hotter than B",
+        "negation_switch" : {"0" : ["will", "will not"],
+                             "1" : ["is", "is not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["painful", "pleasant"],
+        "original_comparison" : "will be more painful to hold onto than",
+        "paraphrase" : "is more difficult to hold onto than",
+        "inverted_paraphrase" : "is less enjoyable to hold onto than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
+    },
+
+    "19" : {
+        "initial_comparison" : "A is more magnetic than B",
+        "negation_switch" : {"0" : ["needs", "does not need"],
+                             "1" : ["is", "is not"],
+                             "2" : ["is", "is not"]},
+        "antonym_switch" : ["seperate from", "connect to"],
+        "original_comparison" : "needs more force to seperate from a magnet than",
+        "paraphrase" : "requires more effort to remove from a magnet than",
+        "inverted_paraphrase" : "is less likely to fall off a magnet than",
+        "premise_switch" : {"0" : ["more", "less"], 
+                            "1" : ["more", "less"], 
+                            "2" : ["less", "more"]}
     }
 
 
