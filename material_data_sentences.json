@@ -64,8 +64,8 @@
   },
   "paraphrase_inversion": {
    "original": "A is made out of glass and B is made out of cotton, so A is less edgeless than B",
-   "asymmetric_premise": "B is made out of glass and A is made out of cotton, so A is more edgemore than B",
-   "asymmetric_conclusion": "A is made out of glass and B is made out of cotton, so B is more edgemore than A"
+   "asymmetric_premise": "B is made out of glass and A is made out of cotton, so A is more edgeless than B",
+   "asymmetric_conclusion": "A is made out of glass and B is made out of cotton, so B is more edgeless than A"
   },
   "negation_antonym": {
    "original": "A is made out of glass and B is made out of cotton, so A is not more blunt than B",
@@ -73,7 +73,7 @@
    "asymmetric_conclusion": "A is made out of glass and B is made out of cotton, so B is not less blunt than A"
   },
   "negation_paraphrase": {
-   "original": "A is made out of glass and B is made out of cotton, so A is not more edgemore than B",
+   "original": "A is made out of glass and B is made out of cotton, so A is not more edgeless than B",
    "asymmetric_premise": "B is made out of glass and A is made out of cotton, so A is not less edgeless than B",
    "asymmetric_conclusion": "A is made out of glass and B is made out of cotton, so B is not less edgeless than A"
   },

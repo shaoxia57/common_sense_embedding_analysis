@@ -442,8 +442,8 @@
   },
   "paraphrase_inversion": {
    "original": "A has more momentum than B, so A is less harmless on impact than B",
-   "asymmetric_premise": "B has more momentum than A, so A is more harmmore on impact than B",
-   "asymmetric_conclusion": "A has more momentum than B, so B is more harmmore on impact than A"
+   "asymmetric_premise": "B has more momentum than A, so A is more harmless on impact than B",
+   "asymmetric_conclusion": "A has more momentum than B, so B is more harmless on impact than A"
   },
   "negation_antonym": {
    "original": "A has more momentum than B, so A has more of an inability to cause damage on impact than B",
@@ -451,7 +451,7 @@
    "asymmetric_conclusion": "A has more momentum than B, so B has less of an inability to cause damage on impact than A"
   },
   "negation_paraphrase": {
-   "original": "A has more momentum than B, so A is not more harmmore on impact than B",
+   "original": "A has more momentum than B, so A is not more harmless on impact than B",
    "asymmetric_premise": "B has more momentum than A, so A is not less harmless on impact than B",
    "asymmetric_conclusion": "A has more momentum than B, so B is not less harmless on impact than A"
   },

@@ -1,7 +1,7 @@
 
 def original_phys_perturbation(situation, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                           negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
 
     a_position = situation.index("A")
     b_position = situation.index("B")
@@ -17,7 +17,7 @@ def original_phys_perturbation(situation, comparison_phrase, negation_switch, mo
 
 def negative_phys_perturbation(situation, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                           negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
 
     a_position = situation.index("A")
     b_position = situation.index("B")
@@ -82,7 +82,7 @@ def generate_physical_perturbations(initial_comparison,
 
 def original_material_perturbation(material_1, material_2, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                           negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
     
     original = "A is made out of " + material_1 + " and B is made out of " + material_2 + ", so A " + comparison_phrase + " B"
     asymmetric_premise = "B is made out of " + material_1 + " and A is made out of " + material_2 + ", so A " + negation_comparison_phrase + " B"
@@ -92,7 +92,7 @@ def original_material_perturbation(material_1, material_2, comparison_phrase, ne
 
 def negative_material_perturbation(material_1, material_2, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                                    negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
 
     original = "A is made out of " + material_1 + " and B is made out of " + material_2 + ", so A " + negation_comparison_phrase + " B"
     asymmetric_premise = "B is made out of " + material_1 + " and A is made out of " + material_2 + ", so A " + comparison_phrase + " B"
@@ -131,7 +131,7 @@ def generate_material_perturbations(material_1,
 
 def original_social_perturbation(situation, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                           negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
 
     a_position = situation.index("A")
     b_position = situation.index("B")
@@ -147,7 +147,7 @@ def original_social_perturbation(situation, comparison_phrase, negation_switch, 
 
 def negative_social_perturbation(situation, comparison_phrase, negation_switch, mode):
     negation_comparison_phrase = comparison_phrase.replace(negation_switch[mode][0], 
-                                                           negation_switch[mode][1])
+                                                           negation_switch[mode][1], 1)
 
     a_position = situation.index("A")
     b_position = situation.index("B")

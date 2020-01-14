@@ -599,7 +599,7 @@
    "asymmetric_conclusion": "A has a lot more money than B, so B does not find it less difficult to pay bills than A"
   },
   "antonym": {
-   "original": "A has a lot more money than B, so A finds it more effortmore to pay bills than B",
+   "original": "A has a lot more money than B, so A finds it more effortless to pay bills than B",
    "asymmetric_premise": "B has a lot more money than A, so A finds it less effortless to pay bills than B",
    "asymmetric_conclusion": "A has a lot more money than B, so B finds it less effortless to pay bills than A"
   },
@@ -615,8 +615,8 @@
   },
   "negation_antonym": {
    "original": "A has a lot more money than B, so A does not find it less effortless to pay bills than B",
-   "asymmetric_premise": "B has a lot more money than A, so A does not find it more effortmore to pay bills than B",
-   "asymmetric_conclusion": "A has a lot more money than B, so B does not find it more effortmore to pay bills than A"
+   "asymmetric_premise": "B has a lot more money than A, so A does not find it more effortless to pay bills than B",
+   "asymmetric_conclusion": "A has a lot more money than B, so B does not find it more effortless to pay bills than A"
   },
   "negation_paraphrase": {
    "original": "A has a lot more money than B, so A is less financially secure than B",
