@@ -53,9 +53,9 @@
    "asymmetric_conclusion": "A is lighter than B, so B should not float more than A"
   },
   "antonym": {
-   "original": "A is lighter than B, so A should float less than B",
-   "asymmetric_premise": "B is lighter than A, so A should float more than B",
-   "asymmetric_conclusion": "A is lighter than B, so B should float more than A"
+   "original": "A is lighter than B, so A should sink less than B",
+   "asymmetric_premise": "B is lighter than A, so A should sink more than B",
+   "asymmetric_conclusion": "A is lighter than B, so B should sink more than A"
   },
   "paraphrase": {
    "original": "A is lighter than B, so A will stay afloat more than B",
@@ -63,19 +63,19 @@
    "asymmetric_conclusion": "A is lighter than B, so B will stay afloat less than A"
   },
   "paraphrase_inversion": {
-   "original": "A is lighter than B, so A will sink less than B",
-   "asymmetric_premise": "B is lighter than A, so A will sink more than B",
-   "asymmetric_conclusion": "A is lighter than B, so B will sink more than A"
+   "original": "A is lighter than B, so A will fall to the ocean floor in less time than B",
+   "asymmetric_premise": "B is lighter than A, so A will fall to the ocean floor in more time than B",
+   "asymmetric_conclusion": "A is lighter than B, so B will fall to the ocean floor in more time than A"
   },
   "negation_antonym": {
-   "original": "A is lighter than B, so A should not float more than B",
-   "asymmetric_premise": "B is lighter than A, so A should not float less than B",
-   "asymmetric_conclusion": "A is lighter than B, so B should not float less than A"
+   "original": "A is lighter than B, so A should not sink more than B",
+   "asymmetric_premise": "B is lighter than A, so A should not sink less than B",
+   "asymmetric_conclusion": "A is lighter than B, so B should not sink less than A"
   },
   "negation_paraphrase": {
-   "original": "A is lighter than B, so A will not sink more than B",
-   "asymmetric_premise": "B is lighter than A, so A will not sink less than B",
-   "asymmetric_conclusion": "A is lighter than B, so B will not sink less than A"
+   "original": "A is lighter than B, so A will not fall to the ocean floor in more time than B",
+   "asymmetric_premise": "B is lighter than A, so A will not fall to the ocean floor in less time than B",
+   "asymmetric_conclusion": "A is lighter than B, so B will not fall to the ocean floor in less time than A"
   },
   "negation_paraphrase_inversion": {
    "original": "A is lighter than B, so A will not stay afloat less than B",

@@ -18,10 +18,10 @@
         "negation_switch" : {"0" : ["should", "should not"],
                              "1" : ["will", "will not"],
                              "2" : ["will", "will not"]},
-        "antonym_switch" : ["fit into", "contain"],
+        "antonym_switch" : ["float", "sink"],
         "original_comparison" : "should float more than",
         "paraphrase" : "will stay afloat more than",
-        "inverted_paraphrase" : "will sink less than",
+        "inverted_paraphrase" : "will fall to the ocean floor in less time than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]}
