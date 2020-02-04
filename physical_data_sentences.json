@@ -31,14 +31,14 @@
    "asymmetric_conclusion": "A is smaller than B, so B is not less likely to contain A"
   },
   "negation_paraphrase": {
-   "original": "A is smaller than B, so A is more able to enclose B",
-   "asymmetric_premise": "B is smaller than A, so A is less able to enclose B",
-   "asymmetric_conclusion": "A is smaller than B, so B is less able to enclose A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is smaller than B, so A is not less easily put into B",
    "asymmetric_premise": "B is smaller than A, so A is not more easily put into B",
    "asymmetric_conclusion": "A is smaller than B, so B is not more easily put into A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is smaller than B, so A is not more able to enclose B",
+   "asymmetric_premise": "B is smaller than A, so A is not less able to enclose B",
+   "asymmetric_conclusion": "A is smaller than B, so B is not less able to enclose A"
   }
  },
  "1": {
@@ -73,14 +73,14 @@
    "asymmetric_conclusion": "A is lighter than B, so B should not sink less than A"
   },
   "negation_paraphrase": {
-   "original": "A is lighter than B, so A will not fall to the ocean floor in more time than B",
-   "asymmetric_premise": "B is lighter than A, so A will not fall to the ocean floor in less time than B",
-   "asymmetric_conclusion": "A is lighter than B, so B will not fall to the ocean floor in less time than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is lighter than B, so A will not stay afloat less than B",
    "asymmetric_premise": "B is lighter than A, so A will not stay afloat more than B",
    "asymmetric_conclusion": "A is lighter than B, so B will not stay afloat more than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is lighter than B, so A will not fall to the ocean floor in more time than B",
+   "asymmetric_premise": "B is lighter than A, so A will not fall to the ocean floor in less time than B",
+   "asymmetric_conclusion": "A is lighter than B, so B will not fall to the ocean floor in less time than A"
   }
  },
  "2": {
@@ -115,14 +115,14 @@
    "asymmetric_conclusion": "A is denser than B, so B should not be less soft than A"
   },
   "negation_paraphrase": {
-   "original": "A is denser than B, so A is not more squis nothy than B",
-   "asymmetric_premise": "B is denser than A, so A is not less squis nothy than B",
-   "asymmetric_conclusion": "A is denser than B, so B is not less squis nothy than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is denser than B, so A should not be less difficult to penetrate than B",
    "asymmetric_premise": "B is denser than A, so A should not be more difficult to penetrate than B",
    "asymmetric_conclusion": "A is denser than B, so B should not be more difficult to penetrate than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is denser than B, so A is not more squis nothy than B",
+   "asymmetric_premise": "B is denser than A, so A is not less squis nothy than B",
+   "asymmetric_conclusion": "A is denser than B, so B is not less squis nothy than A"
   }
  },
  "3": {
@@ -157,14 +157,14 @@
    "asymmetric_conclusion": "A is thinner than B, so B can not be blocked by less cracks than A"
   },
   "negation_paraphrase": {
-   "original": "A is thinner than B, so A is not more impeded by small spaces than B",
-   "asymmetric_premise": "B is thinner than A, so A is not less impeded by small spaces than B",
-   "asymmetric_conclusion": "A is thinner than B, so B is not less impeded by small spaces than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is thinner than B, so A can not fit into less openings than B",
    "asymmetric_premise": "B is thinner than A, so A can not fit into more openings than B",
    "asymmetric_conclusion": "A is thinner than B, so B can not fit into more openings than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is thinner than B, so A is not more impeded by small spaces than B",
+   "asymmetric_premise": "B is thinner than A, so A is not less impeded by small spaces than B",
+   "asymmetric_conclusion": "A is thinner than B, so B is not less impeded by small spaces than A"
   }
  },
  "4": {
@@ -199,14 +199,14 @@
    "asymmetric_conclusion": "A is colder than B, so B should not freeze more quickly than A"
   },
   "negation_paraphrase": {
-   "original": "A is colder than B, so A will not take less time to melt than B",
-   "asymmetric_premise": "B is colder than A, so A will not take more time to melt than B",
-   "asymmetric_conclusion": "A is colder than B, so B will not take more time to melt than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is colder than B, so A should not turn into liquid more quickly than B",
    "asymmetric_premise": "B is colder than A, so A should not turn into liquid less quickly than B",
    "asymmetric_conclusion": "A is colder than B, so B should not turn into liquid less quickly than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is colder than B, so A will not take less time to melt than B",
+   "asymmetric_premise": "B is colder than A, so A will not take more time to melt than B",
+   "asymmetric_conclusion": "A is colder than B, so B will not take more time to melt than A"
   }
  },
  "5": {
@@ -241,14 +241,14 @@
    "asymmetric_conclusion": "A is more elastic than B, so B should not bounce back less slowly than A"
   },
   "negation_paraphrase": {
-   "original": "A is more elastic than B, so A needs more energy to bounce back than B",
-   "asymmetric_premise": "B is more elastic than A, so A needs less energy to bounce back than B",
-   "asymmetric_conclusion": "A is more elastic than B, so B needs less energy to bounce back than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is more elastic than B, so A is not harder to bounce than B",
    "asymmetric_premise": "B is more elastic than A, so A is not easier to bounce than B",
    "asymmetric_conclusion": "A is more elastic than B, so B is not easier to bounce than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is more elastic than B, so A does not need more energy to bounce back than B",
+   "asymmetric_premise": "B is more elastic than A, so A does not need less energy to bounce back than B",
+   "asymmetric_conclusion": "A is more elastic than B, so B does not need less energy to bounce back than A"
   }
  },
  "6": {
@@ -283,14 +283,14 @@
    "asymmetric_conclusion": "A is tougher than B, so B is not less difficult to keep together than A"
   },
   "negation_paraphrase": {
-   "original": "A is tougher than B, so A is not more likely to fall apart under pressure than B",
-   "asymmetric_premise": "B is tougher than A, so A is not less likely to fall apart under pressure than B",
-   "asymmetric_conclusion": "A is tougher than B, so B is not less likely to fall apart under pressure than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is tougher than B, so A does not require less effort to tear than B",
    "asymmetric_premise": "B is tougher than A, so A does not require more effort to tear than B",
    "asymmetric_conclusion": "A is tougher than B, so B does not require more effort to tear than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is tougher than B, so A is not more likely to fall apart under pressure than B",
+   "asymmetric_premise": "B is tougher than A, so A is not less likely to fall apart under pressure than B",
+   "asymmetric_conclusion": "A is tougher than B, so B is not less likely to fall apart under pressure than A"
   }
  },
  "7": {
@@ -300,9 +300,9 @@
    "asymmetric_conclusion": "A is softer than B, so B is less comfortable to sleep on than A"
   },
   "negation": {
-   "original": "A is softer than B, so A is less comfortable to sleep on than B",
-   "asymmetric_premise": "B is softer than A, so A is more comfortable to sleep on than B",
-   "asymmetric_conclusion": "A is softer than B, so B is more comfortable to sleep on than A"
+   "original": "A is softer than B, so A is not less comfortable to sleep on than B",
+   "asymmetric_premise": "B is softer than A, so A is not more comfortable to sleep on than B",
+   "asymmetric_conclusion": "A is softer than B, so B is not more comfortable to sleep on than A"
   },
   "antonym": {
    "original": "A is softer than B, so A is less difficult to sleep on than B",
@@ -320,19 +320,19 @@
    "asymmetric_conclusion": "A is softer than B, so B requires more time to feel comfortable on than A"
   },
   "negation_antonym": {
-   "original": "A is softer than B, so A is more difficult to sleep on than B",
-   "asymmetric_premise": "B is softer than A, so A is less difficult to sleep on than B",
-   "asymmetric_conclusion": "A is softer than B, so B is less difficult to sleep on than A"
+   "original": "A is softer than B, so A is not more difficult to sleep on than B",
+   "asymmetric_premise": "B is softer than A, so A is not less difficult to sleep on than B",
+   "asymmetric_conclusion": "A is softer than B, so B is not less difficult to sleep on than A"
   },
   "negation_paraphrase": {
-   "original": "A is softer than B, so A does not require more time to feel comfortable on than B",
-   "asymmetric_premise": "B is softer than A, so A does not require less time to feel comfortable on than B",
-   "asymmetric_conclusion": "A is softer than B, so B does not require less time to feel comfortable on than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is softer than B, so A is not less comfy to sleep on than B",
    "asymmetric_premise": "B is softer than A, so A is not more comfy to sleep on than B",
    "asymmetric_conclusion": "A is softer than B, so B is not more comfy to sleep on than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is softer than B, so A does not require more time to feel comfortable on than B",
+   "asymmetric_premise": "B is softer than A, so A does not require less time to feel comfortable on than B",
+   "asymmetric_conclusion": "A is softer than B, so B does not require less time to feel comfortable on than A"
   }
  },
  "8": {
@@ -367,14 +367,14 @@
    "asymmetric_conclusion": "A is taller than B, so B will not cast a less minature shadow than A"
   },
   "negation_paraphrase": {
-   "original": "A is taller than B, so A does not have more area not touched by its shadow than B",
-   "asymmetric_premise": "B is taller than A, so A does not have less area not touched by its shadow than B",
-   "asymmetric_conclusion": "A is taller than B, so B does not have less area not touched by its shadow than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is taller than B, so A will not have a less extensive shadow than B",
    "asymmetric_premise": "B is taller than A, so A will not have a more extensive shadow than B",
    "asymmetric_conclusion": "A is taller than B, so B will not have a more extensive shadow than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is taller than B, so A does not have more area not touched by its shadow than B",
+   "asymmetric_premise": "B is taller than A, so A does not have less area not touched by its shadow than B",
+   "asymmetric_conclusion": "A is taller than B, so B does not have less area not touched by its shadow than A"
   }
  },
  "9": {
@@ -409,14 +409,14 @@
    "asymmetric_conclusion": "A is heavier than B, so B is not less likely to crumble under the weight of A"
   },
   "negation_paraphrase": {
-   "original": "A is heavier than B, so A is not more expected to be crushed by B",
-   "asymmetric_premise": "B is heavier than A, so A is not less expected to be crushed by B",
-   "asymmetric_conclusion": "A is heavier than B, so B is not less expected to be crushed by A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is heavier than B, so A can not less easily support the weight of B",
    "asymmetric_premise": "B is heavier than A, so A can not more easily support the weight of B",
    "asymmetric_conclusion": "A is heavier than B, so B can not more easily support the weight of A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is heavier than B, so A is not more expected to be crushed by B",
+   "asymmetric_premise": "B is heavier than A, so A is not less expected to be crushed by B",
+   "asymmetric_conclusion": "A is heavier than B, so B is not less expected to be crushed by A"
   }
  },
  "10": {
@@ -451,14 +451,14 @@
    "asymmetric_conclusion": "A has more momentum than B, so B has less of an inability to cause damage on impact than A"
   },
   "negation_paraphrase": {
-   "original": "A has more momentum than B, so A is not more harmless on impact than B",
-   "asymmetric_premise": "B has more momentum than A, so A is not less harmless on impact than B",
-   "asymmetric_conclusion": "A has more momentum than B, so B is not less harmless on impact than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A has more momentum than B, so A will not cause less damage on impact than B",
    "asymmetric_premise": "B has more momentum than A, so A will not cause more damage on impact than B",
    "asymmetric_conclusion": "A has more momentum than B, so B will not cause more damage on impact than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A has more momentum than B, so A is not more harmless on impact than B",
+   "asymmetric_premise": "B has more momentum than A, so A is not less harmless on impact than B",
+   "asymmetric_conclusion": "A has more momentum than B, so B is not less harmless on impact than A"
   }
  },
  "11": {
@@ -493,14 +493,14 @@
    "asymmetric_conclusion": "A is more luminous than B, so B is not less innocuous to look directly at than A"
   },
   "negation_paraphrase": {
-   "original": "A is more luminous than B, so A is more safe to stare at than B",
-   "asymmetric_premise": "B is more luminous than A, so A is less safe to stare at than B",
-   "asymmetric_conclusion": "A is more luminous than B, so B is less safe to stare at than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is more luminous than B, so A will not cause less damage when stared at than B",
    "asymmetric_premise": "B is more luminous than A, so A will not cause more damage when stared at than B",
    "asymmetric_conclusion": "A is more luminous than B, so B will not cause more damage when stared at than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is more luminous than B, so A is not more safe to stare at than B",
+   "asymmetric_premise": "B is more luminous than A, so A is not less safe to stare at than B",
+   "asymmetric_conclusion": "A is more luminous than B, so B is not less safe to stare at than A"
   }
  },
  "12": {
@@ -521,8 +521,8 @@
   },
   "paraphrase": {
    "original": "A is more soluble than B, so A is harder to see in water than B",
-   "asymmetric_premise": "B is more soluble than A, so A is harder to see in water than B",
-   "asymmetric_conclusion": "A is more soluble than B, so B is harder to see in water than A"
+   "asymmetric_premise": "B is more soluble than A, so A is easier to see in water than B",
+   "asymmetric_conclusion": "A is more soluble than B, so B is easier to see in water than A"
   },
   "paraphrase_inversion": {
    "original": "A is more soluble than B, so A is less seperable in water than B",
@@ -535,14 +535,14 @@
    "asymmetric_conclusion": "A is more soluble than B, so B is not less obvious to dis notcern in water than A"
   },
   "negation_paraphrase": {
+   "original": "A is more soluble than B, so A is not easier to see in water than B",
+   "asymmetric_premise": "B is more soluble than A, so A is not harder to see in water than B",
+   "asymmetric_conclusion": "A is more soluble than B, so B is not harder to see in water than A"
+  },
+  "negation_paraphrase_inversion": {
    "original": "A is more soluble than B, so A is not more seperable in water than B",
    "asymmetric_premise": "B is more soluble than A, so A is not less seperable in water than B",
    "asymmetric_conclusion": "A is more soluble than B, so B is not less seperable in water than A"
-  },
-  "negation_paraphrase_inversion": {
-   "original": "A is more soluble than B, so A is not harder to see in water than B",
-   "asymmetric_premise": "B is more soluble than A, so A is not harder to see in water than B",
-   "asymmetric_conclusion": "A is more soluble than B, so B is not harder to see in water than A"
   }
  },
  "13": {
@@ -577,14 +577,14 @@
    "asymmetric_conclusion": "A is more pungent than B, so B is not less easily hidden than A"
   },
   "negation_paraphrase": {
-   "original": "A is more pungent than B, so A is not more likely to go unnoticed than B",
-   "asymmetric_premise": "B is more pungent than A, so A is not less likely to go unnoticed than B",
-   "asymmetric_conclusion": "A is more pungent than B, so B is not less likely to go unnoticed than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is more pungent than B, so A does not require less thought to hide than B",
    "asymmetric_premise": "B is more pungent than A, so A does not require more thought to hide than B",
    "asymmetric_conclusion": "A is more pungent than B, so B does not require more thought to hide than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is more pungent than B, so A is not more likely to go unnoticed than B",
+   "asymmetric_premise": "B is more pungent than A, so A is not less likely to go unnoticed than B",
+   "asymmetric_conclusion": "A is more pungent than B, so B is not less likely to go unnoticed than A"
   }
  },
  "14": {
@@ -619,14 +619,14 @@
    "asymmetric_conclusion": "A is larger than B, so B will not leave less liquid in a tub than A"
   },
   "negation_paraphrase": {
-   "original": "A is larger than B, so A does not leave more liquid in a tub than B",
-   "asymmetric_premise": "B is larger than A, so A does not leave less liquid in a tub than B",
-   "asymmetric_conclusion": "A is larger than B, so B does not leave less liquid in a tub than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is larger than B, so A does not displace less liquid in a tub than B",
    "asymmetric_premise": "B is larger than A, so A does not displace more liquid in a tub than B",
    "asymmetric_conclusion": "A is larger than B, so B does not displace more liquid in a tub than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is larger than B, so A does not leave more liquid in a tub than B",
+   "asymmetric_premise": "B is larger than A, so A does not leave less liquid in a tub than B",
+   "asymmetric_conclusion": "A is larger than B, so B does not leave less liquid in a tub than A"
   }
  },
  "15": {
@@ -661,14 +661,14 @@
    "asymmetric_conclusion": "A is shorter than B, so B is not better for keeping things in reach than A"
   },
   "negation_paraphrase": {
-   "original": "A is shorter than B, so A is not worse for storing everday items than B",
-   "asymmetric_premise": "B is shorter than A, so A is not better for storing everday items than B",
-   "asymmetric_conclusion": "A is shorter than B, so B is not better for storing everday items than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is shorter than B, so A is not more appropriate for keeping things out of reach than B",
    "asymmetric_premise": "B is shorter than A, so A is not less appropriate for keeping things out of reach than B",
    "asymmetric_conclusion": "A is shorter than B, so B is not less appropriate for keeping things out of reach than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is shorter than B, so A is not worse for storing everday items than B",
+   "asymmetric_premise": "B is shorter than A, so A is not better for storing everday items than B",
+   "asymmetric_conclusion": "A is shorter than B, so B is not better for storing everday items than A"
   }
  },
  "16": {
@@ -703,14 +703,14 @@
    "asymmetric_conclusion": "A is wider than B, so B is not less convenient to carry than A"
   },
   "negation_paraphrase": {
+   "original": "A is wider than B, so A is not less awkward to carry than B",
+   "asymmetric_premise": "B is wider than A, so A is not more awkward to carry than B",
+   "asymmetric_conclusion": "A is wider than B, so B is not more awkward to carry than A"
+  },
+  "negation_paraphrase_inversion": {
    "original": "A is wider than B, so A is not more easy to carry than B",
    "asymmetric_premise": "B is wider than A, so A is not less easy to carry than B",
    "asymmetric_conclusion": "A is wider than B, so B is not less easy to carry than A"
-  },
-  "negation_paraphrase_inversion": {
-   "original": "A is wider than B, so A is less awkward to carry than B",
-   "asymmetric_premise": "B is wider than A, so A is more awkward to carry than B",
-   "asymmetric_conclusion": "A is wider than B, so B is more awkward to carry than A"
   }
  },
  "17": {
@@ -745,14 +745,14 @@
    "asymmetric_conclusion": "A is more taught than B, so B can not absorb more additional force than A"
   },
   "negation_paraphrase": {
-   "original": "A is more taught than B, so A is not less likely to snap than B",
-   "asymmetric_premise": "B is more taught than A, so A is not more likely to snap than B",
-   "asymmetric_conclusion": "A is more taught than B, so B is not more likely to snap than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is more taught than B, so A is not more able to tolerate additional force than B",
    "asymmetric_premise": "B is more taught than A, so A is not less able to tolerate additional force than B",
    "asymmetric_conclusion": "A is more taught than B, so B is not less able to tolerate additional force than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is more taught than B, so A is not less likely to snap than B",
+   "asymmetric_premise": "B is more taught than A, so A is not more likely to snap than B",
+   "asymmetric_conclusion": "A is more taught than B, so B is not more likely to snap than A"
   }
  },
  "18": {
@@ -787,14 +787,14 @@
    "asymmetric_conclusion": "A is much hotter than B, so B will not be less pleasant to hold onto than A"
   },
   "negation_paraphrase": {
-   "original": "A is much hotter than B, so A is not more enjoyable to hold onto than B",
-   "asymmetric_premise": "B is much hotter than A, so A is not less enjoyable to hold onto than B",
-   "asymmetric_conclusion": "A is much hotter than B, so B is not less enjoyable to hold onto than A"
-  },
-  "negation_paraphrase_inversion": {
    "original": "A is much hotter than B, so A is not less difficult to hold onto than B",
    "asymmetric_premise": "B is much hotter than A, so A is not more difficult to hold onto than B",
    "asymmetric_conclusion": "A is much hotter than B, so B is not more difficult to hold onto than A"
+  },
+  "negation_paraphrase_inversion": {
+   "original": "A is much hotter than B, so A is not more enjoyable to hold onto than B",
+   "asymmetric_premise": "B is much hotter than A, so A is not less enjoyable to hold onto than B",
+   "asymmetric_conclusion": "A is much hotter than B, so B is not less enjoyable to hold onto than A"
   }
  },
  "19": {
@@ -829,14 +829,14 @@
    "asymmetric_conclusion": "A is more magnetic than B, so B does not need less force to connect to a magnet than A"
   },
   "negation_paraphrase": {
+   "original": "A is more magnetic than B, so A does not require less effort to remove from a magnet than B",
+   "asymmetric_premise": "B is more magnetic than A, so A does not require more effort to remove from a magnet than B",
+   "asymmetric_conclusion": "A is more magnetic than B, so B does not require more effort to remove from a magnet than A"
+  },
+  "negation_paraphrase_inversion": {
    "original": "A is more magnetic than B, so A is not more likely to fall off a magnet than B",
    "asymmetric_premise": "B is more magnetic than A, so A is not less likely to fall off a magnet than B",
    "asymmetric_conclusion": "A is more magnetic than B, so B is not less likely to fall off a magnet than A"
-  },
-  "negation_paraphrase_inversion": {
-   "original": "A is more magnetic than B, so A requires less effort to remove from a magnet than B",
-   "asymmetric_premise": "B is more magnetic than A, so A requires more effort to remove from a magnet than B",
-   "asymmetric_conclusion": "A is more magnetic than B, so B requires more effort to remove from a magnet than A"
   }
  }
 }

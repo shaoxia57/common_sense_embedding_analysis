@@ -11,22 +11,24 @@
             "inverted_paraphrase" : "blocks less light than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "1" : {
             "material_1" : "glass",
             "material_2" : "cotton",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["can", "cannot"], 
+                                 "1" : ["has", "does not have"], 
                                  "2" : ["is", "is not"]},
             "antonym_switch" : ["sharp", "blunt"],
             "original_comparison" : "is more sharp than",
-            "paraphrase" : "can cut better than",
+            "paraphrase" : "has more sharp edges than",
             "inverted_paraphrase" : "is less edgeless than",
             "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["better", "worse"],
-                                "2" : ["less", "more"]}
+                                "1" : ["more", "less"],
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "2" : {
@@ -41,7 +43,8 @@
             "inverted_paraphrase" : "is less easy to lift than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "3" : {
@@ -56,7 +59,8 @@
             "inverted_paraphrase" : "falls to the ocean floor in less time than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "4" : {
@@ -71,7 +75,8 @@
             "inverted_paraphrase" : "is less difficult to break",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "5" : {
@@ -86,7 +91,8 @@
             "inverted_paraphrase" : "is less rough to the touch than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "6" : {
@@ -101,7 +107,8 @@
             "inverted_paraphrase" : "is less likely to survive a fire than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "7" : {
@@ -116,7 +123,8 @@
             "inverted_paraphrase" : "lets more water through than",
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["worse", "better"],
-                                "2" : ["more", "less"]}
+                                "2" : ["more", "less"]},
+            "template" : "2"
     },
 
     "8" : {
@@ -125,13 +133,14 @@
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["is", "is not"], 
                                  "2" : ["is", "is not"]},
-            "antonym_switch" : ["ductile", "brittle"],
+            "antonym_switch" : ["ductile", "rigid"],
             "original_comparison" : "is more ductile than",
             "paraphrase" : "is more malleable than",
-            "inverted_paraphrase" : "is less rigid than",
+            "inverted_paraphrase" : "is less stiff than",
             "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["better", "worse"],
-                                "2" : ["less", "more"]}
+                                "1" : ["more", "less"],
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "9" : {
@@ -145,8 +154,9 @@
             "paraphrase" : "is easier to fold than",
             "inverted_paraphrase" : "is less inflexible",
             "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["better", "worse"],
-                                "2" : ["less", "more"]}
+                                "1" : ["easier", "harder"],
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "10" : {
@@ -155,13 +165,14 @@
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["needs", "does not need"], 
                                  "2" : ["is", "is not"]},
-            "antonym_switch" : ["difficult", "easy"],
-            "original_comparison" : "is more difficult to melt than",
+            "antonym_switch" : ["stay frozen", "melt"],
+            "original_comparison" : "is more likely to stay frozen than",
             "paraphrase" : "needs more energy to melt than",
-            "inverted_paraphrase" : "is less likely to melt than",
+            "inverted_paraphrase" : "is less likely to turn into liquid than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "11" : {
@@ -176,22 +187,24 @@
             "inverted_paraphrase" : "stops less electricity than",
             "premise_switch" : {"0" : ["better", "worse"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "12" : {
             "material_1" : "helium",
             "material_2" : "stone",
-            "negation_switch" : {"0" : ["can", "can not"], 
+            "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["is", "is not"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["fly", "sink"],
-            "original_comparison" : "can fly better than",
+                                 "2" : ["needs", "does not need"]},
+            "antonym_switch" : ["to fly", "stay grounded"],
+            "original_comparison" : "is more likely to fly than",
             "paraphrase" : "is able to fly better than",
-            "inverted_paraphrase" : "is less likely to stay on the ground than",
-            "premise_switch" : {"0" : ["better", "worse"],
+            "inverted_paraphrase" : "needs less effort to make fly than",
+            "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["better", "worse"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "13" : {
@@ -206,7 +219,8 @@
             "inverted_paraphrase" : "flows out of a bottle less smoothly than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["higher", "lower"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "14" : {
@@ -221,7 +235,8 @@
             "inverted_paraphrase" : "is less able to stay in a fixed shape than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["easier", "harder"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "15" : {
@@ -236,7 +251,8 @@
             "inverted_paraphrase" : "poses less risk in storage than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "16" : {
@@ -251,7 +267,8 @@
             "inverted_paraphrase" : "poses more danger inside the human body than",
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["less", "more"],
-                                "2" : ["more", "less"]}
+                                "2" : ["more", "less"]},
+            "template" : "2"
     },
 
     "17" : {
@@ -266,7 +283,8 @@
             "inverted_paraphrase" : "is less able to stay the same shape when heated than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     },
 
     "18" : {
@@ -277,11 +295,12 @@
                                  "2" : ["is", "is not"]},
             "antonym_switch" : ["penetrable", "tough"],
             "original_comparison" : "is less penetrable than",
-            "paraphrase" : "is easier to make a hole in than",
-            "inverted_paraphrase" : "is worse to make a safe out of than",
+            "paraphrase" : "is less likely to have a hole in it than",
+            "inverted_paraphrase" : "is more appropriate to store valuables in",
             "premise_switch" : {"0" : ["less", "more"],
-                                "1" : ["easier", "harder"],
-                                "2" : ["worse", "better"]}
+                                "1" : ["less", "more"],
+                                "2" : ["worse", "better"]},
+            "template" : "2"
     },
 
     "19" : {
@@ -296,7 +315,8 @@
             "inverted_paraphrase" : "will capture less light than",
             "premise_switch" : {"0" : ["better", "worse"],
                                 "1" : ["more", "less"],
-                                "2" : ["less", "more"]}
+                                "2" : ["less", "more"]},
+            "template" : "2"
     }
 
 }

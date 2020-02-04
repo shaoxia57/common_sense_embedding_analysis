@@ -54,8 +54,8 @@ def generate_physical_perturbations(initial_comparison,
     output["paraphrase_inversion"] = original_phys_perturbation(initial_comparison, inverted_paraphrase, premise_switch, "2")
 
     output["negation_antonym"] = original_phys_perturbation(initial_comparison, negation_antonym_comparison, premise_switch, "0")
-    output["negation_paraphrase"] = negative_phys_perturbation(initial_comparison, negative_paraphrase_inversion_comparison, premise_switch, "2")
-    output["negation_paraphrase_inversion"] = negative_phys_perturbation(initial_comparison, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase"] = negative_phys_perturbation(initial_comparison, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase_inversion"] = negative_phys_perturbation(initial_comparison, negative_paraphrase_inversion_comparison, premise_switch, "2")
 
     # output = {}
     # negative_comparison = negation + " " + original_comparison
@@ -124,8 +124,8 @@ def generate_material_perturbations(material_1,
     output["paraphrase_inversion"] = original_material_perturbation(material_1, material_2, inverted_paraphrase, premise_switch, "2")
 
     output["negation_antonym"] = original_material_perturbation(material_1, material_2, negation_antonym_comparison, premise_switch, "0")
-    output["negation_paraphrase"] = negative_material_perturbation(material_1, material_2, negative_paraphrase_inversion_comparison, premise_switch, "2")
-    output["negation_paraphrase_inversion"] = negative_material_perturbation(material_1, material_2, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase"] = negative_material_perturbation(material_1, material_2, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase_inversion"] = negative_material_perturbation(material_1, material_2, negative_paraphrase_inversion_comparison, premise_switch, "2")
 
     return output
 
@@ -184,8 +184,8 @@ def generate_social_perturbations(situation,
     output["paraphrase_inversion"] = original_social_perturbation(situation, inverted_paraphrase, premise_switch, "2")
 
     output["negation_antonym"] = original_social_perturbation(situation, negation_antonym_comparison, premise_switch, "0")
-    output["negation_paraphrase"] = negative_social_perturbation(situation, negative_paraphrase_inversion_comparison, premise_switch, "2")
-    output["negation_paraphrase_inversion"] = negative_social_perturbation(situation, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase"] = negative_social_perturbation(situation, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase_inversion"] = negative_social_perturbation(situation, negative_paraphrase_inversion_comparison, premise_switch, "2")
 
     return output
 
