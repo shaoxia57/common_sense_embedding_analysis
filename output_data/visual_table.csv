@@ -1,0 +1,6 @@
+,original-original,original-asymmetric_premise,original-asymmetric_conclusion,negation-original,negation-asymmetric_premise,negation-asymmetric_conclusion,antonym-original,antonym-asymmetric_premise,antonym-asymmetric_conclusion,paraphrase-original,paraphrase-asymmetric_premise,paraphrase-asymmetric_conclusion,paraphrase_inversion-original,paraphrase_inversion-asymmetric_premise,paraphrase_inversion-asymmetric_conclusion,negation_antonym-original,negation_antonym-asymmetric_premise,negation_antonym-asymmetric_conclusion,negation_paraphrase-original,negation_paraphrase-asymmetric_premise,negation_paraphrase-asymmetric_conclusion,negation_paraphrase_inversion-original,negation_paraphrase_inversion-asymmetric_premise,negation_paraphrase_inversion-asymmetric_conclusion
+0,X,O,O,O,X,X,O,X,X,X,O,O,X,X,X,X,O,O,O,X,X,X,O,O
+1,X,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,X,X,X,O,O
+2,X,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,X,X,X,O,O
+3,X,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,X,X,X,O,O
+4,X,O,O,O,X,X,X,X,X,X,O,O,X,O,O,X,O,O,X,X,X,X,O,O
