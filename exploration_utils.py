@@ -113,11 +113,12 @@ def autolabel(rects, ax, color, below=False):
             bottom = True
         
         if bottom:
-            y = min(-0.4, -2*height)
+            multiple = 1.5 if height < 0 else -1.5
+            y = min(-0.4, multiple*height)
             va = "bottom"
             x = rect.get_x() + 2*rect.get_width() / 3
         else:
-            y = height * 1.05
+            y = height
             x = rect.get_x() + rect.get_width() / 2
             va = "bottom"
 
