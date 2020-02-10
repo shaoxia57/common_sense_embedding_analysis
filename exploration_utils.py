@@ -103,26 +103,24 @@ def aggregate_templates(raw_template_data, metric):
     
     return output
 
-def autolabel(rects, ax, color):
+def autolabel(rects, ax, color, below=False):
     """Attach a text label above each bar in *rects*, displaying its height."""
     for rect in rects:
         height = rect.get_height()
-        print(height)
+        bottom = below
         
         if height < 0:
-            below = True
-        else:
-            below = False
+            bottom = True
         
-        if below:
+        if bottom:
             y = min(-0.4, -2*height)
             va = "bottom"
-            x = rect.get_x() + 5*rect.get_width() / 6
+            x = rect.get_x() + 2*rect.get_width() / 3
         else:
             y = height * 1.05
             x = rect.get_x() + rect.get_width() / 2
             va = "bottom"
-            
+
         ax.annotate('{}'.format(height),
                     xy=(x, y),
                     xytext=(0, 3),  # 3 points vertical offset
