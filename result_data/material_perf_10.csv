@@ -111,7 +111,7 @@ truism_number,perturbation,premise,avg_binary_score,avg_ratio_score
 4,negation_antonym,asymmetric_premise,0.0,-0.8118080177456501
 4,negation_antonym,asymmetric_conclusion,0.0,-0.7857096489874389
 4,negation_paraphrase,original,0.0,-0.8454587835839378
-4,negation_paraphrase,asymmetric_premise,0.0,1.0
+4,negation_paraphrase,asymmetric_premise,1.0,1.0
 4,negation_paraphrase,asymmetric_conclusion,1.0,0.5995777854745254
 4,negation_paraphrase_inversion,original,1.0,0.9319314542386208
 4,negation_paraphrase_inversion,asymmetric_premise,0.0,-0.8873952374935516
@@ -293,7 +293,7 @@ truism_number,perturbation,premise,avg_binary_score,avg_ratio_score
 12,antonym,original,1.0,0.8965832505302984
 12,antonym,asymmetric_premise,1.0,0.8927303570268197
 12,antonym,asymmetric_conclusion,1.0,0.892340891100704
-12,paraphrase,original,0.0,1.0
+12,paraphrase,original,1.0,1.0
 12,paraphrase,asymmetric_premise,0.0,-0.9989121292842154
 12,paraphrase,asymmetric_conclusion,0.0,-0.998357665037029
 12,paraphrase_inversion,original,1.0,0.4645467226371035
@@ -426,7 +426,7 @@ truism_number,perturbation,premise,avg_binary_score,avg_ratio_score
 17,negation_paraphrase,asymmetric_premise,1.0,0.9353321068075224
 17,negation_paraphrase,asymmetric_conclusion,1.0,0.9293669679182367
 17,negation_paraphrase_inversion,original,1.0,0.8619358933897894
-17,negation_paraphrase_inversion,asymmetric_premise,1.0,-1.0
+17,negation_paraphrase_inversion,asymmetric_premise,0.0,-1.0
 17,negation_paraphrase_inversion,asymmetric_conclusion,0.0,-0.8481782532479212
 18,original,original,0.0,-0.6516581684101481
 18,original,asymmetric_premise,1.0,0.44559231850905767
