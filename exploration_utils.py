@@ -74,15 +74,15 @@ def aggregate_pertubations(raw_template_data, metric):
     
     output = {}
     for perturbation in raw_template_data[one_key]:
+        output[perturbation] = {"count" : 0, "pct" : -1, "total" : -1}
         if perturbation != "count":
             for template in raw_template_data:
                 if perturbation in output:
-                    output[perturbation] += raw_template_data[template][perturbation][metric]
-                else:
-                    output[perturbation] = raw_template_data[template][perturbation][metric]
+                    output[perturbation]["count"] += raw_template_data[template][perturbation][metric]
     
     for key in output:
-        output[key] = output[key] / total_count
+        output[key]["total"] = total_count
+        output[key]["pct"] = output[key]["count"] / output[key]["total"]
     
     return output
 
@@ -103,14 +103,21 @@ def aggregate_templates(raw_template_data, metric):
     
     return output
 
-def autolabel(rects, ax, below, color):
+def autolabel(rects, ax, color):
     """Attach a text label above each bar in *rects*, displaying its height."""
     for rect in rects:
         height = rect.get_height()
+        print(height)
+        
+        if height < 0:
+            below = True
+        else:
+            below = False
+        
         if below:
-            y = min(-0.2, -2*height)
+            y = min(-0.4, -2*height)
             va = "bottom"
-            x = rect.get_x() + 4*rect.get_width() / 5
+            x = rect.get_x() + 5*rect.get_width() / 6
         else:
             y = height * 1.05
             x = rect.get_x() + rect.get_width() / 2
@@ -151,8 +158,8 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     ax1.legend(loc=2)
     ax2.legend(loc=0)
     
-    autolabel(rects1, ax1, False, "tab:red")
-    autolabel(rects2, ax2, True, "tab:blue")
+    # autolabel(rects1, ax1, False, "tab:red")
+    # autolabel(rects2, ax2, True, "tab:blue")
     
     ax1.set_title(title)
     

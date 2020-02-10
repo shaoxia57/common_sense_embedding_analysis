@@ -11,7 +11,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "3"
     },
 
     "1" : {
@@ -26,7 +26,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "3"
     },
 
     "2" : {
@@ -41,7 +41,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "3"
     },
 
     "3" : {
@@ -56,7 +56,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "4" : {
@@ -71,7 +71,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "3"
     },
 
     "5" : {
@@ -86,7 +86,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "6" : {
@@ -101,7 +101,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["higher", "lower"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "7" : {
@@ -116,7 +116,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "8" : {
@@ -131,7 +131,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "9" : {
@@ -146,7 +146,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "10" : {
@@ -161,7 +161,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "11" : {
@@ -176,7 +176,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "12" : {
@@ -191,7 +191,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "13" : {
@@ -206,7 +206,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "14" : {
@@ -221,7 +221,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "15" : {
@@ -236,7 +236,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "16" : {
@@ -251,7 +251,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "17" : {
@@ -266,7 +266,7 @@
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
                             "2" : ["more", "less"]},
-        "template" : "3"
+        "template" : "2"
     },
 
     "18" : {
@@ -281,7 +281,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "5"
+        "template" : "4"
     },
 
     "19" : {
@@ -296,6 +296,6 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "3"
+        "template" : "2"
     }
 }
