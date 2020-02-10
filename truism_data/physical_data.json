@@ -1,17 +1,17 @@
 {
     "0" : {
         "initial_comparison" : "A is smaller than B",
-        "negation_switch" : {"0" : ["is", "is not"],
+        "negation_switch" : {"0" : ["can", "can not"],
                              "1" : ["is", "is not"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["fit into", "contain"],
-        "original_comparison" : "is more likely to fit into",
-        "paraphrase" : "is more easily put into",
-        "inverted_paraphrase" : "is less able to enclose",
+        "original_comparison" : "can fit into more boxes than",
+        "paraphrase" : "is more easily put into a container than",
+        "inverted_paraphrase" : "is less able to hold objects than",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "1" : {
@@ -26,7 +26,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "2" : {
@@ -41,7 +41,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "3" : {
@@ -56,7 +56,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "4" : {
@@ -71,7 +71,7 @@
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
                             "2" : ["more", "less"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "5" : {
@@ -86,7 +86,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["easier", "harder"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "6" : {
@@ -101,7 +101,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "7" : {
@@ -116,7 +116,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
 
@@ -132,7 +132,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "9" : {
@@ -141,13 +141,13 @@
                              "1" : ["can", "can not"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["support", "crumble under"],
-        "original_comparison" : "is more likely to support the weight of",
-        "paraphrase" : "can more easily support the weight of",
-        "inverted_paraphrase" : "is less expected to be crushed by",
+        "original_comparison" : "should support the weight of more objects than",
+        "paraphrase" : "can support more weight than",
+        "inverted_paraphrase" : "is expected to be crushed by fewer objects",
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "1"
+                            "2" : ["fewer", "more"]},
+        "template" : "4"
     },
 
     "10" : {
@@ -162,7 +162,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "11" : {
@@ -177,7 +177,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "12" : {
@@ -192,7 +192,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["harder", "easier"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "13" : {
@@ -207,7 +207,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "14" : {
@@ -222,7 +222,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "15" : {
@@ -237,7 +237,7 @@
         "premise_switch" : {"0" : ["worse", "better"], 
                             "1" : ["less", "more"], 
                             "2" : ["better", "worse"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "16" : {
@@ -252,7 +252,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "17" : {
@@ -267,7 +267,7 @@
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
                             "2" : ["more", "less"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "18" : {
@@ -282,7 +282,7 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     },
 
     "19" : {
@@ -297,6 +297,6 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "1"
+        "template" : "4"
     }
 }

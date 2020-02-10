@@ -300,9 +300,9 @@
    "asymmetric_conclusion": "A is made out of leather and B is made out of nylon, so B is more water resistant than A"
   },
   "negation": {
-   "original": "A is made out of leather and B is made out of nylon, so A is not more water resis nottant than B",
-   "asymmetric_premise": "B is made out of leather and A is made out of nylon, so A is not less water resis nottant than B",
-   "asymmetric_conclusion": "A is made out of leather and B is made out of nylon, so B is not less water resis nottant than A"
+   "original": "A is made out of leather and B is made out of nylon, so A is not more water resistant than B",
+   "asymmetric_premise": "B is made out of leather and A is made out of nylon, so A is not less water resistant than B",
+   "asymmetric_conclusion": "A is made out of leather and B is made out of nylon, so B is not less water resistant than A"
   },
   "antonym": {
    "original": "A is made out of leather and B is made out of nylon, so A is more permeable than B",
@@ -552,9 +552,9 @@
    "asymmetric_conclusion": "A is made out of honey and B is made out of water, so B is less viscous than A"
   },
   "negation": {
-   "original": "A is made out of honey and B is made out of water, so A is not less vis notcous than B",
-   "asymmetric_premise": "B is made out of honey and A is made out of water, so A is not more vis notcous than B",
-   "asymmetric_conclusion": "A is made out of honey and B is made out of water, so B is not more vis notcous than A"
+   "original": "A is made out of honey and B is made out of water, so A is not less viscous than B",
+   "asymmetric_premise": "B is made out of honey and A is made out of water, so A is not more viscous than B",
+   "asymmetric_conclusion": "A is made out of honey and B is made out of water, so B is not more viscous than A"
   },
   "antonym": {
    "original": "A is made out of honey and B is made out of water, so A is less free flowing than B",
@@ -656,9 +656,9 @@
    "asymmetric_conclusion": "A is made out of water and B is made out of methane, so B poses more risk in storage than A"
   },
   "negation_antonym": {
-   "original": "A is made out of water and B is made out of methane, so A is not more safe to dis notpose of than B",
-   "asymmetric_premise": "B is made out of water and A is made out of methane, so A is not less safe to dis notpose of than B",
-   "asymmetric_conclusion": "A is made out of water and B is made out of methane, so B is not less safe to dis notpose of than A"
+   "original": "A is made out of water and B is made out of methane, so A is not more safe to dispose of than B",
+   "asymmetric_premise": "B is made out of water and A is made out of methane, so A is not less safe to dispose of than B",
+   "asymmetric_conclusion": "A is made out of water and B is made out of methane, so B is not less safe to dispose of than A"
   },
   "negation_paraphrase": {
    "original": "A is made out of water and B is made out of methane, so A can not be handled with less calmness than B",

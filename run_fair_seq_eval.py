@@ -3,7 +3,7 @@ import random
 import json
 import string
 import logging
-from utils import *
+from experiment_utils import *
 
 def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger):
     dataset = prepare_masked_instances(sentences=sentences, 
