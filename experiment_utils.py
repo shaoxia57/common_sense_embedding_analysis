@@ -67,8 +67,8 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
         for example in masked_examples[key]:
             statement, right_answer, wrong_answer = example
             responses = model.fill_mask(statement, topk=top_n)
-            right_pos = -1
-            wrong_pos = -1
+            right_pos = top_n + 1
+            wrong_pos = top_n + 1
             right_score = 0
             wrong_score = 0
             done = -1
