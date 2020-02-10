@@ -443,9 +443,9 @@ truism_number,perturbation,premise,avg_binary_score,avg_ratio_score
 18,paraphrase_inversion,original,1.0,0.36161798460104694
 18,paraphrase_inversion,asymmetric_premise,1.0,0.1978452949641707
 18,paraphrase_inversion,asymmetric_conclusion,1.0,0.3117056278959243
-18,negation_antonym,original,1.0,0.7199142482258027
-18,negation_antonym,asymmetric_premise,0.0,-0.7426812681131273
-18,negation_antonym,asymmetric_conclusion,0.0,-0.7443504327046472
+18,negation_antonym,original,1.0,0.9145674645857429
+18,negation_antonym,asymmetric_premise,0.0,-0.8366128292433255
+18,negation_antonym,asymmetric_conclusion,0.0,-0.8646314892820979
 18,negation_paraphrase,original,1.0,0.4721848821308253
 18,negation_paraphrase,asymmetric_premise,1.0,0.36497887786298955
 18,negation_paraphrase,asymmetric_conclusion,1.0,0.5850012831303505
