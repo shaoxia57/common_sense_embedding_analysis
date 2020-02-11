@@ -184,14 +184,14 @@
    "asymmetric_conclusion": "A bullies people while B does not, so B is less mean than A"
   },
   "paraphrase": {
-   "original": "A bullies people while B does not, so A is a more cruel person than B",
-   "asymmetric_premise": "B bullies people while A does not, so A is a more cruel person than B",
-   "asymmetric_conclusion": "A bullies people while B does not, so B is a more cruel person than A"
+   "original": "A bullies people while B does not, so A cares less about people than B",
+   "asymmetric_premise": "B bullies people while A does not, so A cares more about people than B",
+   "asymmetric_conclusion": "A bullies people while B does not, so B cares more about people than A"
   },
   "paraphrase_inversion": {
-   "original": "A bullies people while B does not, so A cares less about people than B",
-   "asymmetric_premise": "B bullies people while A does not, so A cares less about people than B",
-   "asymmetric_conclusion": "A bullies people while B does not, so B cares less about people than A"
+   "original": "A bullies people while B does not, so A is a more cruel person than B",
+   "asymmetric_premise": "B bullies people while A does not, so A is a less cruel person than B",
+   "asymmetric_conclusion": "A bullies people while B does not, so B is a less cruel person than A"
   },
   "negation_antonym": {
    "original": "A bullies people while B does not, so A isn't less mean than B",
@@ -199,14 +199,14 @@
    "asymmetric_conclusion": "A bullies people while B does not, so B isn't more mean than A"
   },
   "negation_paraphrase": {
-   "original": "A bullies people while B does not, so A is a more cruel person than B",
-   "asymmetric_premise": "B bullies people while A does not, so A is a more cruel person than B",
-   "asymmetric_conclusion": "A bullies people while B does not, so B is a more cruel person than A"
+   "original": "A bullies people while B does not, so A does not care more about people than B",
+   "asymmetric_premise": "B bullies people while A does not, so A does not care less about people than B",
+   "asymmetric_conclusion": "A bullies people while B does not, so B does not care less about people than A"
   },
   "negation_paraphrase_inversion": {
-   "original": "A bullies people while B does not, so A cares less about people than B",
-   "asymmetric_premise": "B bullies people while A does not, so A cares less about people than B",
-   "asymmetric_conclusion": "A bullies people while B does not, so B cares less about people than A"
+   "original": "A bullies people while B does not, so A isn't a less cruel person than B",
+   "asymmetric_premise": "B bullies people while A does not, so A isn't a more cruel person than B",
+   "asymmetric_conclusion": "A bullies people while B does not, so B isn't a more cruel person than A"
   }
  },
  "5": {
