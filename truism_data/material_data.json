@@ -12,39 +12,42 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "1" : {
             "material_1" : "glass",
             "material_2" : "cotton",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["has", "does not have"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["sharp", "blunt"],
-            "original_comparison" : "is more sharp than",
-            "paraphrase" : "has more sharp edges than",
-            "inverted_paraphrase" : "is less edgeless than",
-            "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["more", "less"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["has", "does not have"], 
+                                 "1" : ["is", "is not"]},
+            "antonym_switch" : ["blunt", "sharp"],
+            "original_comparison" : "is less blunt than",
+            "paraphrase" : "is less edgeless than",
+            "inverted_paraphrase" : "has more sharp edges than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "1" : ["less", "more"],
+                                "2" : ["more", "less"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "2" : {
             "material_1" : "concrete",
             "material_2" : "paper",
             "negation_switch" : {"0" : ["should", "should not"], 
-                                 "1" : ["weighs", "does not weigh"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["heavy", "lightweight"],
-            "original_comparison" : "should be more heavy than",
-            "paraphrase" : "weighs more than",
-            "inverted_paraphrase" : "is less easy to lift than",
-            "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["more", "less"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["weighs", "does not weigh"], 
+                                 "1" : ["is", "is not"]},
+            "antonym_switch" : ["lightweight", "heavy"],
+            "original_comparison" : "should be less lightweight than",
+            "paraphrase" : "is less easy to lift than",
+            "inverted_paraphrase" : "weighs more than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "1" : ["less", "more"],
+                                "2" : ["more", "less"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "3" : {
@@ -60,7 +63,8 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "4" : {
@@ -76,23 +80,25 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "5" : {
             "material_1" : "wool",
             "material_2" : "steel",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["is", "is not"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["soft", "coarse"],
-            "original_comparison" : "is more soft than",
-            "paraphrase" : "is more comfortable to wear than",
-            "inverted_paraphrase" : "is less rough to the touch than",
-            "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["more", "less"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["is", "is not"], 
+                                 "1" : ["is", "is not"]},
+            "antonym_switch" : ["coarse", "soft"],
+            "original_comparison" : "is less coarse than",
+            "paraphrase" : "is less rough to the touch than",
+            "inverted_paraphrase" : "is more comfortable to wear than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "2" : ["more", "less"],
+                                "1" : ["less", "more"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "6" : {
@@ -108,7 +114,8 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "7" : {
@@ -124,7 +131,8 @@
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["worse", "better"],
                                 "2" : ["more", "less"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : false
     },
 
     "8" : {
@@ -140,23 +148,25 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "9" : {
             "material_1" : "cloth",
             "material_2" : "metal",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["is", "is not"], 
-                                 "2" : ["is", "is not"]},
-            "antonym_switch" : ["foldable", "rigid"],
-            "original_comparison" : "is more foldable than",
-            "paraphrase" : "is easier to fold than",
-            "inverted_paraphrase" : "is less inflexible",
-            "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["easier", "harder"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["is", "is not"], 
+                                 "1" : ["is", "is not"]},
+            "antonym_switch" : ["rigid", "foldable"],
+            "original_comparison" : "is less rigid than",
+            "paraphrase" : "is less inflexible than",
+            "inverted_paraphrase" : "is easier to fold than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "2" : ["easier", "harder"],
+                                "1" : ["less", "more"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "10" : {
@@ -172,23 +182,25 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "11" : {
             "material_1" : "metal",
             "material_2" : "dirt",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["lets", "does not let"], 
-                                 "2" : ["stops", "does not stop"]},
-            "antonym_switch" : ["conductor", "insulator"],
-            "original_comparison" : "is a better electrical conductor than",
-            "paraphrase" : "lets more electricity pass through than",
-            "inverted_paraphrase" : "stops less electricity than",
-            "premise_switch" : {"0" : ["better", "worse"],
-                                "1" : ["more", "less"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["lets", "does not let"], 
+                                 "1" : ["stops", "does not stop"]},
+            "antonym_switch" : ["insulator", "conductor"],
+            "original_comparison" : "is a worse electrical insulator than",
+            "paraphrase" : "stops less electricity than",
+            "inverted_paraphrase" : "lets more electricity pass through than",
+            "premise_switch" : {"0" : ["worse", "better"],
+                                "2" : ["more", "less"],
+                                "1" : ["less", "more"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "12" : {
@@ -204,23 +216,25 @@
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["better", "worse"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "13" : {
             "material_1" : "honey",
             "material_2" : "water",
             "negation_switch" : {"0" : ["is", "is not"], 
-                                 "1" : ["has", "does not have"], 
-                                 "2" : ["flows", "does not flow"]},
-            "antonym_switch" : ["viscous", "free flowing"],
-            "original_comparison" : "is more viscous than",
-            "paraphrase" : "has a higher viscosity than",
-            "inverted_paraphrase" : "flows out of a bottle less smoothly than",
-            "premise_switch" : {"0" : ["more", "less"],
-                                "1" : ["higher", "lower"],
-                                "2" : ["less", "more"]},
-            "template" : "1"
+                                 "2" : ["has", "does not have"], 
+                                 "1" : ["flows", "does not flow"]},
+            "antonym_switch" : ["free flowing", "viscous"],
+            "original_comparison" : "is less free flowing than",
+            "paraphrase" : "flows out of a bottle less smoothly than",
+            "inverted_paraphrase" : "has a higher viscosity than",
+            "premise_switch" : {"0" : ["less", "more"],
+                                "2" : ["higher", "lower"],
+                                "1" : ["less", "more"]},
+            "template" : "1",
+            "is_more" : false
     },
 
     "14" : {
@@ -236,23 +250,25 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["easier", "harder"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "15" : {
-            "material_1" : "water",
-            "material_2" : "methane",
+            "material_1" : "methane",
+            "material_2" : "water",
             "negation_switch" : {"0" : ["is", "is not"], 
                                  "1" : ["can", "can not"], 
                                  "2" : ["poses", "does not pose"]},
             "antonym_switch" : ["store", "dispose of"],
-            "original_comparison" : "is more safe to store than",
-            "paraphrase" : "can be handled with more calmness than",
-            "inverted_paraphrase" : "poses less risk in storage than",
+            "original_comparison" : "is less safe to store than",
+            "paraphrase" : "is less safe to stockpile than",
+            "inverted_paraphrase" : "poses more risk in storage than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : false
     },
 
     "16" : {
@@ -268,7 +284,8 @@
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["less", "more"],
                                 "2" : ["more", "less"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : false
     },
 
     "17" : {
@@ -284,7 +301,8 @@
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     },
 
     "18" : {
@@ -300,7 +318,8 @@
             "premise_switch" : {"0" : ["less", "more"],
                                 "1" : ["less", "more"],
                                 "2" : ["worse", "better"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : false
     },
 
     "19" : {
@@ -310,13 +329,14 @@
                                  "1" : ["reflects", "does not reflect"], 
                                  "2" : ["will", "will not"]},
             "antonym_switch" : ["reflect", "absorb"],
-            "original_comparison" : "will reflect light better than",
-            "paraphrase" : "reflects more light than",
+            "original_comparison" : "will reflect more light than",
+            "paraphrase" : "reflects light better than",
             "inverted_paraphrase" : "will capture less light than",
-            "premise_switch" : {"0" : ["better", "worse"],
-                                "1" : ["more", "less"],
+            "premise_switch" : {"1" : ["better", "worse"],
+                                "0" : ["more", "less"],
                                 "2" : ["less", "more"]},
-            "template" : "1"
+            "template" : "1",
+            "is_more" : true
     }
 
 }

@@ -51,7 +51,6 @@ def generate_physical_perturbations(initial_comparison,
     output = {}
     negative_comparison = original_comparison.replace(pad_string(negation_switch["0"][0]),
                                                       pad_string(negation_switch["0"][1]))
-    print(negative_comparison)
     antonym_comparison = original_comparison.replace(antonym_switch[0], antonym_switch[1])
     negation_antonym_comparison = antonym_comparison.replace(pad_string(negation_switch["0"][0]),
                                                              pad_string(negation_switch["0"][1]))

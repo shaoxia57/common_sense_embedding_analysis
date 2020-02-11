@@ -113,10 +113,11 @@ def autolabel(rects, ax, color, below=False):
             bottom = True
         
         if bottom:
-            multiple = 1.5 if height < 0 else -1.5
-            y = min(-0.4, multiple*height)
+            # multiple = 1.5 if height < 0 else -1.5
+            # y = min(-0.4, multiple*height)
+            y = height 
             va = "bottom"
-            x = rect.get_x() + 2*rect.get_width() / 3
+            x = rect.get_x() + 5*rect.get_width() / 6
         else:
             y = height
             x = rect.get_x() + rect.get_width() / 2
@@ -126,7 +127,7 @@ def autolabel(rects, ax, color, below=False):
                     xy=(x, y),
                     xytext=(0, 3),  # 3 points vertical offset
                     textcoords="offset points",
-                    ha='center', va=va, color=color, weight='bold')
+                    ha='center', va=va, color=color, fontsize=8, weight='bold')
 
 def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units, 
                               left_bar_data, right_bar_data, title, save=False):

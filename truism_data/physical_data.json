@@ -11,22 +11,24 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "1" : {
-        "initial_comparison" : "A is lighter than B",
+        "initial_comparison" : "A is heavier than B",
         "negation_switch" : {"0" : ["should", "should not"],
                              "1" : ["will", "will not"],
                              "2" : ["will", "will not"]},
         "antonym_switch" : ["float", "sink"],
-        "original_comparison" : "should float more than",
-        "paraphrase" : "will stay afloat more than",
-        "inverted_paraphrase" : "will fall to the ocean floor in less time than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "should float less than",
+        "paraphrase" : "will stay afloat less than",
+        "inverted_paraphrase" : "will fall to the ocean floor in more time than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     },
 
     "2" : {
@@ -41,22 +43,24 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "3" : {
-        "initial_comparison" : "A is thinner than B",
+        "initial_comparison" : "A is wider than B",
         "negation_switch" : {"0" : ["can", "can not"],
                              "1" : ["can", "can not"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["slip through", "be blocked by"],
-        "original_comparison" : "can slip through more cracks than",
-        "paraphrase" : "can fit into more openings than",
-        "inverted_paraphrase" : "is less impeded by small spaces than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "can slip through less cracks than",
+        "paraphrase" : "can fit into less openings than",
+        "inverted_paraphrase" : "is more impeded by small openings than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     },
 
     "4" : {
@@ -71,7 +75,8 @@
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
                             "2" : ["more", "less"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : false
     },
 
     "5" : {
@@ -86,7 +91,8 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["easier", "harder"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "6" : {
@@ -101,22 +107,24 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "7" : {
-        "initial_comparison" : "A is softer than B",
+        "initial_comparison" : "A is harder than B",
         "negation_switch" : {"0" : ["is", "is not"],
                              "1" : ["is", "is not"],
                              "2" : ["requires", "does not require"]},
         "antonym_switch" : ["comfortable", "difficult"],
-        "original_comparison" : "is more comfortable to sleep on than",
-        "paraphrase" : "is more comfy to sleep on than",
-        "inverted_paraphrase" : "requires less time to feel comfortable on than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "is less comfortable to sleep on than",
+        "paraphrase" : "is less comfy to sleep on than",
+        "inverted_paraphrase" : "requires more time to feel comfortable on than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     },
 
 
@@ -132,37 +140,40 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "9" : {
-        "initial_comparison" : "A is heavier than B",
+        "initial_comparison" : "A is lighter than B",
         "negation_switch" : {"0" : ["is", "is not"],
                              "1" : ["can", "can not"],
                              "2" : ["is", "is not"]},
-        "antonym_switch" : ["support", "crumble under"],
-        "original_comparison" : "should support the weight of more objects than",
-        "paraphrase" : "can support more weight than",
-        "inverted_paraphrase" : "is expected to be crushed by fewer objects",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["fewer", "more"]},
-        "template" : "4"
+        "antonym_switch" : ["support", "crumber under"],
+        "original_comparison" : "is less likely to support weight than",
+        "paraphrase" : "can support less weight than",
+        "inverted_paraphrase" : "is expected to be crushed by more objects",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "fewer"]},
+        "template" : "4",
+        "is_more" : false
     },
 
     "10" : {
-        "initial_comparison" : "A has more momentum than B",
+        "initial_comparison" : "A has less momentum than B",
         "negation_switch" : {"0" : ["is", "is not"],
                              "1" : ["will", "will not"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["ability", "inability"],
-        "original_comparison" : "has more of an ability to cause damage on impact than",
-        "paraphrase" : "will cause more damage on impact than",
-        "inverted_paraphrase" : "is less harmless on impact than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "has less of an ability to cause damage on impact than",
+        "paraphrase" : "will cause less damage on impact than",
+        "inverted_paraphrase" : "is more harmless on impact than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     },
 
     "11" : {
@@ -177,7 +188,8 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "12" : {
@@ -192,7 +204,8 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["harder", "easier"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "13" : {
@@ -207,22 +220,24 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "14" : {
-        "initial_comparison" : "A is larger than B",
+        "initial_comparison" : "A is smaller than B",
         "negation_switch" : {"0" : ["will", "will not"],
                              "1" : ["diplaces", "does not displace"],
                              "2" : ["leaves", "does not leave"]},
         "antonym_switch" : ["displace", "leave"],
-        "original_comparison" : "will displace more liquid in a tub than",
-        "paraphrase" : "diplaces more liquid in a tub than",
-        "inverted_paraphrase" : "leaves less liquid in a tub than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "will displace less liquid in a tub than",
+        "paraphrase" : "diplaces less liquid in a tub than",
+        "inverted_paraphrase" : "leaves more liquid in a tub than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     },
 
     "15" : {
@@ -231,17 +246,18 @@
                              "1" : ["is", "is not"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["out of", "in"],
-        "original_comparison" : "is worse for keeping things out of reach than",
-        "paraphrase" : "is less appropriate for keeping things out of reach than",
+        "original_comparison" : "is less appropriate for keeping things out of reach than",
+        "paraphrase" : "is worse for keeping things out of reach than",
         "inverted_paraphrase" : "is better for storing everday items than",
-        "premise_switch" : {"0" : ["worse", "better"], 
-                            "1" : ["less", "more"], 
+        "premise_switch" : {"1" : ["worse", "better"], 
+                            "0" : ["less", "more"], 
                             "2" : ["better", "worse"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : false
     },
 
     "16" : {
-        "initial_comparison" : "A is wider than B",
+        "initial_comparison" : "A is larger than B",
         "negation_switch" : {"0" : ["is", "is not"],
                              "1" : ["is", "is not"],
                              "2" : ["is", "is not"]},
@@ -252,7 +268,8 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "17" : {
@@ -267,7 +284,8 @@
         "premise_switch" : {"0" : ["less", "more"], 
                             "1" : ["less", "more"], 
                             "2" : ["more", "less"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : false
     },
 
     "18" : {
@@ -282,21 +300,23 @@
         "premise_switch" : {"0" : ["more", "less"], 
                             "1" : ["more", "less"], 
                             "2" : ["less", "more"]},
-        "template" : "4"
+        "template" : "4",
+        "is_more" : true
     },
 
     "19" : {
-        "initial_comparison" : "A is more magnetic than B",
+        "initial_comparison" : "A is less magnetic than B",
         "negation_switch" : {"0" : ["needs", "does not need"],
                              "1" : ["requires", "does not require"],
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["seperate from", "connect to"],
-        "original_comparison" : "needs more force to seperate from a magnet than",
-        "paraphrase" : "requires more effort to remove from a magnet than",
-        "inverted_paraphrase" : "is less likely to fall off a magnet than",
-        "premise_switch" : {"0" : ["more", "less"], 
-                            "1" : ["more", "less"], 
-                            "2" : ["less", "more"]},
-        "template" : "4"
+        "original_comparison" : "needs less force to seperate from another magnet than",
+        "paraphrase" : "requires less effort to remove from a magnet than",
+        "inverted_paraphrase" : "is more likely to fall off a magnet than",
+        "premise_switch" : {"0" : ["less", "more"], 
+                            "1" : ["less", "more"], 
+                            "2" : ["more", "less"]},
+        "template" : "4",
+        "is_more" : false
     }
 }
