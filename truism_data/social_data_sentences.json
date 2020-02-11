@@ -254,18 +254,18 @@
  "6": {
   "original": {
    "original": "A has more work than B, so A is less at ease than B",
-   "asymmetric_premise": "B has more work than A, so A is less at ease than B",
-   "asymmetric_conclusion": "A has more work than B, so B is less at ease than A"
+   "asymmetric_premise": "B has more work than A, so A is more at ease than B",
+   "asymmetric_conclusion": "A has more work than B, so B is more at ease than A"
   },
   "negation": {
-   "original": "A has more work than B, so A is not less at ease than B",
+   "original": "A has more work than B, so A is not more at ease than B",
    "asymmetric_premise": "B has more work than A, so A is not less at ease than B",
    "asymmetric_conclusion": "A has more work than B, so B is not less at ease than A"
   },
   "antonym": {
-   "original": "A has more work than B, so A is less tressed out than B",
-   "asymmetric_premise": "B has more work than A, so A is less tressed out than B",
-   "asymmetric_conclusion": "A has more work than B, so B is less tressed out than A"
+   "original": "A has more work than B, so A is more stressed out than B",
+   "asymmetric_premise": "B has more work than A, so A is less stressed out than B",
+   "asymmetric_conclusion": "A has more work than B, so B is less stressed out than A"
   },
   "paraphrase": {
    "original": "A has more work than B, so A is less calm than B",
@@ -278,9 +278,9 @@
    "asymmetric_conclusion": "A has more work than B, so B has lower stress levels than A"
   },
   "negation_antonym": {
-   "original": "A has more work than B, so A is not less tressed out than B",
-   "asymmetric_premise": "B has more work than A, so A is not less tressed out than B",
-   "asymmetric_conclusion": "A has more work than B, so B is not less tressed out than A"
+   "original": "A has more work than B, so A is not less stressed out than B",
+   "asymmetric_premise": "B has more work than A, so A is not more stressed out than B",
+   "asymmetric_conclusion": "A has more work than B, so B is not more stressed out than A"
   },
   "negation_paraphrase": {
    "original": "A has more work than B, so A is not more calm than B",
