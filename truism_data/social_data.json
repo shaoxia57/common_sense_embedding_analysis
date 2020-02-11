@@ -256,7 +256,7 @@
     },
 
     "16" : {
-        "situation" : "A always looses to B in tennis",
+        "situation" : "A always loses to B in tennis",
         "negation_switch" : {"0" : ["is", "is not"], 
                              "1" : ["has", "has not"], 
                              "2" : ["is", "is not"]},
@@ -309,7 +309,7 @@
                              "1" : ["should", "should not"], 
                              "2" : ["is", "is not"]},
         "antonym_switch" : ["informed", "ignorant"],
-        "original_comparison" : "should be less informed than",
+        "original_comparison" : "should be more informed than",
         "paraphrase" : "should have more understanding of the material than",
         "inverted_paraphrase" : "is less unaware of the subject than",
         "premise_switch" : {"0" : ["more", "less"], 

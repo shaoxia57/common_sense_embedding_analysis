@@ -673,44 +673,44 @@
  },
  "16": {
   "original": {
-   "original": "A always looses to B in tennis, so A is a less proficient tennis player than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is a more proficient tennis player than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is a more proficient tennis player than A"
+   "original": "A always loses to B in tennis, so A is a less proficient tennis player than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is a more proficient tennis player than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is a more proficient tennis player than A"
   },
   "negation": {
-   "original": "A always looses to B in tennis, so A is not a more proficient tennis not player than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is not a less proficient tennis not player than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is not a less proficient tennis not player than A"
+   "original": "A always loses to B in tennis, so A is not a more proficient tennis not player than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is not a less proficient tennis not player than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is not a less proficient tennis not player than A"
   },
   "antonym": {
-   "original": "A always looses to B in tennis, so A is a more inadequate tennis player than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is a less inadequate tennis player than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is a less inadequate tennis player than A"
+   "original": "A always loses to B in tennis, so A is a more inadequate tennis player than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is a less inadequate tennis player than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is a less inadequate tennis player than A"
   },
   "paraphrase": {
-   "original": "A always looses to B in tennis, so A has less skill in tennis than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A has more skill in tennis than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B has more skill in tennis than A"
+   "original": "A always loses to B in tennis, so A has less skill in tennis than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A has more skill in tennis than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B has more skill in tennis than A"
   },
   "paraphrase_inversion": {
-   "original": "A always looses to B in tennis, so A is more incompetent in tennis than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is less incompetent in tennis than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is less incompetent in tennis than A"
+   "original": "A always loses to B in tennis, so A is more incompetent in tennis than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is less incompetent in tennis than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is less incompetent in tennis than A"
   },
   "negation_antonym": {
-   "original": "A always looses to B in tennis, so A is not a less inadequate tennis not player than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is not a more inadequate tennis not player than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is not a more inadequate tennis not player than A"
+   "original": "A always loses to B in tennis, so A is not a less inadequate tennis not player than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is not a more inadequate tennis not player than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is not a more inadequate tennis not player than A"
   },
   "negation_paraphrase": {
-   "original": "A always looses to B in tennis, so A has not more skill in tennis than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A has not less skill in tennis than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B has not less skill in tennis than A"
+   "original": "A always loses to B in tennis, so A has not more skill in tennis than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A has not less skill in tennis than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B has not less skill in tennis than A"
   },
   "negation_paraphrase_inversion": {
-   "original": "A always looses to B in tennis, so A is not less incompetent in tennis not than B",
-   "asymmetric_premise": "B always looses to A in tennis, so A is not more incompetent in tennis not than B",
-   "asymmetric_conclusion": "A always looses to B in tennis, so B is not more incompetent in tennis not than A"
+   "original": "A always loses to B in tennis, so A is not less incompetent in tennis not than B",
+   "asymmetric_premise": "B always loses to A in tennis, so A is not more incompetent in tennis not than B",
+   "asymmetric_conclusion": "A always loses to B in tennis, so B is not more incompetent in tennis not than A"
   }
  },
  "17": {
@@ -799,19 +799,19 @@
  },
  "19": {
   "original": {
-   "original": "A is B's teacher, so A should be less informed than B",
+   "original": "A is B's teacher, so A should be more informed than B",
    "asymmetric_premise": "B is A's teacher, so A should be less informed than B",
    "asymmetric_conclusion": "A is B's teacher, so B should be less informed than A"
   },
   "negation": {
    "original": "A is B's teacher, so A should not be less informed than B",
-   "asymmetric_premise": "B is A's teacher, so A should not be less informed than B",
-   "asymmetric_conclusion": "A is B's teacher, so B should not be less informed than A"
+   "asymmetric_premise": "B is A's teacher, so A should not be more informed than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should not be more informed than A"
   },
   "antonym": {
    "original": "A is B's teacher, so A should be less ignorant than B",
-   "asymmetric_premise": "B is A's teacher, so A should be less ignorant than B",
-   "asymmetric_conclusion": "A is B's teacher, so B should be less ignorant than A"
+   "asymmetric_premise": "B is A's teacher, so A should be more ignorant than B",
+   "asymmetric_conclusion": "A is B's teacher, so B should be more ignorant than A"
   },
   "paraphrase": {
    "original": "A is B's teacher, so A should have more understanding of the material than B",
@@ -824,7 +824,7 @@
    "asymmetric_conclusion": "A is B's teacher, so B is more unaware of the subject than A"
   },
   "negation_antonym": {
-   "original": "A is B's teacher, so A should not be less ignorant than B",
+   "original": "A is B's teacher, so A should not be more ignorant than B",
    "asymmetric_premise": "B is A's teacher, so A should not be less ignorant than B",
    "asymmetric_conclusion": "A is B's teacher, so B should not be less ignorant than A"
   },
