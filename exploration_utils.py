@@ -41,6 +41,25 @@ def fill_pertubation_data(result_data, param_data, template_dict, multiple=1):
 
     return template_dict
 
+def fill_pertubation_data_m(result_data, param_data, template_dict, multiple=1):
+    completed_truisms = {}
+    
+    for i, row in result_data.iterrows():
+        p_key = row["perturbation"] + "-" + row["premise"]
+        if param_data[str(row["truism_number"])]["is_more"]:
+            template_key = "more"
+        else:
+            template_key = "less"
+        
+        template_dict[template_key][p_key]["accuracy"] += row["avg_binary_score"]*multiple
+        template_dict[template_key][p_key]["ratio_score"] += row["avg_ratio_score"]*multiple
+        
+        if row["truism_number"] not in completed_truisms:
+            template_dict[template_key]["count"] += 1*multiple
+            completed_truisms[row["truism_number"]] = 1
+
+    return template_dict
+
 def create_tables(averaged_numbers, perturbation_order, threshold):
     output = {}
     output_2 = {}
@@ -86,6 +105,22 @@ def aggregate_pertubations(raw_template_data, metric):
     
     return output
 
+def aggregate_pertubations_m(raw_template_data, metric):
+    total_count = raw_template_data["count"]
+    
+    output = {}
+    for perturbation in raw_template_data:
+        output[perturbation] = {"count" : 0, "pct" : -1, "total" : -1}
+        if perturbation != "count":
+            if perturbation in output:
+                output[perturbation]["count"] += raw_template_data[perturbation][metric]
+    
+    for key in output:
+        output[key]["total"] = total_count
+        output[key]["pct"] = output[key]["count"] / output[key]["total"]
+    
+    return output
+
 def aggregate_templates(raw_template_data, metric):   
     output = {}
     for template in raw_template_data:
@@ -113,13 +148,14 @@ def autolabel(rects, ax, color, below=False):
             bottom = True
         
         if bottom:
-            # multiple = 1.5 if height < 0 else -1.5
-            # y = min(-0.4, multiple*height)
-            y = height 
+            # multiple = 1.1 if height < 0 else -1.1
+            # y = min(-0.15, multiple*height)
+            # y = height 
+            y = -0.27
             va = "bottom"
-            x = rect.get_x() + 5*rect.get_width() / 6
+            x = rect.get_x() + 1*rect.get_width() / 2
         else:
-            y = height
+            y = 0.57
             x = rect.get_x() + rect.get_width() / 2
             va = "bottom"
 
