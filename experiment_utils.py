@@ -90,7 +90,7 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
             if right_score + wrong_score > 0:
                 ratio_score = (right_score - wrong_score) / (right_score + wrong_score)
             else:
-                ratio_score = 0
+                ratio_score = -1
             
             binary_avg_score += binary_score
             ratio_avg_score += ratio_score
