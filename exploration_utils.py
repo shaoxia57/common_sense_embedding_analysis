@@ -46,10 +46,30 @@ def fill_pertubation_data_m(result_data, param_data, template_dict, multiple=1):
     
     for i, row in result_data.iterrows():
         p_key = row["perturbation"] + "-" + row["premise"]
-        if param_data[str(row["truism_number"])]["is_more"]:
-            template_key = "more"
+        if param_data[str(row["truism_number"])]["greater_than"] == "A":
+            if row["perturbation"] in ["original", "paraphrase", 
+                                       "negation_antonym", "negation_paraphrase_inversion"]:
+                if row["premise"] == "original":
+                    template_key = "more"
+                else:
+                    template_key = "less"
+            else:
+                if row["premise"] == "original":
+                    template_key = "less"
+                else:
+                    template_key = "more"
         else:
-            template_key = "less"
+            if row["perturbation"] in ["original", "paraphrase", 
+                                       "negation_antonym", "negation_paraphrase_inversion"]:
+                if row["premise"] == "original":
+                    template_key = "less"
+                else:
+                    template_key = "more"
+            else:
+                if row["premise"] == "original":
+                    template_key = "more"
+                else:
+                    template_key = "less"
         
         template_dict[template_key][p_key]["accuracy"] += row["avg_binary_score"]*multiple
         template_dict[template_key][p_key]["ratio_score"] += row["avg_ratio_score"]*multiple
@@ -155,7 +175,8 @@ def autolabel(rects, ax, color, below=False):
             va = "bottom"
             x = rect.get_x() + rect.get_width() / 2
         else:
-            y = 0.53
+            y = max(min(0.58, height),0.53)
+            # y = 0.55
             x = rect.get_x() + rect.get_width() / 2
             va = "bottom"
 
