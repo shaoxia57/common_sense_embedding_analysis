@@ -41,10 +41,10 @@ def main():
                                                            max_length=12,
                                                            character_set=chars)
 
-    with open("truism_data/physical_data_sentences.json", "r") as f:
+    with open("truism_data/physical_data_sentences_2.json", "r") as f:
         physical_sents = json.load(f)
         
-    with open("truism_data/physical_data.json", "r") as f:
+    with open("truism_data/physical_data_2.json", "r") as f:
         physical_config = json.load(f)
 
     logger.info("finished reading in physical data")
@@ -56,16 +56,16 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("result_data/physical_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("result_data/physical_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
 
         
-    with open("truism_data/material_data_sentences.json", "r") as f:
+    with open("truism_data/material_data_sentences_2.json", "r") as f:
         material_sents = json.load(f)
         
-    with open("truism_data/material_data.json", "r") as f:
+    with open("truism_data/material_data_2.json", "r") as f:
         material_config = json.load(f)
 
     logger.info("finished reading in material data")
@@ -77,15 +77,15 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("result_data/material_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("result_data/material_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical material results")
         
-    with open("truism_data/social_data_sentences.json", "r") as f:
+    with open("truism_data/social_data_sentences_2.json", "r") as f:
         social_sents = json.load(f)
         
-    with open("truism_data/social_data.json", "r") as f:
+    with open("truism_data/social_data_2.json", "r") as f:
         social_config = json.load(f)
 
     logger.info("finished reading in social data")
@@ -97,7 +97,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("result_data/social_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("result_data/social_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical social results")
