@@ -1,102 +1,102 @@
 {
  "0": {
   "original": {
-   "original": "A is smaller than B and smaller objects are easier to put into a box, so A is easier to put into a box than B"
+   "original": "A is smaller than B, and smaller objects are easier to put into a box, so A is easier to put into a box than B"
   }
  },
  "1": {
   "original": {
-   "original": "A is heavier than B and heavier objects are better at sinking, so A is better at sinking than B"
+   "original": "A is heavier than B, and heavier objects are better at sinking, so A is better at sinking than B"
   }
  },
  "2": {
   "original": {
-   "original": "A is denser than B and denser objects should withstand piercing more easily, so A should withstand piercing more easily than B"
+   "original": "A is denser than B, and denser objects should withstand piercing more easily, so A should withstand piercing more easily than B"
   }
  },
  "3": {
   "original": {
-   "original": "A is wider than B and wider objects find it harder to slip through cracks, so A finds it harder to slip through cracks than B"
+   "original": "A is wider than B, and wider objects find it harder to slip through cracks, so A finds it harder to slip through cracks than B"
   }
  },
  "4": {
   "original": {
-   "original": "A is hotter than B and hotter objects should be easier to melt than, so A should be easier to melt than B"
+   "original": "A is hotter than B, and hotter objects should be easier to melt than, so A should be easier to melt than B"
   }
  },
  "5": {
   "original": {
-   "original": "A is more elastic than B and more elastic objects should bounce better, so A should bounce better than B"
+   "original": "A is more elastic than B, and more elastic objects should bounce better, so A should bounce better than B"
   }
  },
  "6": {
   "original": {
-   "original": "A is tougher than B and tougher objects are harder to rip apart, so A is harder to rip apart than B"
+   "original": "A is tougher than B, and tougher objects are harder to rip apart, so A is harder to rip apart than B"
   }
  },
  "7": {
   "original": {
-   "original": "A is harder than B and harder objects are less comfortable, so A is less comfortable than B"
+   "original": "A is harder than B, and harder objects are less comfortable, so A is less comfortable than B"
   }
  },
  "8": {
   "original": {
-   "original": "A is taller than B and taller objects cast a more lengthy shadow, so A will cast a more lengthy shadow than B"
+   "original": "A is taller than B, and taller objects cast a more lengthy shadow, so A will cast a more lengthy shadow than B"
   }
  },
  "9": {
   "original": {
-   "original": "A is lighter than B and lighter objects find it harder to support weight, so A finds it harder to support weight than B"
+   "original": "A is lighter than B, and lighter objects find it harder to support weight, so A finds it harder to support weight than B"
   }
  },
  "10": {
   "original": {
-   "original": "A has less momentum than B and objects with less momentum find it harder to support weight, so A has a worse ability to damage on impact than B"
+   "original": "A has less momentum than B, and objects with less momentum find it harder to support weight, so A has a worse ability to damage on impact than B"
   }
  },
  "11": {
   "original": {
-   "original": "A is more luminous than B and more luminous objects are more dangerous to look at, so A is more dangerous to look at than B"
+   "original": "A is more luminous than B, and more luminous objects are more dangerous to look at, so A is more dangerous to look at than B"
   }
  },
  "12": {
   "original": {
-   "original": "A is more soluble than B and more soluble objects are harder to discern in water, so A is harder to discern in water than B"
+   "original": "A is more soluble than B, and more soluble objects are harder to discern in water, so A is harder to discern in water than B"
   }
  },
  "13": {
   "original": {
-   "original": "A is more pungent than B and more pungent objects are easier to detect, so A is easier to detect than B"
+   "original": "A is more pungent than B, and more pungent objects are easier to detect, so A is easier to detect than B"
   }
  },
  "14": {
   "original": {
-   "original": "A is smaller than B and smaller objects find it harder to displace liquid in a tub, so A finds it harder to displace liquid in a tub than B"
+   "original": "A is smaller than B, and smaller objects find it harder to displace liquid in a tub, so A finds it harder to displace liquid in a tub than B"
   }
  },
  "15": {
   "original": {
-   "original": "A is shorter than B and shorter objects are worse for keeping things out of reach, so A is worse for keeping things out of reach than B"
+   "original": "A is shorter than B, and shorter objects are worse for keeping things out of reach, so A is worse for keeping things out of reach than B"
   }
  },
  "16": {
   "original": {
-   "original": "A is larger than B and larger objects are more difficult to carry, so A is more difficult to carry than B"
+   "original": "A is larger than B, and larger objects are more difficult to carry, so A is more difficult to carry than B"
   }
  },
  "17": {
   "original": {
-   "original": "A is more taught than B and more taught objects are worse at withstanding additional force, so A is worse at withstanding additional force than B"
+   "original": "A is more taught than B, and more taught objects are worse at withstanding additional force, so A is worse at withstanding additional force than B"
   }
  },
  "18": {
   "original": {
-   "original": "A is much hotter than B and much hotter objects will be more painful to hold onto, so A will be more painful to hold onto than B"
+   "original": "A is much hotter than B, and much hotter objects will be more painful to hold onto, so A will be more painful to hold onto than B"
   }
  },
  "19": {
   "original": {
-   "original": "A is more magnetic than B and more magnetic objects are harder to seperate from another magnet, so A is harder to seperate from another magnet than B"
+   "original": "A is more magnetic than B, and more magnetic objects are harder to seperate from another magnet, so A is harder to seperate from another magnet than B"
   }
  }
 }

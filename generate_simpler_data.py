@@ -6,7 +6,7 @@ def pad_string(string, beg=True):
 
 def original_phys_perturbation(situation, commonsense_fact, comparison_phrase):
     
-    original = situation + " and " + commonsense_fact + ", so A " + comparison_phrase + " B"
+    original = situation + ", and " + commonsense_fact + ", so A " + comparison_phrase + " B"
    
     return {"original" : original}
 
@@ -25,7 +25,7 @@ def original_material_perturbation(material_1, material_2, comparison_phrase):
 
     original_premise =  "A is made out of " + material_1 + \
                         ", B is made out of " + material_2 + \
-                        " and " + material_1 + pad_string(comparison_phrase, False) + material_2
+                        ", and " + material_1 + pad_string(comparison_phrase, False) + material_2
 
     original_conclusion = ", so A " + comparison_phrase + " B"
 
@@ -69,7 +69,7 @@ def generate_easy_material_example(material_1,
 
 def original_social_perturbation(situation, commonsense_fact, comparison_phrase):
     
-    original = situation + " and " + commonsense_fact + ", so A " + comparison_phrase + " B"
+    original = situation + ", and " + commonsense_fact + ", so A " + comparison_phrase + " B"
 
     return {"original" : original}
 
