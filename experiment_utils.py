@@ -14,6 +14,37 @@ def generate_pairs_of_random_strings(number_of_pairs, min_length, max_length, ch
 
     return fictitious_entities
 
+def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_entity_trials):
+    masked_examples = {}
+    for truism in sentences:
+        for perturbation in sentences[truism]:
+            candidate_answers = config[truism]['premise_switch']['0']
+            for premise in sentences[truism][perturbation]:
+                key = "-".join([truism, perturbation, premise])
+                
+                statement = sentences[truism][perturbation][premise]
+                parts = statement.split(",")
+                masked_portion = parts[len(parts)-1]
+
+                right_answer = candidate_answers[0]
+                wrong_answer = candidate_answers[1]
+
+                masked_portion = masked_portion.replace(" " + right_answer + " ", " <mask> ")
+                
+                masked_statement = ""
+                for i in range(len(parts)-1):
+                    masked_statement += parts[i]
+                    masked_statement += ","
+
+                masked_statement += masked_portion
+                masked_examples[key] = []
+                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                    new_masked_statement = masked_statement.replace("A", entity_pair[0])
+                    new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                    masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
+
+    return masked_examples
+
 def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_trials):
     masked_examples = {}
     for truism in sentences:
@@ -46,9 +77,9 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
                     masked_statement = premise + ", " + conclusion
                     masked_examples[key] = []
                     for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                        masked_statement = masked_statement.replace("A", entity_pair[0])
-                        masked_statement = masked_statement.replace("B", entity_pair[1])
-                        masked_examples[key].append((masked_statement, right_answer, wrong_answer))
+                        new_masked_statement = masked_statement.replace("A", entity_pair[0])
+                        new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                        masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
 
     return masked_examples
 
