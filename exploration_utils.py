@@ -80,6 +80,25 @@ def fill_pertubation_data_m(result_data, param_data, template_dict, multiple=1):
 
     return template_dict
 
+def fill_pertubation_data_n(result_data, param_data, template_dict, multiple=1):
+    completed_truisms = {}
+    
+    for i, row in result_data.iterrows():
+        p_key = row["perturbation"] + "-" + row["premise"]
+        if param_data[str(row["truism_number"])]["greater_than"] == "A":
+            template_key = "more"
+        else:
+            template_key = "less"
+        
+        template_dict[template_key][p_key]["accuracy"] += row["avg_binary_score"]*multiple
+        template_dict[template_key][p_key]["ratio_score"] += row["avg_ratio_score"]*multiple
+        
+        if row["truism_number"] not in completed_truisms:
+            template_dict[template_key]["count"] += 1*multiple
+            completed_truisms[row["truism_number"]] = 1
+
+    return template_dict
+
 def create_tables(averaged_numbers, perturbation_order, threshold):
     output = {}
     output_2 = {}

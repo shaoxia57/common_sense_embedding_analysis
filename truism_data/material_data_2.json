@@ -44,10 +44,10 @@
             "antonym_switch" : ["heavy", "lightweight"],
             "original_comparison" : "should be more heavy than",
             "paraphrase" : "weighs more than",
-            "inverted_paraphrase" : "is easier to lift than",
+            "inverted_paraphrase" : "is harder to lift than",
             "premise_switch" : {"0" : ["more", "less"],
                                 "1" : ["more", "less"],
-                                "2" : ["easier", "harder"]},
+                                "2" : ["harder", "easier"]},
             "template" : "1",
             "is_more" : true,
             "greater_than" : "A"

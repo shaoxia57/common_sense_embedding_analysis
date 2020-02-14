@@ -105,9 +105,9 @@
    "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B weighs less than A"
   },
   "paraphrase_inversion": {
-   "original": "A is made out of concrete and B is made out of paper, so A is easier to lift than B",
-   "asymmetric_premise": "B is made out of concrete and A is made out of paper, so A is harder to lift than B",
-   "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B is harder to lift than A"
+   "original": "A is made out of concrete and B is made out of paper, so A is harder to lift than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of paper, so A is easier to lift than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B is easier to lift than A"
   },
   "negation_antonym": {
    "original": "A is made out of concrete and B is made out of paper, so A should not be more lightweight than B",
@@ -120,9 +120,9 @@
    "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B does not weigh more than A"
   },
   "negation_paraphrase_inversion": {
-   "original": "A is made out of concrete and B is made out of paper, so A is not harder to lift than B",
-   "asymmetric_premise": "B is made out of concrete and A is made out of paper, so A is not easier to lift than B",
-   "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B is not easier to lift than A"
+   "original": "A is made out of concrete and B is made out of paper, so A is not easier to lift than B",
+   "asymmetric_premise": "B is made out of concrete and A is made out of paper, so A is not harder to lift than B",
+   "asymmetric_conclusion": "A is made out of concrete and B is made out of paper, so B is not harder to lift than A"
   }
  },
  "3": {
