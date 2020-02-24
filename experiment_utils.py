@@ -208,7 +208,7 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
 
     return avg_responses
 
-def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available):
+def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logger):
     if gpu_available:
         model.cuda()
         logger.info("successfully moved model to gpu")
@@ -228,7 +228,7 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available):
         avg_responses[key] = avg_accuracy
         counter += 1
         if counter % 24 == 0:
-            print("finished one set")
+            logger.info("finished one set")
 
     return avg_responses
 
