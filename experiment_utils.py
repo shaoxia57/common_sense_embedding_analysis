@@ -121,6 +121,25 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
 
     return masked_examples
 
+def prepare_sentence_pair(sentences, config, fictitious_entities, num_entity_trials):
+    sentence_pairs = {}
+    for truism in sentences:
+        for perturbation in sentences[truism]:
+            for asym_perturb in sentences[truism][perturbation]:
+                key = "-".join([truism, perturbation, asym_perturb])
+                
+                statement = sentences[truism][perturbation][asym_perturb]
+                premise = statement.split(",")[0]+'.'
+                conclusion = statement.split(",")[1][4:]+'.'
+                
+                sentence_pairs[key] = []
+                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                    filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+                    filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+                    sentence_pairs[key].append((filled_premise, filled_conclusion))
+
+    return sentence_pairs
+
 def tokenize_sentence(sentence, tokenizer):
     return [tokenizer.bos_token] + tokenizer.tokenize(sentence) + [tokenizer.eos_token]
 
@@ -139,7 +158,7 @@ def prepare_truism_data_for_sentence_scoring(sentences, tokenizer)
 def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n, logger):
     if gpu_available:
         model.cuda()
-        logger.info("succefully moved model to gpu")
+        logger.info("successfully moved model to gpu")
 
     model.eval()
 
@@ -189,6 +208,30 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
 
     return avg_responses
 
+def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available):
+    if gpu_available:
+        model.cuda()
+        logger.info("successfully moved model to gpu")
+
+    model.eval()
+
+    avg_responses = {}
+    counter = 0
+    for key, pairs in sentence_pairs.items():
+        
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in pairs], pad_idx=1)
+        logprobs = model.predict('mnli', batch)
+        
+        result_list = logprobs.argmax(dim=1).tolist()
+        avg_accuracy = result_list.count(2)/len(result_list)
+
+        avg_responses[key] = avg_accuracy
+        counter += 1
+        if counter % 24 == 0:
+            print("finished one set")
+
+    return avg_responses
+
 def convert_fair_seq_results_into_df(result_dictionary):
     truism_numbers = []
     perturbations = []
@@ -209,4 +252,24 @@ def convert_fair_seq_results_into_df(result_dictionary):
             "premise"          : premises,
             "avg_binary_score" : avg_binary_scores,
             "avg_ratio_score"  : avg_ratio_scores
+        })
+
+
+def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
+    set_numbers = []
+    perturbations = []
+    asym_perturbs = []
+    avg_accuracy_scores = []
+    for key in result_dictionary:
+        parts = key.split("-")
+        set_numbers.append(int(parts[0]))
+        perturbations.append(parts[1])
+        asym_perturbs.append(parts[2])
+        avg_accuracy_scores.append(result_dictionary[key])
+
+    return pd.DataFrame.from_dict({
+            "set_number"    : set_numbers,
+            "perturbation"     : perturbations,
+            "asym_perturbs"          : asym_perturbs,
+            "avg_accuracy_score" : avg_accuracy_scores,
         })
