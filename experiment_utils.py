@@ -1,6 +1,7 @@
 import torch
 import random
 import pandas as pd
+from fairseq.data.data_utils import collate_tokens
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -143,7 +144,7 @@ def prepare_sentence_pair(sentences, config, fictitious_entities, num_entity_tri
 def tokenize_sentence(sentence, tokenizer):
     return [tokenizer.bos_token] + tokenizer.tokenize(sentence) + [tokenizer.eos_token]
 
-def prepare_truism_data_for_sentence_scoring(sentences, tokenizer)
+def prepare_truism_data_for_sentence_scoring(sentences, tokenizer):
     prepped_sentences = {}
     for key in sentences:
         prepped_sentences[key] = {}
