@@ -21,7 +21,7 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     logger.info("finished evaluating dataset")
     
-    output_df = convert_fair_seq_results_into_df(perf)
+    output_df = convert_bi_statistic_results_into_df(perf)
 
     return output_df
 
