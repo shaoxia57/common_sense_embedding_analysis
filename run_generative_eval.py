@@ -15,7 +15,7 @@ def run_pipeline(model, tokenizer, possible_chars, sentences, number_of_trials, 
 
     logger.info("finished creating dataset")
 
-    perf = generative_truism_reasoning_test(dataset, model, gpu_available, logger)
+    perf = generative_truism_reasoning_test(dataset, model, torch.cuda.is_available(), logger)
 
     logger.info("finished evaluating dataset")
     
@@ -41,7 +41,7 @@ def main():
     logger.info("finished reading in physical data")
 
     output_df = run_pipeline(model=model,
-                             tokenizer=torkenizer,
+                             tokenizer=tokenizer,
                              possible_chars=chars, 
                              sentences=physical_sents, 
                              number_of_trials=number_of_trials,
@@ -60,7 +60,7 @@ def main():
     logger.info("finished reading in material data")
 
     output_df = run_pipeline(model=model,
-                             tokenizer=torkenizer,
+                             tokenizer=tokenizer,
                              possible_chars=chars, 
                              sentences=material_sents, 
                              number_of_trials=number_of_trials,
@@ -77,7 +77,7 @@ def main():
     logger.info("finished reading in social data")
 
     output_df = run_pipeline(model=model,
-                             tokenizer=torkenizer,
+                             tokenizer=tokenizer,
                              possible_chars=chars, 
                              sentences=social_sents, 
                              number_of_trials=number_of_trials,

@@ -1,4 +1,5 @@
 import torch
+import math
 import random
 import pandas as pd
 from fairseq.data.data_utils import collate_tokens
@@ -123,7 +124,7 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
                 sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
 
                 tokenized_sentence = tokenize_sentence(sentence, tokenizer)
-                tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenize_sentence))
+                tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenized_sentence))
                 
                 if version in prepped_sentences[key]:
                     prepped_sentences[key][version].append(tensor)
@@ -138,7 +139,7 @@ def generative_truism_reasoning_test(tensors, model, gpu_available, logger):
         for key in tensors:
             for version in tensors[key]:
                 for i, tensor in enumerate(tensors[key][version]):
-                tensors[key][version][i] = tensor.cuda()
+                    tensors[key][version][i] = tensor.cuda()
         logger.info("successfully moved tensors to gpu")
 
         model.cuda()
