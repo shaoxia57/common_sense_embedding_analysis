@@ -3,9 +3,9 @@
 ### Layout:
 * data - all inputs and outputs used in scripts or notebooks live here. We currently have three evaluation settings: entailment, generation, masked-word-prediction. For each of these three settings we have dedicated folders for the following three stages of our investigation/evaluation pipeline:
     - Raw Data:
-        + Entailment: truism_data + prepare_sentence_pair in dataset_creation/pre_processing_utils.py
-        + Generation: truism_data + prepare_truism_data_for_sentence_scoring in dataset_creation/pre_processing_utils.py (stored in generation_test_data)
-        + Masked Word Prediction: truism_data + prepare_masked_instances in dataset_creation/pre_processing_utils.py
+        + Entailment: truism_data + `prepare_sentence_pair` in `dataset_creation/pre_processing_utils.py`
+        + Generation: truism_data + `prepare_truism_data_for_sentence_scoring` in `dataset_creation/pre_processing_utils.py` (but also stored in generation_test_data)
+        + Masked Word Prediction: truism_data + `prepare_masked_instances` in `dataset_creation/pre_processing_utils.py`
     - Result Of Experiments Data:
         + Entailment: entailment_result_data
         + Generation: generation_result_data
