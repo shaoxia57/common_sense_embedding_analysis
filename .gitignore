@@ -1,3 +1,6 @@
 clouds
 .ipynb_checkpoints
 __pycache__
+
+# datasets
+dataset_creation/crawler/__pycache__
