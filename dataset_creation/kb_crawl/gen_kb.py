@@ -1,15 +1,14 @@
-import kbcrawl
+import kb_util as kb
 import csv
 import os
 import pprint
 
 pp = pprint.PrettyPrinter(indent=2)
 
-input_path = 'input'
-output_path = 'output'
+base_path = '..\..\data\kb_crawl'
 
 def read_materials(filename):
-  path = os.path.join(input_path, filename)
+  path = os.path.join(base_path, filename)
   print(f'Reading from: {path}')
   with open(path) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -26,9 +25,9 @@ def read_materials(filename):
   return materials
   
 def write_materials(filename, knowledge):
-  path = os.path.join(output_path, filename)
+  path = os.path.join(base_path, filename)
   print(f'Writing to: {path}')
-  with open(os.path.join(output_path, filename), mode='w', newline='\n', encoding='utf-8') as csv_file:
+  with open(path, mode='w', newline='\n', encoding='utf-8') as csv_file:
     writer = csv.writer(csv_file, delimiter=',', quotechar='"')
     writer.writerow(['material_1', 'material_2', 'property comparison'])
     
@@ -38,7 +37,7 @@ def write_materials(filename, knowledge):
   print('Completed')
 
 if __name__ == "__main__":
-  materials = read_materials('materials.csv')
+  materials = read_materials('example_materials_input.csv')
   print('Working...')
-  materials_knowledge = kbcrawl.crawl_materials(materials, 1)
-  write_materials('materials.csv', materials_knowledge)
+  materials_knowledge = kb.crawl_materials(materials, 1)
+  write_materials('example_materials_output.csv', materials_knowledge)
