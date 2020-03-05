@@ -5,7 +5,7 @@ import pprint
 
 pp = pprint.PrettyPrinter(indent=2)
 
-base_path = '..\..\data\kb_crawl'
+base_path = '../../data/kb_crawl'
 
 def read_materials(filename):
   path = os.path.join(base_path, filename)
@@ -19,7 +19,7 @@ def read_materials(filename):
             print(f'Column names: {", ".join(row)}')
             line_count += 1
         else:
-          materials.append(row[0])
+          materials.append((row[0], float(row[1])))
           line_count += 1
     print(f'Processed {line_count} lines')
   return materials
@@ -39,5 +39,5 @@ def write_materials(filename, knowledge):
 if __name__ == "__main__":
   materials = read_materials('example_materials_input.csv')
   print('Working...')
-  materials_knowledge = kb.crawl_materials(materials, 1)
+  materials_knowledge = kb.crawl_materials(materials)
   write_materials('example_materials_output.csv', materials_knowledge)

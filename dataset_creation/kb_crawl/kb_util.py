@@ -1,4 +1,5 @@
 import requests
+import json
 from enum import Enum
 
 # globals
@@ -76,8 +77,18 @@ def fetch(query: str = None, language: Language = Language.English, method: Meth
     url = '/'.join(filter(None, [base, method.value, language.value, query, pos]))
   else:
     url = '/'.join([base, method.value])
-  return requests.get(url, params).json()
-
+  try:
+    return requests.get(url, params).json()
+  except requests.exceptions.Timeout:
+    print(f'Error encountered during fetch: timeout')
+    return None
+  except requests.exceptions.RequestException as e:
+    print(f'Error encountered during fetch: {e}')
+    return None
+  except json.decoder.JSONDecodeError as e:
+    print(f'Error encountered during JSON decoding: {e}')
+    return None
+  
 def fetch_with_cache(query: str = None, language: Language = Language.English, method: Method = Method.Concept, params: dict = None, pos: POS = None):
   res_id = build_query_id(params)
   if res_id in cache:
@@ -92,7 +103,8 @@ def fetch_with_cache(query: str = None, language: Language = Language.English, m
       params=params,
       pos=pos
     )
-    cache[res['@id']] = res
+    if res:
+      cache[res['@id']] = res
     return res
 
 def build_params(start: str = None, end: str = None, rel: Relation = None, node: str = None, other: str = None, language: Language = Language.English, pos: POS = None, limit: int = 1000):
@@ -137,7 +149,7 @@ class Property:
     self.paraphrase = paraphrase
 
 # Material_1, Material_2, Property Comparison
-# Strategy: material → properties → property antonym → materials with property
+# Strategy: material → properties → property antonym → objects with property → made of 
 class MaterialLogic:
   def __init__(self, mat_1: str, mat_2: [str], prop: Property, comp: Comparison = Comparison.More, weight: float = 1.0):
     self.mat_1 = mat_1
@@ -146,11 +158,13 @@ class MaterialLogic:
     self.comp = comp
     self.weight = weight
 
-def crawl_materials(materials: [str], threshold = 1.0) -> [MaterialLogic]:
+def crawl_materials(materials: [(str, float)]) -> [MaterialLogic]:
   knowledge = []
   properties = {}
 
-  for mat_1 in materials:
+  for mat in materials:
+    mat_1 = mat[0]
+    threshold = mat[1]
     # extract properties
     # NOTE: specifying POS with HasProperty gives poor results
     mat_prop_res = fetch(
@@ -169,18 +183,32 @@ def crawl_materials(materials: [str], threshold = 1.0) -> [MaterialLogic]:
       ant_query_params = build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective)
       ant_res = fetch_with_cache(method=Method.Query, params=ant_query_params)
 
+      if not ant_res:
+        continue
+
       # insert into properties
       if not prop:
         prop = Property(prop_label, [ant_edge['end']['label'] for ant_edge in ant_res['edges']])
         properties[prop_label] = prop
 
       for ant_edge in ant_res['edges']:
-        # fetch materials with antonym property
-        mat_2_query_params = build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty)
-        mat_2_res = fetch_with_cache(method=Method.Query, params=mat_2_query_params)
+        # fetch objects with antonym property
+        obj_query_params = build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty)
+        obj_res = fetch_with_cache(method=Method.Query, params=obj_query_params)
 
-        # update materials
-        mat_2.update([mat_2_edge['start']['label'] for mat_2_edge in mat_2_res['edges'] if (mat_2_edge['weight']*ant_edge['weight']*weight) > threshold])
+        if not obj_res:
+          continue
+
+        for obj_edge in obj_res['edges']:
+          # fech materials from objects
+          mat_2_query_params = build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf)
+          mat_2_res = fetch_with_cache(method=Method.Query, params=mat_2_query_params)
+
+          if not mat_2_res:
+            continue
+
+          # update materials
+          mat_2.update([mat_2_edge['end']['label'] for mat_2_edge in mat_2_res['edges'] if (mat_2_edge['weight']*obj_edge['weight']*ant_edge['weight']*weight) > threshold])
 
       knowledge.append(MaterialLogic(mat_1, list(mat_2), prop, comp, weight))
     
