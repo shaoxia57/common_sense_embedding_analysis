@@ -1,0 +1,61 @@
+material_1,material_2,property comparison
+glass,wood,more clear
+glass,tree,more clear
+glass,oxegen,more clear
+glass,silica,more clear
+glass,sand,more clear
+glass,cow skin,more clear
+glass,many things,more clear
+glass,metal,more clear
+glass,molten sand,more clear
+glass,carbon,more clear
+glass,aluminium,more clear
+glass,parts,more clear
+glass,H2O,more clear
+glass,oxygen,more clear
+glass,clay,more clear
+glass,tar,more clear
+glass,cellulose,more clear
+glass,gases,more clear
+glass,hydrogen and oxygen,more clear
+glass,Metal,more clear
+glass,trees,more clear
+glass,silica,more dirty
+glass,molten sand,more dirty
+glass,sand,more dirty
+glass,silica,more clean
+glass,molten sand,more clean
+glass,wood,more clean
+glass,sand,more clean
+glass,concrete,more clean
+glass,silk,more clean
+glass,leather,more clean
+glass,keratin,more clean
+glass,silica,more opaque
+glass,molten sand,more opaque
+glass,sand,more opaque
+glass,H2O,more opaque
+glass,Carbon,more opaque
+glass,oxegen,more opaque
+glass,hydrogen and oxygen,more opaque
+glass,oxygen,more opaque
+glass,straw,more sharp
+concrete,silica,more opaque
+concrete,molten sand,more opaque
+concrete,sand,more opaque
+concrete,air,more opaque
+concrete,H2O,more opaque
+concrete,Carbon,more opaque
+concrete,oxegen,more opaque
+concrete,hydrogen and oxygen,more opaque
+concrete,oxygen,more opaque
+metal,ink and paper,more heavy
+metal,silica,more opaque
+metal,molten sand,more opaque
+metal,sand,more opaque
+metal,air,more opaque
+metal,H2O,more opaque
+metal,Carbon,more opaque
+metal,oxegen,more opaque
+metal,hydrogen and oxygen,more opaque
+metal,oxygen,more opaque
