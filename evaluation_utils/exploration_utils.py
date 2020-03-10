@@ -205,8 +205,8 @@ def autolabel(rects, ax, color, below=False):
                     textcoords="offset points",
                     ha='center', va=va, color=color, fontsize=8, weight='bold')
 
-def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units, 
-                              left_bar_data, right_bar_data, title, save=False):
+def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units, left_bar_data, 
+                              right_bar_data, title, save=False, save_dir=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
     
@@ -241,6 +241,7 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     
     fig.tight_layout()  # otherwise the right y-label is slightly clipped
     if save:
-        plt.savefig("{}.png".format(title))
+        filename = save_dir + "/" + "{}.png".format(title)
+        plt.savefig(filename)
     
     plt.show()
