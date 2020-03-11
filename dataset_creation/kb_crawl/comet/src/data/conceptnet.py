@@ -88,7 +88,7 @@ class GenerationDataLoader(adata.DataLoader):
 
     def load_data(self, path):
         if ".pickle" in path:
-            print("Loading data from: {}".format(path))
+            # print("Loading data from: {}".format(path))
             data_utils.load_existing_data_loader(self, path)
             return True
 
@@ -165,9 +165,9 @@ class GenerationDataLoader(adata.DataLoader):
         self.max_e2 = max([max([l[2] for l in self.masks[split]["total"]])
                            for split in self.masks])
 
-        print(self.max_e1)
-        print(self.max_r)
-        print(self.max_e2)
+        # print(self.max_e1)
+        # print(self.max_r)
+        # print(self.max_e2)
 
         for split in splits:
             num_elements = len(sequences[split])
@@ -189,7 +189,7 @@ class GenerationDataLoader(adata.DataLoader):
                     torch.LongTensor(seq[2])
 
             if split in ["test", "dev"]:
-                print(split)
+                # print(split)
                 self.sequences[split]["negative"] = \
                     self.sequences[split]["total"].index_select(
                         0, torch.LongTensor([i for i, j in enumerate(

@@ -5,7 +5,7 @@ import torch.nn as nn
 def make_model(opt, n_vocab, n_ctx, n_special, load=True,
                return_acts=True, return_probs=False,
                clf_token="<CLASS>", answer_size=None):
-    print(n_ctx)
+    # print(n_ctx)
     if opt.exp == "generation":
         model = LMModel(
             opt.net, n_vocab, n_ctx, return_acts=return_acts,

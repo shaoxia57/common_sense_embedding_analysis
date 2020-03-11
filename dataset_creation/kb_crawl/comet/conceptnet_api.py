@@ -15,17 +15,15 @@ class CometModel:
     self.model_file = model_file
     self.sampling_algorithm = 'beam'+'-'+str(samples)
     
-    self.setup()
+    # setup
+    self.opt, self.state_dict = api.load_model_file(self.model_file)
 
-  def setup(self):
-    opt, state_dict = api.load_model_file(self.model_file)
-
-    self.data_loader, self.text_encoder = api.load_data('conceptnet', opt)
+    self.data_loader, self.text_encoder = api.load_data('conceptnet', self.opt)
 
     n_ctx = self.data_loader.max_e1 + self.data_loader.max_e2 + self.data_loader.max_r
     n_vocab = len(self.text_encoder.encoder) + n_ctx
 
-    self.model = api.make_model(opt, n_vocab, n_ctx, state_dict)
+    self.model = api.make_model(self.opt, n_vocab, n_ctx, self.state_dict)
 
     if self.device != 'cpu':
         cfg.device = int(self.device)
@@ -36,7 +34,7 @@ class CometModel:
         cfg.device = 'cpu'
 
     # set sampler
-    self.sampler = api.set_sampler(opt, self.sampling_algorithm, self.data_loader)    
+    self.sampler = api.set_sampler(self.opt, self.sampling_algorithm, self.data_loader)    
     
   def query(self, query, relations):
     return api.get_conceptnet_sequence(
@@ -47,3 +45,38 @@ class CometModel:
       self.text_encoder, 
       relations
     )
+
+  def interact(self):
+    while True:
+      query = 'help'
+      relation = 'help'
+      sampling_algorithm = 'help'
+
+      while query is None or query.lower() == 'help':
+          query = input('Give an input entity (e.g., go on a hike -- works best if words are lemmatized): ')
+
+          if query == 'help':
+              api.print_help(self.opt.dataset)
+          
+      if query == 'quit':
+          break
+
+      while relation.lower() == 'help':
+          relation = input('Give a relation (type \'help\' for an explanation): ')
+
+          if relation == 'help':
+              api.print_relation_help(self.opt.dataset)
+
+      while sampling_algorithm.lower() == 'help':
+          sampling_algorithm = input('Give a sampling algorithm (type \'help\' for an explanation): ')
+
+          if sampling_algorithm == 'help':
+              api.print_sampling_help()
+
+      sampler = api.set_sampler(self.opt, sampling_algorithm, self.data_loader)
+
+      if relation not in data.conceptnet_data.conceptnet_relations:
+          relation = 'all'
+
+      outputs = api.get_conceptnet_sequence(
+          query, self.model, sampler, self.data_loader, self.text_encoder, relation, print=True)

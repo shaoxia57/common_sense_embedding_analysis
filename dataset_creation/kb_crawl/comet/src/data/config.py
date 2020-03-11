@@ -51,7 +51,7 @@ def get_parameters(opt, exp_type="model"):
     global save_strategy
     save_strategy = opt.save_strategy
 
-    print(params)
+    # print(params)
     return params, meta
 
 
@@ -166,7 +166,7 @@ def get_net_parameters(opt):
 
 def read_config(file_):
     config = DD()
-    print(file_)
+    # print(file_)
     for k, v in file_.items():
         if v == "True" or v == "T" or v == "true":
             config[k] = True

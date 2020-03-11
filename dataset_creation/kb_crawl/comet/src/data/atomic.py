@@ -78,7 +78,7 @@ class GenerationDataLoader(DataLoader):
 
     def load_data(self, path):
         if ".pickle" in path:
-            print("Loading data from: {}".format(path))
+            # print("Loading data from: {}".format(path))
             data_utils.load_existing_data_loader(self, path)
 
             return True
@@ -120,8 +120,8 @@ class GenerationDataLoader(DataLoader):
         self.max_effect = max([max([l[1] for l in self.masks[split]["total"]])
                                for split in self.masks])
 
-        print(self.max_event)
-        print(self.max_effect)
+        # print(self.max_event)
+        # print(self.max_effect)
 
         for split in splits:
             num_elements = len(sequences[split])

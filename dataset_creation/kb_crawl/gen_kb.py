@@ -4,7 +4,7 @@ import csv
 
 sys.path.append(os.getcwd())
 
-import dataset_creation.kb_crawl.util.crawl as crawler
+from dataset_creation.kb_crawl.crawler.crawler import Crawler
 
 base_path = 'data/kb_crawl'
 
@@ -38,7 +38,15 @@ def write_materials(filename, knowledge):
   print('Completed')
 
 if __name__ == "__main__":
+  crawler = Crawler()
+
+  crawler.comet_interact()
   materials = read_materials('example_materials_input.csv')
-  print('Working...')
-  materials_knowledge = crawler.crawl_comet_materials(materials)
-  write_materials('example_materials_output.csv', materials_knowledge)
+
+  print('Generating Conceptnet Materials...')
+  materials_knowledge1 = crawler.crawl_materials(materials)
+  write_materials('example_materials_output.csv', materials_knowledge1)
+
+  print('Generating Comet Conceptnet Materials...')
+  materials_knowledge2 = crawler.crawl_comet_materials(materials)
+  write_materials('example_comet_materials_output.csv', materials_knowledge2)

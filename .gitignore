@@ -4,3 +4,8 @@ clouds
 **/__pycache__
 
 dataset_creation/kb_crawl/comet/pretrained_models
+<<<<<<< HEAD
+=======
+dataset_creation/kb_crawl/comet/data
+dataset_creation/kb_crawl/comet/model
+>>>>>>> comet crawl integration

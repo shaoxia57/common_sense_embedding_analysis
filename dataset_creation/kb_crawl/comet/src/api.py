@@ -8,6 +8,7 @@ from dataset_creation.kb_crawl.comet.src.evaluate.sampler import BeamSampler, Gr
 
 import dataset_creation.kb_crawl.comet.utils.utils as utils
 
+base = "dataset_creation/kb_crawl/comet/"
 
 def load_model_file(model_file):
     model_stuff = data.load_checkpoint(model_file)
@@ -23,8 +24,8 @@ def load_data(dataset, opt):
         data_loader = load_conceptnet_data(opt)
 
     # Initialize TextEncoder
-    encoder_path = "model/encoder_bpe_40000.json"
-    bpe_path = "model/vocab_40000.bpe"
+    encoder_path = base + "model/encoder_bpe_40000.json"
+    bpe_path = base + "model/vocab_40000.bpe"
     text_encoder = TextEncoder(encoder_path, bpe_path)
     text_encoder.encoder = data_loader.vocab_encoder
     text_encoder.decoder = data_loader.vocab_decoder
@@ -39,7 +40,7 @@ def load_atomic_data(opt):
         opt.data.maxe1 = 17
         opt.data.maxe2 = 35
         opt.data.maxr = 1
-    path = "data/atomic/processed/generation/{}.pickle".format(
+    path = base + "data/atomic/processed/generation/{}.pickle".format(
         utils.make_name_string(opt.data))
     data_loader = data.make_data_loader(opt, opt.data.categories)
     loaded = data_loader.load_data(path)
@@ -55,7 +56,7 @@ def load_conceptnet_data(opt):
             opt.data.maxr = 5
         else:
             opt.data.maxr = 1
-    path = "data/conceptnet/processed/generation/{}.pickle".format(
+    path = base + "data/conceptnet/processed/generation/{}.pickle".format(
     utils.make_name_string(opt.data))
     data_loader = data.make_data_loader(opt)
     loaded = data_loader.load_data(path)
@@ -158,7 +159,7 @@ def set_atomic_inputs(input_event, category, data_loader, text_encoder):
     return batch
 
 
-def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relation, force=False):
+def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relation, force=False, print=False):
     if isinstance(relation, list):
         outputs = {}
 
@@ -202,7 +203,8 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
 
         sequence_all['beams'] = sampling_result["beams"]
 
-        # print_conceptnet_sequence(sequence_all)
+        if print:
+            print_conceptnet_sequence(sequence_all)
 
         return {relation: sequence_all}
 

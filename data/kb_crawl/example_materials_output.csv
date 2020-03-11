@@ -1,59 +1,182 @@
 material_1,material_2,property comparison
-glass,trees,more clear
 glass,hydrogen and oxygen,more clear
-glass,tar,more clear
-glass,gases,more clear
-glass,carbon,more clear
-glass,aluminium,more clear
-glass,wood,more clear
-glass,parts,more clear
-glass,sand,more clear
-glass,many things,more clear
-glass,oxegen,more clear
-glass,cellulose,more clear
-glass,molten sand,more clear
-glass,metal,more clear
-glass,H2O,more clear
-glass,tree,more clear
-glass,oxygen,more clear
+glass,cell,more clear
+glass,paper,more clear
+glass,plastic,more clear
+glass,vapor,more clear
+glass,polymer polymer,more clear
+glass,water,more clear
+glass,cloth,more clear
+glass,dirt,more clear
+glass,glass,more clear
+glass,polymer fiber,more clear
+glass,latex,more clear
+glass,concrete,more clear
+glass,cloud,more clear
+glass,polymer polymer polymer polymer,more clear
+glass,gas,more clear
+glass,fiber,more clear
+glass,polymer polymer polymer,more clear
+glass,polymer polymer polymer polymer polymer,more clear
 glass,clay,more clear
-glass,silica,more clear
-glass,Metal,more clear
-glass,cow skin,more clear
-glass,silk,more clean
-glass,leather,more clean
-glass,sand,more clean
-glass,silica,more clean
-glass,keratin,more clean
-glass,concrete,more clean
-glass,wood,more clean
-glass,molten sand,more clean
-glass,sand,more dirty
-glass,silica,more dirty
-glass,gases,more dirty
-glass,molten sand,more dirty
-concrete,H2O,more opaque
-concrete,moving air,more opaque
-concrete,oxygen,more opaque
-concrete,molecules,more opaque
-concrete,hydrogen and oxygen,more opaque
-concrete,air,more opaque
-concrete,sand,more opaque
-concrete,silica,more opaque
-concrete,Carbon,more opaque
-concrete,oxegen,more opaque
+glass,rubber,more clear
+glass,silk,more clear
+glass,stone,more clear
+glass,metal,more clear
+glass,sugar,more clear
+glass,polymer,more clear
+glass,fog,more clear
+glass,water and vapor,more clear
+glass,fabric,more clear
+glass,water vapor,more clear
+glass,material,more clear
+glass,person,more clear
+glass,polymer and plastic,more clear
+glass,hydrogen and helium,more clear
+glass,dirt,more clean
+glass,fiber,more clean
+glass,cow,more clean
+glass,animal,more clean
+glass,animal blood,more clean
+glass,mold,more clean
+glass,animal cell,more clean
+glass,garlic,more clean
+glass,mud,more clean
+glass,soil,more clean
+glass,evil,more clean
+glass,cotton,more clean
+glass,alcohol,more clean
+glass,body odor,more clean
+glass,sweat,more clean
+glass,blood,more clean
+glass,bacteria,more clean
+glass,clothe,more clean
+glass,cow dung,more clean
+glass,plastic,more clean
+glass,animal cell,more dirty
+glass,cleanser,more dirty
+glass,hydrogen and oxygen,more dirty
+glass,clothe,more dirty
+glass,plastic,more dirty
+glass,silicon,more dirty
+glass,water,more dirty
+glass,muscle,more dirty
+glass,muscle fiber,more dirty
+glass,carbon,more dirty
+glass,muscle cell,more dirty
+glass,cotton,more dirty
+glass,muscle muscle,more dirty
+glass,energy,more dirty
+glass,leather,more dirty
+glass,chemical,more dirty
+glass,fiber,more dirty
+glass,linen,more dirty
+glass,muscle and skin,more dirty
+glass,cleanness,more dirty
+glass,soil,more dirty
+glass,polymer,more dirty
+glass,electron,more dirty
+glass,muscle and bone,more dirty
+glass,muscle and agility,more dirty
+glass,detergent,more dirty
+glass,muscle and dexterity,more dirty
+glass,light,more dirty
+glass,hydrogen and helium,more dirty
+glass,cow,more smooth
+glass,cell,more smooth
+glass,shell,more smooth
+glass,plastic,more smooth
+glass,silicon,more smooth
+glass,water,more smooth
+glass,glass,more smooth
+glass,carbon,more smooth
+glass,wool,more smooth
+glass,animal skin,more smooth
+glass,cotton,more smooth
+glass,cow skin,more smooth
+glass,leather,more smooth
+glass,denim,more smooth
+glass,thread,more smooth
+glass,fiber,more smooth
+glass,clay,more smooth
+glass,silk,more smooth
+glass,rubber,more smooth
+glass,egg,more smooth
+glass,grain,more smooth
+glass,metal,more smooth
+glass,sugar,more smooth
+glass,foam,more smooth
+glass,polymer,more smooth
+glass,rock,more smooth
+glass,sand,more smooth
+glass,fabric,more smooth
+glass,water,more empty
+glass,cloth,more empty
+glass,sand,more empty
+glass,clay,more empty
+glass,one element,more empty
+glass,fabric,more empty
+glass,make,more empty
+glass,different color,more empty
+glass,matter,more empty
+glass,material,more empty
+glass,person,more empty
+glass,flour,more empty
+glass,cotton,more empty
+glass,cell,more empty
+glass,metal,more empty
+glass,gas,more empty
+glass,sugar,more empty
+glass,plastic,more empty
+concrete,wood,more opaque
+concrete,glass person be in boat,more opaque
+concrete,plastic,more opaque
+concrete,silicon,more opaque
+concrete,polymer polymer,more opaque
+concrete,water,more opaque
+concrete,glass,more opaque
+concrete,glass person be,more opaque
 concrete,carbon,more opaque
-concrete,molten sand,more opaque
-metal,ink and paper,more heavy
-metal,H2O,more opaque
-metal,moving air,more opaque
-metal,oxygen,more opaque
-metal,molecules,more opaque
-metal,hydrogen and oxygen,more opaque
-metal,air,more opaque
-metal,sand,more opaque
-metal,silica,more opaque
-metal,Carbon,more opaque
-metal,oxegen,more opaque
+concrete,polymer polymer polymer polymer,more opaque
+concrete,liquid,more opaque
+concrete,polymer polymer polymer,more opaque
+concrete,polymer polymer polymer polymer polymer,more opaque
+concrete,rubber,more opaque
+concrete,polymer polymer polymer polymer polymer polymer,more opaque
+concrete,metal,more opaque
+concrete,glass person be in car,more opaque
+concrete,polymer,more opaque
+concrete,sand,more opaque
+concrete,material,more opaque
+concrete,glass person,more opaque
+metal,electron,more heavy
+metal,wavelength,more heavy
+metal,hydrogen,more heavy
+metal,particle,more heavy
+metal,carbon,more heavy
+metal,hydrogen and oxygen,more heavy
+metal,electron and silicon,more heavy
+metal,energy,more heavy
+metal,light,more heavy
+metal,hydrogen and helium,more heavy
+metal,wood,more opaque
+metal,glass person be in boat,more opaque
+metal,plastic,more opaque
+metal,silicon,more opaque
+metal,polymer polymer,more opaque
+metal,water,more opaque
+metal,glass,more opaque
+metal,glass person be,more opaque
 metal,carbon,more opaque
-metal,molten sand,more opaque
+metal,polymer polymer polymer polymer,more opaque
+metal,liquid,more opaque
+metal,polymer polymer polymer,more opaque
+metal,polymer polymer polymer polymer polymer,more opaque
+metal,rubber,more opaque
+metal,polymer polymer polymer polymer polymer polymer,more opaque
+metal,metal,more opaque
+metal,glass person be in car,more opaque
+metal,polymer,more opaque
+metal,sand,more opaque
+metal,material,more opaque
+metal,glass person,more opaque
