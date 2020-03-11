@@ -1,11 +1,12 @@
-import kb_util as kb
-import csv
+import sys
 import os
-import pprint
+import csv
 
-pp = pprint.PrettyPrinter(indent=2)
+sys.path.append(os.getcwd())
 
-base_path = '../../data/kb_crawl'
+import dataset_creation.kb_crawl.util.crawl as crawler
+
+base_path = 'data/kb_crawl'
 
 def read_materials(filename):
   path = os.path.join(base_path, filename)
@@ -39,5 +40,5 @@ def write_materials(filename, knowledge):
 if __name__ == "__main__":
   materials = read_materials('example_materials_input.csv')
   print('Working...')
-  materials_knowledge = kb.crawl_materials(materials)
+  materials_knowledge = crawler.crawl_materials(materials)
   write_materials('example_materials_output.csv', materials_knowledge)
