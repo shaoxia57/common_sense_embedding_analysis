@@ -5,18 +5,16 @@ import dataset_creation.kb_crawl.conceptnet.api as cn_api
 
 # Material_1, Material_2, Property Comparison
 # Strategy: material → properties → property antonym → objects with property → made of 
-def crawl_materials(materials: [(str, float)]) -> [MaterialLogic]:
+def crawl_materials(materials: [str], topK: int = 10, threshold: float = 0) -> [MaterialLogic]:
   knowledge = []
   properties = {}
 
-  for mat in materials:
-    mat_1 = mat[0]
-    threshold = mat[1]
+  for mat_1 in materials:
     # extract properties
     # NOTE: specifying POS with HasProperty gives poor results
     mat_prop_res = cn_api.fetch(
       method=Method.Query,
-      params=cn_api.build_params(start=mat_1, rel=Relation.HasProperty)
+      params=cn_api.build_params(start=mat_1, rel=Relation.HasProperty, limit=topK)
     )
 
     for prop_edge in mat_prop_res['edges']:
@@ -27,7 +25,7 @@ def crawl_materials(materials: [(str, float)]) -> [MaterialLogic]:
       weight = prop_edge['weight']
       
       # fetch antonym properties
-      ant_query_params = cn_api.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective)
+      ant_query_params = cn_api.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective, limit=topK)
       ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
 
       if not ant_res:
@@ -40,7 +38,7 @@ def crawl_materials(materials: [(str, float)]) -> [MaterialLogic]:
 
       for ant_edge in ant_res['edges']:
         # fetch objects with antonym property
-        obj_query_params = cn_api.build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty)
+        obj_query_params = cn_api.build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty, limit=topK)
         obj_res = cn_api.fetch_with_cache(method=Method.Query, params=obj_query_params)
 
         if not obj_res:
@@ -48,7 +46,7 @@ def crawl_materials(materials: [(str, float)]) -> [MaterialLogic]:
 
         for obj_edge in obj_res['edges']:
           # fech materials from objects
-          mat_2_query_params = cn_api.build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf)
+          mat_2_query_params = cn_api.build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf, limit=topK)
           mat_2_res = cn_api.fetch_with_cache(method=Method.Query, params=mat_2_query_params)
 
           if not mat_2_res:

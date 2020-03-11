@@ -1,61 +1,59 @@
 material_1,material_2,property comparison
-glass,Metal,more clear
-glass,oxegen,more clear
-glass,gases,more clear
-glass,tree,more clear
-glass,silica,more clear
-glass,sand,more clear
-glass,clay,more clear
-glass,many things,more clear
-glass,cow skin,more clear
-glass,H2O,more clear
-glass,aluminium,more clear
-glass,cellulose,more clear
-glass,metal,more clear
-glass,molten sand,more clear
-glass,wood,more clear
-glass,carbon,more clear
-glass,parts,more clear
-glass,oxygen,more clear
-glass,hydrogen and oxygen,more clear
 glass,trees,more clear
+glass,hydrogen and oxygen,more clear
 glass,tar,more clear
-glass,molten sand,more dirty
-glass,silica,more dirty
-glass,sand,more dirty
-glass,molten sand,more clean
-glass,wood,more clean
-glass,silica,more clean
-glass,leather,more clean
-glass,concrete,more clean
-glass,keratin,more clean
+glass,gases,more clear
+glass,carbon,more clear
+glass,aluminium,more clear
+glass,wood,more clear
+glass,parts,more clear
+glass,sand,more clear
+glass,many things,more clear
+glass,oxegen,more clear
+glass,cellulose,more clear
+glass,molten sand,more clear
+glass,metal,more clear
+glass,H2O,more clear
+glass,tree,more clear
+glass,oxygen,more clear
+glass,clay,more clear
+glass,silica,more clear
+glass,Metal,more clear
+glass,cow skin,more clear
 glass,silk,more clean
+glass,leather,more clean
 glass,sand,more clean
-glass,molten sand,more opaque
-glass,silica,more opaque
-glass,H2O,more opaque
-glass,oxegen,more opaque
-glass,oxygen,more opaque
-glass,Carbon,more opaque
-glass,hydrogen and oxygen,more opaque
-glass,sand,more opaque
-glass,straw,more sharp
-concrete,molten sand,more opaque
-concrete,silica,more opaque
+glass,silica,more clean
+glass,keratin,more clean
+glass,concrete,more clean
+glass,wood,more clean
+glass,molten sand,more clean
+glass,sand,more dirty
+glass,silica,more dirty
+glass,gases,more dirty
+glass,molten sand,more dirty
 concrete,H2O,more opaque
-concrete,air,more opaque
-concrete,oxegen,more opaque
+concrete,moving air,more opaque
 concrete,oxygen,more opaque
-concrete,Carbon,more opaque
+concrete,molecules,more opaque
 concrete,hydrogen and oxygen,more opaque
+concrete,air,more opaque
 concrete,sand,more opaque
+concrete,silica,more opaque
+concrete,Carbon,more opaque
+concrete,oxegen,more opaque
+concrete,carbon,more opaque
+concrete,molten sand,more opaque
 metal,ink and paper,more heavy
-metal,molten sand,more opaque
-metal,silica,more opaque
 metal,H2O,more opaque
-metal,air,more opaque
-metal,oxegen,more opaque
+metal,moving air,more opaque
 metal,oxygen,more opaque
-metal,Carbon,more opaque
+metal,molecules,more opaque
 metal,hydrogen and oxygen,more opaque
+metal,air,more opaque
 metal,sand,more opaque
+metal,silica,more opaque
+metal,Carbon,more opaque
+metal,oxegen,more opaque
+metal,carbon,more opaque
+metal,molten sand,more opaque

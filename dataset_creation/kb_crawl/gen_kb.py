@@ -20,7 +20,7 @@ def read_materials(filename):
             print(f'Column names: {", ".join(row)}')
             line_count += 1
         else:
-          materials.append((row[0], float(row[1])))
+          materials.append(row[0])
           line_count += 1
     print(f'Processed {line_count} lines')
   return materials
