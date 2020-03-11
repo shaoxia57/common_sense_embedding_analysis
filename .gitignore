@@ -2,3 +2,5 @@
 clouds
 .ipynb_checkpoints
 **/__pycache__
+
+dataset_creation/kb_crawl/comet/pretrained_models

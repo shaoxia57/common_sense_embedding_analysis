@@ -5,4 +5,4 @@
 
 ## Notes
 * Crawls ConceptNet
-* Atomic and Comet support coming soon
+* Comet is largely taken from `https://github.com/atcbosselut/comet-commonsense`, but you'll need to download pretrained files to run

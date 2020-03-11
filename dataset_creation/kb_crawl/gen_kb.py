@@ -40,5 +40,5 @@ def write_materials(filename, knowledge):
 if __name__ == "__main__":
   materials = read_materials('example_materials_input.csv')
   print('Working...')
-  materials_knowledge = crawler.crawl_materials(materials)
+  materials_knowledge = crawler.crawl_comet_materials(materials)
   write_materials('example_materials_output.csv', materials_knowledge)

@@ -1,7 +1,36 @@
-from dataset_creation.kb_crawl.classes.static import Method, Comparison, Relation, POS
+from dataset_creation.kb_crawl.classes.static import Method, Comparison, Relation, POS, CometRelation
 from dataset_creation.kb_crawl.classes.property import Property
 from dataset_creation.kb_crawl.classes.logic import MaterialLogic
+
 import dataset_creation.kb_crawl.conceptnet.api as cn_api
+from dataset_creation.kb_crawl.comet.conceptnet_api import CometModel
+
+
+def crawl_comet_materials(materials):
+  comet_cn_api = CometModel(device=0)
+  # Material_1, Material_2, Property Comparison
+  # Strategy: material → properties → antonym properties → objects made of
+  knowledge = []
+  for mat1 in materials:
+    mat1_relations = ['HasProperty']
+
+    # fetch material properties
+    prop_outputs = comet_cn_api.query(mat1, mat1_relations)
+
+    for mat1_rel in mat1_relations: 
+      prop_output = prop_outputs[mat1_rel]
+      for prop in prop_output['beams']:
+        prop_relations = ['MadeOf']
+
+        # fetch made of objects
+        mat2_outputs = comet_cn_api.query(prop, prop_relations)
+        
+        for prop_rel in prop_relations:
+          mat2_output = mat2_outputs[prop_rel]
+          mat2 = mat2_output['beams']
+          knowledge.append(MaterialLogic(mat1, mat2, Property(prop)))
+
+  return knowledge  
 
 # Material_1, Material_2, Property Comparison
 # Strategy: material → properties → property antonym → objects with property → made of 
