@@ -82,23 +82,29 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
 
     return masked_examples
 
-def prepare_sentence_pair(sentences, config, fictitious_entities, num_entity_trials):
+def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
     sentence_pairs = {}
-    for truism in sentences:
-        for perturbation in sentences[truism]:
-            for asym_perturb in sentences[truism][perturbation]:
-                key = "-".join([truism, perturbation, asym_perturb])
+    for index, corr_incorr_pair in sentences.items():
+        sentence_pairs[index]={'correct':[],'incorrect':[]}
                 
-                statement = sentences[truism][perturbation][asym_perturb]
-                premise = statement.split(",")[0]+'.'
-                conclusion = statement.split(",")[1][4:]+'.'
+        correct_statement = corr_incorr_pair['correct']
+        premise = correct_statement.split(",")[0]+'.'
+        conclusion = correct_statement.split(",")[1][4:]+'.'
                 
-                sentence_pairs[key] = []
-                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                    filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-                    filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-                    sentence_pairs[key].append((filled_premise, filled_conclusion))
-
+        for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            sentence_pairs[index]['correct'].append((filled_premise, filled_conclusion))
+            
+        incorrect_statement = corr_incorr_pair['incorrect']
+        premise = incorrect_statement.split(",")[0]+'.'
+        conclusion = incorrect_statement.split(",")[1][4:]+'.'
+                
+        for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            sentence_pairs[index]['incorrect'].append((filled_premise, filled_conclusion))
+            
     return sentence_pairs
 
 def tokenize_sentence(sentence, tokenizer):

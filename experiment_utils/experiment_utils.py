@@ -99,7 +99,8 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
 
     return avg_responses
 
-def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logger):
+
+def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available):
     if gpu_available:
         model.cuda()
         logger.info("successfully moved model to gpu")
@@ -108,18 +109,32 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
 
     avg_responses = {}
     counter = 0
-    for key, pairs in sentence_pairs.items():
-        
-        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in pairs], pad_idx=1)
+    for key, corr_incorr_pair in sentence_pairs.items():
+        avg_responses[key] = {'correct':{'label_list':[], 'avg_accuracy':-1},
+                              'incorrect':{'label_list':[], 'avg_accuracy':-1}}
+        # Correct pair (true label: entailment) results
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['correct']], pad_idx=1)
         logprobs = model.predict('mnli', batch)
         
         result_list = logprobs.argmax(dim=1).tolist()
         avg_accuracy = result_list.count(2)/len(result_list)
 
-        avg_responses[key] = avg_accuracy
+        avg_responses[key]['correct']['label_list'] = result_list
+        avg_responses[key]['correct']['avg_accuracy'] = avg_accuracy
+        
+        # Incorrect pair (true label: contradiction) results
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['incorrect']], pad_idx=1)
+        logprobs = model.predict('mnli', batch)
+        
+        result_list = logprobs.argmax(dim=1).tolist()
+        avg_accuracy = result_list.count(2)/len(result_list)
+
+        avg_responses[key]['incorrect']['label_list'] = result_list
+        avg_responses[key]['incorrect']['avg_accuracy'] = avg_accuracy
+        
         counter += 1
         if counter % 24 == 0:
-            logger.info("finished one set")
+            print("finished one set")
 
     return avg_responses
 
@@ -150,17 +165,28 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
     set_numbers = []
     perturbations = []
     asym_perturbs = []
-    avg_accuracy_scores = []
+    ent_avg_accuracy_scores = []
+    contr_avg_accuracy_scores = []
+    ent_label_list = []
+    contr_label_list = []
     for key in result_dictionary:
         parts = key.split("-")
         set_numbers.append(int(parts[0]))
         perturbations.append(parts[1])
         asym_perturbs.append(parts[2])
-        avg_accuracy_scores.append(result_dictionary[key])
+        
+        ent_avg_accuracy_scores.append(result_dictionary[key]['correct']['avg_accuracy'])
+        contr_avg_accuracy_scores.append(result_dictionary[key]['incorrect']['avg_accuracy'])
+        
+        ent_label_list.append(result_dictionary[key]['correct']['label_list'])
+        contr_label_list.append(result_dictionary[key]['incorrect']['label_list'])
 
     return pd.DataFrame.from_dict({
             "set_number"    : set_numbers,
             "perturbation"     : perturbations,
             "asym_perturbs"          : asym_perturbs,
-            "avg_accuracy_score" : avg_accuracy_scores,
+            "ent_avg_score" : ent_avg_accuracy_scores,
+            "contr_avg_score" : contr_avg_accuracy_scores,
+            "ent_label_list" : ent_label_list,
+            "contr_label_list" : contr_label_list
         })
