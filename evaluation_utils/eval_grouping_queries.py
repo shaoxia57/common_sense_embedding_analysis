@@ -53,6 +53,18 @@ def run_template_grouping_query(df):
     result = ps.sqldf(template_grouping_query, locals())
     return result
 
+def run_set_grouping_query(df):
+    template_grouping_query = """
+                                  SELECT set_number, 
+                                         AVG(stat) AS avg_stat, 
+                                         COUNT(1) as count
+                                  FROM df
+                                  GROUP BY set_number
+                                  ORDER by set_number
+                              """
+    result = ps.sqldf(template_grouping_query, locals())
+    return result
+
 def run_perturbation_grouping_query(df):
     perturbation_grouping_query = """
                                       SELECT perturbation, 
@@ -73,4 +85,38 @@ def run_perturbation_grouping_query(df):
     result = ps.sqldf(perturbation_grouping_query, locals())
     return result
 
+def run_linguistic_operator_grouping_query(df):
+    linguistic_operator_grouping_query = """
+                                             SELECT linguistic_operator, 
+                                                    AVG(stat) AS avg_stat, 
+                                                    COUNT(1) as count
+                                             FROM df
+                                             WHERE asymetric_operator = "original"
+                                             GROUP BY linguistic_operator
+                                             ORDER by CASE WHEN linguistic_operator LIKE 'original' THEN '1'
+                                                           WHEN linguistic_operator LIKE 'negation_antonym' THEN '6'
+                                                           WHEN linguistic_operator LIKE 'negation_paraphrase' THEN '7'
+                                                           WHEN linguistic_operator LIKE 'negation_paraphrase_inversion' THEN '8'
+                                                           WHEN linguistic_operator LIKE 'negation' THEN '2'
+                                                           WHEN linguistic_operator LIKE 'antonym' THEN '3'
+                                                           WHEN linguistic_operator LIKE 'paraphrase_inversion' THEN '5'
+                                                           WHEN linguistic_operator LIKE 'paraphrase' THEN '4'
+                                                           END
+                                         """
+    result = ps.sqldf(linguistic_operator_grouping_query, locals())
+    return result
 
+def run_asymetric_operator_grouping_query(df):
+    asymetric_operator_grouping_query = """
+                                             SELECT asymetric_operator, 
+                                                    AVG(stat) AS avg_stat, 
+                                                    COUNT(1) as count
+                                             FROM df
+                                             GROUP BY asymetric_operator
+                                             ORDER by CASE WHEN asymetric_operator LIKE 'original' THEN '1'
+                                                           WHEN asymetric_operator LIKE 'asymmetric_premise' THEN '2'
+                                                           WHEN asymetric_operator LIKE 'negation_paraphrase%' THEN '3'
+                                                           END
+                                         """
+    result = ps.sqldf(asymetric_operator_grouping_query, locals())
+    return result
