@@ -30,7 +30,7 @@ class Crawler:
       mat_1_relations = ['HasProperty']
 
       # fetch material properties
-      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations)
+      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, "beam", topK)
 
       for mat_1_rel in mat_1_relations: 
         prop_output = prop_outputs[mat_1_rel]
@@ -57,7 +57,7 @@ class Crawler:
 
             # fetch made of objects
             ant_relations = ['MadeOf']
-            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations)
+            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, "beam", topK)
             
             for prop_rel in ant_relations:
               mat_2_output = mat_2_outputs[prop_rel]
@@ -105,7 +105,7 @@ class Crawler:
 
           # fetch materials with property from comet
           ant_relations = ['MadeOf']
-          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations)
+          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, "beam", topK)
           
           for ant_rel in ant_relations:
             mat_2_output = mat_2_outputs[ant_rel]

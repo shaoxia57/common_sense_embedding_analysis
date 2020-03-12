@@ -39,8 +39,6 @@ def write_materials(filename, knowledge):
 
 if __name__ == "__main__":
   crawler = Crawler()
-
-  crawler.comet_interact()
   materials = read_materials('example_materials_input.csv')
 
   print('Generating Conceptnet Materials...')

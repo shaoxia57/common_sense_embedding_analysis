@@ -74,14 +74,12 @@ def make_model(opt, n_vocab, n_ctx, state_dict):
     return model
 
 
-def set_sampler(opt, sampling_algorithm, data_loader):
-    if "beam" in sampling_algorithm:
-        opt.eval.bs = int(sampling_algorithm.split("-")[1])
+def set_sampler(opt, sampling_algorithm, search_size, data_loader):
+    if sampling_algorithm is "beam":
+        opt.eval.bs = search_size
         sampler = BeamSampler(opt, data_loader)
-    elif "topk" in sampling_algorithm:
-        # print("Still bugs in the topk sampler. Use beam or greedy instead")
-        # raise NotImplementedError
-        opt.eval.k = int(sampling_algorithm.split("-")[1])
+    elif sampling_algorithm is "topk":
+        opt.eval.k = search_size
         sampler = TopKSampler(opt, data_loader)
     else:
         sampler = GreedySampler(opt, data_loader)
