@@ -117,7 +117,6 @@ def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_availab
         for example in masked_examples[key]:
             statement, right_answer, wrong_answer = example
             statement = statement.replace('<mask>','[MASK]')
-            print(statement)
             responses = fill_mask_pipeline(statement)
             right_pos = top_n + 1
             wrong_pos = top_n + 1
