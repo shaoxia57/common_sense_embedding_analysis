@@ -124,7 +124,7 @@ def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_availab
             wrong_score = 0
             done = -1
             for i in range(len(responses)):
-                possible_answer = tokenizer.convert_ids_to_tokens(responses[0]['token'])[1:]
+                possible_answer = tokenizer.convert_ids_to_tokens(responses[i]['token'])[1:]
                 if possible_answer == right_answer:
                     right_score = responses[i]['score']
                     right_pos = i

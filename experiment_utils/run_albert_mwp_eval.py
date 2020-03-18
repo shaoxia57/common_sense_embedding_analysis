@@ -6,7 +6,6 @@ import sys
 import torch
 import experiment_utils as utils
 from transformers import AlbertTokenizer, AlbertForMaskedLM
-from transformers import pipeline
 
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
@@ -79,7 +78,7 @@ def main():
 
     logger.info("finished reading in material data")
 
-    output_df = run_pipeline(model=mode, 
+    output_df = run_pipeline(model=model, 
                              tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=material_sents, 
