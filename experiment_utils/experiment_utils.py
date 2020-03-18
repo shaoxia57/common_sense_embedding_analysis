@@ -183,7 +183,7 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
         logprobs = model.predict('mnli', batch)
         
         result_list = logprobs.argmax(dim=1).tolist()
-        avg_accuracy = result_list.count(2)/len(result_list)
+        avg_accuracy = result_list.count(0)/len(result_list)
 
         avg_responses[key]['incorrect']['label_list'] = result_list
         avg_responses[key]['incorrect']['avg_accuracy'] = avg_accuracy
