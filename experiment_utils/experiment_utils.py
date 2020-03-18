@@ -99,6 +99,62 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
 
     return avg_responses
 
+def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_available, top_n, logger):
+#     if gpu_available:
+#         model.cuda()
+#         logger.info("successfully moved model to gpu")
+
+    model.eval()
+
+    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, topk=top_n)
+    
+    avg_responses = {}
+    for j, key in enumerate(masked_examples):
+        binary_avg_score = 0
+        ratio_avg_score = 0
+
+        for example in masked_examples[key]:
+            statement, right_answer, wrong_answer = example
+            statement = statement.replace('<mask>','[MASK]')
+            print(statement)
+            responses = fill_mask_pipeline(statement)
+            right_pos = top_n + 1
+            wrong_pos = top_n + 1
+            right_score = 0
+            wrong_score = 0
+            done = -1
+            for i in range(len(responses)):
+                possible_answer = tokenizer.convert_ids_to_tokens(responses[0]['token'])[1:]
+                if possible_answer == right_answer:
+                    right_score = responses[i]['score']
+                    right_pos = i
+                    done += 1
+                if possible_answer == wrong_answer:
+                    wrong_score = responses[i]['score']
+                    wrong_pos = i
+                    done += 1
+                if done > 0:
+                    break
+            
+            binary_score = 1 if right_pos < wrong_pos else 0
+            
+            if right_score + wrong_score > 0:
+                ratio_score = (right_score - wrong_score) / (right_score + wrong_score)
+            else:
+                ratio_score = -1
+            
+            binary_avg_score += binary_score
+            ratio_avg_score += ratio_score
+
+        binary_avg_score /= float(len(masked_examples[key]))
+        ratio_avg_score /= float(len(masked_examples[key]))
+
+        avg_responses[key] = {"binary_score" : binary_avg_score, "ratio_score" : ratio_avg_score}
+        
+        if (j+1) % 240 == 0:
+            logger.info("finished 10 more")
+
+    return avg_responses
 
 def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logger):
     if gpu_available:
