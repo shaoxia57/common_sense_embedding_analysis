@@ -21,8 +21,8 @@ def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, numbe
 
     perf = utils.albert_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
-                                                 tokenizer=tokenizer
-                                                 gpu_available=torch.cuda.is_available(),
+                                                 tokenizer=tokenizer,
+                                                 gpu_available=False,
                                                  top_n=100,
                                                  logger=logger)
 
