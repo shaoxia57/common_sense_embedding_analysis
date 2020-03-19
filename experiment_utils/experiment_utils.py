@@ -189,8 +189,8 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
         avg_responses[key]['incorrect']['avg_accuracy'] = avg_accuracy
         
         counter += 1
-        if counter % 24 == 0:
-            logger.info("finished one set")
+        if counter % 240 == 0:
+            logger.info("finished 10 more")
 
     return avg_responses
 
