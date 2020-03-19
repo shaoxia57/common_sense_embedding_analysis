@@ -30,7 +30,11 @@ def autolabel(rects, ax, color, below=False):
             va = "bottom"
             x = rect.get_x() + rect.get_width() / 2
         else:
-            y = max(min(0.58, height),0.53)
+            if 0.33 - height < 0.05:
+                y = height * 1.13
+            else:
+                y = height
+
             # y = 0.55
             x = rect.get_x() + rect.get_width() / 2
             va = "bottom"
@@ -45,7 +49,8 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
                               left_bar_data, right_bar_data, title, save_dir="",
                               legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
                               add_nums_to_bars=True, nums_should_be_below=[False, True],
-                              left_range=[0,1], right_range=[-1,1], small_title=False):
+                              left_range=[0,1], right_range=[-1,1], small_title=False,
+                              rand=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
     
@@ -53,6 +58,10 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     fig, ax1 = plt.subplots()
     x = np.arange(len(x_labels))
     width = 0.35
+    if rand:
+        rand_level=rand
+    else:
+        rand_level=sum(left_range)/2.0
     
     color = 'tab:red'
     ax1.set_ylabel(left_units, color=color)
@@ -85,7 +94,7 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     else:
         ax1.set_title(title)
 
-    random_guess = ax1.axhline(y=sum(left_range)/2.0,color="darkgray", linestyle=":") 
+    random_guess = ax1.axhline(y=rand_level,color="darkgray", linestyle=":") 
     ax1.legend((rects1, rects2, random_guess), (left_units, right_units, "Random Guess"),
                loc=legend_loc, ncol=1, fontsize=10, framealpha=0.8)
     
@@ -97,7 +106,8 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
 
 def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, data_one,
                          data_two, title, save_dir="", legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
-                         add_nums_to_bars=True, nums_should_be_below=[False, True], y_range=[0,1], small_title=False):
+                         add_nums_to_bars=True, nums_should_be_below=[False, True], y_range=[0,1], small_title=False,
+                         rand=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
     
@@ -105,6 +115,11 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     fig, ax1 = plt.subplots()
     x = np.arange(len(x_labels))
     width = 0.35
+
+    if rand:
+        rand_level=rand
+    else:
+        rand_level=sum(y_range)/2.0
     
     color_1 = 'tab:red'
     color_2 = 'tab:blue'
@@ -124,7 +139,7 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
         autolabel(rects1, ax1, color_1, nums_should_be_below[0])
         autolabel(rects2, ax1, color_2, nums_should_be_below[0])
     
-    random_guess = ax1.axhline(y=sum(y_range)/2.0, color='silver', linestyle=":")    
+    random_guess = ax1.axhline(y=rand_level, color='silver', linestyle=":")    
     
     if small_title:
         ax1.set_title(title, size=10)
@@ -142,7 +157,8 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     plt.show()
 
 def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir="", legend_loc=1, label_x_ticks=True,
-                     x_ticks_rotation=15, add_nums_to_bars=True, nums_should_be_below=False, y_range=[0,1], small_title=False):
+                     x_ticks_rotation=15, add_nums_to_bars=True, nums_should_be_below=False, y_range=[0,1], small_title=False,
+                     rand=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
     
@@ -153,6 +169,11 @@ def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir=""
     else:
         x = np.arange(x_labels[0], x_labels[1], 1)
     width = 0.35
+
+    if rand:
+        rand_level=rand
+    else:
+        rand_level=sum(y_range)/2.0
     
     ax1.set_ylabel(y_label, color=color)
     ax1.set_ylim(bottom=y_range[0], top=y_range[1])
@@ -172,7 +193,7 @@ def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir=""
     if add_nums_to_bars:
         autolabel(rects1, ax1, color, nums_should_be_below)
 
-    random_guess = ax1.axhline(y=sum(y_range)/2.0,color='silver', linestyle=":")    
+    random_guess = ax1.axhline(y=rand_level,color='silver', linestyle=":")    
     
     if small_title:
         ax1.set_title(title, size=10)

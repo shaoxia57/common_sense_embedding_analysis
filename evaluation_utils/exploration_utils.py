@@ -1,31 +1,35 @@
 import pandas as pd
 
-def filter_data_into_more_less_by_actual_comparison(result_data, param_data):
+def filter_data_into_more_less_by_actual_comparison(result_data, param_data, option=0):
+    if option == 1:
+        premise = "asym_perturbs"
+    else:
+        premise = "premise"
     more = []
     less = []
     for i, row in result_data.iterrows():
-        p_key = row["perturbation"] + "-" + row["premise"]
+        p_key = row["perturbation"] + "-" + row[premise]
         if param_data[str(row["truism_number"])]["greater_than"] == "A":
             if row["perturbation"] in ["original", "paraphrase", 
                                        "negation_antonym", "negation_paraphrase_inversion"]:
-                if row["premise"] == "original":
+                if row[premise] == "original":
                     template_key = "more"
                 else:
                     template_key = "less"
             else:
-                if row["premise"] == "original":
+                if row[premise] == "original":
                     template_key = "less"
                 else:
                     template_key = "more"
         else:
             if row["perturbation"] in ["original", "paraphrase", 
                                        "negation_antonym", "negation_paraphrase_inversion"]:
-                if row["premise"] == "original":
+                if row[premise] == "original":
                     template_key = "less"
                 else:
                     template_key = "more"
             else:
-                if row["premise"] == "original":
+                if row[premise] == "original":
                     template_key = "more"
                 else:
                     template_key = "less"
@@ -38,13 +42,19 @@ def filter_data_into_more_less_by_actual_comparison(result_data, param_data):
     return (pd.DataFrame.from_records(more), pd.DataFrame.from_records(less))
 
 
-def filter_data_into_more_less_by_orig_comparison(result_data, param_data):
+def filter_data_into_more_less_by_orig_comparison(result_data, param_data, option=0):
+    if option:
+        premise = "asym_perturbs"
+        truism_number = "set_number"
+    else:
+        premise = "premise"
+        truism_number = "truism_number"
     more = []
     less = []
     for i, row in result_data.iterrows():
-        p_key = row["perturbation"] + "-" + row["premise"]
+        p_key = row["perturbation"] + "-" + row[premise]
         
-        if param_data[str(row["truism_number"])]["greater_than"] == "A":
+        if param_data[str(row[truism_number])]["greater_than"] == "A":
             more.append(row)
         else:
             less.append(row)        
