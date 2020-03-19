@@ -40,48 +40,7 @@ def main():
 
     roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.large')
 
-    fictitious_entities = proc.generate_pairs_of_random_names(number_of_pairs=100)
-
-    with open("../data/truism_data/physical_data_sentences_2.json", "r") as f:
-        physical_sents = json.load(f)
-        
-    with open("../data/truism_data/physical_data_2.json", "r") as f:
-        physical_config = json.load(f)
-
-    logger.info("finished reading in physical data")
-
-    output_df = run_pipeline(model=roberta, 
-                             fictitious_entities=fictitious_entities, 
-                             sentences=physical_sents, 
-                             config=physical_config, 
-                             number_of_entity_trials=number_of_entity_trials,
-                             logger=logger)
-
-    output_df.to_csv("../data/masked_word_result_data/w_name/physical_perf_{}.csv".format(number_of_entity_trials),
-                     index=False)
-
-    logger.info("finished saving physical dataset results")
-
-        
-    with open("../data/truism_data/material_data_sentences_2.json", "r") as f:
-        material_sents = json.load(f)
-        
-    with open("../data/truism_data/material_data_2.json", "r") as f:
-        material_config = json.load(f)
-
-    logger.info("finished reading in material data")
-
-    output_df = run_pipeline(model=roberta, 
-                             fictitious_entities=fictitious_entities, 
-                             sentences=material_sents, 
-                             config=material_config, 
-                             number_of_entity_trials=number_of_entity_trials,
-                             logger=logger)
-
-    output_df.to_csv("../data/masked_word_result_data/w_name/material_perf_{}.csv".format(number_of_entity_trials),
-                     index=False)
-
-    logger.info("finished saving physical material results")
+    names = proc.generate_pairs_of_random_names(number_of_pairs=100)
         
     with open("../data/truism_data/social_data_sentences_2.json", "r") as f:
         social_sents = json.load(f)
@@ -92,7 +51,7 @@ def main():
     logger.info("finished reading in social data")
 
     output_df = run_pipeline(model=roberta, 
-                             fictitious_entities=fictitious_entities, 
+                             fictitious_entities=names, 
                              sentences=social_sents, 
                              config=social_config, 
                              number_of_entity_trials=number_of_entity_trials,
