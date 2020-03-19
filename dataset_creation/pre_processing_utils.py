@@ -1,5 +1,6 @@
 import torch
 import random
+import pandas as pd
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -12,6 +13,20 @@ def generate_pairs_of_random_strings(number_of_pairs, min_length, max_length, ch
         fictitious_entities.append((word_1, word_2))
 
     return fictitious_entities
+
+def generate_pairs_of_random_names(number_of_pairs, name_dir="../data/other/baby-names.csv"):
+    names = pd.read_csv(name_dir)
+    names = list(names["name"])
+    name_pairs = []
+    for name in random.sample(names, number_of_pairs):
+        while True:
+            i = random.randint(0, len(names)-1)
+            if names[i] != name:
+                other_name = names[i]
+                name_pairs.append((name, other_name))
+                break
+
+    return name_pairs
 
 def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_entity_trials):
     masked_examples = {}
