@@ -8,3 +8,10 @@ class MaterialLogic:
     self.prop = prop
     self.comp = comp
     self.weight = weight
+
+class RelationLogic:
+  def __init__(self, relation: str, prop: Property, comp: Comparison = Comparison.More, weight: float = 1.0):
+    self.relation = relation
+    self.prop = prop
+    self.comp = comp
+    self.weight = weight

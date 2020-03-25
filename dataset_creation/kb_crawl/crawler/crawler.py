@@ -1,6 +1,6 @@
 from dataset_creation.kb_crawl.classes.static import Method, Comparison, Relation, POS, CometRelation
 from dataset_creation.kb_crawl.classes.property import Property
-from dataset_creation.kb_crawl.classes.logic import MaterialLogic
+from dataset_creation.kb_crawl.classes.logic import MaterialLogic, RelationLogic
 
 import dataset_creation.kb_crawl.conceptnet.api as cn_api
 from dataset_creation.kb_crawl.comet.conceptnet_api import CometModel
@@ -30,7 +30,7 @@ class Crawler:
       mat_1_relations = ['HasProperty']
 
       # fetch material properties
-      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, "beam", topK)
+      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, 'beam', topK)
 
       for mat_1_rel in mat_1_relations: 
         prop_output = prop_outputs[mat_1_rel]
@@ -57,7 +57,7 @@ class Crawler:
 
             # fetch made of objects
             ant_relations = ['MadeOf']
-            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, "beam", topK)
+            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, 'beam', topK)
             
             for prop_rel in ant_relations:
               mat_2_output = mat_2_outputs[prop_rel]
@@ -105,7 +105,7 @@ class Crawler:
 
           # fetch materials with property from comet
           ant_relations = ['MadeOf']
-          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, "beam", topK)
+          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, 'beam', topK)
           
           for ant_rel in ant_relations:
             mat_2_output = mat_2_outputs[ant_rel]
@@ -138,15 +138,40 @@ class Crawler:
 
   # Relation, Property_Comparison
   # Strategy: Occupation/Role noun → capabilities
-  def crawl_relation(self, ):
-    return 1
+  def crawl_relations(self, relations: [str], topK: int = 10):
+    knowledge = []
+    properties = {}
+    
+    for relation in relations:
+      relation_relations = ['CapableOf']
+      capability_outputs = self.comet_cn_api.query(relation, relation_relations, 'beam', topK)
+
+      for relation_rel in relation_relations: 
+        capability_output = capability_outputs[relation_rel]
+        for capability_count, capability_label in enumerate(capability_output['beams']):
+          prop = properties[capability_label] if capability_label in properties else None
+          comp = Comparison.More
+          weight = capability_count
+
+          # insert into properties
+          if not prop:
+            # fetch antonym properties from conceptnet
+            ant_query_params = cn_api.build_params(start=capability_label, rel=Relation.Antonym, limit=topK)
+            ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
+            ants = [ant_edge['end']['label'] for ant_edge in ant_res['edges']] if ant_res else []
+            prop = Property(capability_label, ants)
+            properties[capability_label] = prop
+
+          knowledge.append(RelationLogic(relation, prop, comp, weight))
+
+    return knowledge
 
   # Property, Property_Comparison
   # Strategy: Action → property consequence → comparison
-  def crawl_property(self, ):
+  def crawl_properties(self, properties: [str], topK: int = 10):
     return 1
 
   # Property_Comparison, Property_Comparison
   # Strategy: Action comparison → property consequence → action comparison
-  def crawl_comparison(self, ):
+  def crawl_comparisons(self, comparisons: [str], topK: int = 10):
     return 1
