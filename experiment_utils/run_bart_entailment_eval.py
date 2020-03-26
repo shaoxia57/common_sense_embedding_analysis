@@ -36,7 +36,7 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = torch.hub.load(github='pytorch/fairseq', model='bart.large.mnli')
+    bart = torch.hub.load(github='pytorch/fairseq', model='bart.large.mnli')
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
                                                                 min_length=3,
@@ -49,7 +49,7 @@ def main():
 
     logger.info("finished reading in physical data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=bart, 
                              fictitious_entities=fictitious_entities, 
                              sentences=physical_sents, 
                              number_of_entity_trials=number_of_entity_trials,
@@ -66,7 +66,7 @@ def main():
 
     logger.info("finished reading in material data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=bart, 
                              fictitious_entities=fictitious_entities, 
                              sentences=material_sents, 
                              number_of_entity_trials=number_of_entity_trials,
@@ -82,7 +82,7 @@ def main():
 
     logger.info("finished reading in social data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=bart, 
                              fictitious_entities=fictitious_entities, 
                              sentences=social_sents,  
                              number_of_entity_trials=number_of_entity_trials,

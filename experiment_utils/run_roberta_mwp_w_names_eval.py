@@ -60,7 +60,7 @@ def main():
     output_df.to_csv("../data/masked_word_result_data/w_name/social_perf_{}.csv".format(number_of_entity_trials),
                      index=False)
 
-    logger.info("finished saving physical social results")
+    logger.info("finished saving social results")
 
 if __name__ == "__main__":
     main()
