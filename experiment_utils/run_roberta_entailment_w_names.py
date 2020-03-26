@@ -38,7 +38,7 @@ def main():
 
     roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.large.mnli')
 
-    names = proc.proc.generate_pairs_of_random_names(number_of_pairs=100)
+    names = proc.generate_pairs_of_random_names(number_of_pairs=100)
         
     with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
         social_sents = json.load(f)
