@@ -29,6 +29,7 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     return output_df
 
+
 def main():
     random.seed(1012)
     logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',

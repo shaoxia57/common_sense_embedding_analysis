@@ -1,6 +1,10 @@
 import torch
 import random
 import pandas as pd
+import sys
+
+sys.path.append('../')
+from dataset_creation.generate_data import pad_string
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -81,7 +85,7 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
                 right_answer = None
                 wrong_answer = None
                 for answer in candidate_answers:
-                    if answer in conclusion:
+                    if pad_string(answer, False) in conclusion:
                         conclusion = conclusion.replace(" " + answer + " ", " <mask> ")
                         right_answer = answer
                     else:
