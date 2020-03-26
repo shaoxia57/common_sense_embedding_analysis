@@ -26,14 +26,14 @@ def autolabel(rects, ax, color, below=False):
             # multiple = 1.1 if height < 0 else -1.1
             # y = min(-0.15, multiple*height)
             # y = height 
-            y = -0.2
+            y = -0.25
             va = "bottom"
             x = rect.get_x() + rect.get_width() / 2
         else:
-            if 0.33 - height < 0.05:
-                y = height * 1.13
-            else:
-                y = height
+            # if 0.33 - height < 0.05:
+            #     y = height * 1.13
+            # else:
+            y = min(height + 0.03, height*1.12)
 
             # y = 0.55
             x = rect.get_x() + rect.get_width() / 2
@@ -187,6 +187,14 @@ def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir=""
             ax1.set_xticklabels(x_labels, rotation=x_ticks_rotation)
     else:
         ax1.set_xlim(x_labels[0], x_labels[1])
+        if not label_x_ticks:
+            plt.tick_params(
+                axis='x',          # changes apply to the x-axis
+                which='both',      # both major and minor ticks are affected
+                bottom=False,      # ticks along the bottom edge are off
+                top=False,         # ticks along the top edge are off
+                labelbottom=False)
+
     
     ax1.set_xlabel(x_label)
 
