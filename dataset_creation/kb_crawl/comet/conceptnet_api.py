@@ -25,12 +25,12 @@ class CometModel:
     self.model = api.make_model(self.opt, n_vocab, n_ctx, self.state_dict)
 
     if self.device != 'cpu':
-        cfg.device = int(self.device)
-        cfg.do_gpu = True
-        torch.cuda.set_device(cfg.device)
-        self.model.cuda(cfg.device)
+      cfg.device = int(self.device)
+      cfg.do_gpu = True
+      torch.cuda.set_device(cfg.device)
+      self.model.cuda(cfg.device)
     else:
-        cfg.device = 'cpu'  
+      cfg.device = 'cpu'  
     
   def query(self, query, relations, sampling_algorithm='beam', search_size=10):
     sampler = api.set_sampler(self.opt, sampling_algorithm, search_size, self.data_loader)  
@@ -50,34 +50,34 @@ class CometModel:
       sampling_method = 'help'
 
       while query is None or query.lower() == 'help':
-          query = input('Give an input entity (e.g., go on a hike -- works best if words are lemmatized): ')
+        query = input('Give an input entity (e.g., go on a hike -- works best if words are lemmatized): ')
 
-          if query == 'help':
-              api.print_help(self.opt.dataset)
+        if query == 'help':
+            api.print_help(self.opt.dataset)
           
       if query == 'quit':
-          break
+        break
 
       while relation.lower() == 'help':
-          relation = input('Give a relation (type \'help\' for an explanation): ')
+        relation = input('Give a relation (type \'help\' for an explanation): ')
 
-          if relation == 'help':
-              api.print_relation_help(self.opt.dataset)
+        if relation == 'help':
+          api.print_relation_help(self.opt.dataset)
 
       while sampling_method.lower() == 'help':
-          sampling_method = input('Give a sampling algorithm (type \'help\' for an explanation): ')
+        sampling_method = input('Give a sampling algorithm (type \'help\' for an explanation): ')
 
-          if sampling_method == 'help':
-              api.print_sampling_help()
+        if sampling_method == 'help':
+            api.print_sampling_help()
 
-          sampling_method_split = sampling_method.split('-')[0]
-          sampling_algorithm = sampling_method_split[0]
-          search_size = int(sampling_method.split('-')[1]) if len(sampling_method_split) > 1 else 10
+        sampling_method_split = sampling_method.split('-')[0]
+        sampling_algorithm = sampling_method_split[0]
+        search_size = int(sampling_method.split('-')[1]) if len(sampling_method_split) > 1 else 10
 
       sampler = api.set_sampler(self.opt, sampling_algorithm, search_size, self.data_loader)
 
       if relation not in data.conceptnet_data.conceptnet_relations:
-          relation = 'all'
+        relation = 'all'
 
       outputs = api.get_conceptnet_sequence(
-          query, self.model, sampler, self.data_loader, self.text_encoder, relation, print=True)
+        query, self.model, sampler, self.data_loader, self.text_encoder, relation, print=True)
