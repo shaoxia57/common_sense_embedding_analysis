@@ -60,7 +60,7 @@ class CometModel:
         break
 
       while category.lower() == 'help':
-        relation = input('Give an effect type (type \'help\' for an explanation): ')
+        category = input('Give an effect type (type \'help\' for an explanation): ')
 
         if category == 'help':
           api.print_category_help(self.opt.dataset)
