@@ -87,7 +87,7 @@ def set_sampler(opt, sampling_algorithm, search_size, data_loader):
     return sampler
 
 
-def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, category):
+def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, category, print=False):
     if isinstance(category, list):
         outputs = {}
         for cat in category:
@@ -123,7 +123,8 @@ def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, 
 
         sequence_all['beams'] = sampling_result["beams"]
 
-        print_atomic_sequence(sequence_all)
+        if print:
+            print_atomic_sequence(sequence_all)
 
         return {category: sequence_all}
 
