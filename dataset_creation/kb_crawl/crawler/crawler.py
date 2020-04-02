@@ -8,9 +8,6 @@ from dataset_creation.kb_crawl.comet.atomic_api import CometAtomicModel
 
 comet_conceptnet_model = 'dataset_creation/kb_crawl/comet/pretrained_models/conceptnet_pretrained_model.pickle'
 comet_atomic_model = 'dataset_creation/kb_crawl/comet/pretrained_models/atomic_pretrained_model.pickle'
-
-import pprint
-
 class Crawler:
   def __init__(self, device=0):
     self.device = device
@@ -27,9 +24,6 @@ class Crawler:
     self.comet_cn_api.interact()
 
   def comet_atomic_interact(self):
-    res = self.comet_at_api.query('PersonX is a lawyer', 'all')
-    pp = pprint.PrettyPrinter()
-    pp.pprint(res)
     self.comet_at_api.interact()
 
   # Material_1, Material_2, Property Comparison
