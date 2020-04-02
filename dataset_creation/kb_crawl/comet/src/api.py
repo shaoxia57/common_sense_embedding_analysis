@@ -75,10 +75,10 @@ def make_model(opt, n_vocab, n_ctx, state_dict):
 
 
 def set_sampler(opt, sampling_algorithm, search_size, data_loader):
-    if sampling_algorithm is "beam":
+    if sampling_algorithm == "beam":
         opt.eval.bs = search_size
         sampler = BeamSampler(opt, data_loader)
-    elif sampling_algorithm is "topk":
+    elif sampling_algorithm == "topk":
         opt.eval.k = search_size
         sampler = TopKSampler(opt, data_loader)
     else:
@@ -92,7 +92,7 @@ def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, 
         outputs = {}
         for cat in category:
             new_outputs = get_atomic_sequence(
-                input_event, model, sampler, data_loader, text_encoder, cat)
+                input_event, model, sampler, data_loader, text_encoder, cat, print=print)
             outputs.update(new_outputs)
         return outputs
     elif category == "all":
@@ -100,7 +100,7 @@ def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, 
 
         for category in data_loader.categories:
             new_outputs = get_atomic_sequence(
-                input_event, model, sampler, data_loader, text_encoder, category)
+                input_event, model, sampler, data_loader, text_encoder, category, print=print)
             outputs.update(new_outputs)
         return outputs
     else:
@@ -164,7 +164,7 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
 
         for rel in relation:
             new_outputs = get_conceptnet_sequence(
-                e1, model, sampler, data_loader, text_encoder, rel)
+                e1, model, sampler, data_loader, text_encoder, rel, print=print)
             outputs.update(new_outputs)
         return outputs
     elif relation == "all":
@@ -172,7 +172,7 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
 
         for relation in data.conceptnet_data.conceptnet_relations:
             new_outputs = get_conceptnet_sequence(
-                e1, model, sampler, data_loader, text_encoder, relation)
+                e1, model, sampler, data_loader, text_encoder, relation, print=print)
             outputs.update(new_outputs)
         return outputs
     else:

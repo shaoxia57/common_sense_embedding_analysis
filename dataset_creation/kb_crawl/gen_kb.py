@@ -8,12 +8,15 @@ from dataset_creation.kb_crawl.crawler.crawler import Crawler
 
 if __name__ == "__main__":
   crawlSettings = {
-    'material': True,
-    'relation': True,
+    'material': False,
+    'relation': False,
     'property': False,
     'comparison': False,
   }
   crawler = Crawler()
+
+  # crawler.comet_conceptnet_interact()
+  # crawler.comet_atomic_interact()
 
   if crawlSettings['material']:
     materials = util.read_file('example_materials_input.csv')
@@ -38,7 +41,7 @@ if __name__ == "__main__":
 
     print('Generating Properties...')
     properties_knowledge = crawler.crawl_properties(properties)
-    util.write_relation('example_properties_output.csv', properties_knowledge)
+    util.write_relations('example_properties_output.csv', properties_knowledge)
 
   if crawlSettings['comparison']:
     comparisons = util.read_file('example_comparisons_input.csv')

@@ -3,20 +3,34 @@ from dataset_creation.kb_crawl.classes.property import Property
 from dataset_creation.kb_crawl.classes.logic import MaterialLogic, RelationLogic
 
 import dataset_creation.kb_crawl.conceptnet.api as cn_api
-from dataset_creation.kb_crawl.comet.conceptnet_api import CometModel
+from dataset_creation.kb_crawl.comet.conceptnet_api import CometConceptnetModel
+from dataset_creation.kb_crawl.comet.atomic_api import CometAtomicModel
 
 comet_conceptnet_model = 'dataset_creation/kb_crawl/comet/pretrained_models/conceptnet_pretrained_model.pickle'
+comet_atomic_model = 'dataset_creation/kb_crawl/comet/pretrained_models/atomic_pretrained_model.pickle'
+
+import pprint
 
 class Crawler:
   def __init__(self, device=0):
     self.device = device
     self.cn_api = cn_api
 
-    print(f'Initializing comet model from: {comet_conceptnet_model}')
-    self.comet_cn_api = CometModel(device, model_file=comet_conceptnet_model)
+    print(f'Initializing comet conceptnet model from: {comet_conceptnet_model}')
+    self.comet_cn_api = CometConceptnetModel(device, model_file=comet_conceptnet_model)
 
-  def comet_interact(self):
+    print(f'Initializing comet atomic model from: {comet_atomic_model}')
+    self.comet_at_api = CometAtomicModel(device, model_file=comet_atomic_model)
+
+
+  def comet_conceptnet_interact(self):
     self.comet_cn_api.interact()
+
+  def comet_atomic_interact(self):
+    res = self.comet_at_api.query('PersonX is a lawyer', 'all')
+    pp = pprint.PrettyPrinter()
+    pp.pprint(res)
+    self.comet_at_api.interact()
 
   # Material_1, Material_2, Property Comparison
   # Strategy: material → properties (comet) → property antonym (cn) → materials made of property antonym (comet)

@@ -9,7 +9,7 @@ import dataset_creation.kb_crawl.comet.src.api as api
 
 samples = 10
 pretrained_file = 'dataset_creation/kb_crawl/comet/pretrained_models/conceptnet_pretrained_model.pickle'
-class CometModel:
+class CometConceptnetModel:
   def __init__(self, device = 'cpu', model_file = pretrained_file):
     self.device = device
     self.model_file = model_file
@@ -53,7 +53,7 @@ class CometModel:
         query = input('Give an input entity (e.g., go on a hike -- works best if words are lemmatized): ')
 
         if query == 'help':
-            api.print_help(self.opt.dataset)
+          api.print_help(self.opt.dataset)
           
       if query == 'quit':
         break
@@ -70,9 +70,9 @@ class CometModel:
         if sampling_method == 'help':
             api.print_sampling_help()
 
-        sampling_method_split = sampling_method.split('-')[0]
-        sampling_algorithm = sampling_method_split[0]
-        search_size = int(sampling_method.split('-')[1]) if len(sampling_method_split) > 1 else 10
+      sampling_method_split = sampling_method.split('-')
+      sampling_algorithm = str(sampling_method_split[0])
+      search_size = int(sampling_method_split[1]) if len(sampling_method_split) > 1 else 10
 
       sampler = api.set_sampler(self.opt, sampling_algorithm, search_size, self.data_loader)
 
