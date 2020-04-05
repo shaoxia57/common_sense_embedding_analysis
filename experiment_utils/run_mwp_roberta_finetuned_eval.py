@@ -5,6 +5,7 @@ import string
 import sys
 import torch
 import experiment_utils as utils
+from fairseq.models.roberta import RobertaModel
 
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
