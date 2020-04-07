@@ -26,7 +26,8 @@ def autolabel(rects, ax, color, below=False):
             # multiple = 1.1 if height < 0 else -1.1
             # y = min(-0.15, multiple*height)
             # y = height 
-            y = -0.25
+            y = -0.2
+            # print(y* 1.5)
             va = "bottom"
             x = rect.get_x() + rect.get_width() / 2
         else:
