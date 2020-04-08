@@ -51,7 +51,7 @@
  },
  "10": {
   "original": {
-   "original": "A has less momentum than B, and objects with less momentum find it harder to support weight, so A has a worse ability to damage on impact than B"
+   "original": "A has less momentum than B, and objects with less momentum have a worse ability to damage on impact, so A has a worse ability to damage on impact than B"
   }
  },
  "11": {
@@ -86,7 +86,7 @@
  },
  "17": {
   "original": {
-   "original": "A is more taught than B, and more taught objects are worse at withstanding additional force, so A is worse at withstanding additional force than B"
+   "original": "A is more taut than B, and more taut objects are worse at withstanding additional force, so A is worse at withstanding additional force than B"
   }
  },
  "18": {
@@ -96,7 +96,7 @@
  },
  "19": {
   "original": {
-   "original": "A is more magnetic than B, and more magnetic objects are harder to seperate from another magnet, so A is harder to seperate from another magnet than B"
+   "original": "A is more magnetic than B, and more magnetic objects are harder to separate from another magnet, so A is harder to separate from another magnet than B"
   }
  }
 }
