@@ -504,16 +504,16 @@
   "incorrect": "A is B's boss, so B does not command less respect than A"
  },
  "5-antonym-original": {
-  "correct": "A is B's boss, so A commands less dishonor than B",
-  "incorrect": "A is B's boss, so A commands more dishonor than B"
+  "correct": "A is B's boss, so A commands less disrespect than B",
+  "incorrect": "A is B's boss, so A commands more disrespect than B"
  },
  "5-antonym-asymmetric_premise": {
-  "correct": "B is A's boss, so A commands more dishonor than B",
-  "incorrect": "B is A's boss, so A commands less dishonor than B"
+  "correct": "B is A's boss, so A commands more disrespect than B",
+  "incorrect": "B is A's boss, so A commands less disrespect than B"
  },
  "5-antonym-asymmetric_conclusion": {
-  "correct": "A is B's boss, so B commands more dishonor than A",
-  "incorrect": "A is B's boss, so B commands less dishonor than A"
+  "correct": "A is B's boss, so B commands more disrespect than A",
+  "incorrect": "A is B's boss, so B commands less disrespect than A"
  },
  "5-paraphrase-original": {
   "correct": "A is B's boss, so A has earned more respect than B",
@@ -540,16 +540,16 @@
   "incorrect": "A is B's boss, so B should be disrespected less than A"
  },
  "5-negation_antonym-original": {
-  "correct": "A is B's boss, so A does not command more dishonor than B",
-  "incorrect": "A is B's boss, so A does not command less dishonor than B"
+  "correct": "A is B's boss, so A does not command more disrespect than B",
+  "incorrect": "A is B's boss, so A does not command less disrespect than B"
  },
  "5-negation_antonym-asymmetric_premise": {
-  "correct": "B is A's boss, so A does not command less dishonor than B",
-  "incorrect": "B is A's boss, so A does not command more dishonor than B"
+  "correct": "B is A's boss, so A does not command less disrespect than B",
+  "incorrect": "B is A's boss, so A does not command more disrespect than B"
  },
  "5-negation_antonym-asymmetric_conclusion": {
-  "correct": "A is B's boss, so B does not command less dishonor than A",
-  "incorrect": "A is B's boss, so B does not command more dishonor than A"
+  "correct": "A is B's boss, so B does not command less disrespect than A",
+  "incorrect": "A is B's boss, so B does not command more disrespect than A"
  },
  "5-negation_paraphrase-original": {
   "correct": "A is B's boss, so A has not earned less respect than B",
@@ -1140,16 +1140,16 @@
   "incorrect": "A hurt B's feelings, so B should not be less selfish than A"
  },
  "11-negation_paraphrase_inversion-original": {
-  "correct": "A hurt B's feelings, so A is more caring than B",
-  "incorrect": "A hurt B's feelings, so A is less caring than B"
+  "correct": "A hurt B's feelings, so A is not more caring than B",
+  "incorrect": "A hurt B's feelings, so A is not less caring than B"
  },
  "11-negation_paraphrase_inversion-asymmetric_premise": {
-  "correct": "B hurt A's feelings, so A is less caring than B",
-  "incorrect": "B hurt A's feelings, so A is more caring than B"
+  "correct": "B hurt A's feelings, so A is not less caring than B",
+  "incorrect": "B hurt A's feelings, so A is not more caring than B"
  },
  "11-negation_paraphrase_inversion-asymmetric_conclusion": {
-  "correct": "A hurt B's feelings, so B is less caring than A",
-  "incorrect": "A hurt B's feelings, so B is more caring than A"
+  "correct": "A hurt B's feelings, so B is not less caring than A",
+  "incorrect": "A hurt B's feelings, so B is not more caring than A"
  },
  "12-original-original": {
   "correct": "A is B's priest, so A spends less time sinning than B",
@@ -1248,100 +1248,100 @@
   "incorrect": "A is B's priest, so B can not be found praying less often than A"
  },
  "13-original-original": {
+  "correct": "A is B's lawyer, so A is less ignorant of the law than B",
+  "incorrect": "A is B's lawyer, so A is more ignorant of the law than B"
+ },
+ "13-original-asymmetric_premise": {
+  "correct": "B is A's lawyer, so A is more ignorant of the law than B",
+  "incorrect": "B is A's lawyer, so A is less ignorant of the law than B"
+ },
+ "13-original-asymmetric_conclusion": {
+  "correct": "A is B's lawyer, so B is more ignorant of the law than A",
+  "incorrect": "A is B's lawyer, so B is less ignorant of the law than A"
+ },
+ "13-negation-original": {
+  "correct": "A is B's lawyer, so A is not more ignorant of the law than B",
+  "incorrect": "A is B's lawyer, so A is not less ignorant of the law than B"
+ },
+ "13-negation-asymmetric_premise": {
+  "correct": "B is A's lawyer, so A is not less ignorant of the law than B",
+  "incorrect": "B is A's lawyer, so A is not more ignorant of the law than B"
+ },
+ "13-negation-asymmetric_conclusion": {
+  "correct": "A is B's lawyer, so B is not less ignorant of the law than A",
+  "incorrect": "A is B's lawyer, so B is not more ignorant of the law than A"
+ },
+ "13-antonym-original": {
   "correct": "A is B's lawyer, so A is more knowledgeable about law than B",
   "incorrect": "A is B's lawyer, so A is less knowledgeable about law than B"
  },
- "13-original-asymmetric_premise": {
+ "13-antonym-asymmetric_premise": {
   "correct": "B is A's lawyer, so A is less knowledgeable about law than B",
   "incorrect": "B is A's lawyer, so A is more knowledgeable about law than B"
  },
- "13-original-asymmetric_conclusion": {
+ "13-antonym-asymmetric_conclusion": {
   "correct": "A is B's lawyer, so B is less knowledgeable about law than A",
   "incorrect": "A is B's lawyer, so B is more knowledgeable about law than A"
  },
- "13-negation-original": {
-  "correct": "A is B's lawyer, so A is not less knowledgeable about law than B",
-  "incorrect": "A is B's lawyer, so A is not more knowledgeable about law than B"
- },
- "13-negation-asymmetric_premise": {
-  "correct": "B is A's lawyer, so A is not more knowledgeable about law than B",
-  "incorrect": "B is A's lawyer, so A is not less knowledgeable about law than B"
- },
- "13-negation-asymmetric_conclusion": {
-  "correct": "A is B's lawyer, so B is not more knowledgeable about law than A",
-  "incorrect": "A is B's lawyer, so B is not less knowledgeable about law than A"
- },
- "13-antonym-original": {
-  "correct": "A is B's lawyer, so A is less ignorant of law than B",
-  "incorrect": "A is B's lawyer, so A is more ignorant of law than B"
- },
- "13-antonym-asymmetric_premise": {
-  "correct": "B is A's lawyer, so A is more ignorant of law than B",
-  "incorrect": "B is A's lawyer, so A is less ignorant of law than B"
- },
- "13-antonym-asymmetric_conclusion": {
-  "correct": "A is B's lawyer, so B is more ignorant of law than A",
-  "incorrect": "A is B's lawyer, so B is less ignorant of law than A"
- },
  "13-paraphrase-original": {
-  "correct": "A is B's lawyer, so A has studied law better than B",
-  "incorrect": "A is B's lawyer, so A has studied law worse than B"
- },
- "13-paraphrase-asymmetric_premise": {
-  "correct": "B is A's lawyer, so A has studied law worse than B",
-  "incorrect": "B is A's lawyer, so A has studied law better than B"
- },
- "13-paraphrase-asymmetric_conclusion": {
-  "correct": "A is B's lawyer, so B has studied law worse than A",
-  "incorrect": "A is B's lawyer, so B has studied law better than A"
- },
- "13-paraphrase_inversion-original": {
   "correct": "A is B's lawyer, so A is less clueless about the law than B",
   "incorrect": "A is B's lawyer, so A is more clueless about the law than B"
  },
- "13-paraphrase_inversion-asymmetric_premise": {
+ "13-paraphrase-asymmetric_premise": {
   "correct": "B is A's lawyer, so A is more clueless about the law than B",
   "incorrect": "B is A's lawyer, so A is more clueless about the law than B"
  },
- "13-paraphrase_inversion-asymmetric_conclusion": {
+ "13-paraphrase-asymmetric_conclusion": {
   "correct": "A is B's lawyer, so B is more clueless about the law than A",
   "incorrect": "A is B's lawyer, so B is more clueless about the law than A"
  },
+ "13-paraphrase_inversion-original": {
+  "correct": "A is B's lawyer, so A has studied the law better than B",
+  "incorrect": "A is B's lawyer, so A has studied the law worse than B"
+ },
+ "13-paraphrase_inversion-asymmetric_premise": {
+  "correct": "B is A's lawyer, so A has studied the law worse than B",
+  "incorrect": "B is A's lawyer, so A has studied the law better than B"
+ },
+ "13-paraphrase_inversion-asymmetric_conclusion": {
+  "correct": "A is B's lawyer, so B has studied the law worse than A",
+  "incorrect": "A is B's lawyer, so B has studied the law better than A"
+ },
  "13-negation_antonym-original": {
-  "correct": "A is B's lawyer, so A is not more ignorant of law than B",
-  "incorrect": "A is B's lawyer, so A is not less ignorant of law than B"
+  "correct": "A is B's lawyer, so A is not less knowledgeable about law than B",
+  "incorrect": "A is B's lawyer, so A is not more knowledgeable about law than B"
  },
  "13-negation_antonym-asymmetric_premise": {
-  "correct": "B is A's lawyer, so A is not less ignorant of law than B",
-  "incorrect": "B is A's lawyer, so A is not more ignorant of law than B"
+  "correct": "B is A's lawyer, so A is not more knowledgeable about law than B",
+  "incorrect": "B is A's lawyer, so A is not less knowledgeable about law than B"
  },
  "13-negation_antonym-asymmetric_conclusion": {
-  "correct": "A is B's lawyer, so B is not less ignorant of law than A",
-  "incorrect": "A is B's lawyer, so B is not more ignorant of law than A"
+  "correct": "A is B's lawyer, so B is not more knowledgeable about law than A",
+  "incorrect": "A is B's lawyer, so B is not less knowledgeable about law than A"
  },
  "13-negation_paraphrase-original": {
-  "correct": "A is B's lawyer, so A has not studied law worse than B",
-  "incorrect": "A is B's lawyer, so A has not studied law better than B"
- },
- "13-negation_paraphrase-asymmetric_premise": {
-  "correct": "B is A's lawyer, so A has not studied law better than B",
-  "incorrect": "B is A's lawyer, so A has not studied law worse than B"
- },
- "13-negation_paraphrase-asymmetric_conclusion": {
-  "correct": "A is B's lawyer, so B has not studied law better than A",
-  "incorrect": "A is B's lawyer, so B has not studied law worse than A"
- },
- "13-negation_paraphrase_inversion-original": {
   "correct": "A is B's lawyer, so A is not more clueless about the law than B",
   "incorrect": "A is B's lawyer, so A is not more clueless about the law than B"
  },
- "13-negation_paraphrase_inversion-asymmetric_premise": {
+ "13-negation_paraphrase-asymmetric_premise": {
   "correct": "B is A's lawyer, so A is not less clueless about the law than B",
   "incorrect": "B is A's lawyer, so A is not more clueless about the law than B"
  },
- "13-negation_paraphrase_inversion-asymmetric_conclusion": {
+ "13-negation_paraphrase-asymmetric_conclusion": {
   "correct": "A is B's lawyer, so B is not less clueless about the law than A",
   "incorrect": "A is B's lawyer, so B is not more clueless about the law than A"
+ },
+ "13-negation_paraphrase_inversion-original": {
+  "correct": "A is B's lawyer, so A has not studied the law worse than B",
+  "incorrect": "A is B's lawyer, so A has not studied the law better than B"
+ },
+ "13-negation_paraphrase_inversion-asymmetric_premise": {
+  "correct": "B is A's lawyer, so A has not studied the law better than B",
+  "incorrect": "B is A's lawyer, so A has not studied the law worse than B"
+ },
+ "13-negation_paraphrase_inversion-asymmetric_conclusion": {
+  "correct": "A is B's lawyer, so B has not studied the law better than A",
+  "incorrect": "A is B's lawyer, so B has not studied the law worse than A"
  },
  "14-original-original": {
   "correct": "A has a lot less money than B, so A is less financially secure than B",
@@ -1440,40 +1440,40 @@
   "incorrect": "A has a lot less money than B, so B does not worry less about bankruptcy than A"
  },
  "15-original-original": {
-  "correct": "A watches more tv shows than B, so A is more capable of understanding pop-culture referneces than B",
-  "incorrect": "A watches more tv shows than B, so A is less capable of understanding pop-culture referneces than B"
+  "correct": "A watches more tv shows than B, so A is more capable of understanding pop-culture references than B",
+  "incorrect": "A watches more tv shows than B, so A is less capable of understanding pop-culture references than B"
  },
  "15-original-asymmetric_premise": {
-  "correct": "B watches more tv shows than A, so A is less capable of understanding pop-culture referneces than B",
-  "incorrect": "B watches more tv shows than A, so A is more capable of understanding pop-culture referneces than B"
+  "correct": "B watches more tv shows than A, so A is less capable of understanding pop-culture references than B",
+  "incorrect": "B watches more tv shows than A, so A is more capable of understanding pop-culture references than B"
  },
  "15-original-asymmetric_conclusion": {
-  "correct": "A watches more tv shows than B, so B is less capable of understanding pop-culture referneces than A",
-  "incorrect": "A watches more tv shows than B, so B is more capable of understanding pop-culture referneces than A"
+  "correct": "A watches more tv shows than B, so B is less capable of understanding pop-culture references than A",
+  "incorrect": "A watches more tv shows than B, so B is more capable of understanding pop-culture references than A"
  },
  "15-negation-original": {
-  "correct": "A watches more tv shows than B, so A is not less capable of understanding pop-culture referneces than B",
-  "incorrect": "A watches more tv shows than B, so A is not more capable of understanding pop-culture referneces than B"
+  "correct": "A watches more tv shows than B, so A is not less capable of understanding pop-culture references than B",
+  "incorrect": "A watches more tv shows than B, so A is not more capable of understanding pop-culture references than B"
  },
  "15-negation-asymmetric_premise": {
-  "correct": "B watches more tv shows than A, so A is not more capable of understanding pop-culture referneces than B",
-  "incorrect": "B watches more tv shows than A, so A is not less capable of understanding pop-culture referneces than B"
+  "correct": "B watches more tv shows than A, so A is not more capable of understanding pop-culture references than B",
+  "incorrect": "B watches more tv shows than A, so A is not less capable of understanding pop-culture references than B"
  },
  "15-negation-asymmetric_conclusion": {
-  "correct": "A watches more tv shows than B, so B is not more capable of understanding pop-culture referneces than A",
-  "incorrect": "A watches more tv shows than B, so B is not less capable of understanding pop-culture referneces than A"
+  "correct": "A watches more tv shows than B, so B is not more capable of understanding pop-culture references than A",
+  "incorrect": "A watches more tv shows than B, so B is not less capable of understanding pop-culture references than A"
  },
  "15-antonym-original": {
-  "correct": "A watches more tv shows than B, so A is less unable to understand pop-culture referneces than B",
-  "incorrect": "A watches more tv shows than B, so A is more unable to understand pop-culture referneces than B"
+  "correct": "A watches more tv shows than B, so A is less unable to understand pop-culture references than B",
+  "incorrect": "A watches more tv shows than B, so A is more unable to understand pop-culture references than B"
  },
  "15-antonym-asymmetric_premise": {
-  "correct": "B watches more tv shows than A, so A is more unable to understand pop-culture referneces than B",
-  "incorrect": "B watches more tv shows than A, so A is less unable to understand pop-culture referneces than B"
+  "correct": "B watches more tv shows than A, so A is more unable to understand pop-culture references than B",
+  "incorrect": "B watches more tv shows than A, so A is less unable to understand pop-culture references than B"
  },
  "15-antonym-asymmetric_conclusion": {
-  "correct": "A watches more tv shows than B, so B is more unable to understand pop-culture referneces than A",
-  "incorrect": "A watches more tv shows than B, so B is less unable to understand pop-culture referneces than A"
+  "correct": "A watches more tv shows than B, so B is more unable to understand pop-culture references than A",
+  "incorrect": "A watches more tv shows than B, so B is less unable to understand pop-culture references than A"
  },
  "15-paraphrase-original": {
   "correct": "A watches more tv shows than B, so A has better knowledge about current pop-culture than B",
@@ -1500,16 +1500,16 @@
   "incorrect": "A watches more tv shows than B, so B is less ignorant about pop-culture than A"
  },
  "15-negation_antonym-original": {
-  "correct": "A watches more tv shows than B, so A is not more unable to understand pop-culture referneces than B",
-  "incorrect": "A watches more tv shows than B, so A is not less unable to understand pop-culture referneces than B"
+  "correct": "A watches more tv shows than B, so A is not more unable to understand pop-culture references than B",
+  "incorrect": "A watches more tv shows than B, so A is not less unable to understand pop-culture references than B"
  },
  "15-negation_antonym-asymmetric_premise": {
-  "correct": "B watches more tv shows than A, so A is not less unable to understand pop-culture referneces than B",
-  "incorrect": "B watches more tv shows than A, so A is not more unable to understand pop-culture referneces than B"
+  "correct": "B watches more tv shows than A, so A is not less unable to understand pop-culture references than B",
+  "incorrect": "B watches more tv shows than A, so A is not more unable to understand pop-culture references than B"
  },
  "15-negation_antonym-asymmetric_conclusion": {
-  "correct": "A watches more tv shows than B, so B is not less unable to understand pop-culture referneces than A",
-  "incorrect": "A watches more tv shows than B, so B is not more unable to understand pop-culture referneces than A"
+  "correct": "A watches more tv shows than B, so B is not less unable to understand pop-culture references than A",
+  "incorrect": "A watches more tv shows than B, so B is not more unable to understand pop-culture references than A"
  },
  "15-negation_paraphrase-original": {
   "correct": "A watches more tv shows than B, so A does not have worse knowledge about current pop-culture than B",

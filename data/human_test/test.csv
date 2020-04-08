@@ -12,7 +12,7 @@ CHOICE,"A has more work than B,  so B does not find it _____ to be calm than A",
 CHOICE,"B is A's teacher,  so A is not _____ unaware of the subject than B",more,less,"('s', '19-negation_paraphrase_inversion-asymmetric_premise')",less
 CHOICE,"A is made out of cotton and B is made out of glass,  so B is not _____ blunt than A",less,more,"('m', '1-negation_antonym-asymmetric_conclusion')",more
 CHOICE,"A is able to concentrate more than B,  so A does not waste _____ time than B",less,more,"('s', '3-negation_paraphrase_inversion-original')",more
-CHOICE,"A is made out of stone and B is made out of helium,  so B is _____ to make fly than A",easier,harder,"('m', '12-original-asymmetric_conclusion')",easier
+CHOICE,"A is made out of stone and B is made out of helium,  so B has a _____ time flying than A",easier,harder,"('m', '12-original-asymmetric_conclusion')",easier
 CHOICE,"A has more dedication than B,  so A will have a _____ time succeeding than B",harder,easier,"('s', '8-antonym-original')",easier
 CHOICE,"B is heavier than A,  so A is _____ at floating than B",worse,better,"('p', '1-antonym-asymmetric_premise')",better
 CHOICE,"A is taller than B,  so A will cast a _____ lengthy shadow than B",more,less,"('p', '8-original-original')",more
@@ -29,7 +29,7 @@ CHOICE,"A is made out of metal and B is made out of cloth,  so B is _____ to be 
 CHOICE,"A has less momentum than B,  so B does not have a _____ inability to damage on impact than A",worse,better,"('p', '10-negation_antonym-asymmetric_conclusion')",better
 CHOICE,"A is more elastic than B,  so A is _____ to keep in one place than B",easier,harder,"('p', '5-paraphrase_inversion-original')",harder
 CHOICE,"A is B's boss,  so A should be disrespected _____ than B",more,less,"('s', '5-paraphrase_inversion-original')",less
-CHOICE,"A is made out of cotton and B is made out of glass,  so A is not _____ to cut with than B",better,worse,"('m', '1-negation_paraphrase-original')",worse
+CHOICE,"A is made out of cotton and B is made out of glass,  so A is not _____ to cut with than B",worse,better,"('m', '1-negation_paraphrase-original')",better
 CHOICE,"B is wider than A,  so A is _____ at fitting into openings than B",better,worse,"('p', '3-paraphrase-asymmetric_premise')",better
 CHOICE,"A is denser than B,  so B should withstand piercing _____ easily than A",less,more,"('p', '2-original-asymmetric_conclusion')",less
 CHOICE,"A is hotter than B,  so A should be _____ to freeze than B",easier,harder,"('p', '4-antonym-original')",harder
@@ -58,12 +58,12 @@ CHOICE,"A is more taut than B,  so B is _____ at withstanding additional force t
 CHOICE,"A is made out of mercury and B is made out of oxygen,  so B is not _____ to stay away from than A",better,worse,"('m', '16-negation_paraphrase_inversion-asymmetric_conclusion')",better
 CHOICE,"B is made out of chocolate and A is made out of metal,  so A is not _____ to keep frozen than B",easier,harder,"('m', '10-negation-asymmetric_premise')",harder
 CHOICE,"A is made out of copper and B is made out of concrete,  so A is _____ rigid than B",more,less,"('m', '8-antonym-original')",less
-CHOICE,"A is made out of metal and B is made out of dirt,  so B is _____ at stopping electricity than A",worse,better,"('m', '11-negation_paraphrase_inversion-asymmetric_conclusion')",worse
+CHOICE,"A is made out of metal and B is made out of dirt,  so B is not _____ at stopping electricity than A",worse,better,"('m', '11-negation_paraphrase_inversion-asymmetric_conclusion')",worse
 CHOICE,"A is going to perform for people while B is not,  so B does not find it _____ to be relaxed than A",easier,harder,"('s', '1-negation-asymmetric_conclusion')",harder
 CHOICE,"A is made out of copper and B is made out of concrete,  so B is _____ stiff than A",less,more,"('m', '8-paraphrase_inversion-asymmetric_conclusion')",more
 CHOICE,"A is made out of metal and B is made out of rubber,  so B should not float _____ than A",worse,better,"('m', '3-negation-asymmetric_conclusion')",worse
 CHOICE,"B bullies people while A does not,  so A is a _____ cruel person than B",more,less,"('s', '4-paraphrase_inversion-asymmetric_premise')",less
-CHOICE,"B watches more tv shows than A,  so A is _____ unable to understand pop-culture referneces than B",more,less,"('s', '15-antonym-asymmetric_premise')",more
+CHOICE,"B watches more tv shows than A,  so A is _____ unable to understand pop-culture references than B",more,less,"('s', '15-antonym-asymmetric_premise')",more
 CHOICE,"B is A's priest,  so A spends _____ time praying than B",more,less,"('s', '12-antonym-asymmetric_premise')",less
 CHOICE,"A is made out of wood and B is made out of glass,  so B is _____ combustible than A",less,more,"('m', '6-original-asymmetric_conclusion')",less
 CHOICE,"A bullies people while B does not,  so B isn't _____ mean than A",more,less,"('s', '4-negation_antonym-asymmetric_conclusion')",more
