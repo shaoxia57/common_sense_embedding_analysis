@@ -8,8 +8,8 @@ from dataset_creation.kb_crawl.crawler.crawler import Crawler
 
 if __name__ == "__main__":
   crawlSettings = {
-    'material': False,
-    'relation': False,
+    'material': True,
+    'relation': True,
     'property': False,
     'comparison': False,
   }

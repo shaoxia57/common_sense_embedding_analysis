@@ -1,4 +1,5 @@
 from dataset_creation.kb_crawl.classes.static import Method, Comparison, Relation, POS, CometRelation
+from dataset_creation.kb_crawl.classes.word import Word
 from dataset_creation.kb_crawl.classes.property import Property
 from dataset_creation.kb_crawl.classes.logic import MaterialLogic, RelationLogic
 
@@ -28,28 +29,28 @@ class Crawler:
 
   # Material_1, Material_2, Property Comparison
   # Strategy: material → properties (comet) → property antonym (cn) → materials made of property antonym (comet)
-  def crawl_comet_materials(self, materials, topK=10):
+  def crawl_comet_materials(self, materials, sampler = 'topk', samples = 10):
     # Material_1, Material_2, Property Comparison
     # Strategy: material → properties → antonym properties → objects made of
     knowledge = []
-    properties = {}
+    prop_dict = {}
 
     for mat_1 in materials:
       mat_1_relations = ['HasProperty']
 
       # fetch material properties
-      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, 'beam', topK)
+      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, sampler, samples)
 
       for mat_1_rel in mat_1_relations: 
         prop_output = prop_outputs[mat_1_rel]
-        for prop_count, prop_label in enumerate(prop_output['beams']):
-          mat_2 = set()
-          prop = properties[prop_label] if prop_label in properties else None
+        for prop_i, prop_label in enumerate(prop_output['beams']):
+          mat_2_dict = {}
+          prop = prop_dict[prop_label] if prop_label in prop_dict else None
           comp = Comparison.More
-          weight = prop_count
+          weight = prop_i
           
           # fetch antonym properties from conceptnet
-          ant_query_params = cn_api.build_params(start=prop_label, rel=Relation.Antonym, pos=POS.Adjective, limit=topK)
+          ant_query_params = cn_api.build_params(start=prop_label, rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
           ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
 
           if not ant_res:
@@ -57,47 +58,65 @@ class Crawler:
 
           # insert into properties
           if not prop:
-            prop = Property(prop_label, [ant_edge['end']['label'] for ant_edge in ant_res['edges']])
-            properties[prop_label] = prop
+            prop = Property(
+              Word(prop_label, prop_output['tokens'][prop_i]), 
+              [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']]
+            )
+            prop_dict[prop_label] = prop
 
           for ant_edge in ant_res['edges']:
             ant = ant_edge['end']['label']
 
             # fetch made of objects
             ant_relations = ['MadeOf']
-            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, 'beam', topK)
+            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, sampler, samples)
             
             for prop_rel in ant_relations:
               mat_2_output = mat_2_outputs[prop_rel]
-              mat_2.update(mat_2_output['beams'])
+              for mat_2_i, mat_2 in enumerate(mat_2_output['beams']):
+                if mat_2 not in mat_2_dict:
+                  mat_2_dict[mat_2] = mat_2_output['tokens'][mat_2_i]
           
-          knowledge.append(MaterialLogic(mat_1, list(mat_2), prop, comp, weight))
+          # make words
+          mat_2_words = []
+          for mat_2 in mat_2_dict:
+            mat_2_words.append(Word(mat_2, mat_2_dict[mat_2]))
+
+          material_logic = MaterialLogic(
+            Word(mat_1, prop_output['input_token']),
+            mat_2_words, 
+            prop, 
+            comp, 
+            weight
+          )
+
+          knowledge.append(material_logic)
 
     return knowledge  
 
   # Material_1, Material_2, Property Comparison
   # Strategy: material → properties (cn) → property antonym (cn) → materials made of property antonym (comet)
-  def crawl_materials(self, materials: [str], topK: int = 10, threshold: float = 0) -> [MaterialLogic]:
+  def crawl_materials(self, materials: [str], sampler: str = 'topk', samples: int = 10, threshold: float = 0) -> [MaterialLogic]:
     knowledge = []
-    properties = {}
+    prop_dict = {}
 
     for mat_1 in materials:
       # extract properties from conceptnet
       # NOTE: specifying POS with HasProperty gives poor results
       mat_prop_res = cn_api.fetch(
         method=Method.Query,
-        params=cn_api.build_params(start=mat_1, rel=Relation.HasProperty, limit=topK)
+        params=cn_api.build_params(start=mat_1, rel=Relation.HasProperty, limit=samples)
       )
 
       for prop_edge in mat_prop_res['edges']:
         prop_label = prop_edge['end']['label']
-        mat_2 = set()
-        prop = properties[prop_label] if prop_label in properties else None
+        mat_2_dict = {}
+        prop = prop_dict[prop_label] if prop_label in prop_dict else None
         comp = Comparison.More
         weight = prop_edge['weight']
         
         # fetch antonym properties from conceptnet
-        ant_query_params = cn_api.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective, limit=topK)
+        ant_query_params = cn_api.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
         ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
 
         if not ant_res:
@@ -105,25 +124,42 @@ class Crawler:
 
         # insert into properties
         if not prop:
-          prop = Property(prop_label, [ant_edge['end']['label'] for ant_edge in ant_res['edges']])
-          properties[prop_label] = prop
+          prop = Property(
+            Word(prop_label), 
+            [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']]
+          )
+          prop_dict[prop_label] = prop
 
         for ant_edge in ant_res['edges']:
           ant = ant_edge['end']['label']
 
           # fetch materials with property from comet
           ant_relations = ['MadeOf']
-          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, 'beam', topK)
+          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, sampler, samples)
           
           for ant_rel in ant_relations:
             mat_2_output = mat_2_outputs[ant_rel]
-            mat_2.update(mat_2_output['beams'])
-          
-        knowledge.append(MaterialLogic(mat_1, list(mat_2), prop, comp, weight))
+            for mat_2_i, mat_2 in enumerate(mat_2_output['beams']):
+              mat_2_dict[mat_2] = mat_2_output['tokens'][mat_2_i]
+        
+        # make words
+        mat_2_words = []
+        for mat_2 in mat_2_dict:
+          mat_2_words.append(Word(mat_2, mat_2_dict[mat_2]))
+
+        material_logic = MaterialLogic(
+          Word(mat_1),
+          mat_2_words, 
+          prop, 
+          comp, 
+          weight
+        )
+
+        knowledge.append(material_logic)
 
         # for ant_edge in ant_res['edges']:
         #   # fetch objects with antonym property
-        #   obj_query_params = cn_api.build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty, limit=topK)
+        #   obj_query_params = cn_api.build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty, limit=samples)
         #   obj_res = cn_api.fetch_with_cache(method=Method.Query, params=obj_query_params)
 
         #   if not obj_res:
@@ -131,7 +167,7 @@ class Crawler:
 
         #   for obj_edge in obj_res['edges']:
         #     # fech materials from objects
-        #     mat_2_query_params = cn_api.build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf, limit=topK)
+        #     mat_2_query_params = cn_api.build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf, limit=samples)
         #     mat_2_res = cn_api.fetch_with_cache(method=Method.Query, params=mat_2_query_params)
 
         #     if not mat_2_res:
@@ -146,31 +182,39 @@ class Crawler:
 
   # Relation, Property_Comparison
   # Strategy: Occupation/Role noun → capabilities
-  def crawl_relations(self, relations: [str], topK: int = 10):
+  def crawl_relations(self, relations: [str], sampler = 'topk', samples: int = 10):
     knowledge = []
-    properties = {}
+    prop_dict = {}
     
     for relation in relations:
       relation_relations = ['CapableOf']
-      capability_outputs = self.comet_cn_api.query(relation, relation_relations, 'beam', topK)
+      capability_outputs = self.comet_cn_api.query(relation, relation_relations, sampler, samples)
 
       for relation_rel in relation_relations: 
         capability_output = capability_outputs[relation_rel]
-        for capability_count, capability_label in enumerate(capability_output['beams']):
-          prop = properties[capability_label] if capability_label in properties else None
+        for capability_i, capability_label in enumerate(capability_output['beams']):
+          prop = prop_dict[capability_label] if capability_label in prop_dict else None
           comp = Comparison.More
-          weight = capability_count
+          weight = capability_i
 
           # insert into properties
           if not prop:
             # fetch antonym properties from conceptnet
-            ant_query_params = cn_api.build_params(start=capability_label, rel=Relation.Antonym, limit=topK)
+            ant_query_params = cn_api.build_params(start=capability_label, rel=Relation.Antonym, limit=samples)
             ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
-            ants = [ant_edge['end']['label'] for ant_edge in ant_res['edges']] if ant_res else []
-            prop = Property(capability_label, ants)
-            properties[capability_label] = prop
+            prop = Property(
+              Word(capability_label, capability_output['tokens'][capability_i]), 
+              [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']] if ant_res else [])
+            prop_dict[capability_label] = prop
 
-          knowledge.append(RelationLogic(relation, prop, comp, weight))
+          relation_logic = RelationLogic(
+            Word(relation, capability_output['input_token']),
+            prop,
+            comp,
+            weight
+          )
+
+          knowledge.append(relation_logic)
 
     return knowledge
 

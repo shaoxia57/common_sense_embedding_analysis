@@ -1,381 +1,573 @@
-material_1,material_2,property comparison
-cotton,aluminium,more soft
-cotton,material,more soft
-cotton,polymer,more soft
-cotton,silk,more soft
-cotton,denim,more soft
-cotton,paper,more soft
-cotton,static electricity,more soft
-cotton,silicon,more soft
-cotton,word,more soft
-cotton,lead,more soft
-cotton,noise than loud noise,more soft
-cotton,emotion,more soft
-cotton,anger,more soft
-cotton,plastic,more soft
-cotton,fabric,more soft
-cotton,pain,more soft
-cotton,sound than sound,more soft
-cotton,ceramic,more soft
-cotton,iron,more soft
-cotton,cell,more soft
-cotton,sugar,more soft
-cotton,atom,more soft
-cotton,money,more soft
-cotton,polyester,more soft
-cotton,fear,more soft
-cotton,noise and vibration,more soft
-cotton,steel,more soft
-cotton,sound,more soft
-cotton,feel,more soft
-cotton,metal,more soft
-cotton,leather,more soft
-cotton,wool,more soft
-cotton,sound and vibration,more soft
-cotton,nickel,more soft
-cotton,electron,more soft
-cotton,silver,more soft
-cotton,gold,more soft
-cotton,noise than loud sound,more soft
-cotton,carbon,more soft
-cotton,vibration,more soft
-cotton,sand,more soft
-cotton,noise than sound,more soft
-cotton,animal,more soft
-cotton,noise than noise,more soft
-cotton,noise,more soft
-cotton,cloth,more soft
-cotton,cotton,more soft
-cotton,stock,more soft
-cotton,cow skin,more white
-cotton,oil,more white
-cotton,carbon,more white
-cotton,black tar,more white
-cotton,plastic,more white
-cotton,gold,more white
-cotton,fiber,more white
-cotton,sugar,more white
-cotton,polymer,more white
-cotton,leather,more white
-cotton,cell,more white
-cotton,metal,more white
-cotton,silver,more white
-cotton,latex,more white
-cotton,cotton,more white
-cotton,cow hide,more white
-cotton,person,more hard
-cotton,belief,more hard
-cotton,guilt,more hard
-cotton,flavor,more hard
-cotton,water,more hard
-cotton,sadness,more hard
-cotton,silk,more hard
-cotton,loneliness,more hard
-cotton,product,more hard
-cotton,sorrow,more hard
-cotton,concrete,more hard
-cotton,meat,more hard
-cotton,lead,more hard
-cotton,fact fact,more hard
-cotton,plastic,more hard
-cotton,fabric,more hard
-cotton,pain,more hard
-cotton,fiber,more hard
-cotton,bread,more hard
-cotton,iron,more hard
-cotton,logic,more hard
-cotton,sugar,more hard
-cotton,different ingredient,more hard
-cotton,depression,more hard
-cotton,money,more hard
-cotton,fact,more hard
-cotton,flower,more hard
-cotton,steel,more hard
-cotton,theory,more hard
-cotton,statistic,more hard
-cotton,food,more hard
-cotton,feel,more hard
-cotton,metal,more hard
-cotton,despair,more hard
-cotton,gold,more hard
-cotton,element,more hard
-cotton,stone,more hard
-cotton,rock,more hard
-cotton,misery,more hard
-cotton,sand,more hard
-cotton,rich,more hard
-cotton,pearl,more hard
-cotton,ingredient,more hard
-cotton,cheese,more hard
-cotton,cotton,more hard
-cotton,unhappiness,more hard
-cotton,plastic,more thin
-cotton,polymer,more thin
-cotton,fiber,more thin
-cotton,silk,more thin
-cotton,polymer fiber,more thin
-cotton,cell,more thin
-cotton,metal,more thin
-cotton,latex,more thin
-cotton,rubber,more thin
-cotton,sugar,more thin
-cotton,clothe and clothe,more green
-cotton,flour,more green
-cotton,yeast and yeast product,more green
-cotton,yeast and yeast,more green
-cotton,water,more green
-cotton,plum,more green
-cotton,polymer,more green
-cotton,corn,more green
-cotton,yeast and sugar,more green
-cotton,green and yellow and yellow,more green
-cotton,green and red,more green
-cotton,fruit,more green
-cotton,flour and other chemical,more green
-cotton,green and green,more green
-cotton,grass,more green
-cotton,wheat,more green
-cotton,plastic,more green
-cotton,green than green,more green
-cotton,milk,more green
-cotton,plant,more green
-cotton,green,more green
-cotton,green and yellow,more green
-cotton,chemical,more green
-cotton,sugar,more green
-cotton,soil,more green
-cotton,clothe,more green
-cotton,flower,more green
-cotton,clothe and clothe store,more green
-cotton,green plant,more green
-cotton,metal,more green
-cotton,apple,more green
-cotton,yeast,more green
-cotton,green grass,more green
-cotton,green bean,more green
-cotton,clay,more green
-cotton,mud,more green
-cotton,grain,more green
-cotton,melons,more green
-cotton,chlorophyll,more green
-cotton,chlorophyll and oxygen,more green
-cotton,clothe and clothe and clothe,more green
-cotton,yellow yellow,more yellow
-cotton,plastic,more yellow
-cotton,yellow,more yellow
-cotton,yellow plastic,more yellow
-cotton,yellow yellow and green,more yellow
-cotton,yellow and red,more yellow
-cotton,yellow and yellow,more yellow
-cotton,orange,more yellow
-cotton,yellow and green,more yellow
-cotton,yellow and white,more yellow
-concrete,person,more hard
-concrete,belief,more hard
-concrete,guilt,more hard
-concrete,flavor,more hard
-concrete,water,more hard
-concrete,sadness,more hard
-concrete,silk,more hard
-concrete,loneliness,more hard
-concrete,product,more hard
-concrete,sorrow,more hard
-concrete,concrete,more hard
-concrete,meat,more hard
-concrete,lead,more hard
-concrete,fact fact,more hard
-concrete,plastic,more hard
-concrete,fabric,more hard
-concrete,pain,more hard
-concrete,fiber,more hard
-concrete,bread,more hard
-concrete,iron,more hard
-concrete,logic,more hard
-concrete,sugar,more hard
-concrete,different ingredient,more hard
-concrete,depression,more hard
-concrete,money,more hard
-concrete,fact,more hard
-concrete,flower,more hard
-concrete,steel,more hard
-concrete,theory,more hard
-concrete,statistic,more hard
-concrete,food,more hard
-concrete,feel,more hard
-concrete,metal,more hard
-concrete,despair,more hard
-concrete,gold,more hard
-concrete,element,more hard
-concrete,stone,more hard
-concrete,rock,more hard
-concrete,misery,more hard
-concrete,sand,more hard
-concrete,rich,more hard
-concrete,pearl,more hard
-concrete,ingredient,more hard
-concrete,cheese,more hard
-concrete,cotton,more hard
-concrete,unhappiness,more hard
-concrete,particle,more heavy
-concrete,energy,more heavy
-concrete,carbon,more heavy
-concrete,electron and silicon,more heavy
-concrete,hydrogen and helium,more heavy
-concrete,electron,more heavy
-concrete,light,more heavy
-concrete,wavelength,more heavy
-concrete,hydrogen,more heavy
-concrete,hydrogen and oxygen,more heavy
-concrete,material,more opaque
-concrete,glass person,more opaque
-concrete,water,more opaque
-concrete,polymer,more opaque
-concrete,polymer polymer polymer polymer polymer,more opaque
-concrete,silicon,more opaque
-concrete,polymer polymer polymer,more opaque
-concrete,polymer polymer polymer polymer polymer polymer,more opaque
-concrete,plastic,more opaque
-concrete,polymer polymer,more opaque
-concrete,rubber,more opaque
-concrete,glass person be in car,more opaque
-concrete,metal,more opaque
-concrete,glass,more opaque
-concrete,liquid,more opaque
-concrete,carbon,more opaque
-concrete,wood,more opaque
-concrete,glass person be,more opaque
-concrete,sand,more opaque
-concrete,polymer polymer polymer polymer,more opaque
-concrete,glass person be in boat,more opaque
-concrete,amino acid,more strong
-concrete,water,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,paper,more strong
-concrete,product,more strong
-concrete,worm,more strong
-concrete,silicon,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid acid acid acid and,more strong
-concrete,computer software,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,information,more strong
-concrete,plastic,more strong
-concrete,molecule,more strong
-concrete,ceramic,more strong
-concrete,iron,more strong
-concrete,cell,more strong
-concrete,software,more strong
-concrete,chemical,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,sugar,more strong
-concrete,atom,more strong
-concrete,different ingredient,more strong
-concrete,money,more strong
-concrete,electron,more strong
-concrete,metal,more strong
-concrete,copper,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,carbon,more strong
-concrete,data,more strong
-concrete,protein,more strong
-concrete,element,more strong
-concrete,clay,more strong
-concrete,ingredient,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,cheese,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid,more strong
-concrete,cell phone,more strong
-concrete,amino acid acid acid acid acid acid acid acid acid acid acid acid acid acid acid,more strong
-concrete,flour,more cold
-concrete,person,more cold
-concrete,cow,more cold
-concrete,yeast and yeast,more cold
-concrete,water,more cold
-concrete,good attitude,more cold
-concrete,false information,more cold
-concrete,false tooth,more cold
-concrete,good than fake,more cold
-concrete,meat,more cold
-concrete,hydrogen peroxide,more cold
-concrete,hydrogen and oxygen,more cold
-concrete,yeast and yeast and yeast and yeast and yeast and yeast,more cold
-concrete,good sense,more cold
-concrete,yeast and yeast and yeast and yeast,more cold
-concrete,milk,more cold
-concrete,flour and other ingredient,more cold
-concrete,sugar,more cold
-concrete,money,more cold
-concrete,piece of cloth,more cold
-concrete,good food,more cold
-concrete,yeast and yeast and yeast and yeast and yeast,more cold
-concrete,good than bad,more cold
-concrete,hydrogen and helium,more cold
-concrete,metal,more cold
-concrete,liquid,more cold
-concrete,piece of paper,more cold
-concrete,component,more cold
-concrete,bad,more cold
-concrete,hydrogen,more cold
-concrete,yeast,more cold
-concrete,egg,more cold
-concrete,oil,more cold
-concrete,element,more cold
-concrete,yeast and yeast and yeast,more cold
-concrete,yeast and flour,more cold
-concrete,cloth,more cold
-concrete,cotton,more cold
-metal,person,more hard
-metal,belief,more hard
-metal,guilt,more hard
-metal,flavor,more hard
-metal,water,more hard
-metal,sadness,more hard
-metal,silk,more hard
-metal,loneliness,more hard
-metal,product,more hard
-metal,sorrow,more hard
-metal,concrete,more hard
-metal,meat,more hard
-metal,lead,more hard
-metal,fact fact,more hard
-metal,plastic,more hard
-metal,fabric,more hard
-metal,pain,more hard
-metal,fiber,more hard
-metal,bread,more hard
-metal,iron,more hard
-metal,logic,more hard
-metal,sugar,more hard
-metal,different ingredient,more hard
-metal,depression,more hard
-metal,money,more hard
-metal,fact,more hard
-metal,flower,more hard
-metal,steel,more hard
-metal,theory,more hard
-metal,statistic,more hard
-metal,food,more hard
-metal,feel,more hard
-metal,metal,more hard
-metal,despair,more hard
-metal,gold,more hard
-metal,element,more hard
-metal,stone,more hard
-metal,rock,more hard
-metal,misery,more hard
-metal,sand,more hard
-metal,rich,more hard
-metal,pearl,more hard
-metal,ingredient,more hard
-metal,cheese,more hard
-metal,cotton,more hard
-metal,unhappiness,more hard
-metal,particle,more heavy
-metal,energy,more heavy
-metal,carbon,more heavy
-metal,electron and silicon,more heavy
-metal,hydrogen and helium,more heavy
-metal,electron,more heavy
-metal,light,more heavy
-metal,wavelength,more heavy
-metal,hydrogen,more heavy
-metal,hydrogen and oxygen,more heavy
+material_1,material_2,property comparison,material_1 token,material_2 token,property token
+glass,clay,more transparent,[1846],[5538],[13070]
+glass,fabric,more transparent,[1846],[5707],[13070]
+glass,material,more transparent,[1846],[5491],[13070]
+glass,cloth,more transparent,[1846],[4850],[13070]
+glass,stone,more transparent,[1846],[2090],[13070]
+glass,plastic,more transparent,[1846],[4438],[13070]
+glass,person,more transparent,[1846],[1800],[13070]
+glass,concrete,more transparent,[1846],[5721],[13070]
+glass,dirt,more transparent,[1846],[3809],[13070]
+glass,paper,more transparent,[1846],[2405],[13070]
+glass,polymer,more transparent,[1846],"[14444, 3450]",[13070]
+glass,glass,more transparent,[1846],[1846],[13070]
+glass,water,more transparent,[1846],[1353],[13070]
+glass,ceramic,more transparent,[1846],[19471],[13070]
+glass,rubber,more transparent,[1846],[8999],[13070]
+glass,silicon,more transparent,[1846],[36980],[13070]
+glass,metal,more transparent,[1846],[2817],[13070]
+glass,liquid nitrogen,more transparent,[1846],"[5379, 5147, 32221]",[13070]
+glass,sand,more transparent,[1846],[4062],[13070]
+glass,transparent water,more transparent,[1846],"[13070, 1353]",[13070]
+glass,light,more transparent,[1846],[1092],[13070]
+glass,air,more transparent,[1846],[1352],[13070]
+glass,liquid,more transparent,[1846],[5379],[13070]
+glass,reflective material,more transparent,[1846],"[22378, 5491]",[13070]
+glass,glass,more opaque,[1846],[1846],[21967]
+glass,plastic,more opaque,[1846],[4438],[21967]
+glass,metal,more opaque,[1846],[2817],[21967]
+glass,wood,more opaque,[1846],[2510],[21967]
+glass,water,more opaque,[1846],[1353],[21967]
+glass,silicon,more opaque,[1846],[36980],[21967]
+glass,material,more opaque,[1846],[5491],[21967]
+glass,steel,more opaque,[1846],[4085],[21967]
+glass,crystal,more opaque,[1846],[5334],[21967]
+glass,transparent glass,more opaque,[1846],"[13070, 1846]",[21967]
+glass,polymer,more opaque,[1846],"[14444, 3450]",[21967]
+glass,sand,more opaque,[1846],[4062],[21967]
+glass,carbon,more opaque,[1846],[19885],[21967]
+glass,liquid,more opaque,[1846],[5379],[21967]
+glass,rubber,more opaque,[1846],[8999],[21967]
+glass,clay,more opaque,[1846],[5538],[21967]
+glass,paper,more opaque,[1846],[2405],[21967]
+glass,ceramic,more opaque,[1846],[19471],[21967]
+glass,water,more clear,[1846],[1353],[1949]
+glass,cloud,more clear,[1846],[4635],[1949]
+glass,vapor,more clear,[1846],[21430],[1949]
+glass,gas,more clear,[1846],[3938],[1949]
+glass,hydrogen and oxygen,more clear,[1846],"[26696, 488, 9637]",[1949]
+glass,glass,more clear,[1846],[1846],[1949]
+glass,fog,more clear,[1846],[6130],[1949]
+glass,sand,more clear,[1846],[4062],[1949]
+glass,plastic,more clear,[1846],[4438],[1949]
+glass,liquid ice,more clear,[1846],"[5379, 755]",[1949]
+glass,polymer,more clear,[1846],"[14444, 3450]",[1949]
+glass,ceramic,more clear,[1846],[19471],[1949]
+glass,rubber,more clear,[1846],[8999],[1949]
+glass,silicon,more clear,[1846],[36980],[1949]
+glass,metal,more clear,[1846],[2817],[1949]
+glass,liquid,more clear,[1846],[5379],[1949]
+glass,sugar,more clear,[1846],[6444],[1949]
+glass,fiber,more clear,[1846],[18007],[1949]
+glass,cell,more clear,[1846],[2776],[1949]
+glass,silk,more clear,[1846],[4772],[1949]
+glass,latex,more clear,[1846],[27139],[1949]
+glass,clay,more clear,[1846],[5538],[1949]
+glass,fabric,more clear,[1846],[5707],[1949]
+glass,material,more clear,[1846],[5491],[1949]
+glass,cloth,more clear,[1846],[4850],[1949]
+glass,stone,more clear,[1846],[2090],[1949]
+glass,person,more clear,[1846],[1800],[1949]
+glass,concrete,more clear,[1846],[5721],[1949]
+glass,dirt,more clear,[1846],[3809],[1949]
+glass,paper,more clear,[1846],[2405],[1949]
+glass,metal,more fragile,[1846],[2817],[8430]
+glass,iron,more fragile,[1846],[4230],[8430]
+glass,carbon,more fragile,[1846],[19885],[8430]
+glass,stone,more fragile,[1846],[2090],[8430]
+glass,gold,more fragile,[1846],[2883],[8430]
+glass,silicon,more fragile,[1846],[36980],[8430]
+glass,rock,more fragile,[1846],[2594],[8430]
+glass,steel,more fragile,[1846],[4085],[8430]
+glass,cell,more fragile,[1846],[2776],[8430]
+glass,silver,more fragile,[1846],[2935],[8430]
+glass,clay or metal,more fragile,[1846],"[5538, 522, 2817]",[8430]
+glass,ceramic,more fragile,[1846],[19471],[8430]
+glass,fiber,more fragile,[1846],[18007],[8430]
+glass,polymer,more fragile,[1846],"[14444, 3450]",[8430]
+glass,plastic or plastic,more fragile,[1846],"[4438, 522, 4438]",[8430]
+glass,plastic,more fragile,[1846],[4438],[8430]
+glass,water,more fragile,[1846],[1353],[8430]
+glass,glass,more fragile,[1846],[1846],[8430]
+glass,atom,more fragile,[1846],[30999],[8430]
+glass,electron,more fragile,[1846],"[7913, 504]",[8430]
+glass,element,more fragile,[1846],[10577],[8430]
+cotton,steel,more soft,[7034],[4085],[2022]
+cotton,gold,more soft,[7034],[2883],[2022]
+cotton,iron,more soft,[7034],[4230],[2022]
+cotton,metal,more soft,[7034],[2817],[2022]
+cotton,money,more soft,[7034],[1831],[2022]
+cotton,stock,more soft,[7034],[6382],[2022]
+cotton,leather,more soft,[7034],[3349],[2022]
+cotton,silver,more soft,[7034],[2935],[2022]
+cotton,lead,more soft,[7034],[3010],[2022]
+cotton,paper and plastic,more soft,[7034],"[2405, 488, 4438]",[2022]
+cotton,fabric,more soft,[7034],[5707],[2022]
+cotton,silk,more soft,[7034],[4772],[2022]
+cotton,wool,more soft,[7034],[10726],[2022]
+cotton,cloth,more soft,[7034],[4850],[2022]
+cotton,denim,more soft,[7034],[14350],[2022]
+cotton,cotton,more soft,[7034],[7034],[2022]
+cotton,material,more soft,[7034],[5491],[2022]
+cotton,animal skin,more soft,[7034],"[3880, 1563]",[2022]
+cotton,polyester,more soft,[7034],[35417],[2022]
+cotton,sound,more soft,[7034],[1465],[2022]
+cotton,noise,more soft,[7034],[3074],[2022]
+cotton,vibration,more soft,[7034],[14882],[2022]
+cotton,air,more soft,[7034],[1352],[2022]
+cotton,static electricity,more soft,[7034],"[11696, 8120]",[2022]
+cotton,echo,more soft,[7034],[6452],[2022]
+cotton,electricity,more soft,[7034],[8120],[2022]
+cotton,volume,more soft,[7034],[8358],[2022]
+cotton,wind and noise,more soft,[7034],"[2272, 488, 3074]",[2022]
+cotton,emotion,more soft,[7034],[4339],[2022]
+cotton,anger,more soft,[7034],[1721],[2022]
+cotton,word,more soft,[7034],[1392],[2022]
+cotton,fear,more soft,[7034],[1950],[2022]
+cotton,pain,more soft,[7034],[1652],[2022]
+cotton,feel,more soft,[7034],[1064],[2022]
+cotton,sugar,more soft,[7034],[6444],[2022]
+cotton,silicon,more soft,[7034],[36980],[2022]
+cotton,plastic,more soft,[7034],[4438],[2022]
+cotton,nickel,more soft,[7034],[28116],[2022]
+cotton,atom,more soft,[7034],[30999],[2022]
+cotton,cell,more soft,[7034],[2776],[2022]
+cotton,carbon,more soft,[7034],[19885],[2022]
+cotton,polymer,more soft,[7034],"[14444, 3450]",[2022]
+cotton,sand,more soft,[7034],[4062],[2022]
+cotton,electron,more soft,[7034],"[7913, 504]",[2022]
+cotton,aluminium,more soft,[7034],"[8997, 3097, 2013]",[2022]
+cotton,ceramic,more soft,[7034],[19471],[2022]
+cotton,cow skin,more white,[7034],"[9781, 1563]",[1454]
+cotton,leather,more white,[7034],[3349],[1454]
+cotton,plastic,more white,[7034],[4438],[1454]
+cotton,fiber,more white,[7034],[18007],[1454]
+cotton,cell,more white,[7034],[2776],[1454]
+cotton,oil,more white,[7034],[6020],[1454]
+cotton,cotton,more white,[7034],[7034],[1454]
+cotton,latex,more white,[7034],[27139],[1454]
+cotton,sugar,more white,[7034],[6444],[1454]
+cotton,animal cell,more white,[7034],"[3880, 2776]",[1454]
+cotton,metal,more white,[7034],[2817],[1454]
+cotton,carbon,more white,[7034],[19885],[1454]
+cotton,polymer,more white,[7034],"[14444, 3450]",[1454]
+cotton,silver,more white,[7034],[2935],[1454]
+cotton,gold,more white,[7034],[2883],[1454]
+cotton,black tar,more white,[7034],"[1301, 5993]",[1454]
+cotton,polymer,more thin,[7034],"[14444, 3450]",[2808]
+cotton,plastic,more thin,[7034],[4438],[2808]
+cotton,sugar,more thin,[7034],[6444],[2808]
+cotton,fiber,more thin,[7034],[18007],[2808]
+cotton,cell,more thin,[7034],[2776],[2808]
+cotton,rubber that can make you float,more thin,[7034],"[8999, 525, 759, 925, 512, 10683]",[2808]
+cotton,metal,more thin,[7034],[2817],[2808]
+cotton,silk,more thin,[7034],[4772],[2808]
+cotton,latex,more thin,[7034],[27139],[2808]
+cotton,ceramic,more thin,[7034],[19471],[2808]
+cotton,water,more green,[7034],[1353],[2056]
+cotton,clothe,more green,[7034],"[796, 481]",[2056]
+cotton,plastic,more green,[7034],[4438],[2056]
+cotton,mud,more green,[7034],[5884],[2056]
+cotton,flour,more green,[7034],[17918],[2056]
+cotton,cow skin,more green,[7034],"[9781, 1563]",[2056]
+cotton,soil,more green,[7034],[8536],[2056]
+cotton,clay,more green,[7034],[5538],[2056]
+cotton,glass,more green,[7034],[1846],[2056]
+cotton,metal,more green,[7034],[2817],[2056]
+cotton,sugar,more green,[7034],[6444],[2056]
+cotton,corn,more green,[7034],[8289],[2056]
+cotton,grain,more green,[7034],[13569],[2056]
+cotton,fruit,more green,[7034],[6647],[2056]
+cotton,milk,more green,[7034],[5940],[2056]
+cotton,apple,more green,[7034],[7304],[2056]
+cotton,wheat,more green,[7034],[17004],[2056]
+cotton,melons,more green,[7034],"[2039, 820]",[2056]
+cotton,water and sugar,more green,[7034],"[1353, 488, 6444]",[2056]
+cotton,plum,more green,[7034],[20815],[2056]
+cotton,chemical,more green,[7034],[12620],[2056]
+cotton,cow dung,more green,[7034],"[9781, 28203]",[2056]
+cotton,yeast,more green,[7034],"[1431, 523]",[2056]
+cotton,element,more green,[7034],[10577],[2056]
+cotton,polymer,more green,[7034],"[14444, 3450]",[2056]
+cotton,green,more green,[7034],[2056],[2056]
+cotton,plant,more green,[7034],[6047],[2056]
+cotton,flower seed,more green,[7034],"[6330, 10107]",[2056]
+cotton,chlorophyll,more green,[7034],"[18717, 39296, 665]",[2056]
+cotton,grass,more green,[7034],[3614],[2056]
+cotton,yellow,more green,[7034],[3484],[2056]
+cotton,bean,more green,[7034],[16201],[2056]
+cotton,lime,more green,[7034],[14721],[2056]
+cotton,vegetable,more green,[7034],[17869],[2056]
+cotton,flower,more green,[7034],[6330],[2056]
+cotton,grape,more green,[7034],[21028],[2056]
+cotton,orange,more green,[7034],[4564],[2056]
+cotton,yellow plastic,more yellow,[7034],"[3484, 4438]",[3484]
+cotton,orange,more yellow,[7034],[4564],[3484]
+cotton,plastic,more yellow,[7034],[4438],[3484]
+cotton,gas,more yellow,[7034],[3938],[3484]
+cotton,white cell,more yellow,[7034],"[1454, 2776]",[3484]
+cotton,latex,more yellow,[7034],[27139],[3484]
+cotton,green,more yellow,[7034],[2056],[3484]
+cotton,hydrogen,more yellow,[7034],[26696],[3484]
+cotton,cell,more yellow,[7034],[2776],[3484]
+cotton,pink and white,more yellow,[7034],"[3390, 488, 1454]",[3484]
+concrete,metal,more hard,[5721],[2817],[1162]
+concrete,steel,more hard,[5721],[4085],[1162]
+concrete,product and money,more hard,[5721],"[10905, 488, 1831]",[1162]
+concrete,plastic,more hard,[5721],[4438],[1162]
+concrete,gold,more hard,[5721],[2883],[1162]
+concrete,element,more hard,[5721],[10577],[1162]
+concrete,lead,more hard,[5721],[3010],[1162]
+concrete,iron,more hard,[5721],[4230],[1162]
+concrete,money,more hard,[5721],[1831],[1162]
+concrete,stone,more hard,[5721],[2090],[1162]
+concrete,pain,more hard,[5721],[1652],[1162]
+concrete,depression,more hard,[5721],[12015],[1162]
+concrete,despair,more hard,[5721],[8142],[1162]
+concrete,feel,more hard,[5721],[1064],[1162]
+concrete,unhappiness,more hard,[5721],[27535],[1162]
+concrete,sadness,more hard,[5721],[6410],[1162]
+concrete,guilt,more hard,[5721],[4566],[1162]
+concrete,loneliness,more hard,[5721],[12722],[1162]
+concrete,misery,more hard,[5721],[8688],[1162]
+concrete,sorrow,more hard,[5721],[8617],[1162]
+concrete,sugar,more hard,[5721],[6444],[1162]
+concrete,silk,more hard,[5721],[4772],[1162]
+concrete,cotton,more hard,[5721],[7034],[1162]
+concrete,pearl,more hard,[5721],[8440],[1162]
+concrete,fabric,more hard,[5721],[5707],[1162]
+concrete,water,more hard,[5721],[1353],[1162]
+concrete,flower,more hard,[5721],[6330],[1162]
+concrete,fiber,more hard,[5721],[18007],[1162]
+concrete,sand,more hard,[5721],[4062],[1162]
+concrete,sugar corn,more hard,[5721],"[6444, 8289]",[1162]
+concrete,fact,more hard,[5721],[1618],[1162]
+concrete,theory,more hard,[5721],[6581],[1162]
+concrete,belief,more hard,[5721],[4719],[1162]
+concrete,rock,more hard,[5721],[2594],[1162]
+concrete,concrete,more hard,[5721],[5721],[1162]
+concrete,logic,more hard,[5721],[8906],[1162]
+concrete,solid matter,more hard,[5721],"[4370, 1621]",[1162]
+concrete,statistical fact,more hard,[5721],"[10605, 13544, 1618]",[1162]
+concrete,person and thing,more hard,[5721],"[1800, 488, 615]",[1162]
+concrete,meat,more hard,[5721],[5089],[1162]
+concrete,cheese,more hard,[5721],[6821],[1162]
+concrete,sugar and sour milk,more hard,[5721],"[6444, 488, 9514, 5940]",[1162]
+concrete,rich person,more hard,[5721],"[3717, 1800]",[1162]
+concrete,different ingredient,more hard,[5721],"[1685, 33571]",[1162]
+concrete,flavor,more hard,[5721],[14601],[1162]
+concrete,ingredient,more hard,[5721],[33571],[1162]
+concrete,bread,more hard,[5721],[5339],[1162]
+concrete,food,more hard,[5721],[2044],[1162]
+concrete,electron,more heavy,[5721],"[7913, 504]",[2262]
+concrete,hydrogen and oxygen,more heavy,[5721],"[26696, 488, 9637]",[2262]
+concrete,energy,more heavy,[5721],[2940],[2262]
+concrete,particle,more heavy,[5721],[24757],[2262]
+concrete,carbon,more heavy,[5721],[19885],[2262]
+concrete,light,more heavy,[5721],[1092],[2262]
+concrete,electricity,more heavy,[5721],[8120],[2262]
+concrete,silicon,more heavy,[5721],[36980],[2262]
+concrete,wavelength,more heavy,[5721],"[37117, 663]",[2262]
+concrete,water,more heavy,[5721],[1353],[2262]
+concrete,glass,more opaque,[5721],[1846],[21967]
+concrete,plastic,more opaque,[5721],[4438],[21967]
+concrete,metal,more opaque,[5721],[2817],[21967]
+concrete,wood,more opaque,[5721],[2510],[21967]
+concrete,water,more opaque,[5721],[1353],[21967]
+concrete,silicon,more opaque,[5721],[36980],[21967]
+concrete,material,more opaque,[5721],[5491],[21967]
+concrete,steel,more opaque,[5721],[4085],[21967]
+concrete,crystal,more opaque,[5721],[5334],[21967]
+concrete,transparent glass,more opaque,[5721],"[13070, 1846]",[21967]
+concrete,polymer,more opaque,[5721],"[14444, 3450]",[21967]
+concrete,sand,more opaque,[5721],[4062],[21967]
+concrete,carbon,more opaque,[5721],[19885],[21967]
+concrete,liquid,more opaque,[5721],[5379],[21967]
+concrete,rubber,more opaque,[5721],[8999],[21967]
+concrete,clay,more opaque,[5721],[5538],[21967]
+concrete,paper,more opaque,[5721],[2405],[21967]
+concrete,ceramic,more opaque,[5721],[19471],[21967]
+concrete,sugar,more cold,[5721],[6444],[1705]
+concrete,water,more cold,[5721],[1353],[1705]
+concrete,hydrogen peroxide,more cold,[5721],"[26696, 38923]",[1705]
+concrete,milk,more cold,[5721],[5940],[1705]
+concrete,cow,more cold,[5721],[9781],[1705]
+concrete,oil,more cold,[5721],[6020],[1705]
+concrete,liquid,more cold,[5721],[5379],[1705]
+concrete,mineral water,more cold,[5721],"[25077, 1353]",[1705]
+concrete,carbon,more cold,[5721],[19885],[1705]
+concrete,chocolate,more cold,[5721],[5317],[1705]
+concrete,good,more cold,[5721],[870],[1705]
+concrete,false information,more cold,[5721],"[6843, 2444]",[1705]
+concrete,bad,more cold,[5721],[1498],[1705]
+concrete,money,more cold,[5721],[1831],[1705]
+concrete,person,more cold,[5721],[1800],[1705]
+concrete,nice person,more cold,[5721],"[1875, 1800]",[1705]
+concrete,conservative conservative,more cold,[5721],"[16726, 16726]",[1705]
+concrete,fun and easy to please,more cold,[5721],"[2664, 488, 2032, 485, 1572]",[1705]
+concrete,class,more cold,[5721],[2879],[1705]
+concrete,party person,more cold,[5721],"[2555, 1800]",[1705]
+concrete,person who have work,more cold,[5721],"[1800, 763, 604, 1129]",[1705]
+concrete,cotton,more cold,[5721],[7034],[1705]
+concrete,cloth,more cold,[5721],[4850],[1705]
+concrete,meat,more cold,[5721],[5089],[1705]
+concrete,metal,more cold,[5721],[2817],[1705]
+concrete,component,more cold,[5721],[28672],[1705]
+concrete,element,more cold,[5721],[10577],[1705]
+concrete,egg,more cold,[5721],[8441],[1705]
+concrete,ingredient,more cold,[5721],[33571],[1705]
+concrete,piece of paper,more cold,[5721],"[2399, 498, 2405]",[1705]
+concrete,flour,more cold,[5721],[17918],[1705]
+concrete,sugar sugar and spice,more cold,[5721],"[6444, 6444, 488, 16361]",[1705]
+concrete,clay,more cold,[5721],[5538],[1705]
+concrete,rice,more cold,[5721],[6878],[1705]
+concrete,corn,more cold,[5721],[8289],[1705]
+concrete,yeast,more cold,[5721],"[1431, 523]",[1705]
+concrete,wheat,more cold,[5721],[17004],[1705]
+concrete,fruit,more cold,[5721],[6647],[1705]
+concrete,cell,more strong,[5721],[2776],[2074]
+concrete,sugar,more strong,[5721],[6444],[2074]
+concrete,atom,more strong,[5721],[30999],[2074]
+concrete,water,more strong,[5721],[1353],[2074]
+concrete,protein,more strong,[5721],[21229],[2074]
+concrete,carbon,more strong,[5721],[19885],[2074]
+concrete,electron,more strong,[5721],"[7913, 504]",[2074]
+concrete,chemical fuel,more strong,[5721],"[12620, 8458]",[2074]
+concrete,molecule,more strong,[5721],[32118],[2074]
+concrete,metal,more strong,[5721],[2817],[2074]
+concrete,amino acid,more strong,[5721],"[24683, 245, 11800]",[2074]
+concrete,milk,more strong,[5721],[5940],[2074]
+concrete,element,more strong,[5721],[10577],[2074]
+concrete,soil,more strong,[5721],[8536],[2074]
+concrete,grain,more strong,[5721],[13569],[2074]
+concrete,bacteria,more strong,[5721],[23765],[2074]
+concrete,soy bean,more strong,[5721],"[37754, 16201]",[2074]
+concrete,chemical,more strong,[5721],[12620],[2074]
+concrete,plastic,more strong,[5721],[4438],[2074]
+concrete,ceramic,more strong,[5721],[19471],[2074]
+concrete,silicon,more strong,[5721],[36980],[2074]
+concrete,clay,more strong,[5721],[5538],[2074]
+concrete,product,more strong,[5721],[10905],[2074]
+concrete,plastic and plastic,more strong,[5721],"[4438, 488, 4438]",[2074]
+concrete,iron ore,more strong,[5721],"[4230, 610]",[2074]
+concrete,ingredient,more strong,[5721],[33571],[2074]
+concrete,money,more strong,[5721],[1831],[2074]
+concrete,different element,more strong,[5721],"[1685, 10577]",[2074]
+concrete,copper,more strong,[5721],[10484],[2074]
+concrete,software,more strong,[5721],[15532],[2074]
+concrete,cheese,more strong,[5721],[6821],[2074]
+concrete,computer,more strong,[5721],[3337],[2074]
+concrete,paper,more strong,[5721],[2405],[2074]
+concrete,data,more strong,[5721],[7200],[2074]
+concrete,information,more strong,[5721],[2444],[2074]
+concrete,worm,more strong,[5721],[11786],[2074]
+concrete,mouse,more strong,[5721],[8080],[2074]
+concrete,sugar,more black,[5721],[6444],[1301]
+concrete,cell,more black,[5721],[2776],[1301]
+concrete,water,more black,[5721],[1353],[1301]
+concrete,plastic,more black,[5721],[4438],[1301]
+concrete,polymer,more black,[5721],"[14444, 3450]",[1301]
+concrete,chemical,more black,[5721],[12620],[1301]
+concrete,cow,more black,[5721],[9781],[1301]
+concrete,carbon,more black,[5721],[19885],[1301]
+concrete,sand,more black,[5721],[4062],[1301]
+concrete,fiber,more black,[5721],[18007],[1301]
+concrete,light,more black,[5721],[1092],[1301]
+concrete,hydrogen peroxide,more black,[5721],"[26696, 38923]",[1301]
+concrete,electron,more black,[5721],"[7913, 504]",[1301]
+concrete,energy,more black,[5721],[2940],[1301]
+concrete,silicon,more black,[5721],[36980],[1301]
+concrete,glass,more black,[5721],[1846],[1301]
+concrete,metal,more rigid,[5721],[2817],[8840]
+concrete,plastic,more rigid,[5721],[4438],[8840]
+concrete,steel,more rigid,[5721],[4085],[8840]
+concrete,rubber,more rigid,[5721],[8999],[8840]
+concrete,fiber,more rigid,[5721],[18007],[8840]
+concrete,polymer,more rigid,[5721],"[14444, 3450]",[8840]
+concrete,carbon,more rigid,[5721],[19885],[8840]
+concrete,iron,more rigid,[5721],[4230],[8840]
+concrete,animal cell,more rigid,[5721],"[3880, 2776]",[8840]
+concrete,cell,more rigid,[5721],[2776],[8840]
+concrete,deception,more rigid,[5721],[15635],[8840]
+concrete,lie,more rigid,[5721],[1485],[8840]
+concrete,affair,more rigid,[5721],[7808],[8840]
+concrete,false information,more rigid,[5721],"[6843, 2444]",[8840]
+concrete,fact,more rigid,[5721],[1618],[8840]
+concrete,crime,more rigid,[5721],[5321],[8840]
+concrete,deceit,more rigid,[5721],[24238],[8840]
+concrete,person,more rigid,[5721],[1800],[8840]
+concrete,act,more rigid,[5721],[1486],[8840]
+concrete,story,more rigid,[5721],[1734],[8840]
+concrete,particle,more rigid,[5721],[24757],[8840]
+concrete,vibration,more rigid,[5721],[14882],[8840]
+concrete,sound,more rigid,[5721],[1465],[8840]
+concrete,step,more rigid,[5721],[1913],[8840]
+concrete,muscle,more rigid,[5721],[5129],[8840]
+concrete,air,more rigid,[5721],[1352],[8840]
+concrete,noise,more rigid,[5721],[3074],[8840]
+concrete,molecule,more rigid,[5721],[32118],[8840]
+concrete,energy,more rigid,[5721],[2940],[8840]
+metal,electron,more heavy,[2817],"[7913, 504]",[2262]
+metal,hydrogen and oxygen,more heavy,[2817],"[26696, 488, 9637]",[2262]
+metal,energy,more heavy,[2817],[2940],[2262]
+metal,particle,more heavy,[2817],[24757],[2262]
+metal,carbon,more heavy,[2817],[19885],[2262]
+metal,light,more heavy,[2817],[1092],[2262]
+metal,electricity,more heavy,[2817],[8120],[2262]
+metal,silicon,more heavy,[2817],[36980],[2262]
+metal,wavelength and light,more heavy,[2817],"[37117, 663, 488, 1092]",[2262]
+metal,water,more heavy,[2817],[1353],[2262]
+metal,glass,more opaque,[2817],[1846],[21967]
+metal,plastic,more opaque,[2817],[4438],[21967]
+metal,metal,more opaque,[2817],[2817],[21967]
+metal,wood,more opaque,[2817],[2510],[21967]
+metal,water,more opaque,[2817],[1353],[21967]
+metal,silicon and plastic,more opaque,[2817],"[36980, 488, 4438]",[21967]
+metal,material,more opaque,[2817],[5491],[21967]
+metal,steel,more opaque,[2817],[4085],[21967]
+metal,crystal,more opaque,[2817],[5334],[21967]
+metal,transparent glass,more opaque,[2817],"[13070, 1846]",[21967]
+metal,polymer,more opaque,[2817],"[14444, 3450]",[21967]
+metal,sand,more opaque,[2817],[4062],[21967]
+metal,silicon,more opaque,[2817],[36980],[21967]
+metal,carbon,more opaque,[2817],[19885],[21967]
+metal,liquid,more opaque,[2817],[5379],[21967]
+metal,rubber,more opaque,[2817],[8999],[21967]
+metal,clay,more opaque,[2817],[5538],[21967]
+metal,paper,more opaque,[2817],[2405],[21967]
+metal,ceramic,more opaque,[2817],[19471],[21967]
+metal,metal,more rigid,[2817],[2817],[8840]
+metal,plastic,more rigid,[2817],[4438],[8840]
+metal,steel,more rigid,[2817],[4085],[8840]
+metal,rubber,more rigid,[2817],[8999],[8840]
+metal,fiber,more rigid,[2817],[18007],[8840]
+metal,polymer,more rigid,[2817],"[14444, 3450]",[8840]
+metal,carbon,more rigid,[2817],[19885],[8840]
+metal,iron,more rigid,[2817],[4230],[8840]
+metal,animal skin,more rigid,[2817],"[3880, 1563]",[8840]
+metal,cell,more rigid,[2817],[2776],[8840]
+metal,deception,more rigid,[2817],[15635],[8840]
+metal,lie,more rigid,[2817],[1485],[8840]
+metal,affair,more rigid,[2817],[7808],[8840]
+metal,false statement,more rigid,[2817],"[6843, 4833]",[8840]
+metal,fact fact,more rigid,[2817],"[1618, 1618]",[8840]
+metal,crime,more rigid,[2817],[5321],[8840]
+metal,deceit,more rigid,[2817],[24238],[8840]
+metal,person identity,more rigid,[2817],"[1800, 8014]",[8840]
+metal,act of act,more rigid,[2817],"[1486, 498, 1486]",[8840]
+metal,story,more rigid,[2817],[1734],[8840]
+metal,particle,more rigid,[2817],[24757],[8840]
+metal,vibration,more rigid,[2817],[14882],[8840]
+metal,sound,more rigid,[2817],[1465],[8840]
+metal,step,more rigid,[2817],[1913],[8840]
+metal,muscle,more rigid,[2817],[5129],[8840]
+metal,air,more rigid,[2817],[1352],[8840]
+metal,noise,more rigid,[2817],[3074],[8840]
+metal,molecule,more rigid,[2817],[32118],[8840]
+metal,energy,more rigid,[2817],[2940],[8840]
+metal,metal,more flexible,[2817],[2817],[19751]
+metal,steel,more flexible,[2817],[4085],[19751]
+metal,fiber,more flexible,[2817],[18007],[19751]
+metal,wire,more flexible,[2817],[6859],[19751]
+metal,carbon,more flexible,[2817],[19885],[19751]
+metal,string,more flexible,[2817],[6422],[19751]
+metal,iron,more flexible,[2817],[4230],[19751]
+metal,line,more flexible,[2817],[1584],[19751]
+metal,cell,more flexible,[2817],[2776],[19751]
+metal,silicon,more flexible,[2817],[36980],[19751]
+metal,plastic,more flexible,[2817],[4438],[19751]
+metal,flexible material,more flexible,[2817],"[19751, 5491]",[19751]
+metal,rubber,more flexible,[2817],[8999],[19751]
+metal,elastic,more flexible,[2817],[20392],[19751]
+metal,nylon,more flexible,[2817],[23029],[19751]
+metal,polymer,more flexible,[2817],"[14444, 3450]",[19751]
+metal,glass,more flexible,[2817],[1846],[19751]
+metal,gold,more flexible,[2817],[2883],[19751]
+metal,reinforcement,more flexible,[2817],"[18217, 5921]",[19751]
+metal,fact,more flexible,[2817],[1618],[19751]
+metal,wood,more flexible,[2817],[2510],[19751]
+metal,information,more flexible,[2817],[2444],[19751]
+metal,person,more flexible,[2817],[1800],[19751]
+metal,money,more flexible,[2817],[1831],[19751]
+metal,word,more flexible,[2817],[1392],[19751]
+metal,politician,more flexible,[2817],[19017],[19751]
+metal,element,more flexible,[2817],[10577],[19751]
+metal,vote,more flexible,[2817],[9719],[19751]
+metal,government,more flexible,[2817],[4417],[19751]
+metal,bureaucracy,more flexible,[2817],[33883],[19751]
+metal,citizen,more flexible,[2817],[12527],[19751]
+metal,gender be,more flexible,[2817],"[18557, 580]",[19751]
+metal,sugar,more cold,[2817],[6444],[1705]
+metal,water,more cold,[2817],[1353],[1705]
+metal,hydrogen,more cold,[2817],[26696],[1705]
+metal,milk,more cold,[2817],[5940],[1705]
+metal,cow,more cold,[2817],[9781],[1705]
+metal,oil,more cold,[2817],[6020],[1705]
+metal,liquid,more cold,[2817],[5379],[1705]
+metal,mineral,more cold,[2817],[25077],[1705]
+metal,carbon,more cold,[2817],[19885],[1705]
+metal,chocolate,more cold,[2817],[5317],[1705]
+metal,good sense,more cold,[2817],"[870, 1760]",[1705]
+metal,false information,more cold,[2817],"[6843, 2444]",[1705]
+metal,bad person,more cold,[2817],"[1498, 1800]",[1705]
+metal,money,more cold,[2817],[1831],[1705]
+metal,person who play sport,more cold,[2817],"[1800, 763, 2200, 5761]",[1705]
+metal,nice than bad,more cold,[2817],"[1875, 815, 1498]",[1705]
+metal,conservative conservative,more cold,[2817],"[16726, 16726]",[1705]
+metal,fun,more cold,[2817],[2664],[1705]
+metal,class,more cold,[2817],[2879],[1705]
+metal,party,more cold,[2817],[2555],[1705]
+metal,person and thing,more cold,[2817],"[1800, 488, 615]",[1705]
+metal,cotton,more cold,[2817],[7034],[1705]
+metal,cloth,more cold,[2817],[4850],[1705]
+metal,meat,more cold,[2817],[5089],[1705]
+metal,metal,more cold,[2817],[2817],[1705]
+metal,component,more cold,[2817],[28672],[1705]
+metal,element of effect,more cold,[2817],"[10577, 498, 4497]",[1705]
+metal,egg,more cold,[2817],[8441],[1705]
+metal,ingredient,more cold,[2817],[33571],[1705]
+metal,piece of paper,more cold,[2817],"[2399, 498, 2405]",[1705]
+metal,flour,more cold,[2817],[17918],[1705]
+metal,clay,more cold,[2817],[5538],[1705]
+metal,rice,more cold,[2817],[6878],[1705]
+metal,corn husk,more cold,[2817],"[8289, 30514]",[1705]
+metal,yeast,more cold,[2817],"[1431, 523]",[1705]
+metal,wheat,more cold,[2817],[17004],[1705]
+metal,fruit,more cold,[2817],[6647],[1705]
+metal,cell,more strong,[2817],[2776],[2074]
+metal,sugar,more strong,[2817],[6444],[2074]
+metal,atom,more strong,[2817],[30999],[2074]
+metal,water,more strong,[2817],[1353],[2074]
+metal,protein,more strong,[2817],[21229],[2074]
+metal,carbon dioxide,more strong,[2817],"[19885, 592, 26691]",[2074]
+metal,electron,more strong,[2817],"[7913, 504]",[2074]
+metal,chemical,more strong,[2817],[12620],[2074]
+metal,molecule,more strong,[2817],[32118],[2074]
+metal,metal,more strong,[2817],[2817],[2074]
+metal,amino acid,more strong,[2817],"[24683, 245, 11800]",[2074]
+metal,milk,more strong,[2817],[5940],[2074]
+metal,element,more strong,[2817],[10577],[2074]
+metal,soil,more strong,[2817],[8536],[2074]
+metal,grain,more strong,[2817],[13569],[2074]
+metal,bacteria,more strong,[2817],[23765],[2074]
+metal,soy bean,more strong,[2817],"[37754, 16201]",[2074]
+metal,plastic,more strong,[2817],[4438],[2074]
+metal,ceramic,more strong,[2817],[19471],[2074]
+metal,silicon,more strong,[2817],[36980],[2074]
+metal,carbon,more strong,[2817],[19885],[2074]
+metal,clay,more strong,[2817],[5538],[2074]
+metal,product,more strong,[2817],[10905],[2074]
+metal,iron and iron,more strong,[2817],"[4230, 488, 4230]",[2074]
+metal,ingredient,more strong,[2817],[33571],[2074]
+metal,money,more strong,[2817],[1831],[2074]
+metal,different material,more strong,[2817],"[1685, 5491]",[2074]
+metal,copper,more strong,[2817],[10484],[2074]
+metal,software,more strong,[2817],[15532],[2074]
+metal,cell phone,more strong,[2817],"[2776, 1417]",[2074]
+metal,cheese,more strong,[2817],[6821],[2074]
+metal,computer software,more strong,[2817],"[3337, 15532]",[2074]
+metal,paper,more strong,[2817],[2405],[2074]
+metal,data,more strong,[2817],[7200],[2074]
+metal,information,more strong,[2817],[2444],[2074]
+metal,worm,more strong,[2817],[11786],[2074]
+metal,mouse,more strong,[2817],[8080],[2074]

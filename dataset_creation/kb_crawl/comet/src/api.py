@@ -114,6 +114,7 @@ def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, 
 
             batch = set_atomic_inputs(
                 input_event, category, data_loader, text_encoder)
+            sequence_all['input_token'] = batch["input_token"]
 
             sampling_result = sampler.generate_sequence(
                 batch, model, data_loader, data_loader.max_event +
@@ -122,6 +123,7 @@ def get_atomic_sequence(input_event, model, sampler, data_loader, text_encoder, 
                 data.atomic_data.num_delimiter_tokens["category"])
 
         sequence_all['beams'] = sampling_result["beams"]
+        sequence_all['tokens'] = sampling_result["tokens"]
 
         if print:
             print_atomic_sequence(sequence_all)
@@ -152,6 +154,7 @@ def set_atomic_inputs(input_event, category, data_loader, text_encoder):
     XMB[:, -1] = torch.LongTensor([text_encoder.encoder["<{}>".format(category)]])
 
     batch = {}
+    batch["input_token"] = prefix
     batch["sequences"] = XMB
     batch["attention_mask"] = data.atomic_data.make_attention_mask(XMB)
 
@@ -191,6 +194,7 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
             batch, abort = set_conceptnet_inputs(
                 e1, relation_sequence, text_encoder,
                 data_loader.max_e1, data_loader.max_r, force)
+            sequence_all['input_token'] = batch["input_token"]
 
             if abort:
                 return {relation: sequence_all}
@@ -201,6 +205,7 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
                 data_loader.max_e2)
 
         sequence_all['beams'] = sampling_result["beams"]
+        sequence_all['tokens'] = sampling_result["tokens"]
 
         if print:
             print_conceptnet_sequence(sequence_all)
@@ -226,6 +231,7 @@ def set_conceptnet_inputs(input_event, relation, text_encoder, max_e1, max_r, fo
     XMB[:, max_e1:max_e1 + len(rel_tokens)] = torch.LongTensor(rel_tokens)
 
     batch = {}
+    batch["input_token"] = e1_tokens
     batch["sequences"] = XMB
     batch["attention_mask"] = data.conceptnet_data.make_attention_mask(XMB)
 

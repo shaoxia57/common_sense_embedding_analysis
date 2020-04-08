@@ -1,182 +1,177 @@
-material_1,material_2,property comparison
-glass,person,more clear
-glass,polymer and plastic,more clear
-glass,material,more clear
-glass,water,more clear
-glass,vapor,more clear
-glass,polymer,more clear
-glass,silk,more clear
-glass,polymer polymer polymer polymer polymer,more clear
-glass,dirt,more clear
-glass,paper,more clear
-glass,latex,more clear
-glass,concrete,more clear
-glass,water vapor,more clear
-glass,water and vapor,more clear
-glass,polymer polymer polymer,more clear
-glass,fog,more clear
-glass,hydrogen and oxygen,more clear
-glass,gas,more clear
-glass,plastic,more clear
-glass,polymer polymer,more clear
-glass,fabric,more clear
-glass,fiber,more clear
-glass,cloud,more clear
-glass,cell,more clear
-glass,rubber,more clear
-glass,sugar,more clear
-glass,hydrogen and helium,more clear
-glass,polymer fiber,more clear
-glass,metal,more clear
-glass,glass,more clear
-glass,stone,more clear
-glass,clay,more clear
-glass,polymer polymer polymer polymer,more clear
-glass,cloth,more clear
-glass,animal cell,more clean
-glass,evil,more clean
-glass,body odor,more clean
-glass,blood,more clean
-glass,cow,more clean
-glass,sweat,more clean
-glass,plastic,more clean
-glass,fiber,more clean
-glass,mold,more clean
-glass,alcohol,more clean
-glass,animal,more clean
-glass,dirt,more clean
-glass,mud,more clean
-glass,bacteria,more clean
-glass,garlic,more clean
-glass,soil,more clean
-glass,cotton,more clean
-glass,clothe,more clean
-glass,animal blood,more clean
-glass,cow dung,more clean
-glass,animal cell,more dirty
-glass,energy,more dirty
-glass,water,more dirty
-glass,polymer,more dirty
-glass,muscle,more dirty
-glass,silicon,more dirty
-glass,hydrogen and oxygen,more dirty
-glass,muscle and dexterity,more dirty
-glass,plastic,more dirty
-glass,fiber,more dirty
-glass,cleanness,more dirty
-glass,chemical,more dirty
-glass,soil,more dirty
-glass,clothe,more dirty
-glass,detergent,more dirty
-glass,muscle muscle,more dirty
-glass,hydrogen and helium,more dirty
-glass,electron,more dirty
-glass,cotton,more dirty
-glass,leather,more dirty
-glass,linen,more dirty
-glass,light,more dirty
-glass,cleanser,more dirty
-glass,muscle cell,more dirty
-glass,carbon,more dirty
-glass,muscle fiber,more dirty
-glass,muscle and skin,more dirty
-glass,muscle and bone,more dirty
-glass,muscle and agility,more dirty
-glass,thread,more smooth
-glass,cow,more smooth
-glass,water,more smooth
-glass,polymer,more smooth
-glass,silk,more smooth
-glass,denim,more smooth
-glass,silicon,more smooth
-glass,cow skin,more smooth
-glass,foam,more smooth
-glass,plastic,more smooth
-glass,fabric,more smooth
-glass,fiber,more smooth
-glass,cell,more smooth
-glass,rubber,more smooth
-glass,sugar,more smooth
-glass,animal skin,more smooth
-glass,metal,more smooth
-glass,leather,more smooth
-glass,wool,more smooth
-glass,glass,more smooth
-glass,egg,more smooth
-glass,carbon,more smooth
-glass,rock,more smooth
-glass,clay,more smooth
-glass,sand,more smooth
-glass,shell,more smooth
-glass,grain,more smooth
-glass,cotton,more smooth
-glass,flour,more empty
-glass,make,more empty
-glass,person,more empty
-glass,one element,more empty
-glass,gas,more empty
-glass,material,more empty
-glass,plastic,more empty
-glass,fabric,more empty
-glass,clay,more empty
-glass,water,more empty
-glass,sand,more empty
-glass,matter,more empty
-glass,metal,more empty
-glass,different color,more empty
-glass,cell,more empty
-glass,cloth,more empty
-glass,sugar,more empty
-glass,cotton,more empty
-concrete,material,more opaque
-concrete,glass person,more opaque
-concrete,water,more opaque
-concrete,polymer,more opaque
-concrete,polymer polymer polymer polymer polymer,more opaque
-concrete,silicon,more opaque
-concrete,polymer polymer polymer,more opaque
-concrete,polymer polymer polymer polymer polymer polymer,more opaque
-concrete,plastic,more opaque
-concrete,polymer polymer,more opaque
-concrete,rubber,more opaque
-concrete,glass person be in car,more opaque
-concrete,metal,more opaque
-concrete,glass,more opaque
-concrete,liquid,more opaque
-concrete,carbon,more opaque
-concrete,wood,more opaque
-concrete,glass person be,more opaque
-concrete,sand,more opaque
-concrete,polymer polymer polymer polymer,more opaque
-concrete,glass person be in boat,more opaque
-metal,particle,more heavy
-metal,energy,more heavy
-metal,carbon,more heavy
-metal,electron and silicon,more heavy
-metal,hydrogen and helium,more heavy
-metal,electron,more heavy
-metal,light,more heavy
-metal,wavelength,more heavy
-metal,hydrogen,more heavy
-metal,hydrogen and oxygen,more heavy
-metal,material,more opaque
-metal,glass person,more opaque
-metal,water,more opaque
-metal,polymer,more opaque
-metal,polymer polymer polymer polymer polymer,more opaque
-metal,silicon,more opaque
-metal,polymer polymer polymer,more opaque
-metal,polymer polymer polymer polymer polymer polymer,more opaque
-metal,plastic,more opaque
-metal,polymer polymer,more opaque
-metal,rubber,more opaque
-metal,glass person be in car,more opaque
-metal,metal,more opaque
-metal,glass,more opaque
-metal,liquid,more opaque
-metal,carbon,more opaque
-metal,wood,more opaque
-metal,glass person be,more opaque
-metal,sand,more opaque
-metal,polymer polymer polymer polymer,more opaque
-metal,glass person be in boat,more opaque
+material_1,material_2,property comparison,material_1 token,material_2 token,property token
+glass,water,more clear,,[1353],
+glass,cloud,more clear,,[4635],
+glass,vapor,more clear,,[21430],
+glass,gas,more clear,,[3938],
+glass,hydrogen and oxygen,more clear,,"[26696, 488, 9637]",
+glass,glass,more clear,,[1846],
+glass,fog,more clear,,[6130],
+glass,sand,more clear,,[4062],
+glass,plastic,more clear,,[4438],
+glass,liquid,more clear,,[5379],
+glass,polymer,more clear,,"[14444, 3450]",
+glass,ceramic,more clear,,[19471],
+glass,rubber,more clear,,[8999],
+glass,silicon,more clear,,[36980],
+glass,metal,more clear,,[2817],
+glass,liquid plastic,more clear,,"[5379, 4438]",
+glass,polypropylene,more clear,,"[14444, 706, 5420, 8524]",
+glass,sugar sugar,more clear,,"[6444, 6444]",
+glass,fiber,more clear,,[18007],
+glass,cell,more clear,,[2776],
+glass,silk,more clear,,[4772],
+glass,latex,more clear,,[27139],
+glass,clay,more clear,,[5538],
+glass,fabric,more clear,,[5707],
+glass,material,more clear,,[5491],
+glass,cloth,more clear,,[4850],
+glass,stone,more clear,,[2090],
+glass,person,more clear,,[1800],
+glass,concrete,more clear,,[5721],
+glass,dirt,more clear,,[3809],
+glass,paper,more clear,,[2405],
+glass,cow,more clean,,[9781],
+glass,plastic,more clean,,[4438],
+glass,dirt,more clean,,[3809],
+glass,cotton,more clean,,[7034],
+glass,animal cell,more clean,,"[3880, 2776]",
+glass,soil and dirt,more clean,,"[8536, 488, 3809]",
+glass,mold,more clean,,[16382],
+glass,mud,more clean,,[5884],
+glass,clothe,more clean,,"[796, 481]",
+glass,fiber,more clean,,[18007],
+glass,garlic seed,more clean,,"[15022, 10107]",
+glass,bacteria and other bodily bodily fluid,more clean,,"[23765, 488, 728, 17489, 17489, 9857]",
+glass,animal skin,more clean,,"[3880, 1563]",
+glass,blood,more clean,,[1377],
+glass,evil,more clean,,[3402],
+glass,cow dung,more clean,,"[9781, 28203]",
+glass,sweat,more clean,,[3639],
+glass,body pigment,more clean,,"[956, 17571, 1012]",
+glass,human blood,more clean,,"[1879, 1377]",
+glass,alcohol,more clean,,[6542],
+glass,plastic,more dirty,,[4438],
+glass,cleanner and cleanser,more dirty,,"[7265, 1127, 488, 7265, 1617]",
+glass,detergent,more dirty,,[39711],
+glass,cotton,more dirty,,[7034],
+glass,chemical,more dirty,,[12620],
+glass,soil,more dirty,,[8536],
+glass,linen,more dirty,,[11161],
+glass,fiber,more dirty,,[18007],
+glass,clothe,more dirty,,"[796, 481]",
+glass,dirt,more dirty,,[3809],
+glass,plastic so it can melt easily,more dirty,,"[4438, 620, 507, 759, 9423, 2705]",
+glass,light,more dirty,,[1092],
+glass,polymer,more dirty,,"[14444, 3450]",
+glass,carbon,more dirty,,[19885],
+glass,water,more dirty,,[1353],
+glass,hydrogen and oxygen,more dirty,,"[26696, 488, 9637]",
+glass,electron,more dirty,,"[7913, 504]",
+glass,energy,more dirty,,[2940],
+glass,silicon,more dirty,,[36980],
+glass,glass,more dirty,,[1846],
+glass,muscle,more dirty,,[5129],
+glass,leather,more dirty,,[3349],
+glass,animal cell,more dirty,,"[3880, 2776]",
+glass,fur,more dirty,,[6172],
+glass,metal,more dirty,,[2817],
+glass,body part,more dirty,,"[956, 1250]",
+glass,denim,more dirty,,[14350],
+glass,fluid muscle,more dirty,,"[9857, 5129]",
+glass,skin,more dirty,,[1563],
+glass,meat,more dirty,,[5089],
+glass,cleanser,more dirty,,"[7265, 1617]",
+glass,metal,more smooth,,[2817],
+glass,sugar,more smooth,,[6444],
+glass,cow,more smooth,,[9781],
+glass,grain,more smooth,,[13569],
+glass,plastic,more smooth,,[4438],
+glass,silicon,more smooth,,[36980],
+glass,cell,more smooth,,[2776],
+glass,clay,more smooth,,[5538],
+glass,sand and rock,more smooth,,"[4062, 488, 2594]",
+glass,carbon,more smooth,,[19885],
+glass,thread,more smooth,,[9264],
+glass,cotton,more smooth,,[7034],
+glass,leather,more smooth,,[3349],
+glass,silk,more smooth,,[4772],
+glass,fabric,more smooth,,[5707],
+glass,denim,more smooth,,[14350],
+glass,wool,more smooth,,[10726],
+glass,fiber,more smooth,,[18007],
+glass,sand,more smooth,,[4062],
+glass,water,more smooth,,[1353],
+glass,glass,more smooth,,[1846],
+glass,rock,more smooth,,[2594],
+glass,polymer,more smooth,,"[14444, 3450]",
+glass,foam,more smooth,,[12436],
+glass,rubber,more smooth,,[8999],
+glass,animal hide,more smooth,,"[3880, 2830]",
+glass,egg,more smooth,,[8441],
+glass,cow hide,more smooth,,"[9781, 2830]",
+glass,shell,more smooth,,[6515],
+glass,plastic,more empty,,[4438],
+glass,flour,more empty,,[17918],
+glass,fabric,more empty,,[5707],
+glass,cotton,more empty,,[7034],
+glass,sugar,more empty,,[6444],
+glass,make - up,more empty,,"[925, 260, 609]",
+glass,cloth,more empty,,[4850],
+glass,material,more empty,,[5491],
+glass,clay,more empty,,[5538],
+glass,different color,more empty,,"[1685, 3184]",
+glass,cell,more empty,,[2776],
+glass,water,more empty,,[1353],
+glass,person,more empty,,[1800],
+glass,gas,more empty,,[3938],
+glass,one element,more empty,,"[566, 10577]",
+glass,metal,more empty,,[2817],
+glass,sand,more empty,,[4062],
+glass,matter,more empty,,[1621],
+concrete,glass,more opaque,,[1846],
+concrete,plastic,more opaque,,[4438],
+concrete,metal,more opaque,,[2817],
+concrete,wood,more opaque,,[2510],
+concrete,water,more opaque,,[1353],
+concrete,silicon,more opaque,,[36980],
+concrete,material,more opaque,,[5491],
+concrete,steel,more opaque,,[4085],
+concrete,crystal,more opaque,,[5334],
+concrete,transparent plastic,more opaque,,"[13070, 4438]",
+concrete,polymer and rubber,more opaque,,"[14444, 3450, 488, 8999]",
+concrete,sand,more opaque,,[4062],
+concrete,carbon,more opaque,,[19885],
+concrete,liquid,more opaque,,[5379],
+concrete,rubber,more opaque,,[8999],
+concrete,polymer,more opaque,,"[14444, 3450]",
+concrete,clay,more opaque,,[5538],
+concrete,paper,more opaque,,[2405],
+concrete,ceramic,more opaque,,[19471],
+metal,electron,more heavy,,"[7913, 504]",
+metal,hydrogen and oxygen,more heavy,,"[26696, 488, 9637]",
+metal,energy,more heavy,,[2940],
+metal,particle,more heavy,,[24757],
+metal,carbon,more heavy,,[19885],
+metal,light,more heavy,,[1092],
+metal,electricity,more heavy,,[8120],
+metal,silicon,more heavy,,[36980],
+metal,wavelength,more heavy,,"[37117, 663]",
+metal,water,more heavy,,[1353],
+metal,glass,more opaque,,[1846],
+metal,plastic,more opaque,,[4438],
+metal,metal,more opaque,,[2817],
+metal,wood,more opaque,,[2510],
+metal,water,more opaque,,[1353],
+metal,silicon,more opaque,,[36980],
+metal,material,more opaque,,[5491],
+metal,steel,more opaque,,[4085],
+metal,crystal,more opaque,,[5334],
+metal,transparent plastic,more opaque,,"[13070, 4438]",
+metal,polymer,more opaque,,"[14444, 3450]",
+metal,sand,more opaque,,[4062],
+metal,carbon,more opaque,,[19885],
+metal,liquid,more opaque,,[5379],
+metal,rubber and metal,more opaque,,"[8999, 488, 2817]",
+metal,clay,more opaque,,[5538],
+metal,paper,more opaque,,[2405],
+metal,ceramic,more opaque,,[19471],

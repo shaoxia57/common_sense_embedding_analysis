@@ -75,12 +75,14 @@ class GreedySampler(Sampler):
             XMB, MMB = self.append_batch(XMB, next_idx, MMB)
 
         beams = []
+        tokens = []
 
         for beam in seqs:
             beams.append(" ".join("".join(
                 [data_loader.vocab_decoder[tok.item()].replace(
                     '</w>', ' ').replace('\n', '')
                  for tok in beam if tok != self.end_token]).split()))
+            tokens.append([tok.item() for tok in beam if tok != self.end_token])
 
         sampling_result = {
             "sequence": beams[0],
@@ -88,7 +90,8 @@ class GreedySampler(Sampler):
             "beam_losses": [loss.item()],
             "loss": loss.item(),
             "beam_lengths": [counts],
-            "length": counts
+            "length": counts,
+            "tokens": tokens
         }
 
         return sampling_result
@@ -159,12 +162,14 @@ class TopKSampler(Sampler):
             XMB, MMB = self.append_batch(XMB, next_idx, MMB)
 
         beams = []
+        tokens = []
 
         for beam in seqs:
             beams.append(" ".join("".join(
                 [data_loader.vocab_decoder[tok.item()].replace(
                     '</w>', ' ').replace('\n', '')
                  for tok in beam if tok != self.end_token]).split()))
+            tokens.append([tok.item() for tok in beam if tok != self.end_token])
 
         sampling_result = {
             "sequence": beams[0],
@@ -172,7 +177,8 @@ class TopKSampler(Sampler):
             "beam_losses": losses.squeeze().tolist(),
             "loss": losses[0].item(),
             "beam_lengths": counts.long().squeeze().tolist(),
-            "length": counts[0].long().item()
+            "length": counts[0].long().item(),
+            "tokens": tokens
         }
 
         return sampling_result
@@ -306,12 +312,14 @@ class BeamSampler(TopKSampler):
                 break
 
         beams = []
+        tokens = []
 
         for beam in beam_seqs:
             beams.append(" ".join("".join(
                 [data_loader.vocab_decoder[tok.item()].replace(
                     '</w>', ' ').replace('\n', '')
                  for tok in beam if tok != self.end_token]).split()))
+            tokens.append([tok.item() for tok in beam if tok != self.end_token])
 
         sampling_result = {
             "sequence": beams[0],
@@ -319,7 +327,8 @@ class BeamSampler(TopKSampler):
             "beam_losses": beam_lls.tolist(),
             "loss": beam_lls[0].item(),
             "beam_lengths": counts.tolist(),
-            "length": counts[0].item()
+            "length": counts[0].item(),
+            "tokens": tokens
         }
 
         return sampling_result
