@@ -101,6 +101,40 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
 
     return masked_examples
 
+def prepare_masked_instances_for_humans(sentences, config):
+    masked_examples = {}
+    for truism in sentences:
+        for perturbation in sentences[truism]:
+
+            if 'paraphrase' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['0']
+            elif '_inversion' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['1']
+            else:
+                candidate_answers = config[truism]['premise_switch']['2']
+
+            for premise in sentences[truism][perturbation]:
+                key = "-".join([truism, perturbation, premise])
+                
+                statement = sentences[truism][perturbation][premise]
+                premise = statement.split(",")[0]
+                conclusion = statement.split(",")[1]
+
+                right_answer = None
+                wrong_answer = None
+                for answer in candidate_answers:
+                    if pad_string(answer, False) in conclusion:
+                        conclusion = conclusion.replace(" " + answer + " ", " _____ ")
+                        right_answer = answer
+                    else:
+                        wrong_answer = answer
+
+                if right_answer and wrong_answer:
+                    masked_statement = premise + ", " + conclusion
+                    masked_examples[key] = (masked_statement, right_answer, wrong_answer)
+
+    return masked_examples
+
 def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
     sentence_pairs = {}
     for index, corr_incorr_pair in sentences.items():
