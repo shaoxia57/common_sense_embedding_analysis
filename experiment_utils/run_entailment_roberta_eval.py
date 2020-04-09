@@ -55,7 +55,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical results")
@@ -72,7 +72,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving material results")
@@ -88,7 +88,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving social results")
