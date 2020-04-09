@@ -41,8 +41,8 @@ def main():
     number_of_entity_trials = 10
 
     roberta = RobertaModel.from_pretrained(
-    '../../fairseq/checkpoints/',
-    checkpoint_file='checkpoint_best.pt',
+    '../../fairseq/fine-tuned_roberta/',
+    checkpoint_file='new_checkpoint_best.pt',
     data_name_or_path='../../fairseq/data-bin/probes')
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
