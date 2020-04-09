@@ -50,7 +50,7 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/generation_result_data/physical_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("../data/generation_result_data/gpt2/physical_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
@@ -69,7 +69,7 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/generation_result_data/material_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("../data/generation_result_data/gpt2/material_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving material dataset results")
@@ -86,7 +86,7 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/generation_result_data/social_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("../data/generation_result_data/gpt2/social_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving social dataset results")
