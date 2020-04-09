@@ -2,7 +2,7 @@ import torch
 import math
 import pandas as pd
 from fairseq.data.data_utils import collate_tokens
-# from transformers import pipeline
+from transformers import pipeline
 
 def generative_truism_reasoning_test(tensors, model, gpu_available, logger):
     if gpu_available:
