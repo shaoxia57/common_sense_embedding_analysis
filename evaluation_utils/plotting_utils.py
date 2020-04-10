@@ -25,11 +25,12 @@ def autolabel(rects, ax, color, below=False):
         if bottom:
             # multiple = 1.1 if height < 0 else -1.1
             # y = min(-0.15, multiple*height)
-            # y = height 
-            y = -0.2
+            y = height 
+            # y = -0.2
             # print(y* 1.5)
             va = "bottom"
-            x = rect.get_x() + rect.get_width() / 2
+            # x = rect.get_x() + rect.get_width() / 2
+            x = rect.get_x() + 2 * rect.get_width() / 3
         else:
             # if 0.33 - height < 0.05:
             #     y = height * 1.13
@@ -37,7 +38,7 @@ def autolabel(rects, ax, color, below=False):
             y = min(height + 0.03, height*1.12)
 
             # y = 0.55
-            x = rect.get_x() + rect.get_width() / 2
+            x = rect.get_x() + rect.get_width() / 3
             va = "bottom"
 
         ax.annotate('{}'.format(height),
@@ -122,8 +123,8 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     else:
         rand_level=sum(y_range)/2.0
     
-    color_1 = 'tab:red'
-    color_2 = 'tab:blue'
+    color_1 = 'tab:green'
+    color_2 = 'tab:orange'
     ax1.set_ylabel(y_label, color=color_1)
     ax1.set_ylim(bottom=y_range[0], top=y_range[1])
     rects1 = ax1.bar(x - width/2, data_one, width, color=color_1)
@@ -138,7 +139,7 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     
     if add_nums_to_bars:
         autolabel(rects1, ax1, color_1, nums_should_be_below[0])
-        autolabel(rects2, ax1, color_2, nums_should_be_below[0])
+        autolabel(rects2, ax1, color_2, nums_should_be_below[1])
     
     random_guess = ax1.axhline(y=rand_level, color='silver', linestyle=":")    
     
