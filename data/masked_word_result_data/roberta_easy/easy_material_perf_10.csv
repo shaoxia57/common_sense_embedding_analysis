@@ -11,7 +11,7 @@ truism_number,perturbation,premise,avg_binary_score,avg_ratio_score
 9,original,original,0.8,0.05258685098223842
 10,original,original,0.0,-0.27778166408151267
 11,original,original,1.0,0.986556124648344
-12,original,original,0.6,-0.002821436687271088
+12,original,original,1.0,0.9950983332715634
 13,original,original,1.0,0.5699126774184226
 14,original,original,0.7,0.059032976447788446
 15,original,original,1.0,0.8758883216466773

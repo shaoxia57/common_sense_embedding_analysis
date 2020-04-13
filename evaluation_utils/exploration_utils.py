@@ -1,15 +1,17 @@
 import pandas as pd
 
 def filter_data_into_more_less_by_actual_comparison(result_data, param_data, option=0):
-    if option == 1:
+    if option:
         premise = "asym_perturbs"
+        truism_number = "set_number"
     else:
         premise = "premise"
+        truism_number = "truism_number"
     more = []
     less = []
     for i, row in result_data.iterrows():
         p_key = row["perturbation"] + "-" + row[premise]
-        if param_data[str(row["truism_number"])]["greater_than"] == "A":
+        if param_data[str(row[truism_number])]["greater_than"] == "A":
             if row["perturbation"] in ["original", "paraphrase", 
                                        "negation_antonym", "negation_paraphrase_inversion"]:
                 if row[premise] == "original":

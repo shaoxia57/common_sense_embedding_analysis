@@ -60,7 +60,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/easy_physical_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta_easy/easy_physical_perf_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
@@ -81,7 +81,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("data/masked_word_result_data/easy_material_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta_easy/easy_material_perf_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical material results")
@@ -101,7 +101,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/easy_social_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta_easy/easy_social_perf_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical social results")
