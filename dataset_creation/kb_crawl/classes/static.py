@@ -22,11 +22,6 @@ class Language(Enum):
   Dutch = 'nl'
   Chinese = 'zh'
 
-class Comparison(Enum):
-  More = 1
-  Equal = 0
-  Less = -1
-
 class Relation(Enum):
   RelatedTo = 'RelatedTo'
   FormOf = 'FormOf'

@@ -1,7 +1,7 @@
 import requests
 import json
 
-from dataset_creation.kb_crawl.classes.static import Method, Language, Comparison, Relation, POS
+from dataset_creation.kb_crawl.classes.static import Method, Language, Relation, POS
 
 # globals
 base = 'http://api.conceptnet.io'

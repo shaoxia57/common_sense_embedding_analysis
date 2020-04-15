@@ -33,10 +33,10 @@ def write_materials(filename, knowledge):
           [
             logic.mat_1.name, 
             mat_2.name, 
-            logic.comp.name.lower() + ' ' + logic.prop.original.name, 
+            logic.comp.original.name + ' ' + logic.prop.original.name, 
             logic.mat_1.token, 
             logic.mat_2[mat_2_i].token,
-            logic.prop.original.token
+            logic.comp.original.token + logic.prop.original.token
           ]
         )
   print('Completed')
@@ -52,9 +52,9 @@ def write_relations(filename, knowledge):
       writer.writerow(
         [
           logic.relation.name, 
-          logic.prop.original.name + ' ' + logic.comp.name.lower(),
+          logic.prop.original.name + ' ' + logic.comp.original.name,
           logic.relation.token,
-          logic.prop.original.token
+          logic.prop.original.token + logic.comp.original.token
         ]
       )
   print('Completed')

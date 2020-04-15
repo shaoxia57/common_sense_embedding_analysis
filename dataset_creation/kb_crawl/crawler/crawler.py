@@ -1,5 +1,6 @@
-from dataset_creation.kb_crawl.classes.static import Method, Comparison, Relation, POS, CometRelation
+from dataset_creation.kb_crawl.classes.static import Method, Relation, POS, CometRelation
 from dataset_creation.kb_crawl.classes.word import Word
+from dataset_creation.kb_crawl.classes.comparison import Comparison
 from dataset_creation.kb_crawl.classes.property import Property
 from dataset_creation.kb_crawl.classes.logic import MaterialLogic, RelationLogic
 
@@ -20,7 +21,6 @@ class Crawler:
     print(f'Initializing comet atomic model from: {comet_atomic_model}')
     self.comet_at_api = CometAtomicModel(device, model_file=comet_atomic_model)
 
-
   def comet_conceptnet_interact(self):
     self.comet_cn_api.interact()
 
@@ -30,10 +30,11 @@ class Crawler:
   # Material_1, Material_2, Property Comparison
   # Strategy: material → properties (comet) → property antonym (cn) → materials made of property antonym (comet)
   def crawl_comet_materials(self, materials, sampler = 'topk', samples = 10):
-    # Material_1, Material_2, Property Comparison
-    # Strategy: material → properties → antonym properties → objects made of
     knowledge = []
     prop_dict = {}
+
+    # common comparisons
+    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
 
     for mat_1 in materials:
       mat_1_relations = ['HasProperty']
@@ -46,7 +47,7 @@ class Crawler:
         for prop_i, prop_label in enumerate(prop_output['beams']):
           mat_2_dict = {}
           prop = prop_dict[prop_label] if prop_label in prop_dict else None
-          comp = Comparison.More
+          comp = comp_more
           weight = prop_i
           
           # fetch antonym properties from conceptnet
@@ -60,7 +61,7 @@ class Crawler:
           if not prop:
             prop = Property(
               Word(prop_label, prop_output['tokens'][prop_i]), 
-              [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']]
+              [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
             )
             prop_dict[prop_label] = prop
 
@@ -100,6 +101,9 @@ class Crawler:
     knowledge = []
     prop_dict = {}
 
+    # common comparisons
+    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
+
     for mat_1 in materials:
       # extract properties from conceptnet
       # NOTE: specifying POS with HasProperty gives poor results
@@ -112,7 +116,7 @@ class Crawler:
         prop_label = prop_edge['end']['label']
         mat_2_dict = {}
         prop = prop_dict[prop_label] if prop_label in prop_dict else None
-        comp = Comparison.More
+        comp = comp_more
         weight = prop_edge['weight']
         
         # fetch antonym properties from conceptnet
@@ -125,8 +129,8 @@ class Crawler:
         # insert into properties
         if not prop:
           prop = Property(
-            Word(prop_label), 
-            [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']]
+            Word(prop_label, self.comet_cn_api.encode(prop_label)), 
+            [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
           )
           prop_dict[prop_label] = prop
 
@@ -148,7 +152,7 @@ class Crawler:
           mat_2_words.append(Word(mat_2, mat_2_dict[mat_2]))
 
         material_logic = MaterialLogic(
-          Word(mat_1),
+          Word(mat_1, self.comet_cn_api.encode(mat_1)),
           mat_2_words, 
           prop, 
           comp, 
@@ -156,28 +160,7 @@ class Crawler:
         )
 
         knowledge.append(material_logic)
-
-        # for ant_edge in ant_res['edges']:
-        #   # fetch objects with antonym property
-        #   obj_query_params = cn_api.build_params_from_id(endId=ant_edge['end']['@id'], rel=Relation.HasProperty, limit=samples)
-        #   obj_res = cn_api.fetch_with_cache(method=Method.Query, params=obj_query_params)
-
-        #   if not obj_res:
-        #     continue
-
-        #   for obj_edge in obj_res['edges']:
-        #     # fech materials from objects
-        #     mat_2_query_params = cn_api.build_params_from_id(startId=obj_edge['start']['@id'], rel=Relation.MadeOf, limit=samples)
-        #     mat_2_res = cn_api.fetch_with_cache(method=Method.Query, params=mat_2_query_params)
-
-        #     if not mat_2_res:
-        #       continue
-
-        #     # update materials
-        #     mat_2.update([mat_2_edge['end']['label'] for mat_2_edge in mat_2_res['edges'] if (mat_2_edge['weight']*obj_edge['weight']*ant_edge['weight']*weight) > threshold])
-
-        # knowledge.append(MaterialLogic(mat_1, list(mat_2), prop, comp, weight))
-      
+  
     return knowledge
 
   # Relation, Property_Comparison
@@ -185,6 +168,9 @@ class Crawler:
   def crawl_relations(self, relations: [str], sampler = 'topk', samples: int = 10):
     knowledge = []
     prop_dict = {}
+
+    # common comparisons
+    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
     
     for relation in relations:
       relation_relations = ['CapableOf']
@@ -194,7 +180,7 @@ class Crawler:
         capability_output = capability_outputs[relation_rel]
         for capability_i, capability_label in enumerate(capability_output['beams']):
           prop = prop_dict[capability_label] if capability_label in prop_dict else None
-          comp = Comparison.More
+          comp = comp_more
           weight = capability_i
 
           # insert into properties
@@ -204,7 +190,7 @@ class Crawler:
             ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
             prop = Property(
               Word(capability_label, capability_output['tokens'][capability_i]), 
-              [Word(ant_edge['end']['label']) for ant_edge in ant_res['edges']] if ant_res else [])
+              [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']] if ant_res else [])
             prop_dict[capability_label] = prop
 
           relation_logic = RelationLogic(

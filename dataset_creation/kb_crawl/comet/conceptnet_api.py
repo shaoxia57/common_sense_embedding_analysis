@@ -43,6 +43,9 @@ class CometConceptnetModel:
       relations
     )
 
+  def encode(self, target):
+    return self.text_encoder.encode([target], verbose=False)[0]
+
   def interact(self):
     while True:
       query = 'help'
