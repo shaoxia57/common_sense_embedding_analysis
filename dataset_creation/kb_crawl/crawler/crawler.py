@@ -4,28 +4,27 @@ from dataset_creation.kb_crawl.classes.comparison import Comparison
 from dataset_creation.kb_crawl.classes.property import Property
 from dataset_creation.kb_crawl.classes.logic import MaterialLogic, RelationLogic
 
-import dataset_creation.kb_crawl.conceptnet.api as cn_api
-from dataset_creation.kb_crawl.comet.conceptnet_api import CometConceptnetModel
-from dataset_creation.kb_crawl.comet.atomic_api import CometAtomicModel
+import dataset_creation.kb_crawl.utils.conceptnet as Conceptnet
+from dataset_creation.kb_crawl.utils.comet_transformers import CometConceptnetModel
+from dataset_creation.kb_crawl.utils.comet_transformers import CometAtomicModel
 
 comet_conceptnet_model = 'dataset_creation/kb_crawl/comet/pretrained_models/conceptnet_pretrained_model.pickle'
 comet_atomic_model = 'dataset_creation/kb_crawl/comet/pretrained_models/atomic_pretrained_model.pickle'
 class Crawler:
   def __init__(self, device=0):
     self.device = device
-    self.cn_api = cn_api
 
     print(f'Initializing comet conceptnet model from: {comet_conceptnet_model}')
-    self.comet_cn_api = CometConceptnetModel(device, model_file=comet_conceptnet_model)
+    self.comet_conceptnet_model = CometConceptnetModel(device, model_file=comet_conceptnet_model)
 
     print(f'Initializing comet atomic model from: {comet_atomic_model}')
-    self.comet_at_api = CometAtomicModel(device, model_file=comet_atomic_model)
+    self.comet_atomic_model = CometAtomicModel(device, model_file=comet_atomic_model)
 
   def comet_conceptnet_interact(self):
-    self.comet_cn_api.interact()
+    self.comet_conceptnet_model.interact()
 
   def comet_atomic_interact(self):
-    self.comet_at_api.interact()
+    self.comet_atomic_model.interact()
 
   # Material_1, Material_2, Property Comparison
   # Strategy: material → properties (comet) → property antonym (cn) → materials made of property antonym (comet)
@@ -34,13 +33,13 @@ class Crawler:
     prop_dict = {}
 
     # common comparisons
-    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
+    comp_more = Comparison(Word('more', self.comet_conceptnet_model.encode('more')), Word('less', self.comet_conceptnet_model.encode('less')))
 
     for mat_1 in materials:
       mat_1_relations = ['HasProperty']
 
       # fetch material properties
-      prop_outputs = self.comet_cn_api.query(mat_1, mat_1_relations, sampler, samples)
+      prop_outputs = self.comet_conceptnet_model.query(mat_1, mat_1_relations, sampler, samples)
 
       for mat_1_rel in mat_1_relations: 
         prop_output = prop_outputs[mat_1_rel]
@@ -51,8 +50,8 @@ class Crawler:
           weight = prop_i
           
           # fetch antonym properties from conceptnet
-          ant_query_params = cn_api.build_params(start=prop_label, rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
-          ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
+          ant_query_params = Conceptnet.build_params(start=prop_label, rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
+          ant_res = Conceptnet.fetch_with_cache(method=Method.Query, params=ant_query_params)
 
           if not ant_res:
             continue
@@ -61,7 +60,7 @@ class Crawler:
           if not prop:
             prop = Property(
               Word(prop_label, prop_output['tokens'][prop_i]), 
-              [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
+              [Word(ant_edge['end']['label'], self.comet_conceptnet_model.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
             )
             prop_dict[prop_label] = prop
 
@@ -70,7 +69,7 @@ class Crawler:
 
             # fetch made of objects
             ant_relations = ['MadeOf']
-            mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, sampler, samples)
+            mat_2_outputs = self.comet_conceptnet_model.query(ant, ant_relations, sampler, samples)
             
             for prop_rel in ant_relations:
               mat_2_output = mat_2_outputs[prop_rel]
@@ -102,14 +101,14 @@ class Crawler:
     prop_dict = {}
 
     # common comparisons
-    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
+    comp_more = Comparison(Word('more', self.comet_conceptnet_model.encode('more')), Word('less', self.comet_conceptnet_model.encode('less')))
 
     for mat_1 in materials:
       # extract properties from conceptnet
       # NOTE: specifying POS with HasProperty gives poor results
-      mat_prop_res = cn_api.fetch(
+      mat_prop_res = Conceptnet.fetch(
         method=Method.Query,
-        params=cn_api.build_params(start=mat_1, rel=Relation.HasProperty, limit=samples)
+        params=Conceptnet.build_params(start=mat_1, rel=Relation.HasProperty, limit=samples)
       )
 
       for prop_edge in mat_prop_res['edges']:
@@ -120,8 +119,8 @@ class Crawler:
         weight = prop_edge['weight']
         
         # fetch antonym properties from conceptnet
-        ant_query_params = cn_api.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
-        ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
+        ant_query_params = Conceptnet.build_params_from_id(startId=prop_edge['end']['@id'], rel=Relation.Antonym, pos=POS.Adjective, limit=samples)
+        ant_res = Conceptnet.fetch_with_cache(method=Method.Query, params=ant_query_params)
 
         if not ant_res:
           continue
@@ -129,8 +128,8 @@ class Crawler:
         # insert into properties
         if not prop:
           prop = Property(
-            Word(prop_label, self.comet_cn_api.encode(prop_label)), 
-            [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
+            Word(prop_label, self.comet_conceptnet_model.encode(prop_label)), 
+            [Word(ant_edge['end']['label'], self.comet_conceptnet_model.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']]
           )
           prop_dict[prop_label] = prop
 
@@ -139,7 +138,7 @@ class Crawler:
 
           # fetch materials with property from comet
           ant_relations = ['MadeOf']
-          mat_2_outputs = self.comet_cn_api.query(ant, ant_relations, sampler, samples)
+          mat_2_outputs = self.comet_conceptnet_model.query(ant, ant_relations, sampler, samples)
           
           for ant_rel in ant_relations:
             mat_2_output = mat_2_outputs[ant_rel]
@@ -152,7 +151,7 @@ class Crawler:
           mat_2_words.append(Word(mat_2, mat_2_dict[mat_2]))
 
         material_logic = MaterialLogic(
-          Word(mat_1, self.comet_cn_api.encode(mat_1)),
+          Word(mat_1, self.comet_conceptnet_model.encode(mat_1)),
           mat_2_words, 
           prop, 
           comp, 
@@ -170,11 +169,11 @@ class Crawler:
     prop_dict = {}
 
     # common comparisons
-    comp_more = Comparison(Word('more', self.comet_cn_api.encode('more')), Word('less', self.comet_cn_api.encode('less')))
+    comp_more = Comparison(Word('more', self.comet_conceptnet_model.encode('more')), Word('less', self.comet_conceptnet_model.encode('less')))
     
     for relation in relations:
       relation_relations = ['CapableOf']
-      capability_outputs = self.comet_cn_api.query(relation, relation_relations, sampler, samples)
+      capability_outputs = self.comet_conceptnet_model.query(relation, relation_relations, sampler, samples)
 
       for relation_rel in relation_relations: 
         capability_output = capability_outputs[relation_rel]
@@ -186,11 +185,11 @@ class Crawler:
           # insert into properties
           if not prop:
             # fetch antonym properties from conceptnet
-            ant_query_params = cn_api.build_params(start=capability_label, rel=Relation.Antonym, limit=samples)
-            ant_res = cn_api.fetch_with_cache(method=Method.Query, params=ant_query_params)
+            ant_query_params = Conceptnet.build_params(start=capability_label, rel=Relation.Antonym, limit=samples)
+            ant_res = Conceptnet.fetch_with_cache(method=Method.Query, params=ant_query_params)
             prop = Property(
               Word(capability_label, capability_output['tokens'][capability_i]), 
-              [Word(ant_edge['end']['label'], self.comet_cn_api.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']] if ant_res else [])
+              [Word(ant_edge['end']['label'], self.comet_conceptnet_model.encode(ant_edge['end']['label'])) for ant_edge in ant_res['edges']] if ant_res else [])
             prop_dict[capability_label] = prop
 
           relation_logic = RelationLogic(
