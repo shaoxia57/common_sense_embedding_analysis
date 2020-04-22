@@ -8,6 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.parameter import Parameter
+from torch.nn import CrossEntropyLoss
 
 
 '''
@@ -203,14 +204,27 @@ class LMModel(nn.Module):
             pos_emb_mask[:, :, -n_ctx:] = -1e12
             self.register_buffer('pos_emb_mask', pos_emb_mask)
 
-    def forward(self, x, sequence_mask=None):
+    def forward(self, x, sequence_mask=None, labels=None):
         h = self.transformer(x, sequence_mask)
         lm_logits = self.lm_head(h)
+        
+        outputs = lm_logits
+
         if self.return_probs:
-            lm_logits = F.softmax(lm_logits + self.pos_emb_mask, dim=-1)
+            outputs = F.softmax(lm_logits + self.pos_emb_mask, dim=-1)
         elif self.return_acts:
-            lm_logits = lm_logits + self.pos_emb_mask
-        return lm_logits
+            outputs = lm_logits + self.pos_emb_mask
+
+        if labels is not None:
+            # Shift so that tokens < n predict n
+            shift_logits = lm_logits[..., :, :].contiguous()
+            shift_labels = labels[..., :-1].contiguous()
+            # Flatten the tokens
+            loss_fct = CrossEntropyLoss()
+            loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+            outputs = (loss, outputs)
+
+        return outputs # (loss), lm_logits
 
 
 class LMHead(nn.Module):

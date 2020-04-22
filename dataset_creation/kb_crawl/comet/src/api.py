@@ -4,6 +4,7 @@ from dataset_creation.kb_crawl.comet.src.data.utils import TextEncoder
 import dataset_creation.kb_crawl.comet.src.data.config as cfg
 import dataset_creation.kb_crawl.comet.src.data.data as data
 import dataset_creation.kb_crawl.comet.src.models.models as models
+import dataset_creation.kb_crawl.comet.src.models.utils as model_utils
 from dataset_creation.kb_crawl.comet.src.evaluate.sampler import BeamSampler, GreedySampler, TopKSampler
 
 import dataset_creation.kb_crawl.comet.utils.utils as utils
@@ -237,6 +238,11 @@ def set_conceptnet_inputs(input_event, relation, text_encoder, max_e1, max_r, fo
 
     return batch, abort
 
+def encode_sequence(input, encoder, data_loader):
+    tokens = encoder.encode([input], verbose=False)[0]
+    XMB = torch.LongTensor(tokens)
+    XMB = model_utils.prepare_position_embeddings(None, data_loader.vocab_encoder, XMB.unsqueeze(-1))
+    return XMB
 
 def print_conceptnet_sequence(sequence_object):
     e1 = sequence_object["e1"]
