@@ -194,6 +194,44 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
 
     return avg_responses
 
+def fair_seq_no_neutral_sent_pair_classification(sentence_pairs, model, gpu_available, logger):
+    if gpu_available:
+        model.cuda()
+        logger.info("successfully moved model to gpu")
+
+    model.eval()
+
+    avg_responses = {}
+    counter = 0
+    for key, corr_incorr_pair in sentence_pairs.items():
+        avg_responses[key] = {'correct':{'label_list':[], 'avg_accuracy':-1},
+                              'incorrect':{'label_list':[], 'avg_accuracy':-1}}
+        # Correct pair (true label: entailment) results
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['correct']], pad_idx=1)
+        logprobs = model.predict('sentence_classification_head', batch)
+        
+        result_list = logprobs.argmax(dim=1).tolist()
+        avg_accuracy = result_list.count(1)/len(result_list)
+
+        avg_responses[key]['correct']['label_list'] = result_list
+        avg_responses[key]['correct']['avg_accuracy'] = avg_accuracy
+        
+        # Incorrect pair (true label: contradiction) results
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['incorrect']], pad_idx=1)
+        logprobs = model.predict('sentence_classification_head', batch)
+        
+        result_list = logprobs.argmax(dim=1).tolist()
+        avg_accuracy = result_list.count(0)/len(result_list)
+
+        avg_responses[key]['incorrect']['label_list'] = result_list
+        avg_responses[key]['incorrect']['avg_accuracy'] = avg_accuracy
+        
+        counter += 1
+        if counter % 240 == 0:
+            logger.info("finished 10 more")
+
+    return avg_responses
+
 def convert_bi_statistic_results_into_df(result_dictionary):
     truism_numbers = []
     perturbations = []
