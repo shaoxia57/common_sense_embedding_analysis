@@ -4,7 +4,7 @@ import logging
 import random
 import string
 import torch
-from transformers import GPT2Tokenizer, GPT2LMHeadModel
+from transformers import GPT2Tokenizer, GPT2LMHeadModel, OpenAIGPTTokenizer, OpenAIGPTLMHeadModel
 import experiment_utils as utils
 
 sys.path.append('../')
@@ -36,8 +36,8 @@ def main():
     chars = list(string.ascii_uppercase.replace("A", "").replace("I", "").replace("U", ""))
     number_of_trials = 10
 
-    tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-    model = GPT2LMHeadModel.from_pretrained("../../models/gpt-2/pytorch_model.bin")
+    tokenizer = GPT2Tokenizer.from_pretrained('../../models/gpt-2/')
+    model = GPT2LMHeadModel.from_pretrained("../../models/gpt-2/")
 
     with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
         physical_sents = json.load(f)
