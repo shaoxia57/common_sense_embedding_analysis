@@ -40,8 +40,8 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
-    model = BertForMaskedLM.from_pretrained('bert-large-cased')
+    tokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
+    model = BertForMaskedLM.from_pretrained('bert-large-uncased')
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
                                                                 min_length=3,
