@@ -5,6 +5,7 @@ import sys
 
 sys.path.append('../')
 from dataset_creation.generate_data import pad_string
+import dataset_creation.kb_crawl.comet.src.api as comet_api
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -181,6 +182,32 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
 
                 tokenized_sentence = tokenize_sentence(sentence, tokenizer)
                 tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenized_sentence))
+                
+                if version in prepped_sentences[key]:
+                    prepped_sentences[key][version].append(tensor)
+                else:
+                    prepped_sentences[key][version] = [tensor]
+        
+
+    return prepped_sentences
+
+def prepare_truism_data_for_sentence_scoring_comet(sentences, possible_characters, encoder, data_loader, num_trials):
+
+    character_pairs = []
+    for char in possible_characters:
+        for char_2 in possible_characters:
+            if char != char_2:
+                character_pairs.append((char, char_2))
+
+    prepped_sentences = {}
+    for key in sentences:
+        prepped_sentences[key] = {}
+        for character_pair in random.sample(character_pairs, num_trials):
+            for version in sentences[key]:
+                sentence = sentences[key][version]
+                sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
+                tokenized_sentence = comet_api.encode_sequence(sentence, encoder, data_loader)
+                tensor = torch.tensor(tokenized_sentence)
                 
                 if version in prepped_sentences[key]:
                     prepped_sentences[key][version].append(tensor)

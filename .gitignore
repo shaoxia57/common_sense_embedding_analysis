@@ -1,4 +1,9 @@
 **/.DS_Store
 clouds
 .ipynb_checkpoints
-__pycache__
+**/__pycache__
+.vscode
+
+dataset_creation/kb_crawl/comet/pretrained_models
+dataset_creation/kb_crawl/comet/data
+dataset_creation/kb_crawl/comet/model

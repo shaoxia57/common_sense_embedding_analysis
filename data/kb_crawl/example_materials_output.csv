@@ -1,61 +1,174 @@
-material_1,material_2,property comparison
-glass,wood,more clear
-glass,tree,more clear
-glass,oxegen,more clear
-glass,silica,more clear
-glass,sand,more clear
-glass,cow skin,more clear
-glass,many things,more clear
-glass,metal,more clear
-glass,molten sand,more clear
-glass,carbon,more clear
-glass,aluminium,more clear
-glass,parts,more clear
-glass,H2O,more clear
-glass,oxygen,more clear
-glass,clay,more clear
-glass,tar,more clear
-glass,cellulose,more clear
-glass,gases,more clear
-glass,hydrogen and oxygen,more clear
-glass,Metal,more clear
-glass,trees,more clear
-glass,silica,more dirty
-glass,molten sand,more dirty
-glass,sand,more dirty
-glass,silica,more clean
-glass,molten sand,more clean
-glass,wood,more clean
-glass,sand,more clean
-glass,concrete,more clean
-glass,silk,more clean
-glass,leather,more clean
-glass,keratin,more clean
-glass,silica,more opaque
-glass,molten sand,more opaque
-glass,sand,more opaque
-glass,H2O,more opaque
-glass,Carbon,more opaque
-glass,oxegen,more opaque
-glass,hydrogen and oxygen,more opaque
-glass,oxygen,more opaque
-glass,straw,more sharp
-concrete,silica,more opaque
-concrete,molten sand,more opaque
-concrete,sand,more opaque
-concrete,air,more opaque
-concrete,H2O,more opaque
-concrete,Carbon,more opaque
-concrete,oxegen,more opaque
-concrete,hydrogen and oxygen,more opaque
-concrete,oxygen,more opaque
-metal,ink and paper,more heavy
-metal,silica,more opaque
-metal,molten sand,more opaque
-metal,sand,more opaque
-metal,air,more opaque
-metal,H2O,more opaque
-metal,Carbon,more opaque
-metal,oxegen,more opaque
-metal,hydrogen and oxygen,more opaque
-metal,oxygen,more opaque
+material_1,material_2,property comparison,material_1 token,material_2 token,property token
+glass,water,more clear,[1846],[1353],"[725, 1949]"
+glass,cloud,more clear,[1846],[4635],"[725, 1949]"
+glass,vapor,more clear,[1846],[21430],"[725, 1949]"
+glass,gas,more clear,[1846],[3938],"[725, 1949]"
+glass,hydrogen and oxygen,more clear,[1846],"[26696, 488, 9637]","[725, 1949]"
+glass,glass,more clear,[1846],[1846],"[725, 1949]"
+glass,fog,more clear,[1846],[6130],"[725, 1949]"
+glass,sand,more clear,[1846],[4062],"[725, 1949]"
+glass,plastic,more clear,[1846],[4438],"[725, 1949]"
+glass,liquid,more clear,[1846],[5379],"[725, 1949]"
+glass,polymer,more clear,[1846],"[14444, 3450]","[725, 1949]"
+glass,ceramic,more clear,[1846],[19471],"[725, 1949]"
+glass,rubber,more clear,[1846],[8999],"[725, 1949]"
+glass,silicon,more clear,[1846],[36980],"[725, 1949]"
+glass,metal,more clear,[1846],[2817],"[725, 1949]"
+glass,sugar,more clear,[1846],[6444],"[725, 1949]"
+glass,fiber,more clear,[1846],[18007],"[725, 1949]"
+glass,cell,more clear,[1846],[2776],"[725, 1949]"
+glass,silk,more clear,[1846],[4772],"[725, 1949]"
+glass,latex,more clear,[1846],[27139],"[725, 1949]"
+glass,clay,more clear,[1846],[5538],"[725, 1949]"
+glass,fabric,more clear,[1846],[5707],"[725, 1949]"
+glass,material,more clear,[1846],[5491],"[725, 1949]"
+glass,cloth,more clear,[1846],[4850],"[725, 1949]"
+glass,stone,more clear,[1846],[2090],"[725, 1949]"
+glass,person,more clear,[1846],[1800],"[725, 1949]"
+glass,concrete,more clear,[1846],[5721],"[725, 1949]"
+glass,dirt,more clear,[1846],[3809],"[725, 1949]"
+glass,paper,more clear,[1846],[2405],"[725, 1949]"
+glass,cow hair,more clean,[1846],"[9781, 1133]","[725, 2698]"
+glass,plastic,more clean,[1846],[4438],"[725, 2698]"
+glass,dirt,more clean,[1846],[3809],"[725, 2698]"
+glass,cotton,more clean,[1846],[7034],"[725, 2698]"
+glass,animal,more clean,[1846],[3880],"[725, 2698]"
+glass,soil,more clean,[1846],[8536],"[725, 2698]"
+glass,mold,more clean,[1846],[16382],"[725, 2698]"
+glass,mud,more clean,[1846],[5884],"[725, 2698]"
+glass,clothe,more clean,[1846],"[796, 481]","[725, 2698]"
+glass,fiber,more clean,[1846],[18007],"[725, 2698]"
+glass,garlic,more clean,[1846],[15022],"[725, 2698]"
+glass,bacteria,more clean,[1846],[23765],"[725, 2698]"
+glass,animal cell,more clean,[1846],"[3880, 2776]","[725, 2698]"
+glass,blood,more clean,[1846],[1377],"[725, 2698]"
+glass,evil,more clean,[1846],[3402],"[725, 2698]"
+glass,cow fat,more clean,[1846],"[9781, 4739]","[725, 2698]"
+glass,sweat and other bodily fluids,more clean,[1846],"[3639, 488, 728, 17489, 21569]","[725, 2698]"
+glass,body oil,more clean,[1846],"[956, 6020]","[725, 2698]"
+glass,human blood,more clean,[1846],"[1879, 1377]","[725, 2698]"
+glass,alcohol,more clean,[1846],[6542],"[725, 2698]"
+glass,plastic,more dirty,[1846],[4438],"[725, 3900]"
+glass,cleanser and cleanser,more dirty,[1846],"[7265, 1617, 488, 7265, 1617]","[725, 3900]"
+glass,detergent and laundry detergent,more dirty,[1846],"[39711, 488, 9222, 39711]","[725, 3900]"
+glass,cotton,more dirty,[1846],[7034],"[725, 3900]"
+glass,chemical,more dirty,[1846],[12620],"[725, 3900]"
+glass,soil,more dirty,[1846],[8536],"[725, 3900]"
+glass,linen,more dirty,[1846],[11161],"[725, 3900]"
+glass,fiber,more dirty,[1846],[18007],"[725, 3900]"
+glass,clothe,more dirty,[1846],"[796, 481]","[725, 3900]"
+glass,dirt,more dirty,[1846],[3809],"[725, 3900]"
+glass,light,more dirty,[1846],[1092],"[725, 3900]"
+glass,polymer,more dirty,[1846],"[14444, 3450]","[725, 3900]"
+glass,carbon,more dirty,[1846],[19885],"[725, 3900]"
+glass,water,more dirty,[1846],[1353],"[725, 3900]"
+glass,hydrogen and oxygen,more dirty,[1846],"[26696, 488, 9637]","[725, 3900]"
+glass,electron,more dirty,[1846],"[7913, 504]","[725, 3900]"
+glass,energy,more dirty,[1846],[2940],"[725, 3900]"
+glass,silicon,more dirty,[1846],[36980],"[725, 3900]"
+glass,glass,more dirty,[1846],[1846],"[725, 3900]"
+glass,muscle,more dirty,[1846],[5129],"[725, 3900]"
+glass,leather and muscle,more dirty,[1846],"[3349, 488, 5129]","[725, 3900]"
+glass,animal cell,more dirty,[1846],"[3880, 2776]","[725, 3900]"
+glass,fur,more dirty,[1846],[6172],"[725, 3900]"
+glass,metal,more dirty,[1846],[2817],"[725, 3900]"
+glass,body odor,more dirty,[1846],"[956, 11837]","[725, 3900]"
+glass,denim,more dirty,[1846],[14350],"[725, 3900]"
+glass,fluid,more dirty,[1846],[9857],"[725, 3900]"
+glass,skin,more dirty,[1846],[1563],"[725, 3900]"
+glass,meat,more dirty,[1846],[5089],"[725, 3900]"
+glass,cleanness,more dirty,[1846],"[7265, 1125]","[725, 3900]"
+glass,detergent,more dirty,[1846],[39711],"[725, 3900]"
+glass,metal,more smooth,[1846],[2817],"[725, 3866]"
+glass,sugar,more smooth,[1846],[6444],"[725, 3866]"
+glass,cow skin,more smooth,[1846],"[9781, 1563]","[725, 3866]"
+glass,grain,more smooth,[1846],[13569],"[725, 3866]"
+glass,plastic,more smooth,[1846],[4438],"[725, 3866]"
+glass,silicon,more smooth,[1846],[36980],"[725, 3866]"
+glass,cell,more smooth,[1846],[2776],"[725, 3866]"
+glass,clay,more smooth,[1846],[5538],"[725, 3866]"
+glass,sand,more smooth,[1846],[4062],"[725, 3866]"
+glass,carbon,more smooth,[1846],[19885],"[725, 3866]"
+glass,thread,more smooth,[1846],[9264],"[725, 3866]"
+glass,cotton,more smooth,[1846],[7034],"[725, 3866]"
+glass,leather,more smooth,[1846],[3349],"[725, 3866]"
+glass,silk,more smooth,[1846],[4772],"[725, 3866]"
+glass,fabric,more smooth,[1846],[5707],"[725, 3866]"
+glass,denim,more smooth,[1846],[14350],"[725, 3866]"
+glass,wool,more smooth,[1846],[10726],"[725, 3866]"
+glass,fiber,more smooth,[1846],[18007],"[725, 3866]"
+glass,water,more smooth,[1846],[1353],"[725, 3866]"
+glass,glass or ceramic,more smooth,[1846],"[1846, 522, 19471]","[725, 3866]"
+glass,rock,more smooth,[1846],[2594],"[725, 3866]"
+glass,polymer,more smooth,[1846],"[14444, 3450]","[725, 3866]"
+glass,foam,more smooth,[1846],[12436],"[725, 3866]"
+glass,rubber,more smooth,[1846],[8999],"[725, 3866]"
+glass,plastic and hard,more smooth,[1846],"[4438, 488, 1162]","[725, 3866]"
+glass,animal skin,more smooth,[1846],"[3880, 1563]","[725, 3866]"
+glass,egg,more smooth,[1846],[8441],"[725, 3866]"
+glass,shell,more smooth,[1846],[6515],"[725, 3866]"
+glass,plastic,more empty,[1846],[4438],"[725, 2203]"
+glass,flour,more empty,[1846],[17918],"[725, 2203]"
+glass,fabric,more empty,[1846],[5707],"[725, 2203]"
+glass,cotton,more empty,[1846],[7034],"[725, 2203]"
+glass,sugar,more empty,[1846],[6444],"[725, 2203]"
+glass,make,more empty,[1846],[925],"[725, 2203]"
+glass,cloth,more empty,[1846],[4850],"[725, 2203]"
+glass,material,more empty,[1846],[5491],"[725, 2203]"
+glass,clay,more empty,[1846],[5538],"[725, 2203]"
+glass,different size,more empty,[1846],"[1685, 3338]","[725, 2203]"
+glass,cell,more empty,[1846],[2776],"[725, 2203]"
+glass,water,more empty,[1846],[1353],"[725, 2203]"
+glass,person,more empty,[1846],[1800],"[725, 2203]"
+glass,gas,more empty,[1846],[3938],"[725, 2203]"
+glass,one type of food,more empty,[1846],"[566, 3594, 498, 2044]","[725, 2203]"
+glass,metal,more empty,[1846],[2817],"[725, 2203]"
+glass,sand,more empty,[1846],[4062],"[725, 2203]"
+glass,matter,more empty,[1846],[1621],"[725, 2203]"
+concrete,glass,more opaque,[5721],[1846],"[725, 21967]"
+concrete,plastic,more opaque,[5721],[4438],"[725, 21967]"
+concrete,metal,more opaque,[5721],[2817],"[725, 21967]"
+concrete,wood,more opaque,[5721],[2510],"[725, 21967]"
+concrete,water,more opaque,[5721],[1353],"[725, 21967]"
+concrete,silicon,more opaque,[5721],[36980],"[725, 21967]"
+concrete,material,more opaque,[5721],[5491],"[725, 21967]"
+concrete,steel,more opaque,[5721],[4085],"[725, 21967]"
+concrete,crystal,more opaque,[5721],[5334],"[725, 21967]"
+concrete,transparent glass,more opaque,[5721],"[13070, 1846]","[725, 21967]"
+concrete,polymer,more opaque,[5721],"[14444, 3450]","[725, 21967]"
+concrete,sand,more opaque,[5721],[4062],"[725, 21967]"
+concrete,carbon,more opaque,[5721],[19885],"[725, 21967]"
+concrete,liquid,more opaque,[5721],[5379],"[725, 21967]"
+concrete,rubber,more opaque,[5721],[8999],"[725, 21967]"
+concrete,clay,more opaque,[5721],[5538],"[725, 21967]"
+concrete,paper,more opaque,[5721],[2405],"[725, 21967]"
+concrete,ceramic,more opaque,[5721],[19471],"[725, 21967]"
+metal,electron,more heavy,[2817],"[7913, 504]","[725, 2262]"
+metal,hydrogen and oxygen,more heavy,[2817],"[26696, 488, 9637]","[725, 2262]"
+metal,energy,more heavy,[2817],[2940],"[725, 2262]"
+metal,particle,more heavy,[2817],[24757],"[725, 2262]"
+metal,carbon,more heavy,[2817],[19885],"[725, 2262]"
+metal,light,more heavy,[2817],[1092],"[725, 2262]"
+metal,electricity,more heavy,[2817],[8120],"[725, 2262]"
+metal,silicon,more heavy,[2817],[36980],"[725, 2262]"
+metal,wavelength,more heavy,[2817],"[37117, 663]","[725, 2262]"
+metal,water,more heavy,[2817],[1353],"[725, 2262]"
+metal,glass,more opaque,[2817],[1846],"[725, 21967]"
+metal,plastic,more opaque,[2817],[4438],"[725, 21967]"
+metal,metal,more opaque,[2817],[2817],"[725, 21967]"
+metal,wood,more opaque,[2817],[2510],"[725, 21967]"
+metal,water,more opaque,[2817],[1353],"[725, 21967]"
+metal,silicon,more opaque,[2817],[36980],"[725, 21967]"
+metal,material,more opaque,[2817],[5491],"[725, 21967]"
+metal,steel,more opaque,[2817],[4085],"[725, 21967]"
+metal,crystal,more opaque,[2817],[5334],"[725, 21967]"
+metal,transparent glass,more opaque,[2817],"[13070, 1846]","[725, 21967]"
+metal,polymer,more opaque,[2817],"[14444, 3450]","[725, 21967]"
+metal,sand,more opaque,[2817],[4062],"[725, 21967]"
+metal,silicon and carbon dioxide,more opaque,[2817],"[36980, 488, 19885, 592, 26691]","[725, 21967]"
+metal,carbon,more opaque,[2817],[19885],"[725, 21967]"
+metal,liquid,more opaque,[2817],[5379],"[725, 21967]"
+metal,rubber,more opaque,[2817],[8999],"[725, 21967]"
+metal,clay,more opaque,[2817],[5538],"[725, 21967]"
+metal,paper,more opaque,[2817],[2405],"[725, 21967]"
+metal,ceramic and plastic,more opaque,[2817],"[19471, 488, 4438]","[725, 21967]"
