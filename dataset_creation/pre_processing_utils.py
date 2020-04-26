@@ -45,22 +45,29 @@ def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_en
                 parts = statement.split(",")
                 masked_portion = parts[len(parts)-1]
 
-                right_answer = candidate_answers[0]
-                wrong_answer = candidate_answers[1]
+                right_answer = None
+                wrong_answer = None
+                for answer in candidate_answers:
+                    if pad_string(answer, False) in masked_portion:
+                        masked_portion = masked_portion.replace(" " + answer + " ", " <mask> ")
+                        right_answer = answer
+                    else:
+                        wrong_answer = answer
 
-                masked_portion = masked_portion.replace(" " + right_answer + " ", " <mask> ")
-                
                 masked_statement = ""
                 for i in range(len(parts)-1):
                     masked_statement += parts[i]
                     masked_statement += ","
 
-                masked_statement += masked_portion
-                masked_examples[key] = []
-                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                    new_masked_statement = masked_statement.replace("A", entity_pair[0])
-                    new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
-                    masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
+                if right_answer and wrong_answer:
+                    masked_statement += masked_portion
+                    masked_examples[key] = []
+                    for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                        new_masked_statement = masked_statement.replace("A", entity_pair[0])
+                        new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                        masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
+
+
 
     return masked_examples
 
