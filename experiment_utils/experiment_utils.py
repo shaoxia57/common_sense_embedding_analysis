@@ -235,7 +235,7 @@ def fair_seq_no_neutral_sent_pair_classification(sentence_pairs, model, gpu_avai
 def convert_bi_statistic_results_into_df(result_dictionary):
     truism_numbers = []
     perturbations = []
-    premises = []
+    premises = []s
     avg_binary_scores = []
     avg_ratio_scores = []
     for key in result_dictionary:

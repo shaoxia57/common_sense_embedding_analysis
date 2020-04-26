@@ -5,11 +5,12 @@ import string
 import sys
 import torch
 import experiment_utils as utils
+from transformers import AlbertTokenizer, AlbertForMaskedLM
 
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
 
-def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger):
+def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, number_of_entity_trials, logger):
     dataset = proc.prepare_masked_instances(sentences=sentences, 
                                             config=config, 
                                             fictitious_entities=fictitious_entities,
@@ -17,9 +18,10 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     logger.info("finished creating dataset")
 
-    perf = utils.fair_seq_masked_word_prediction(masked_examples=dataset,
+    perf = utils.albert_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
-                                                 gpu_available=torch.cuda.is_available(),
+                                                 tokenizer=tokenizer,
+                                                 gpu_available=False,
                                                  top_n=100,
                                                  logger=logger)
 
@@ -38,7 +40,8 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.base')
+    tokenizer = AlbertTokenizer.from_pretrained('albert-xxlarge-v2')
+    model = AlbertForMaskedLM.from_pretrained('albert-xxlarge-v2')
 
     names = proc.generate_pairs_of_random_names(number_of_pairs=100)
         
@@ -50,14 +53,15 @@ def main():
 
     logger.info("finished reading in social data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=model, 
+                             tokenizer=tokenizer,
                              fictitious_entities=names, 
                              sentences=social_sents, 
                              config=social_config, 
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base_w_name/social_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/albert_w_name/alberta_social_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving social results")
