@@ -43,7 +43,7 @@ def main():
                                                                 max_length=12,
                                                                 character_set=chars)
 
-    with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
+    with open("../data/generation_test_data/physical_easy_data_sentences.json", "r") as f:
         physical_sents = json.load(f)
     
 
@@ -55,13 +55,13 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/roberta/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta_easy/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical results")
 
         
-    with open("../data/generation_test_data/material_data_sentences.json", "r") as f:
+    with open("../data/generation_test_data/material_easy_data_sentences.json", "r") as f:
         material_sents = json.load(f)
 
     logger.info("finished reading in material data")
@@ -72,12 +72,12 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/roberta/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta_easy/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving material results")
         
-    with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
+    with open("../data/generation_test_data/social_easy_data_sentences.json", "r") as f:
         social_sents = json.load(f)
 
     logger.info("finished reading in social data")
@@ -88,7 +88,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/entailment_result_data/roberta/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/entailment_result_data/roberta_easy/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving social results")
