@@ -216,7 +216,6 @@ def get_conceptnet_sequence(e1, model, sampler, data_loader, text_encoder, relat
 
 def set_conceptnet_inputs(input_event, relation, text_encoder, max_e1, max_r, force):
     abort = False
-
     e1_tokens, rel_tokens, _ = data.conceptnet_data.do_example(text_encoder, input_event, relation, None)
 
     if len(e1_tokens) >  max_e1:
@@ -239,8 +238,13 @@ def set_conceptnet_inputs(input_event, relation, text_encoder, max_e1, max_r, fo
     return batch, abort
 
 def encode_sequence(input, encoder, data_loader):
+    max_len = data_loader.max_sequence if hasattr(data_loader, 'max_sequence') else None
+
     tokens = encoder.encode([input], verbose=False)[0]
-    XMB = torch.LongTensor(tokens)
+    if max_len and len(tokens) > max_len:
+        XMB = torch.LongTensor(tokens[:max_len])
+    else:
+        XMB = torch.LongTensor(tokens)
     XMB = model_utils.prepare_position_embeddings(None, data_loader.vocab_encoder, XMB.unsqueeze(-1))
     return XMB
 

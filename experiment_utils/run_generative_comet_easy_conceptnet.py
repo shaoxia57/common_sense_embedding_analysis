@@ -42,6 +42,7 @@ def main():
 
     tokenizer = comet_model.text_encoder
     data_loader = comet_model.data_loader
+    data_loader.max_sequence=31
     model = comet_model.model
 
     with open("data/generation_test_data/physical_easy_data_sentences.json", "r") as f:
