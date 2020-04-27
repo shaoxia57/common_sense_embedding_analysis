@@ -44,7 +44,7 @@ def main():
     data_loader = comet_model.data_loader
     model = comet_model.model
 
-    with open("data/generation_test_data/physical_data_sentences.json", "r") as f:
+    with open("data/generation_test_data/physical_easy_data_sentences.json", "r") as f:
         physical_sents = json.load(f)
 
     logger.info("finished reading in physical data")
@@ -57,13 +57,13 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/physical_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("data/generation_result_data/comet_easy_conceptnet/physical_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
 
         
-    with open("data/generation_test_data/material_data_sentences.json", "r") as f:
+    with open("data/generation_test_data/material_easy_data_sentences.json", "r") as f:
         material_sents = json.load(f)
         
 
@@ -77,12 +77,12 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/material_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("data/generation_result_data/comet_easy_conceptnet/material_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving material dataset results")
         
-    with open("data/generation_test_data/social_data_sentences.json", "r") as f:
+    with open("data/generation_test_data/social_easy_data_sentences.json", "r") as f:
         social_sents = json.load(f)
 
     logger.info("finished reading in social data")
@@ -95,7 +95,7 @@ def main():
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/social_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("data/generation_result_data/comet_easy_conceptnet/social_perf_{}.csv".format(number_of_trials),
                      index=False)
 
     logger.info("finished saving social dataset results")
