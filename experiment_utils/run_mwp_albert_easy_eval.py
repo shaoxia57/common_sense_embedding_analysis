@@ -5,21 +5,23 @@ import string
 import sys
 import torch
 import experiment_utils as utils
+from transformers import AlbertTokenizer, AlbertForMaskedLM
 
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
 
-def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger):
+def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, number_of_entity_trials, logger):
     dataset = proc.prepare_masked_easy_instances(sentences=sentences, 
-                                                 config=config, 
-                                                 fictitious_entities=fictitious_entities,
-                                                 num_entity_trials=number_of_entity_trials)    
+                                            config=config, 
+                                            fictitious_entities=fictitious_entities,
+                                            num_entity_trials=number_of_entity_trials)    
 
     logger.info("finished creating dataset")
 
-    perf = utils.fair_seq_masked_word_prediction(masked_examples=dataset,
+    perf = utils.albert_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
-                                                 gpu_available=torch.cuda.is_available(),
+                                                 tokenizer=tokenizer,
+                                                 gpu_available=False,
                                                  top_n=100,
                                                  logger=logger)
 
@@ -38,13 +40,14 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.base')
+    tokenizer = AlbertTokenizer.from_pretrained('albert-xxlarge-v2')
+    model = AlbertForMaskedLM.from_pretrained('albert-xxlarge-v2')
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
                                                                 min_length=3,
                                                                 max_length=12,
                                                                 character_set=chars)
-
+    
     with open("../data/truism_data/easy_truism_data/easy_physical_data_sentences.json", "r") as f:
         physical_sents = json.load(f)
         
@@ -53,17 +56,18 @@ def main():
 
     logger.info("finished reading in physical data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=model, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=physical_sents, 
                              config=physical_config, 
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base_easy/easy_physical_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/albert_easy/albert_physical_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
-    logger.info("finished saving physical dataset results")
+    logger.info("finished saving physical results")
 
         
     with open("../data/truism_data/easy_truism_data/easy_material_data_sentences.json", "r") as f:
@@ -74,17 +78,18 @@ def main():
 
     logger.info("finished reading in material data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=model, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=material_sents, 
                              config=material_config, 
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base_easy/easy_material_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/albert_easy/albert_material_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
-    logger.info("finished saving physical material results")
+    logger.info("finished saving material results")
         
     with open("../data/truism_data/easy_truism_data/easy_social_data_sentences.json", "r") as f:
         social_sents = json.load(f)
@@ -94,17 +99,18 @@ def main():
 
     logger.info("finished reading in social data")
 
-    output_df = run_pipeline(model=roberta, 
+    output_df = run_pipeline(model=model, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=social_sents, 
                              config=social_config, 
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base_easy/easy_social_perf_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/albert_easy/alberta_social_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
-    logger.info("finished saving physical social results")
+    logger.info("finished saving social results")
 
 if __name__ == "__main__":
     main()
