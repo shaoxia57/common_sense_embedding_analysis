@@ -8,7 +8,7 @@ import torch
 import experiment_utils as utils
 
 sys.path.append(os.getcwd())
-from dataset_creation.kb_crawl.utils.comet_transformers import CometAtomicModel
+from dataset_creation.kb_crawl.utils.comet_transformers import CometConceptnetModel
 from dataset_creation import pre_processing_utils as proc
 
 def run_pipeline(model, tokenizer, data_loader, possible_chars, sentences, number_of_trials, logger):
