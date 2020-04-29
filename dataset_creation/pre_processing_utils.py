@@ -6,7 +6,7 @@ import re
 
 sys.path.append('../')
 from dataset_creation.generate_data import pad_string
-import dataset_creation.kb_crawl.comet.src.api as comet_api
+from dataset_creation.kb_crawl.comet.src import api as comet_api
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))

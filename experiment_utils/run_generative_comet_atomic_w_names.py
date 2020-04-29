@@ -7,7 +7,7 @@ import string
 import torch
 import experiment_utils as utils
 
-sys.path.append(os.getcwd())
+sys.path.append('../')
 from dataset_creation.kb_crawl.utils.comet_transformers import CometAtomicModel
 from dataset_creation import pre_processing_utils as proc
 
