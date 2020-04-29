@@ -53,7 +53,7 @@ def main():
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              data_loader=data_loader,
-                             possible_chars=chars, 
+                             possible_chars=names, 
                              sentences=social_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
