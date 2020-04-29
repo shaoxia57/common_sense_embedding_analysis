@@ -33,7 +33,6 @@ def main():
                         datefmt = '%m/%d/%Y %H:%M:%S',
                         level = logging.INFO)
     logger = logging.getLogger(__name__)
-    chars = list(string.ascii_uppercase.replace("A", "").replace("I", "").replace("U", ""))
     number_of_trials = 10
 
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')

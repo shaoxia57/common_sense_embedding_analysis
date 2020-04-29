@@ -2,10 +2,11 @@ import torch
 import random
 import pandas as pd
 import sys
+import re
 
 sys.path.append('../')
 from dataset_creation.generate_data import pad_string
-import dataset_creation.kb_crawl.comet.src.api as comet_api
+#import dataset_creation.kb_crawl.comet.src.api as comet_api
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -63,8 +64,8 @@ def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_en
                     masked_statement += masked_portion
                     masked_examples[key] = []
                     for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                        new_masked_statement = masked_statement.replace("A", entity_pair[0])
-                        new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                        new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement).capitalize()
+                        new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement)
                         masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
 
 
@@ -100,11 +101,11 @@ def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_
                         wrong_answer = answer
 
                 if right_answer and wrong_answer:
-                    masked_statement = premise + ", " + conclusion
+                    masked_statement = premise + "," + conclusion
                     masked_examples[key] = []
                     for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                        new_masked_statement = masked_statement.replace("A", entity_pair[0])
-                        new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                        new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement).capitalize()
+                        new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement)
                         masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
 
     return masked_examples
@@ -153,8 +154,10 @@ def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
         conclusion = correct_statement.split(",")[1][4:]+'.'
                 
         for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_premise = re.sub(r"\bA\b", entity_pair[0], premise)
+            filled_premise = re.sub(r"\bB\b", entity_pair[1], filled_premise).capitalize()
+            filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
+            filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion)
             sentence_pairs[index]['correct'].append((filled_premise, filled_conclusion))
             
         incorrect_statement = corr_incorr_pair['incorrect']
@@ -162,8 +165,10 @@ def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
         conclusion = incorrect_statement.split(",")[1][4:]+'.'
                 
         for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_premise = re.sub(r"\bA\b", entity_pair[0], premise)
+            filled_premise = re.sub(r"\bB\b", entity_pair[1], filled_premise).capitalize()
+            filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
+            filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion)
             sentence_pairs[index]['incorrect'].append((filled_premise, filled_conclusion))
             
     return sentence_pairs
@@ -173,11 +178,14 @@ def tokenize_sentence(sentence, tokenizer):
 
 def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tokenizer, num_trials):
 
-    character_pairs = []
-    for char in possible_characters:
-        for char_2 in possible_characters:
-            if char != char_2:
-                character_pairs.append((char, char_2))
+    if len(possible_characters[0]) == 1:
+        character_pairs = []
+        for char in possible_characters:
+            for char_2 in possible_characters:
+                if char != char_2:
+                    character_pairs.append((char, char_2))
+    else:
+        character_pairs = possible_characters
 
     prepped_sentences = {}
     for key in sentences:
@@ -185,7 +193,8 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
+                sentence = re.sub(r"\bA\b", character_pair[0], sentence).capitalize()
+                sentence = re.sub(r"\bB\b", character_pair[1], sentence)
 
                 tokenized_sentence = tokenize_sentence(sentence, tokenizer)
                 tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenized_sentence))
@@ -212,7 +221,8 @@ def prepare_truism_data_for_sentence_scoring_comet(sentences, possible_character
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
+                sentence = re.sub(r"\bA\b", character_pair[0], sentence).capitalize()
+                sentence = re.sub(r"\bB\b", character_pair[1], sentence)
                 tokenized_sentence = comet_api.encode_sequence(sentence, encoder, data_loader)
                 tensor = torch.tensor(tokenized_sentence)
                 
