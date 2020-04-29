@@ -190,8 +190,8 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = re.sub(r"\bA\b", entity_pair[0], sentence)
-                sentence = re.sub(r"\bB\b", entity_pair[1], sentence)
+                sentence = re.sub(r"\bA\b", character_pair[0], sentence)
+                sentence = re.sub(r"\bB\b", character_pair[1], sentence)
 
                 tokenized_sentence = tokenize_sentence(sentence, tokenizer)
                 tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenized_sentence))
@@ -218,8 +218,8 @@ def prepare_truism_data_for_sentence_scoring_comet(sentences, possible_character
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = re.sub(r"\bA\b", entity_pair[0], sentence)
-                sentence = re.sub(r"\bB\b", entity_pair[1], sentence)
+                sentence = re.sub(r"\bA\b", character_pair[0], sentence)
+                sentence = re.sub(r"\bB\b", character_pair[1], sentence)
                 tokenized_sentence = comet_api.encode_sequence(sentence, encoder, data_loader)
                 tensor = torch.tensor(tokenized_sentence)
                 
