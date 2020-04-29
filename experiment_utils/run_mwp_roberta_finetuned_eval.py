@@ -42,7 +42,7 @@ def main():
 
     roberta = RobertaModel.from_pretrained(
     '../../fairseq/fine-tuned_roberta/',
-    checkpoint_file='fine_tuned_checkpoint_best.pt',
+    checkpoint_file='base_fine-tuned_best.pt',
     data_name_or_path='../../fairseq/data-bin/probes')
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
@@ -68,7 +68,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta/physical_perf_ft_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-base/physical_perf_ft_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
@@ -92,7 +92,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta/material_perf_ft_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-base/material_perf_ft_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical material results")
@@ -115,7 +115,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta/social_perf_ft_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-base/social_perf_ft_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical social results")
