@@ -64,8 +64,8 @@ def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_en
                     masked_statement += masked_portion
                     masked_examples[key] = []
                     for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                        new_masked_statement = masked_statement.replace("A", entity_pair[0])
-                        new_masked_statement = new_masked_statement.replace("B", entity_pair[1])
+                       new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
+                        new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement)
                         masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
 
 
@@ -154,8 +154,10 @@ def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
         conclusion = correct_statement.split(",")[1][4:]+'.'
                 
         for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_premise = re.sub(r"\bA\b", entity_pair[0], premise)
+            filled_premise = re.sub(r"\bB\b", entity_pair[1], filled_premise).capitalize()
+            filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
+            filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion).capitalize()
             sentence_pairs[index]['correct'].append((filled_premise, filled_conclusion))
             
         incorrect_statement = corr_incorr_pair['incorrect']
@@ -163,8 +165,10 @@ def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
         conclusion = incorrect_statement.split(",")[1][4:]+'.'
                 
         for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-            filled_premise = premise.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
-            filled_conclusion = conclusion.replace("A", entity_pair[0]).replace("B", entity_pair[1]).capitalize()
+            filled_premise = re.sub(r"\bA\b", entity_pair[0], premise)
+            filled_premise = re.sub(r"\bB\b", entity_pair[1], filled_premise).capitalize()
+            filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
+            filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion).capitalize()
             sentence_pairs[index]['incorrect'].append((filled_premise, filled_conclusion))
             
     return sentence_pairs
@@ -186,7 +190,8 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
+                sentence = re.sub(r"\bA\b", entity_pair[0], sentence)
+                sentence = re.sub(r"\bB\b", entity_pair[1], sentence)
 
                 tokenized_sentence = tokenize_sentence(sentence, tokenizer)
                 tensor = torch.tensor(tokenizer.convert_tokens_to_ids(tokenized_sentence))
