@@ -6,7 +6,7 @@ import re
 
 sys.path.append('../')
 from dataset_creation.generate_data import pad_string
-#import dataset_creation.kb_crawl.comet.src.api as comet_api
+from dataset_creation.kb_crawl.comet.src import api as comet_api
 
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
@@ -209,11 +209,14 @@ def prepare_truism_data_for_sentence_scoring(sentences, possible_characters, tok
 
 def prepare_truism_data_for_sentence_scoring_comet(sentences, possible_characters, encoder, data_loader, num_trials):
 
-    character_pairs = []
-    for char in possible_characters:
-        for char_2 in possible_characters:
-            if char != char_2:
-                character_pairs.append((char, char_2))
+    if len(possible_characters[0]) == 1:
+        character_pairs = []
+        for char in possible_characters:
+            for char_2 in possible_characters:
+                if char != char_2:
+                    character_pairs.append((char, char_2))
+    else:
+        character_pairs = possible_characters
 
     prepped_sentences = {}
     for key in sentences:
