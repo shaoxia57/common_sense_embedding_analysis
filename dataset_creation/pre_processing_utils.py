@@ -64,7 +64,7 @@ def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_en
                     masked_statement += masked_portion
                     masked_examples[key] = []
                     for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                       new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
+                        new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
                         new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement)
                         masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
 
@@ -218,7 +218,8 @@ def prepare_truism_data_for_sentence_scoring_comet(sentences, possible_character
         for character_pair in random.sample(character_pairs, num_trials):
             for version in sentences[key]:
                 sentence = sentences[key][version]
-                sentence = sentence.replace("A", character_pair[0]).replace("B", character_pair[1])
+                sentence = re.sub(r"\bA\b", entity_pair[0], sentence)
+                sentence = re.sub(r"\bB\b", entity_pair[1], sentence)
                 tokenized_sentence = comet_api.encode_sequence(sentence, encoder, data_loader)
                 tensor = torch.tensor(tokenized_sentence)
                 
