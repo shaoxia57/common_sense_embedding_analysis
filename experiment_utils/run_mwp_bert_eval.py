@@ -20,7 +20,6 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     perf = utils.happy_transformer_masked_word_prediction(masked_examples=dataset,
                                                           model=model,
-                                                          gpu_available=True,
                                                           top_n=100,
                                                           logger=logger)
 
