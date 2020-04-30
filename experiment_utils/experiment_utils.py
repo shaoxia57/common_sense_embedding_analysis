@@ -100,10 +100,7 @@ def fair_seq_masked_word_prediction(masked_examples, model, gpu_available, top_n
 
     return avg_responses
 
-def happy_transformer_masked_word_prediction(masked_examples, model, gpu_available, top_n, logger):
-    if gpu_available:
-        model.cuda()
-        logger.info("successfully moved model to gpu")
+def happy_transformer_masked_word_prediction(masked_examples, model, top_n, logger):
 
     avg_responses = {}
     for j, key in enumerate(masked_examples):
