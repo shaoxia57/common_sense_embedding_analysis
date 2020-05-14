@@ -78,21 +78,6 @@ def prepare_finetuning_instances(sentences, config, fictitious_entities, num_ent
     statements = []
     for truism in sentences:
         for perturbation in sentences[truism]:
-            for premise in sentences[truism][perturbation]:
-                statement = sentences[truism][perturbation][premise]
-                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                    new_statement = re.sub(r"\bA\b", entity_pair[0], statement)
-                    new_statement = re.sub(r"\bB\b", entity_pair[1], new_statement)
-                    statements.append(new_statement)
-
-    return statements
-
-def prepare_masked_finetuning_instances(sentences, config, fictitious_entities, num_entity_trials):
-    random.seed(1012)
-    statements = []
-    for truism in sentences:
-        for perturbation in sentences[truism]:
-
             if 'paraphrase' not in perturbation:
                 candidate_answers = config[truism]['premise_switch']['0']
             elif '_inversion' not in perturbation:
@@ -100,9 +85,7 @@ def prepare_masked_finetuning_instances(sentences, config, fictitious_entities, 
             else:
                 candidate_answers = config[truism]['premise_switch']['2']
 
-            for premise in sentences[truism][perturbation]:
-                key = "-".join([truism, perturbation, premise])
-                
+            for premise in sentences[truism][perturbation]:                
                 statement = sentences[truism][perturbation][premise]
                 premise = statement.split(",")[0]
                 conclusion = statement.split(",")[1]
@@ -111,17 +94,14 @@ def prepare_masked_finetuning_instances(sentences, config, fictitious_entities, 
                 wrong_answer = None
                 for answer in candidate_answers:
                     if pad_string(answer, False) in conclusion:
-                        conclusion = conclusion.replace(" " + answer + " ", " [MASK] ")
                         right_answer = answer
-                    else:
-                        wrong_answer = answer
 
-                if right_answer and wrong_answer:
-                    masked_statement = premise + "," + conclusion
-                    for entity_pair in random.sample(fictitious_entities, num_entity_trials):
-                        new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
-                        new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement)
-                        statements.append(new_masked_statement)
+            for premise in sentences[truism][perturbation]:
+                statement = sentences[truism][perturbation][premise]
+                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                    new_statement = re.sub(r"\bA\b", entity_pair[0], statement)
+                    new_statement = re.sub(r"\bB\b", entity_pair[1], new_statement)
+                    statements.append((new_statement, right_answer))
 
     return statements
 
