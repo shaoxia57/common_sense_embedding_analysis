@@ -60,9 +60,11 @@ def main():
 
     sentences = np.concatenate((physical_sentences, material_sentences, social_sentences))
 
+
     split_sentences, split_indicies = proc.sample_finetuning_instances(sentences,
                                                                        train_pct=0.8,
                                                                        eval_pct=0.1)
+    
     train_sents, eval_sents, test_sents = split_sentences
     train_sets, eval_sets, test_sets = split_indicies
 

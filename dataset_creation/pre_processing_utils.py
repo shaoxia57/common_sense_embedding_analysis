@@ -91,13 +91,10 @@ def prepare_finetuning_instances(sentences, config, fictitious_entities, num_ent
                 conclusion = statement.split(",")[1]
 
                 right_answer = None
-                wrong_answer = None
                 for answer in candidate_answers:
                     if pad_string(answer, False) in conclusion:
                         right_answer = answer
 
-            for premise in sentences[truism][perturbation]:
-                statement = sentences[truism][perturbation][premise]
                 for entity_pair in random.sample(fictitious_entities, num_entity_trials):
                     new_statement = re.sub(r"\bA\b", entity_pair[0], statement)
                     new_statement = re.sub(r"\bB\b", entity_pair[1], new_statement)
@@ -115,7 +112,7 @@ def sample_finetuning_instances(sentences, train_pct, eval_pct):
     for i, sentence in enumerate(sentences):
         if i // 240 in train_sets:
             train_sentences.append(sentence)
-
+    
     eval_sentences = []
     for i, sentence in enumerate(sentences):
         if i // 240 in eval_sets:
