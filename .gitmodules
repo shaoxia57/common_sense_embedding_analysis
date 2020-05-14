@@ -1,0 +1,3 @@
+[submodule "happy-transformer"]
+	path = happy-transformer
+	url = https://github.com/EricFillion/happy-transformer
