@@ -75,7 +75,7 @@ def main():
 
     with open("../data/finetune_data/train_m_sentences.txt", "w") as f:
         for i, sent in enumerate(train_sents):
-            f.write(sent[1]+",")
+            f.write(sent[1])
             if i < len(train_sents) - 1:
                 f.write("\n")
 
@@ -90,7 +90,7 @@ def main():
 
     with open("../data/finetune_data/eval_m_sentences.txt", "w") as f:
         for i, sent in enumerate(eval_sents):
-            f.write(sent[1]+",")
+            f.write(sent[1])
             if i < len(eval_sents) - 1:
                 f.write("\n")
 
@@ -105,7 +105,7 @@ def main():
 
     with open("../data/finetune_data/test_m_sentences.txt", "w") as f:
         for i, sent in enumerate(test_sents):
-            f.write(sent[1]+",")
+            f.write(sent[1])
             if i < len(test_sents) - 1:
                 f.write("\n")
 
