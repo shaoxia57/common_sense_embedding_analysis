@@ -18,9 +18,9 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     logger.info("finished creating dataset")
 
-    perf = utils.fair_seq_masked_word_prediction(masked_examples=dataset,
+    perf = utils.happy_transformer_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
-                                                 gpu_available=torch.cuda.is_available(),
+                                                 #gpu_available=torch.cuda.is_available(),
                                                  top_n=100,
                                                  logger=logger)
 
