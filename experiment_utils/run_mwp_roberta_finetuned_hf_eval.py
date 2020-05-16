@@ -18,10 +18,10 @@ def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, numbe
 
     logger.info("finished creating dataset")
 
-    perf = utils.happy_transformer_masked_word_prediction(masked_examples=dataset,
+    perf = utils.albert_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
                                                  tokenizer=tokenizer,
-                                                 #gpu_available=torch.cuda.is_available(),
+                                                 gpu_available=torch.cuda.is_available(),
                                                  top_n=100,
                                                  logger=logger)
 
