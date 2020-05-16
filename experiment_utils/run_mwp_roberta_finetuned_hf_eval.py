@@ -10,7 +10,7 @@ from transformers import RobertaForMaskedLM, RobertaTokenizer
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
 
-def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger):
+def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, number_of_entity_trials, logger):
     dataset = proc.prepare_masked_instances(sentences=sentences, 
                                             config=config, 
                                             fictitious_entities=fictitious_entities,
@@ -20,6 +20,7 @@ def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity
 
     perf = utils.happy_transformer_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
+                                                 tokenizer=tokenizer,
                                                  #gpu_available=torch.cuda.is_available(),
                                                  top_n=100,
                                                  logger=logger)
@@ -41,7 +42,7 @@ def main():
     number_of_entity_trials = 10
 
     
-
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
     checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     state_dict = torch.load(checkpoint_path)["model"]
     roberta = RobertaForMaskedLM.from_pretrained('roberta-base', state_dict=state_dict)
@@ -65,6 +66,7 @@ def main():
     logger.info("finished reading in physical data")
 
     output_df = run_pipeline(model=roberta, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=physical_sents, 
                              config=physical_config, 
@@ -89,6 +91,7 @@ def main():
     logger.info("finished reading in material data")
 
     output_df = run_pipeline(model=roberta, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=material_sents, 
                              config=material_config, 
@@ -112,6 +115,7 @@ def main():
     logger.info("finished reading in social data")
 
     output_df = run_pipeline(model=roberta, 
+                             tokenizer=tokenizer,
                              fictitious_entities=fictitious_entities, 
                              sentences=social_sents, 
                              config=social_config, 
