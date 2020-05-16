@@ -51,10 +51,10 @@ def main():
     # Initializing a RoBERTa configuration
     config = RobertaConfig.from_pretrained('roberta-base')
     # Initializing a model from the configuration
-    model = RobertaForMaskedLM(config)
+    roberta = RobertaForMaskedLM(config)
     checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     state_dict = torch.load(checkpoint_path)["model"]
-    model.load_state_dict(state_dict)
+    roberta.load_state_dict(state_dict)
 
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
