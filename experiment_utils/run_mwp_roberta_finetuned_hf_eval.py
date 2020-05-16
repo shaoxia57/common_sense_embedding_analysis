@@ -40,12 +40,11 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = RobertaForMaskedLM()
+    
 
     checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
-    checkpoint = torch.load(checkpoint_path)
-
-    roberta.load_state_dict(checkpoint['model'])
+    state_dict = torch.load(checkpoint_path)["model"]
+    roberta = RobertaForMaskedLM.from_pretrained('roberta-base', state_dict=state_dict)
     
 
 
