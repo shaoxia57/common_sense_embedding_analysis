@@ -7,6 +7,7 @@ import torch
 import experiment_utils as utils
 from transformers import RobertaForMaskedLM, RobertaTokenizer
 from transformers import RobertaConfig
+from happytransformer import HappyROBERTA
 
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
@@ -19,10 +20,8 @@ def run_pipeline(model, tokenizer, fictitious_entities, sentences, config, numbe
 
     logger.info("finished creating dataset")
 
-    perf = utils.albert_masked_word_prediction(masked_examples=dataset,
+    perf = utils.happy_transformer_masked_word_prediction(masked_examples=dataset,
                                                  model=model,
-                                                 tokenizer=tokenizer,
-                                                 gpu_available=torch.cuda.is_available(),
                                                  top_n=100,
                                                  logger=logger)
 
@@ -48,13 +47,24 @@ def main():
     # state_dict = torch.load(checkpoint_path)["model"]
     # roberta = RobertaForMaskedLM.from_pretrained('roberta-base', state_dict=state_dict)
     
-    # Initializing a RoBERTa configuration
+    # # Initializing a RoBERTa configuration
+    # config = RobertaConfig.from_pretrained('roberta-base')
+    # # Initializing a model from the configuration
+    # roberta = RobertaForMaskedLM(config)
+    # checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
+    # state_dict = torch.load(checkpoint_path)["model"]
+    # roberta.load_state_dict(state_dict)
+
+    roberta = HappyROBERTA('roberta-base')
+    
     config = RobertaConfig.from_pretrained('roberta-base')
-    # Initializing a model from the configuration
-    roberta = RobertaForMaskedLM(config)
+    mlm = RobertaForMaskedLM(config)
     checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     state_dict = torch.load(checkpoint_path)["model"]
-    roberta.load_state_dict(state_dict)
+    mlm.load_state_dict(state_dict)
+    mlm.eval()
+
+    roberta.mlm = mlm
 
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
