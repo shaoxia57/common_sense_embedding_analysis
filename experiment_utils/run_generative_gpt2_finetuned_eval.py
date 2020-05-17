@@ -42,12 +42,18 @@ def main():
     with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
         physical_sents = json.load(f)
 
+    test_index = ['15','18']
+    test_phy_sents = {}
+    for key, val in physical_sents.items():
+        if key.split('-')[0] in test_index:
+            test_phy_sents[key] = val
+
     logger.info("finished reading in physical data")
 
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              possible_chars=chars, 
-                             sentences=physical_sents, 
+                             sentences=test_phy_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
@@ -60,13 +66,18 @@ def main():
     with open("../data/generation_test_data/material_data_sentences.json", "r") as f:
         material_sents = json.load(f)
         
+    test_index = ['15','18']
+    test_mat_sents = {}
+    for key, val in material_sents.items():
+        if key.split('-')[0] in test_index:
+            test_mat_sents[key] = val
 
     logger.info("finished reading in material data")
 
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              possible_chars=chars, 
-                             sentences=material_sents, 
+                             sentences=test_mat_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
@@ -78,12 +89,18 @@ def main():
     with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
         social_sents = json.load(f)
 
+    test_index = ['15','18']
+    test_soc_sents = {}
+    for key, val in social_sents.items():
+        if key.split('-')[0] in test_index:
+            test_soc_sents[key] = val
+
     logger.info("finished reading in social data")
 
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              possible_chars=chars, 
-                             sentences=social_sents, 
+                             sentences=test_soc_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
