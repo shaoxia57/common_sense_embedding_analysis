@@ -17,7 +17,7 @@ def run_pipeline(model, fictitious_entities, sentences, number_of_entity_trials,
 
     logger.info("finished creating dataset")
 
-    perf = utils.fair_seq_sent_pair_classification(sentence_pairs=dataset,
+    perf = utils.fair_seq_no_neutral_sent_pair_classification(sentence_pairs=dataset,
                                                    model=model,
                                                    gpu_available=torch.cuda.is_available(),
                                                    logger=logger)
