@@ -1,0 +1,29 @@
+{
+  "0" : {
+    "situation" : "A goes to college and B goes to high school",
+    "negation_switch" : {"0" : ["was", "wasn't"], 
+                         "1" : ["was", "wasn't"]},
+    "antonym_switch" : ["born", "unborn"],
+    "original_comparison" : "was born before",
+    "commonsense_fact" : "people attend high school before college",
+    "paraphrase" : "was conceived before",
+    "premise_switch" : {"0" : ["before", "after"], 
+                        "1" : ["before", "after"]},
+    "template" : "5",
+    "is_more" : true,
+    "greater_than" : "A"
+  },
+
+  "1" : {
+    "situation" : "A is eating dinner",
+    "negation_switch" : {"0" : ["was", "wasn't"], 
+                         "1" : ["was", "wasn't"]},
+    "antonym_switch" : ["hungry", "full"],
+    "original_comparison" : "was hungry before eating dinner",
+    "commonsense_fact" : "people eat dinner if they're hungry",
+    "paraphrase" : "was starving before eating dinner",
+    "premise_switch" : {"0" : ["before", "after"], 
+                        "1" : ["before", "after"]},
+    "template" : "6"
+  }
+}

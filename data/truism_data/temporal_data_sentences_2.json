@@ -1,0 +1,42 @@
+{
+ "0": {
+  "original": {
+   "original": "A goes to college and B goes to high school, so A was born before B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A was born after B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B was born after A"
+  },
+  "negation": {
+   "original": "A goes to college and B goes to high school, so A wasn't born after B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A wasn't born before B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B wasn't born before A"
+  },
+  "antonym": {
+   "original": "A goes to college and B goes to high school, so A was unborn after B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A was unborn before B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B was unborn before A"
+  },
+  "paraphrase": {
+   "original": "A goes to college and B goes to high school, so A was conceived before B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A was conceived after B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B was conceived after A"
+  },
+  "negation_antonym": {
+   "original": "A goes to college and B goes to high school, so A wasn't unborn before B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A wasn't unborn after B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B wasn't unborn after A"
+  },
+  "negation_paraphrase": {
+   "original": "A goes to college and B goes to high school, so A wasn't conceived after B",
+   "asymmetric_premise": "B goes to college and A goes to high school, so A wasn't conceived before B",
+   "asymmetric_conclusion": "A goes to college and B goes to high school, so B wasn't conceived before A"
+  }
+ },
+ "1": {
+  "original": "A is eating dinner, so A was hungry before eating dinner",
+  "negation": "A is eating dinner, so A wasn't hungry before eating dinner",
+  "antonym": "A is eating dinner, so A was full before eating dinner",
+  "paraphrase": "A is eating dinner, so A was starving before eating dinner",
+  "negation_antonym": "A is eating dinner, so A wasn't full before eating dinner",
+  "negation_paraphrase": "A is eating dinner, so A wasn't starving before eating dinner"
+ }
+}
