@@ -9,7 +9,7 @@
     "paraphrase" : "was conceived before",
     "premise_switch" : {"0" : ["before", "after"], 
                         "1" : ["before", "after"]},
-    "template" : "5",
+    "template" : "1",
     "is_more" : true,
     "greater_than" : "A"
   },
@@ -24,6 +24,6 @@
     "paraphrase" : "was starving before eating dinner",
     "premise_switch" : {"0" : ["before", "after"], 
                         "1" : ["before", "after"]},
-    "template" : "6"
+    "template" : "5"
   }
 }
