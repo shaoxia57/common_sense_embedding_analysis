@@ -199,54 +199,21 @@ def generate_social_perturbations(situation,
 
     return output
 
-def original_temporal_perturbation(situation, comparison_phrase, premise_switch, mode):
-    if "B" not in situation:
-        return situation + ", so A " + comparison_phrase
+def original_temporal_perturbation(situation, comparison_phrase, premise_switch, mode):    
+    return situation + ", so " + comparison_phrase
     
-    negation_comparison_phrase = comparison_phrase.replace(premise_switch[mode][0], 
-                                                           premise_switch[mode][1], 1)
-
-    a_position = situation.index("A")
-    b_position = situation.index("B")
-
-    flipped_situation = (situation[:a_position] + "B" + situation[a_position + 1:b_position] + 
-                        "A" + situation[b_position+1:])
-    
-    original = situation + ", so A " + comparison_phrase + " B"
-    asymmetric_premise = flipped_situation + ", so A " + negation_comparison_phrase + " B"
-    asymmetric_conclusion = situation + ", so B " + negation_comparison_phrase + " A"
-
-    return {"original" : original, 
-            "asymmetric_premise" : asymmetric_premise, 
-            "asymmetric_conclusion" : asymmetric_conclusion}   
-        
-
 def negative_temporal_perturbation(situation, comparison_phrase, premise_switch, mode):
-    if "B" not in situation:
-        return situation + ", so A " + comparison_phrase
-
     negation_comparison_phrase = comparison_phrase.replace(premise_switch[mode][0], 
                                                            premise_switch[mode][1], 1)
 
-    a_position = situation.index("A")
-    b_position = situation.index("B")
-
-    flipped_situation = (situation[:a_position] + "B" + situation[a_position + 1:b_position] + 
-                         "A" + situation[b_position+1:])
-
-    original = situation + ", so A " + negation_comparison_phrase + " B"
-    asymmetric_premise = flipped_situation + ", so A " + comparison_phrase + " B"
-    asymmetric_conclusion = situation + ", so B " + comparison_phrase + " A"
-
-    return {"original" : original,
-            "asymmetric_premise" : asymmetric_premise,
-            "asymmetric_conclusion" : asymmetric_conclusion}
+    return situation + ", so " + negation_comparison_phrase
 
 def generate_temporal_perturbations(situation,
                                     negation_switch,
                                     antonym_switch,
                                     original_comparison,
                                     paraphrase,
+                                    inverted_paraphrase,
                                     premise_switch):
 
     output = {}
@@ -258,13 +225,17 @@ def generate_temporal_perturbations(situation,
 
     negative_paraphrase_comparison = paraphrase.replace(pad_string(negation_switch["1"][0]), 
                                                         pad_string(negation_switch["1"][1]))
+    negative_paraphrase_inversion_comparison = inverted_paraphrase.replace(pad_string(negation_switch["2"][0]),
+                                                                           pad_string(negation_switch["2"][1]))
 
     output["original"] = original_temporal_perturbation(situation, original_comparison, premise_switch, "0")
     output["negation"] = negative_temporal_perturbation(situation, negative_comparison, premise_switch, "0")
     output["antonym"]  = negative_temporal_perturbation(situation, antonym_comparison, premise_switch, "0")
     output["paraphrase"] = original_temporal_perturbation(situation, paraphrase, premise_switch, "1")
+    output["paraphrase_inversion"] = original_temporal_perturbation(situation, inverted_paraphrase, premise_switch, "2")
 
     output["negation_antonym"] = original_temporal_perturbation(situation, negation_antonym_comparison, premise_switch, "0")
     output["negation_paraphrase"] = negative_temporal_perturbation(situation, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase_inversion"] = negative_temporal_perturbation(situation, negative_paraphrase_inversion_comparison, premise_switch, "2")
 
     return output
