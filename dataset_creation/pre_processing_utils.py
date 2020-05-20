@@ -9,6 +9,9 @@ sys.path.append('../')
 from dataset_creation.generate_data import pad_string
 # from dataset_creation.kb_crawl.comet.src import api as comet_api
 
+NUMBER_OF_SENTENCES_PER_SET = 240
+NUMBER_OF_PERTURBATIONS_PER_SET = 24
+
 def random_string_generator_variable_size(min_size, max_size, allowed_chars):
     return ''.join(random.choice(allowed_chars) for x in range(random.randint(min_size, max_size)))
 
@@ -73,7 +76,39 @@ def prepare_masked_easy_instances(sentences, config, fictitious_entities, num_en
 
     return masked_examples
 
-def prepare_finetuning_instances(sentences, config, fictitious_entities, num_entity_trials):
+def prep_ft_instances_for_sampling_from_sets(sentences, config, fictitious_entities, num_entity_trials):
+    random.seed(1012)
+    statements = {}
+    for truism in sentences:
+        statements[truism] = {}
+        for perturbation in sentences[truism]:
+            if 'paraphrase' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['0']
+            elif '_inversion' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['1']
+            else:
+                candidate_answers = config[truism]['premise_switch']['2']
+
+            for premise in sentences[truism][perturbation]:
+                key = "{}-{}".format(perturbation, premise)               
+                statement = sentences[truism][perturbation][premise]
+                premise = statement.split(",")[0]
+                conclusion = statement.split(",")[1]
+
+                right_answer = None
+                for answer in candidate_answers:
+                    if pad_string(answer, False) in conclusion:
+                        right_answer = answer
+
+                statements[truism][key] = []
+                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                    new_statement = re.sub(r"\bA\b", entity_pair[0], statement)
+                    new_statement = re.sub(r"\bB\b", entity_pair[1], new_statement)
+                    statements[truism][key].append((new_statement, right_answer))
+
+    return statements
+
+def prep_ft_instances_for_sampling_by_sets(sentences, config, fictitious_entities, num_entity_trials):
     random.seed(1012)
     statements = []
     for truism in sentences:
@@ -102,25 +137,59 @@ def prepare_finetuning_instances(sentences, config, fictitious_entities, num_ent
 
     return statements
 
-def sample_finetuning_instances(sentences, train_pct, eval_pct):
-    sets = [i for i in range(int(len(sentences)/240))]
+def sample_from_sets_finetuning_instances(sentences, num_train_perturbs, num_eval_perturbs):
+    random.seed(1012)
+    train_sentences = []
+    train_keys = []
+    eval_sentences = []
+    eval_keys = []
+    test_sentences = []
+    test_keys = []
+    pertubation_indicies = [i for i in range(NUMBER_OF_PERTURBATIONS_PER_SET)]
+    for truism in sentences:
+        train_eval_indicies = random.sample(pertubation_indicies, num_train_perturbs+num_eval_perturbs)
+        train_indicies = set(random.sample(train_eval_indicies, num_train_perturbs))
+        eval_indicies = set([i for i in train_eval_indicies if i not in train_indicies])
+        for i, perturbation in enumerate(sentences[truism]):
+            key = "{}-{}".format(truism, perturbation)
+            if i in train_indicies:
+                for sentence in sentences[truism][perturbation]:
+                    train_sentences.append(sentence)
+                train_keys.append(key)
+            elif i in eval_indicies:
+                for sentence in sentences[truism][perturbation]:
+                    eval_sentences.append(sentence)
+                eval_keys.append(key)
+            else:
+                for sentence in sentences[truism][perturbation]:
+                    test_sentences.append(sentence)
+                test_keys.append(key)
+
+    return ((train_sentences, eval_sentences, test_sentences), (train_keys, eval_keys, test_keys))
+
+
+
+
+
+def sample_by_sets_finetuning_instances(sentences, train_pct, eval_pct):
+    sets = [i for i in range(int(len(sentences)/NUMBER_OF_SENTENCES_PER_SET))]
     train_sets, test_sets = train_test_split(sets, train_size=train_pct, random_state=1012)
     updated_eval_pct = eval_pct / (1 - train_pct)
     eval_sets, test_sets = train_test_split(test_sets, train_size=updated_eval_pct, random_state=1012)
 
     train_sentences = []
     for i, sentence in enumerate(sentences):
-        if i // 240 in train_sets:
+        if i // NUMBER_OF_SENTENCES_PER_SET in train_sets:
             train_sentences.append(sentence)
     
     eval_sentences = []
     for i, sentence in enumerate(sentences):
-        if i // 240 in eval_sets:
+        if i // NUMBER_OF_SENTENCES_PER_SET in eval_sets:
             eval_sentences.append(sentence)
 
     test_sentences = []
     for i, sentence in enumerate(sentences):
-        if i // 240 in test_sets:
+        if i // NUMBER_OF_SENTENCES_PER_SET in test_sets:
             test_sentences.append(sentence)
 
     return ((train_sentences, eval_sentences, test_sentences), (train_sets, eval_sets, test_sets))
