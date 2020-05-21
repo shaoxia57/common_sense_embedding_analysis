@@ -13,7 +13,7 @@ def create_table(grouped_numbers, columns_in_order, column_name, stat):
     
     return pd.DataFrame.from_dict(output)
 
-def autolabel(rects, ax, color, below=False):
+def autolabel(rects, ax, color, below=False, font_size=12):
     """Attach a text label above each bar in *rects*, displaying its height."""
     for rect in rects:
         height = rect.get_height()
@@ -45,11 +45,11 @@ def autolabel(rects, ax, color, below=False):
                     xy=(x, y),
                     xytext=(0, 3),  # 3 points vertical offset
                     textcoords="offset points",
-                    ha='center', va=va, color=color, fontsize=8, weight='bold')
+                    ha='center', va=va, color=color, fontsize=font_size, weight='bold')
 
 def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units, 
                               left_bar_data, right_bar_data, title, save_dir="",
-                              legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
+                              legend_loc=1, label_x_ticks=True, x_ticks_rotation=15, font_size=12,
                               add_nums_to_bars=True, nums_should_be_below=[False, True],
                               left_range=[0,1], right_range=[-1,1], small_title=False,
                               rand=None):
@@ -85,8 +85,8 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     ax2.tick_params(axis='y', labelcolor=color)
     
     if add_nums_to_bars:
-        autolabel(rects1, ax1, "tab:red", nums_should_be_below[0])
-        autolabel(rects2, ax2, "tab:blue", nums_should_be_below[1])
+        autolabel(rects1, ax1, "tab:red", nums_should_be_below[0], font_size=font_size)
+        autolabel(rects2, ax2, "tab:blue", nums_should_be_below[1], font_size=font_size)
     
     if small_title:
         ax1.set_title(title, size=10)
@@ -107,8 +107,8 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     plt.show()
 
 def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, data_one,
-                         data_two, title, save_dir="", legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
-                         add_nums_to_bars=True, nums_should_be_below=[False, True], y_range=[0,1], small_title=False,
+                         data_two, color1, color2, title, save_dir="", legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
+                         add_nums_to_bars=True, font_size=12, nums_should_be_below=[False, True], y_range=[0,1], small_title=False,
                          rand=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
@@ -123,8 +123,8 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     else:
         rand_level=sum(y_range)/2.0
     
-    color_1 = 'tab:green'
-    color_2 = 'tab:orange'
+    color_1 = color1
+    color_2 = color2
     ax1.set_ylabel(y_label, color=color_1)
     ax1.set_ylim(bottom=y_range[0], top=y_range[1])
     rects1 = ax1.bar(x - width/2, data_one, width, color=color_1)
@@ -138,17 +138,19 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     ax1.set_xlabel(x_label)
     
     if add_nums_to_bars:
-        autolabel(rects1, ax1, color_1, nums_should_be_below[0])
-        autolabel(rects2, ax1, color_2, nums_should_be_below[1])
+        autolabel(rects1, ax1, color_1, nums_should_be_below[0], font_size=font_size)
+        autolabel(rects2, ax1, color_2, nums_should_be_below[1], font_size=font_size)
     
-    random_guess = ax1.axhline(y=rand_level, color='silver', linestyle=":")    
+    #random_guess = ax1.axhline(y=rand_level, color='silver', linestyle=":")    
     
     if small_title:
         ax1.set_title(title, size=10)
     else:
         ax1.set_title(title)
 
-    ax1.legend((rects1, rects2, random_guess), (y_one_label, y_two_label, "Random Guess"),
+    #ax1.legend((rects1, rects2, random_guess), (y_one_label, y_two_label, "Random Guess"),
+               #loc=legend_loc, ncol=1, fontsize=10, framealpha=0.8)
+    ax1.legend((rects1, rects2), (y_one_label, y_two_label),
                loc=legend_loc, ncol=1, fontsize=10, framealpha=0.8)
     
     fig.tight_layout()  # otherwise the right y-label is slightly clipped
@@ -159,7 +161,7 @@ def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, d
     plt.show()
 
 def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir="", legend_loc=1, label_x_ticks=True,
-                     x_ticks_rotation=15, add_nums_to_bars=True, nums_should_be_below=False, y_range=[0,1], small_title=False,
+                     x_ticks_rotation=15, add_nums_to_bars=True, nums_should_be_below=False, font_size=12, y_range=[0,1], small_title=False,
                      rand=None):
     
     # https://matplotlib.org/gallery/api/two_scales.html
@@ -201,7 +203,7 @@ def display_bar_plot(x_labels, x_label, y_label, data, title, color, save_dir=""
     ax1.set_xlabel(x_label)
 
     if add_nums_to_bars:
-        autolabel(rects1, ax1, color, nums_should_be_below)
+        autolabel(rects1, ax1, color, nums_should_be_below, font_size=font_size)
 
     random_guess = ax1.axhline(y=rand_level,color='silver', linestyle=":")    
     
