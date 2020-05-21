@@ -7,8 +7,10 @@ import torch
 import experiment_utils as utils
 from transformers import RobertaForMaskedLM, RobertaTokenizer
 from transformers import RobertaConfig
-from happytransformer import HappyROBERTA
+#from happytransformer import HappyROBERTA
 
+sys.path.append('../happy-transformer/')
+from happytransformer import HappyROBERTA
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
 
@@ -42,7 +44,7 @@ def main():
     number_of_entity_trials = 10
 
     
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-base)
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
     # checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     # state_dict = torch.load(checkpoint_path)["model"]
     # roberta = RobertaForMaskedLM.from_pretrained('roberta-base', state_dict=state_dict)
@@ -55,13 +57,14 @@ def main():
     # state_dict = torch.load(checkpoint_path)["model"]
     # roberta.load_state_dict(state_dict)
 
-    roberta = HappyROBERTA('roberta-base')
+    roberta = HappyROBERTA('roberta-large')
     
-    config = RobertaConfig.from_pretrained('roberta-base')
+    config = RobertaConfig.from_pretrained('roberta-large')
     mlm = RobertaForMaskedLM(config)
     #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/roberta-base/save_step_230400/checkpoint.pt'
-    checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/roberta-base/roberta_base_best_sample_from_sets/checkpoint.pt'
+    #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/roberta-base/roberta_base_best_sample_from_sets/checkpoint.pt'
+    checkpoint_path = '../data/finetune_data/roberta-large/save_step_114000/checkpoint.pt'
     state_dict = torch.load(checkpoint_path)["model"]
     mlm.load_state_dict(state_dict)
     mlm.eval()
@@ -110,7 +113,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/sample_from_set/physical_perf_ft19_new_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta/sample_from_set/physical_perf_ft19_new_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
@@ -147,7 +150,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/sample_from_set/material_perf_ft19_new_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta/sample_from_set/material_perf_ft19_new_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical material results")
@@ -183,7 +186,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/sample_from_set/social_perf_ft19_new_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta/sample_from_set/social_perf_ft19_new_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical social results")

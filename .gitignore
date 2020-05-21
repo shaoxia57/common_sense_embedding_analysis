@@ -7,3 +7,4 @@ clouds
 dataset_creation/kb_crawl/comet/pretrained_models
 dataset_creation/kb_crawl/comet/data
 dataset_creation/kb_crawl/comet/model
+data/finetune_data/roberta-large
