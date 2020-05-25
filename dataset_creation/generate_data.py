@@ -199,8 +199,43 @@ def generate_social_perturbations(situation,
 
     return output
 
+def original_temporal_perturbation(situation, comparison_phrase, premise_switch, mode):    
+    return situation + ", so " + comparison_phrase
     
-   
+def negative_temporal_perturbation(situation, comparison_phrase, premise_switch, mode):
+    negation_comparison_phrase = comparison_phrase.replace(premise_switch[mode][0], 
+                                                           premise_switch[mode][1], 1)
 
+    return situation + ", so " + negation_comparison_phrase
 
-    
+def generate_temporal_perturbations(situation,
+                                    negation_switch,
+                                    antonym_switch,
+                                    original_comparison,
+                                    paraphrase,
+                                    inverted_paraphrase,
+                                    premise_switch):
+
+    output = {}
+    negative_comparison = original_comparison.replace(pad_string(negation_switch["0"][0]),
+                                                      pad_string(negation_switch["0"][1]))
+    antonym_comparison = original_comparison.replace(antonym_switch[0], antonym_switch[1])
+    negation_antonym_comparison = antonym_comparison.replace(pad_string(negation_switch["0"][0]),
+                                                             pad_string(negation_switch["0"][1]))
+
+    negative_paraphrase_comparison = paraphrase.replace(pad_string(negation_switch["1"][0]), 
+                                                        pad_string(negation_switch["1"][1]))
+    negative_paraphrase_inversion_comparison = inverted_paraphrase.replace(pad_string(negation_switch["2"][0]),
+                                                                           pad_string(negation_switch["2"][1]))
+
+    output["original"] = original_temporal_perturbation(situation, original_comparison, premise_switch, "0")
+    output["negation"] = negative_temporal_perturbation(situation, negative_comparison, premise_switch, "0")
+    output["antonym"]  = negative_temporal_perturbation(situation, antonym_comparison, premise_switch, "0")
+    output["paraphrase"] = original_temporal_perturbation(situation, paraphrase, premise_switch, "1")
+    output["paraphrase_inversion"] = original_temporal_perturbation(situation, inverted_paraphrase, premise_switch, "2")
+
+    output["negation_antonym"] = original_temporal_perturbation(situation, negation_antonym_comparison, premise_switch, "0")
+    output["negation_paraphrase"] = negative_temporal_perturbation(situation, negative_paraphrase_comparison, premise_switch, "1")
+    output["negation_paraphrase_inversion"] = negative_temporal_perturbation(situation, negative_paraphrase_inversion_comparison, premise_switch, "2")
+
+    return output
