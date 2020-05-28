@@ -45,7 +45,7 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.base')
+    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.large')
     roberta.eval()
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
@@ -53,66 +53,66 @@ def main():
                                                                 max_length=12,
                                                                 character_set=chars)
 
-    # with open("../data/truism_data/physical_data_sentences_2.json", "r") as f:
-    #     physical_sents = json.load(f)
+    with open("../data/truism_data/physical_data_sentences_2.json", "r") as f:
+        physical_sents = json.load(f)
         
-    # with open("../data/truism_data/physical_data_2.json", "r") as f:
-    #     physical_config = json.load(f)
+    with open("../data/truism_data/physical_data_2.json", "r") as f:
+        physical_config = json.load(f)
 
-    # logger.info("finished reading in physical data")
+    logger.info("finished reading in physical data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=physical_sents, 
-    #                          config=physical_config, 
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=physical_sents, 
+                             config=physical_config, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/masked_word_result_data/roberta-base/physical_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/physical_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving physical dataset results")
+    logger.info("finished saving physical dataset results")
 
         
-    # with open("../data/truism_data/material_data_sentences_2.json", "r") as f:
-    #     material_sents = json.load(f)
+    with open("../data/truism_data/material_data_sentences_2.json", "r") as f:
+        material_sents = json.load(f)
         
-    # with open("../data/truism_data/material_data_2.json", "r") as f:
-    #     material_config = json.load(f)
+    with open("../data/truism_data/material_data_2.json", "r") as f:
+        material_config = json.load(f)
 
-    # logger.info("finished reading in material data")
+    logger.info("finished reading in material data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=material_sents, 
-    #                          config=material_config, 
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=material_sents, 
+                             config=material_config, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/masked_word_result_data/roberta-base/material_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/material_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving physical material results")
+    logger.info("finished saving physical material results")
         
-    # with open("../data/truism_data/social_data_sentences_2.json", "r") as f:
-    #     social_sents = json.load(f)
+    with open("../data/truism_data/social_data_sentences_2.json", "r") as f:
+        social_sents = json.load(f)
         
-    # with open("../data/truism_data/social_data_2.json", "r") as f:
-    #     social_config = json.load(f)
+    with open("../data/truism_data/social_data_2.json", "r") as f:
+        social_config = json.load(f)
 
-    # logger.info("finished reading in social data")
+    logger.info("finished reading in social data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=social_sents, 
-    #                          config=social_config, 
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=social_sents, 
+                             config=social_config, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/masked_word_result_data/roberta-base/social_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/social_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving social results")
+    logger.info("finished saving social results")
 
     with open("../data/truism_data/temporal_data_sentences_2.json", "r") as f:
         temporal_sents = json.load(f)
@@ -130,7 +130,7 @@ def main():
                              logger=logger,
                              temporal=True)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/temporal_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/temporal_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving temporal results")
