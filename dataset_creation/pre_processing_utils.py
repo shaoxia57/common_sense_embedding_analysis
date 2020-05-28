@@ -228,7 +228,7 @@ def prepare_masked_instances_temporal(sentences, config, fictitious_entities, nu
                     new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
                     new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement).capitalize()
                     masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
-
+    return masked_examples
 
 def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_trials):
     masked_examples = {}
