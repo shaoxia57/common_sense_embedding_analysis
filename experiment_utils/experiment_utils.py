@@ -157,7 +157,7 @@ def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_availab
 
     model.eval()
 
-    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, topk=top_n)
+    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, device=0, topk=top_n)
     
     avg_responses = {}
     for j, key in enumerate(masked_examples):
