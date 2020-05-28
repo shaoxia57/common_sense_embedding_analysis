@@ -194,7 +194,42 @@ def sample_by_sets_finetuning_instances(sentences, train_pct, eval_pct):
 
     return ((train_sentences, eval_sentences, test_sentences), (train_sets, eval_sets, test_sets))
 
-    
+
+def prepare_masked_instances_temporal(sentences, config, fictitious_entities, num_entity_trials):
+    masked_examples = {}
+    for truism in sentences:
+        for perturbation in sentences[truism]:
+            if 'paraphrase' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['0']
+            elif '_inversion' not in perturbation:
+                candidate_answers = config[truism]['premise_switch']['1']
+            else:
+                candidate_answers = config[truism]['premise_switch']['2']
+
+            key = "-".join([truism, perturbation, "original"])
+                
+            statement = sentences[truism][perturbation]
+            premise = statement.split(",")[0]
+            conclusion = statement.split(",")[1]
+
+            right_answer = None
+            wrong_answer = None
+            for answer in candidate_answers:
+                if pad_string(answer, False) in conclusion:
+                    conclusion = conclusion.replace(" " + answer + " ", " <mask> ")
+                    right_answer = answer
+                else:
+                    wrong_answer = answer
+
+            if right_answer and wrong_answer:
+                masked_statement = premise + "," + conclusion
+                masked_examples[key] = []
+                for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+                    new_masked_statement = re.sub(r"\bA\b", entity_pair[0], masked_statement)
+                    new_masked_statement = re.sub(r"\bB\b", entity_pair[1], new_masked_statement).capitalize()
+                    masked_examples[key].append((new_masked_statement, right_answer, wrong_answer))
+
+
 def prepare_masked_instances(sentences, config, fictitious_entities, num_entity_trials):
     masked_examples = {}
     for truism in sentences:
