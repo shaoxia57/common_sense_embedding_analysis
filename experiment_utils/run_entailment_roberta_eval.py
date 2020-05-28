@@ -93,5 +93,21 @@ def main():
 
     logger.info("finished saving social results")
 
+    with open("../data/generation_test_data/temporal_data_sentences.json", "r") as f:
+        temporal_sents = json.load(f)
+
+    logger.info("finished reading in temporal data")
+
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=temporal_sents,  
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
+
+    output_df.to_csv("../data/entailment_result_data/roberta/temporal_entail_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
+
+    logger.info("finished saving temporal results")
+
 if __name__ == "__main__":
     main()

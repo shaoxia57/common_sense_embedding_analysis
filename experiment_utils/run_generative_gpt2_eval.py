@@ -93,14 +93,14 @@ def main():
     # logger.info("finished saving social dataset results")
 
     with open("../data/generation_test_data/temporal_data_sentences.json", "r") as f:
-        social_sents = json.load(f)
+        temporal_sents = json.load(f)
 
     logger.info("finished reading in temporal data")
 
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              possible_chars=chars, 
-                             sentences=social_sents, 
+                             sentences=temporal_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
