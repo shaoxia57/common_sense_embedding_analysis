@@ -151,13 +151,13 @@ def happy_transformer_masked_word_prediction(masked_examples, model, top_n, logg
 
 
 def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_available, top_n, logger):
-#     if gpu_available:
-#         model.cuda()
-#         logger.info("successfully moved model to gpu")
+    if gpu_available:
+        model.cuda()
+        logger.info("successfully moved model to gpu")
 
     model.eval()
 
-    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, topk=top_n)
+    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, device=0, topk=top_n)
     
     avg_responses = {}
     for j, key in enumerate(masked_examples):

@@ -39,58 +39,75 @@ def main():
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
     model = GPT2LMHeadModel.from_pretrained("gpt2")
 
-    with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
-        physical_sents = json.load(f)
+    # with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
+    #     physical_sents = json.load(f)
 
-    logger.info("finished reading in physical data")
+    # logger.info("finished reading in physical data")
+
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          possible_chars=chars, 
+    #                          sentences=physical_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
+
+    # output_df.to_csv("../data/generation_result_data/gpt2/physical_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
+
+    # logger.info("finished saving physical dataset results")
+
+        
+    # with open("../data/generation_test_data/material_data_sentences.json", "r") as f:
+    #     material_sents = json.load(f)
+        
+
+    # logger.info("finished reading in material data")
+
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          possible_chars=chars, 
+    #                          sentences=material_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
+
+    # output_df.to_csv("../data/generation_result_data/gpt2/material_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
+
+    # logger.info("finished saving material dataset results")
+        
+    # with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
+    #     social_sents = json.load(f)
+
+    # logger.info("finished reading in social data")
+
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          possible_chars=chars, 
+    #                          sentences=social_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
+
+    # output_df.to_csv("../data/generation_result_data/gpt2/social_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
+
+    # logger.info("finished saving social dataset results")
+
+    with open("../data/generation_test_data/temporal_data_sentences.json", "r") as f:
+        temporal_sents = json.load(f)
+
+    logger.info("finished reading in temporal data")
 
     output_df = run_pipeline(model=model,
                              tokenizer=tokenizer,
                              possible_chars=chars, 
-                             sentences=physical_sents, 
+                             sentences=temporal_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/generation_result_data/gpt2/physical_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("../data/generation_result_data/gpt2/temporal_perf_{}.csv".format(number_of_trials),
                      index=False)
 
-    logger.info("finished saving physical dataset results")
-
-        
-    with open("../data/generation_test_data/material_data_sentences.json", "r") as f:
-        material_sents = json.load(f)
-        
-
-    logger.info("finished reading in material data")
-
-    output_df = run_pipeline(model=model,
-                             tokenizer=tokenizer,
-                             possible_chars=chars, 
-                             sentences=material_sents, 
-                             number_of_trials=number_of_trials,
-                             logger=logger)
-
-    output_df.to_csv("../data/generation_result_data/gpt2/material_perf_{}.csv".format(number_of_trials),
-                     index=False)
-
-    logger.info("finished saving material dataset results")
-        
-    with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
-        social_sents = json.load(f)
-
-    logger.info("finished reading in social data")
-
-    output_df = run_pipeline(model=model,
-                             tokenizer=tokenizer,
-                             possible_chars=chars, 
-                             sentences=social_sents, 
-                             number_of_trials=number_of_trials,
-                             logger=logger)
-
-    output_df.to_csv("../data/generation_result_data/gpt2/social_perf_{}.csv".format(number_of_trials),
-                     index=False)
-
-    logger.info("finished saving social dataset results")
+    logger.info("finished saving temporal dataset results")
 
 if __name__ == "__main__":
     main()

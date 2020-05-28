@@ -9,11 +9,17 @@ import experiment_utils as utils
 sys.path.append('../')
 from dataset_creation import pre_processing_utils as proc
 
-def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger):
-    dataset = proc.prepare_masked_instances(sentences=sentences, 
-                                            config=config, 
-                                            fictitious_entities=fictitious_entities,
-                                            num_entity_trials=number_of_entity_trials)    
+def run_pipeline(model, fictitious_entities, sentences, config, number_of_entity_trials, logger, temporal=False):
+    if not temporal:
+        dataset = proc.prepare_masked_instances(sentences=sentences, 
+                                                config=config, 
+                                                fictitious_entities=fictitious_entities,
+                                                num_entity_trials=number_of_entity_trials)
+    else:
+        dataset = proc.prepare_masked_instances_temporal(sentences=sentences, 
+                                                         config=config, 
+                                                         fictitious_entities=fictitious_entities,
+                                                         num_entity_trials=number_of_entity_trials)
 
     logger.info("finished creating dataset")
 
@@ -39,7 +45,7 @@ def main():
     chars = string.ascii_lowercase
     number_of_entity_trials = 10
 
-    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.base')
+    roberta = torch.hub.load(github='pytorch/fairseq', model='roberta.large')
     roberta.eval()
 
     fictitious_entities = proc.generate_pairs_of_random_strings(number_of_pairs=100, 
@@ -62,7 +68,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/physical_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/physical_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical dataset results")
@@ -83,7 +89,7 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/material_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/material_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
     logger.info("finished saving physical material results")
@@ -103,10 +109,31 @@ def main():
                              number_of_entity_trials=number_of_entity_trials,
                              logger=logger)
 
-    output_df.to_csv("../data/masked_word_result_data/roberta-base/social_perf_2_{}.csv".format(number_of_entity_trials),
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/social_perf_2_{}.csv".format(number_of_entity_trials),
                      index=False)
 
-    logger.info("finished saving physical social results")
+    logger.info("finished saving social results")
+
+    with open("../data/truism_data/temporal_data_sentences_2.json", "r") as f:
+        temporal_sents = json.load(f)
+        
+    with open("../data/truism_data/temporal_data_2.json", "r") as f:
+        temporal_config = json.load(f)
+
+    logger.info("finished reading in temporal data")
+
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=temporal_sents, 
+                             config=temporal_config, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger,
+                             temporal=True)
+
+    output_df.to_csv("../data/masked_word_result_data/roberta-large/temporal_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
+
+    logger.info("finished saving temporal results")
 
 if __name__ == "__main__":
     main()
