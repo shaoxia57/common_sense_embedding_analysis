@@ -151,9 +151,9 @@ def happy_transformer_masked_word_prediction(masked_examples, model, top_n, logg
 
 
 def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_available, top_n, logger):
-#     if gpu_available:
-#         model.cuda()
-#         logger.info("successfully moved model to gpu")
+    if gpu_available:
+        model.cuda()
+        logger.info("successfully moved model to gpu")
 
     model.eval()
 
