@@ -44,46 +44,64 @@ def main():
     data_loader = comet_model.data_loader
     model = comet_model.model
 
-    with open("data/generation_test_data/physical_data_sentences.json", "r") as f:
-        physical_sents = json.load(f)
+    # with open("data/generation_test_data/physical_data_sentences.json", "r") as f:
+    #     physical_sents = json.load(f)
 
-    logger.info("finished reading in physical data")
+    # logger.info("finished reading in physical data")
 
-    output_df = run_pipeline(model=model,
-                             tokenizer=tokenizer,
-                             data_loader=data_loader,
-                             possible_chars=chars, 
-                             sentences=physical_sents, 
-                             number_of_trials=number_of_trials,
-                             logger=logger)
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          data_loader=data_loader,
+    #                          possible_chars=chars, 
+    #                          sentences=physical_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/physical_perf_{}.csv".format(number_of_trials),
-                     index=False)
+    # output_df.to_csv("data/generation_result_data/comet_conceptnet/physical_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
 
-    logger.info("finished saving physical dataset results")
+    # logger.info("finished saving physical dataset results")
 
         
-    with open("data/generation_test_data/material_data_sentences.json", "r") as f:
-        material_sents = json.load(f)
+    # with open("data/generation_test_data/material_data_sentences.json", "r") as f:
+    #     material_sents = json.load(f)
         
 
-    logger.info("finished reading in material data")
+    # logger.info("finished reading in material data")
 
-    output_df = run_pipeline(model=model,
-                             tokenizer=tokenizer,
-                             data_loader=data_loader,
-                             possible_chars=chars, 
-                             sentences=material_sents, 
-                             number_of_trials=number_of_trials,
-                             logger=logger)
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          data_loader=data_loader,
+    #                          possible_chars=chars, 
+    #                          sentences=material_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/material_perf_{}.csv".format(number_of_trials),
-                     index=False)
+    # output_df.to_csv("data/generation_result_data/comet_conceptnet/material_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
 
-    logger.info("finished saving material dataset results")
+    # logger.info("finished saving material dataset results")
         
-    with open("data/generation_test_data/social_data_sentences.json", "r") as f:
-        social_sents = json.load(f)
+    # with open("data/generation_test_data/social_data_sentences.json", "r") as f:
+    #     social_sents = json.load(f)
+
+    # logger.info("finished reading in social data")
+
+    # output_df = run_pipeline(model=model,
+    #                          tokenizer=tokenizer,
+    #                          data_loader=data_loader,
+    #                          possible_chars=chars, 
+    #                          sentences=social_sents, 
+    #                          number_of_trials=number_of_trials,
+    #                          logger=logger)
+
+    # output_df.to_csv("data/generation_result_data/comet_conceptnet/social_perf_{}.csv".format(number_of_trials),
+    #                  index=False)
+
+    # logger.info("finished saving social dataset results")
+
+    with open("data/generation_test_data/temporal_data_sentences.json", "r") as f:
+        temporal_sents = json.load(f)
 
     logger.info("finished reading in social data")
 
@@ -91,14 +109,14 @@ def main():
                              tokenizer=tokenizer,
                              data_loader=data_loader,
                              possible_chars=chars, 
-                             sentences=social_sents, 
+                             sentences=temporal_sents, 
                              number_of_trials=number_of_trials,
                              logger=logger)
 
-    output_df.to_csv("data/generation_result_data/comet_conceptnet/social_perf_{}.csv".format(number_of_trials),
+    output_df.to_csv("data/generation_result_data/comet_conceptnet/temporal_perf_{}.csv".format(number_of_trials),
                      index=False)
 
-    logger.info("finished saving social dataset results")
+    logger.info("finished saving temporal dataset results")
 
 if __name__ == "__main__":
     main()
