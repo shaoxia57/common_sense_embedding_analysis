@@ -321,7 +321,7 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
     perturbations = []
     asym_perturbs = []
     ent_avg_accuracy_scores = []
-    neutral_avg_accuracy_score = []
+    neutral_avg_accuracy_scores = []
     contr_avg_accuracy_scores = []
     ent_label_list = []
     neutral_label_list = []
@@ -345,7 +345,7 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
             "perturbation"     : perturbations,
             "asym_perturbs"          : asym_perturbs,
             "ent_avg_score" : ent_avg_accuracy_scores,
-            "neutral_avg_score" : neutral_avg_accuracy_score,
+            "neutral_avg_score" : neutral_avg_accuracy_scores,
             "contr_avg_score" : contr_avg_accuracy_scores,
             "ent_label_list" : ent_label_list,
             "neutral_label_list" : neutral_label_list,
