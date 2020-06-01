@@ -305,7 +305,7 @@ def prepare_masked_instances_for_humans(sentences, config):
 def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
     sentence_pairs = {}
     for index, corr_incorr_pair in sentences.items():
-        sentence_pairs[index]={'correct':[],'incorrect':[]}
+        sentence_pairs[index]={'correct':[],'neutral': [], 'incorrect':[]}
                 
         correct_statement = corr_incorr_pair['correct']
         premise = correct_statement.split(",")[0]+'.'
@@ -317,6 +317,17 @@ def prepare_sentence_pair(sentences, fictitious_entities, num_entity_trials):
             filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
             filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion)
             sentence_pairs[index]['correct'].append((filled_premise, filled_conclusion))
+
+        neutral_statement = corr_incorr_pair['neutral']
+        premise = neutral_statement.split(",")[0]+'.'
+        conclusion = neutral_statement.split(",")[1][4:]+'.'
+                
+        for entity_pair in random.sample(fictitious_entities, num_entity_trials):
+            filled_premise = re.sub(r"\bA\b", entity_pair[0], premise)
+            filled_premise = re.sub(r"\bB\b", entity_pair[1], filled_premise).capitalize()
+            filled_conclusion = re.sub(r"\bA\b", entity_pair[0], conclusion)
+            filled_conclusion = re.sub(r"\bB\b", entity_pair[1], filled_conclusion)
+            sentence_pairs[index]['neutral'].append((filled_premise, filled_conclusion))
             
         incorrect_statement = corr_incorr_pair['incorrect']
         premise = incorrect_statement.split(",")[0]+'.'
