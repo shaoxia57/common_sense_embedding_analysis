@@ -321,8 +321,10 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
     perturbations = []
     asym_perturbs = []
     ent_avg_accuracy_scores = []
+    neutral_avg_accuracy_score = []
     contr_avg_accuracy_scores = []
     ent_label_list = []
+    neutral_label_list = []
     contr_label_list = []
     for key in result_dictionary:
         parts = key.split("-")
@@ -332,16 +334,20 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
         
         ent_avg_accuracy_scores.append(result_dictionary[key]['correct']['avg_accuracy'])
         contr_avg_accuracy_scores.append(result_dictionary[key]['incorrect']['avg_accuracy'])
+        neutral_avg_accuracy_scores.append(result_dictionary[key]['neutral']['avg_accuracy'])
         
         ent_label_list.append(result_dictionary[key]['correct']['label_list'])
         contr_label_list.append(result_dictionary[key]['incorrect']['label_list'])
+        neutral_label_list.append(result_dictionary[key]['neutral']['label_list'])
 
     return pd.DataFrame.from_dict({
             "set_number"    : set_numbers,
             "perturbation"     : perturbations,
             "asym_perturbs"          : asym_perturbs,
             "ent_avg_score" : ent_avg_accuracy_scores,
+            "neutral_avg_score" : neutral_avg_accuracy_score,
             "contr_avg_score" : contr_avg_accuracy_scores,
             "ent_label_list" : ent_label_list,
+            "neutral_label_list" : neutral_label_list,
             "contr_label_list" : contr_label_list
         })
