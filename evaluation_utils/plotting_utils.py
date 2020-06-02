@@ -106,6 +106,63 @@ def display_two_axis_bar_plot(x_labels, x_label, left_units, right_units,
     
     plt.show()
 
+def display_three_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, y_three_label, data_one,
+                         data_two, data_three, color1, color2, color3, title, save_dir="", legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
+                         add_nums_to_bars=True, font_size=12, nums_should_be_below=[False, True], y_range=[0,1], small_title=False,
+                         rand=None):
+    
+    # https://matplotlib.org/gallery/api/two_scales.html
+    
+    # https://matplotlib.org/gallery/lines_bars_and_markers/barchart.html#sphx-glr-gallery-lines-bars-and-markers-barchart-py
+    fig, ax1 = plt.subplots()
+    x = np.arange(len(x_labels))
+    width = 0.2
+
+    if rand:
+        rand_level=rand
+    else:
+        rand_level=sum(y_range)/2.0
+    
+    color_1 = color1
+    color_2 = color2
+    color_3 = color3
+    ax1.set_ylabel(y_label, color=color_1)
+    ax1.set_ylim(bottom=y_range[0], top=y_range[1])
+    rects1 = ax1.bar(x - width, data_one, width, color=color_1)
+    rects2 = ax1.bar(x, data_two, width, color=color_2)
+    rects3 = ax1.bar(x + width, data_three, width, color=color_3)
+    ax1.tick_params(axis='y', labelcolor=color_1)
+    ax1.set_xticks(x)
+    
+    if label_x_ticks:
+        ax1.set_xticklabels(x_labels, rotation=x_ticks_rotation)
+    
+    ax1.set_xlabel(x_label)
+    
+    if add_nums_to_bars:
+        autolabel(rects1, ax1, color_1, nums_should_be_below[0], font_size=font_size)
+        autolabel(rects2, ax1, color_2, nums_should_be_below[1], font_size=font_size)
+        autolabel(rects3, ax1, color_3, nums_should_be_below[1], font_size=font_size)
+    
+    #random_guess = ax1.axhline(y=rand_level, color='silver', linestyle=":")    
+    
+    if small_title:
+        ax1.set_title(title, size=10)
+    else:
+        ax1.set_title(title)
+
+    #ax1.legend((rects1, rects2, random_guess), (y_one_label, y_two_label, "Random Guess"),
+               #loc=legend_loc, ncol=1, fontsize=10, framealpha=0.8)
+    ax1.legend((rects1, rects2, rects3), (y_one_label, y_two_label, y_three_label),
+               loc=legend_loc, ncol=1, fontsize=10, framealpha=0.8)
+    
+    fig.tight_layout()  # otherwise the right y-label is slightly clipped
+    ax1.set_title(title, size=10)
+    if len(save_dir):
+        plt.savefig("{}{}.pdf".format(save_dir, title), format='pdf', dpi=1200)
+    
+    plt.show()
+
 def display_two_bar_plot(x_labels, x_label, y_label, y_one_label, y_two_label, data_one,
                          data_two, color1, color2, title, save_dir="", legend_loc=1, label_x_ticks=True, x_ticks_rotation=15,
                          add_nums_to_bars=True, font_size=12, nums_should_be_below=[False, True], y_range=[0,1], small_title=False,
