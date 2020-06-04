@@ -64,7 +64,7 @@ def main():
     #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/save_step_92160/checkpoint.pt'
     #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/roberta-base/save_step_230400/checkpoint.pt'
     #checkpoint_path = '/home/rahul/common_sense_embedding_analysis/data/finetune_data/roberta-base/roberta_base_best_sample_from_sets/checkpoint.pt'
-    checkpoint_path = '../data/finetune_data/roberta-large/save_step_114000/checkpoint.pt'
+    checkpoint_path = '../data/finetune_data/roberta-large/save_step_57000/checkpoint.pt'
     state_dict = torch.load(checkpoint_path)["model"]
     mlm.load_state_dict(state_dict)
     mlm.eval()

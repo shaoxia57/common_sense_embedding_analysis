@@ -43,57 +43,57 @@ def main():
                                                                 max_length=12,
                                                                 character_set=chars)
 
-    # with open("../data/generation_test_data/physical_data_sentences.json", "r") as f:
-    #     physical_sents = json.load(f)
+    with open("../data/entailment_test_data/physical_data_sentences.json", "r") as f:
+        physical_sents = json.load(f)
     
 
-    # logger.info("finished reading in physical data")
+    logger.info("finished reading in physical data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=physical_sents, 
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=physical_sents, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/entailment_result_data/roberta/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/entailment_result_data/roberta/physical_entail_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving physical results")
+    logger.info("finished saving physical results")
 
         
-    # with open("../data/generation_test_data/material_data_sentences.json", "r") as f:
-    #     material_sents = json.load(f)
+    with open("../data/entailment_test_data/material_data_sentences.json", "r") as f:
+        material_sents = json.load(f)
 
-    # logger.info("finished reading in material data")
+    logger.info("finished reading in material data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=material_sents, 
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=material_sents, 
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/entailment_result_data/roberta/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/entailment_result_data/roberta/material_entail_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving material results")
+    logger.info("finished saving material results")
         
-    # with open("../data/generation_test_data/social_data_sentences.json", "r") as f:
-    #     social_sents = json.load(f)
+    with open("../data/entailment_test_data/social_data_sentences.json", "r") as f:
+        social_sents = json.load(f)
 
-    # logger.info("finished reading in social data")
+    logger.info("finished reading in social data")
 
-    # output_df = run_pipeline(model=roberta, 
-    #                          fictitious_entities=fictitious_entities, 
-    #                          sentences=social_sents,  
-    #                          number_of_entity_trials=number_of_entity_trials,
-    #                          logger=logger)
+    output_df = run_pipeline(model=roberta, 
+                             fictitious_entities=fictitious_entities, 
+                             sentences=social_sents,  
+                             number_of_entity_trials=number_of_entity_trials,
+                             logger=logger)
 
-    # output_df.to_csv("../data/entailment_result_data/roberta/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
-    #                  index=False)
+    output_df.to_csv("../data/entailment_result_data/roberta/social_entail_perf_2_{}.csv".format(number_of_entity_trials),
+                     index=False)
 
-    # logger.info("finished saving social results")
+    logger.info("finished saving social results")
 
-    with open("../data/generation_test_data/temporal_data_sentences.json", "r") as f:
+    with open("../data/entailment_test_data/temporal_data_sentences.json", "r") as f:
         temporal_sents = json.load(f)
 
     logger.info("finished reading in temporal data")

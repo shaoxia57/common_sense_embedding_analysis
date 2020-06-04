@@ -2,7 +2,7 @@ import torch
 import math
 import pandas as pd
 from fairseq.data.data_utils import collate_tokens
-from transformers import pipeline
+# from transformers import pipeline
 
 def generative_truism_reasoning_test(tensors, model, gpu_available, logger):
     if gpu_available:
@@ -151,13 +151,13 @@ def happy_transformer_masked_word_prediction(masked_examples, model, top_n, logg
 
 
 def albert_masked_word_prediction(masked_examples, model, tokenizer, gpu_available, top_n, logger):
-    if gpu_available:
-        model.cuda()
-        logger.info("successfully moved model to gpu")
+#     if gpu_available:
+#         model.cuda()
+#         logger.info("successfully moved model to gpu")
 
     model.eval()
 
-    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, device=0, topk=top_n)
+    fill_mask_pipeline = pipeline("fill-mask", model=model, tokenizer=tokenizer, topk=top_n)
     
     avg_responses = {}
     for j, key in enumerate(masked_examples):
@@ -217,6 +217,7 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
     counter = 0
     for key, corr_incorr_pair in sentence_pairs.items():
         avg_responses[key] = {'correct':{'label_list':[], 'avg_accuracy':-1},
+                              'neutral':{'label_list':[], 'avg_accuracy':-1},
                               'incorrect':{'label_list':[], 'avg_accuracy':-1}}
         # Correct pair (true label: entailment) results
         batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['correct']], pad_idx=1)
@@ -227,6 +228,16 @@ def fair_seq_sent_pair_classification(sentence_pairs, model, gpu_available, logg
 
         avg_responses[key]['correct']['label_list'] = result_list
         avg_responses[key]['correct']['avg_accuracy'] = avg_accuracy
+
+        # Neutral pair (true label: neutral) results
+        batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['neutral']], pad_idx=1)
+        logprobs = model.predict('mnli', batch)
+        
+        result_list = logprobs.argmax(dim=1).tolist()
+        avg_accuracy = result_list.count(1)/len(result_list)
+
+        avg_responses[key]['neutral']['label_list'] = result_list
+        avg_responses[key]['neutral']['avg_accuracy'] = avg_accuracy
         
         # Incorrect pair (true label: contradiction) results
         batch = collate_tokens([model.encode(pair[0], pair[1]) for pair in corr_incorr_pair['incorrect']], pad_idx=1)
@@ -310,8 +321,10 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
     perturbations = []
     asym_perturbs = []
     ent_avg_accuracy_scores = []
+    neutral_avg_accuracy_scores = []
     contr_avg_accuracy_scores = []
     ent_label_list = []
+    neutral_label_list = []
     contr_label_list = []
     for key in result_dictionary:
         parts = key.split("-")
@@ -321,16 +334,20 @@ def convert_fair_seq_sent_pair_results_into_df(result_dictionary):
         
         ent_avg_accuracy_scores.append(result_dictionary[key]['correct']['avg_accuracy'])
         contr_avg_accuracy_scores.append(result_dictionary[key]['incorrect']['avg_accuracy'])
+        neutral_avg_accuracy_scores.append(result_dictionary[key]['neutral']['avg_accuracy'])
         
         ent_label_list.append(result_dictionary[key]['correct']['label_list'])
         contr_label_list.append(result_dictionary[key]['incorrect']['label_list'])
+        neutral_label_list.append(result_dictionary[key]['neutral']['label_list'])
 
     return pd.DataFrame.from_dict({
             "set_number"    : set_numbers,
             "perturbation"     : perturbations,
             "asym_perturbs"          : asym_perturbs,
             "ent_avg_score" : ent_avg_accuracy_scores,
+            "neutral_avg_score" : neutral_avg_accuracy_scores,
             "contr_avg_score" : contr_avg_accuracy_scores,
             "ent_label_list" : ent_label_list,
+            "neutral_label_list" : neutral_label_list,
             "contr_label_list" : contr_label_list
         })
